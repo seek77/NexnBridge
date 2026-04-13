@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights — Nex & Bridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#00338D;--navy2:#001F5B;--accent2:#0077C8;--accent3:#00A3E0;--bg:#fff;--bg2:#F4F6FA;--text:#1E293B;--text2:#475569;--text3:#7C8DB5;--font:'DM Sans',sans-serif;--mono:'JetBrains Mono',monospace;--display:'Playfair Display',serif}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.8}
+::selection{background:var(--navy);color:#fff}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,51,141,.08)}
+.logo{font-weight:700;font-size:1.15rem;color:var(--navy);text-decoration:none}
+.logo span{color:var(--accent2);font-weight:300}
+nav a.back{font-size:.82rem;color:var(--text2);text-decoration:none;font-weight:500}
+nav a.back:hover{color:var(--navy)}
+
+.hero-bar{background:linear-gradient(165deg,var(--navy),var(--navy2));padding:7rem 3rem 3rem;text-align:center}
+.hero-bar h1{font-family:var(--display);font-size:2.2rem;color:#fff;margin-bottom:.5rem}
+.hero-bar p{color:rgba(255,255,255,.6);font-size:.95rem}
+
+.toc{max-width:900px;margin:3rem auto;padding:0 2rem}
+.toc h2{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:1rem;font-family:var(--mono);letter-spacing:.05em;text-transform:uppercase;font-size:.75rem}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.toc-item{display:block;padding:.8rem 1rem;background:var(--bg2);border:1px solid rgba(0,51,141,.06);border-radius:6px;text-decoration:none;transition:all .2s}
+.toc-item:hover{border-color:rgba(0,51,141,.2);background:var(--bg)}
+.toc-item .ch{font-family:var(--mono);font-size:.6rem;color:var(--accent2);letter-spacing:.1em;text-transform:uppercase}
+.toc-item .ti{font-size:.85rem;font-weight:600;color:var(--navy);margin-top:.15rem;line-height:1.4}
+
+.articles{max-width:740px;margin:0 auto;padding:2rem 2rem 6rem}
+article{margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(0,51,141,.06)}
+article:last-child{border-bottom:none}
+article .meta{font-family:var(--mono);font-size:.65rem;color:var(--accent2);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.6rem}
+article .article-img{width:100%;border-radius:8px;margin-bottom:1.5rem;border:1px solid rgba(0,51,141,.06)}
+article h2{font-family:var(--display);font-size:1.6rem;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:1.2rem}
+article p{font-size:.95rem;color:var(--text);line-height:1.85;margin-bottom:1rem}
+article p:last-child{margin-bottom:0}
+article strong{color:var(--navy)}
+article em{color:var(--text2);font-style:italic}
+article .highlight{background:var(--bg2);border-left:3px solid var(--navy);padding:1rem 1.2rem;margin:1.5rem 0;border-radius:0 6px 6px 0;font-size:.9rem;color:var(--text2);line-height:1.7}
+article .tags{margin-top:1.5rem;display:flex;gap:.5rem;flex-wrap:wrap}
+article .tag{font-family:var(--mono);font-size:.6rem;color:var(--text3);border:1px solid rgba(0,51,141,.1);padding:.2rem .6rem;border-radius:3px;letter-spacing:.06em}
+
+footer{padding:2rem 3rem;background:var(--navy);text-align:center}
+footer p{font-size:.75rem;color:rgba(255,255,255,.5)}
+
+@media(max-width:768px){
+  nav{padding:.8rem 1.5rem}
+  .hero-bar{padding:5.5rem 1.5rem 2rem}
+  .hero-bar h1{font-size:1.6rem}
+  .toc{padding:0 1.5rem}
+  .toc-grid{grid-template-columns:1fr}
+  .articles{padding:2rem 1.5rem 4rem}
+  article h2{font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Nex <span>&</span> Bridge</a>
+  <button class="nav-burger" onclick="this.parentElement.classList.toggle('open')" aria-label="Menu" style="display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px">
+    <span style="display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s"></span>
+    <span style="display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s"></span>
+    <span style="display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s"></span>
+  </button>
+  <a href="index.html#insights" class="back">← Back to Home</a>
+</nav>
+
+<div class="hero-bar">
+  <h1>Insights</h1>
+  <p>Practitioner perspectives on profit-oriented SCM and decision architecture</p>
+</div>
+
+<div class="toc">
+  <h2>Chapter 1 — From Reporting to Simulation</h2>
+  <div class="toc-grid">
+    <a href="#post-1-1" class="toc-item"><div class="ch">Post 1.1</div><div class="ti">What Consulting Taught Me — and What the Ground Made Me Realise</div></a>
+    <a href="#post-1-2" class="toc-item"><div class="ch">Post 1.2</div><div class="ti">Beyond the "Unprofitable" Label: The 3 Layers of SKU Loss</div></a>
+    <a href="#post-1-3" class="toc-item"><div class="ch">Post 1.3</div><div class="ti">The High Price of "Deal With It Later"</div></a>
+    <a href="#post-1-4" class="toc-item"><div class="ch">Post 1.4</div><div class="ti">The Two Clocks of Inventory</div></a>
+    <a href="#post-1-6a" class="toc-item"><div class="ch">Post 1.6</div><div class="ti">Most Supply Chain Decisions Are Simulations, Not Reports</div></a>
+    <a href="#post-1-6b" class="toc-item"><div class="ch">Post 1.6</div><div class="ti">The Deletion Trap</div></a>
+  </div>
+  <h2 style="margin-top:2rem">Chapter 2 — From Simulation to Operating System</h2>
+  <div class="toc-grid">
+    <a href="#post-2-1" class="toc-item"><div class="ch">Post 2.1</div><div class="ti">Why No-Touch Planning Still Ends in Spreadsheets</div></a>
+    <a href="#post-2-2" class="toc-item"><div class="ch">Post 2.2</div><div class="ti">Before Automation, Define the Decision Architecture</div></a>
+    <a href="#post-2-3" class="toc-item"><div class="ch">Post 2.3</div><div class="ti">A Planning System Is Not Yet Intelligence</div></a>
+  </div>
+</div>
+
+<div class="articles">
+
+<!-- POST 1.1 -->
+<article id="post-1-1">
+<div class="meta">Chapter 1 · Post 1.1</div>
+<img src="img/Post1_1.jpeg" alt="Structural Traps of Profit Leakage" class="article-img">
+<h2>What Consulting Taught Me — and What Being on the Ground Made Me Realise</h2>
+<p>Profit leakage in supply chains follows the same structure — whether you're in Seoul, California, or Tokyo.</p>
+<p>I spent the first half of my career advising supply chains. The second half, running them — across Korea, US, and Japan. The markets were distinct. The cultures, consumer behaviours, and distribution structures all varied considerably. And yet the underlying pattern of profit erosion? Remarkably consistent.</p>
+<p>As a consultant, I believed better process design would solve the problem. What the ground taught me: you can redesign a process in weeks. Changing the organisation around it takes years. And unless you look at the data directly, the real source stays invisible.</p>
+<p>If you've worked in supply chain, you'll recognise this scene. End of quarter. Products sitting quietly in a warehouse corner are suddenly brought to the conference table. "The shelf life is nearly up. What are we going to do?" Markdowns, promotions, write-offs. Every quarter, without fail.</p>
+<p>I witnessed this in Seoul, in California, and in Tokyo. For a long time, I attributed it to poor forecasting. Having examined data across three markets, I'm now quite certain — <strong>this is not a forecasting failure. It is a structural one.</strong></p>
+<p>Fast-movers are largely self-correcting. Strong underlying demand absorbs inventory naturally. The market does the work, not the system.</p>
+<div class="highlight">And herein lies the paradox. The more reliably fast-movers correct themselves, the more confident management becomes that everything is functioning well. Viewed in aggregate, the numbers look acceptable. This is the <strong>Aggregation Trap</strong>.</div>
+<p>That misplaced confidence is precisely what allows tail SKUs to go unmanaged. Commercial teams concentrate on high-velocity lines — that is where their targets sit. Brand teams maintain portfolio breadth — slower lines still require shelf presence.</p>
+<p>Caught between these two forces, tail SKUs continue to be produced to MOQ with no one actively accountable for their sell-through. No single party is at fault. This is simply how the structure operates. And it is becoming structurally worse.</p>
+<p>Consumer fragmentation and channel proliferation have caused SKU counts to expand dramatically. Individually, each loss appears negligible. Collectively? Death by a thousand cuts. <strong>The Long-tail Trap.</strong></p>
+<p>The deeper issue is that supply chain continues to speak in the language of volume — whilst executives are waiting to hear something else entirely.</p>
+<div class="tags"><span class="tag">Profitability</span><span class="tag">Long-tail</span><span class="tag">Aggregation Trap</span></div>
+</article>
+
+<!-- POST 1.2 -->
+<article id="post-1-2">
+<div class="meta">Chapter 1 · Post 1.2</div>
+<img src="img/Post1_2.jpeg" alt="3 Layers of SKU Loss" class="article-img">
+<h2>Beyond the "Unprofitable" Label: The 3 Layers of SKU Loss</h2>
+<p>Loss-making SKUs aren't a discovery problem. They're a neglect problem.</p>
+<p>Not all loss-making SKUs are the same. The label "unprofitable" conceals at least three very different situations that require entirely different responses.</p>
+<p><strong>Layer 1 — Pricing hasn't kept pace with cost.</strong> The product was designed at one margin. Since then, input costs moved, trade terms shifted, or promotional depth crept up. The product still sells. The market still wants it. It just doesn't make money any more. The fix is commercial: renegotiate, reprice, or restructure the promotion.</p>
+<p><strong>Layer 2 — Cost structure has eroded.</strong> Yield has fallen. A key input is now more expensive. Scale has dropped below the threshold where fixed-cost absorption still works. The fix is operational: recipe change, supplier switch, production consolidation.</p>
+<p><strong>Layer 3 — The product never found its market.</strong> Demand never materialised. The forecast was over-optimistic from day one. These SKUs need a fundamentally different conversation: not "how do we fix it?" but "why did we produce this much?"</p>
+<div class="highlight">Marketing says: "Taste changes damage the brand." Production says: "New specs drop yields." Both doors need opening, but four or five people hold the keys — and no one turns theirs first. These SKUs sit unchanged for years.</div>
+<p>But there's a deeper issue still. This classification requires design-stage cost targets from PLM, actual costs from ERP, discount data from Sales, inventory turns from Logistics. Different systems, different time horizons — all needing to converge.</p>
+<p>Gathering data: manual. Making the call: manual. This can be a one-off project. It cannot become a monthly rhythm. <strong>The distance between seeing once and seeing continuously — that determines how long a loss-making SKU survives.</strong></p>
+<div class="tags"><span class="tag">SKU Rationalisation</span><span class="tag">Cost Structure</span><span class="tag">Portfolio</span></div>
+</article>
+
+<!-- POST 1.3 -->
+<article id="post-1-3">
+<div class="meta">Chapter 1 · Post 1.3</div>
+<img src="img/Post1_3.jpeg" alt="The High Price of Deal With It Later" class="article-img">
+<h2>The High Price of "Deal With It Later"</h2>
+<p>The most expensive decision in front of slow-moving stock is "let's deal with it later."</p>
+<p>There is always one question that surfaces in the room. "So what are we actually going to do about it?"</p>
+<p>In front of that question, organisations tend to move in predictable ways. Sales says: "Let's park it for now." Marketing says: "If we discount now, we blow the margin target. Wait until it stops moving." SCM is quietly panicking.</p>
+<p>Time passes. The shelf-life window closes. What a 10% markdown would have resolved three months ago now requires 40% — and the channel isn't particularly interested at any price. The remaining options are a distressed clearance or a write-off.</p>
+<p><strong>They held firm to protect the margin. The margin was destroyed anyway.</strong></p>
+<p>When you put a number on what "later" actually costs, it breaks down into four things.</p>
+<p>First, <strong>trapped capital</strong>. Stock sitting in a warehouse for ninety days is money that cannot be deployed elsewhere. Second, <strong>warehousing costs</strong>. Cold storage is not cheap. These costs accumulate quietly, every day. Third, <strong>production capacity consumed</strong>. That inventory required factory time to make — the contribution margin never generated on a higher-performing SKU is a real loss. Fourth, <strong>channel negotiating power</strong>. When shelf life is comfortable, the channel is accommodating. When it is not, the channel knows it.</p>
+<div class="highlight">Inventory is an asset whose options narrow with time. The goal is not to reduce stock. It is to make the right decision at the right moment.</div>
+<div class="tags"><span class="tag">Disposition</span><span class="tag">Two Clocks</span><span class="tag">Markdown</span></div>
+</article>
+
+<!-- POST 1.4 -->
+<article id="post-1-4">
+<div class="meta">Chapter 1 · Post 1.4</div>
+<img src="img/Post1_4.jpeg" alt="Two Clocks of Inventory" class="article-img">
+<h2>The Two Clocks of Inventory: Balancing Cost vs. Leverage</h2>
+<p>Most companies only hear one. Whilst inventory sits in a warehouse, two clocks tick simultaneously.</p>
+<p><strong>The cost clock:</strong> storage fees, tied-up capital, production capacity consumed. These accelerate over time.</p>
+<p><strong>The negotiation clock:</strong> when shelf life is comfortable, 10% off can persuade a channel partner. When expiry looms, 40% won't suffice. The channel holds all the leverage.</p>
+<p>These two clocks move in opposite directions. The longer you hold, the higher your costs. The longer you hold, the weaker your hand.</p>
+<p>Put the numbers on the same table: a 10% discount today reduces margin by a known amount. Waiting 30 days means costs accumulate, the required discount deepens, and channel acceptance falls. When these figures sit side by side, no one needs to argue on instinct.</p>
+<p>Simple concept. But in practice, you hit a wall.</p>
+<p>Channels matter. Online shows high price elasticity. Supermarkets impose listing conditions. Convenience stores enforce tight shelf-life rules. The same discount produces completely different responses.</p>
+<p>Shelf life matters. Thirty days on a 12-month ambient product is comfortable. Thirty days on a 14-day fresh product is a crisis.</p>
+<div class="highlight">Product type × lifecycle × season × channel × remaining shelf life — plus location, procurement structure, storage constraints. Two curves, one table. Simple concept. But every product, channel, season, and location draws a different curve. A single formula for all of this? Impossible. What's needed is not a universal equation — but a system that draws each curve individually and signals when a crossing point approaches.</div>
+<div class="tags"><span class="tag">Two Clocks</span><span class="tag">Inventory</span><span class="tag">Shelf Life</span></div>
+</article>
+
+<!-- POST 1.6a -->
+<article id="post-1-6a">
+<div class="meta">Chapter 1 · Post 1.6</div>
+<img src="img/Post1_5.jpeg" alt="Reporting to Simulation" class="article-img">
+<h2>Most Supply Chain Decisions Are Simulations, Not Reports</h2>
+<p>Most supply chain decisions are treated as reporting problems. They are not. They are simulation problems.</p>
+<p>Yet much of today's analytical infrastructure is still optimised for reporting rather than simulation.</p>
+<p>When capital costs rise, inventory becomes a financial liability. When shipping rates spike, the optimal production-to-distribution mix shifts overnight. When a key supplier signals disruption, the financial implication varies dramatically depending on which products are affected and where safety stock sits.</p>
+<p>These are not reporting questions. They are questions that can only be answered by simulating a scenario — running the numbers forward, comparing alternatives, and seeing the financial consequences before committing to a decision.</p>
+<div class="highlight">A report tells you what happened. A simulation tells you what would happen if — and then lets you compare alternatives before choosing.</div>
+<p>The gap is not analytical skill. The gap is that simulation requires a fundamentally different infrastructure: connected data that updates itself, compute that runs in minutes rather than hours, and an interface that translates results into the financial language executives use to make decisions.</p>
+<div class="tags"><span class="tag">Simulation</span><span class="tag">Infrastructure</span><span class="tag">Decision Architecture</span></div>
+</article>
+
+<!-- POST 1.6b -->
+<article id="post-1-6b">
+<div class="meta">Chapter 1 · Post 1.6</div>
+<img src="img/Post1_6.png" alt="The Deletion Trap" class="article-img">
+<h2>The Deletion Trap</h2>
+<p>SCM speaks in metrics. The boardroom hears profit.</p>
+<p>The supply chain team presents the monthly review. Forecast accuracy: 72%. Fill rate: 96.2%. Inventory turns: up 0.3. 120 SKUs above 90 days of stock cover. All accurate. All operationally meaningful.</p>
+<p>The CEO asks one question. "So what does that mean for profit?"</p>
+<p>This moment repeats itself in boardrooms everywhere. The problem is not data. It is language. Supply chains report in operational metrics. Executives make decisions in financial outcomes. Between those two perspectives, translation rarely happens.</p>
+<p>Most SKU-level profitability reports are built on absorption costing — indirect costs allocated through multiple layers. The allocation basis determines the answer. Use revenue share, and one set of products appears profitable. Use production hours, and the picture shifts.</p>
+<div class="highlight">And this is where many organisations fall into what I call the <strong>Deletion Trap</strong>. A product appears unprofitable. The logical response: remove the SKU. But when that product disappears, the costs it was absorbing do not. They move elsewhere. The remaining portfolio absorbs them. The upside is capped: the maximum possible improvement equals exactly the contribution that product was generating. The downside is open-ended.</div>
+<p>This is not an argument against ever discontinuing a product. It is an argument for simulating what happens to the rest of the portfolio before pulling the trigger. Without that simulation, organisations end up running on a treadmill — cutting, reallocating, cutting again — without the total cost base ever actually shrinking.</p>
+<div class="tags"><span class="tag">Deletion Trap</span><span class="tag">Overhead Allocation</span><span class="tag">MC/PROCO/CEBIT</span></div>
+</article>
+
+<!-- POST 2.1 -->
+<article id="post-2-1">
+<div class="meta">Chapter 2 · Post 2.1</div>
+<img src="img/Post2_2.jpeg" alt="Why Planning Systems Get Ignored" class="article-img">
+<h2>Why No-Touch Planning Still Ends in Spreadsheets</h2>
+<p>No-Touch Planning is often presented as the natural end-state of supply chain maturity. Yet many organisations still return to spreadsheets.</p>
+<p>This is often explained as a trust problem. But the issue is usually more structural.</p>
+<p>Planning systems do not all do the same job. Some mainly consolidate plans — they collect inputs from different functions, align them, and create a single number. Others are the place where plans are actually formed, adjusted as conditions change, and tested through immediate simulation of operational and financial consequences.</p>
+<p><strong>Only the second type moves an organisation materially closer to No-Touch Planning.</strong></p>
+<p>Not every planning decision requires the same degree of system sophistication. In some categories, the room for optimisation is genuinely narrow. Shelf life, production cadence, and other hard constraints already determine most of the answer. In such cases, static rules may be adequate.</p>
+<p>In others, they are not. Where demand variability is high, where SKU and lot complexity matter, and where inventory decisions carry meaningful financial consequences, the gap between static logic and system-led simulation becomes substantial. <strong>That is where regression to spreadsheets destroys the most value.</strong></p>
+<div class="highlight">Safety stock illustrates the point. In volatile and financially material categories, safety stock should not remain a fixed inheritance from legacy logic. It should move as demand moves, as lead times shift, and as inventory positions change. And the implications should be visible immediately for service, inventory, operations, and margin.</div>
+<p>If the system cannot absorb change within the planning logic itself — if it cannot show the effect on service, inventory, operations, and margin without manual reconstruction — then the organisation may plan in the system, but it will continue to decide in the spreadsheet.</p>
+<div class="tags"><span class="tag">No-Touch Planning</span><span class="tag">Systems</span><span class="tag">Spreadsheet</span></div>
+</article>
+
+<!-- POST 2.2 -->
+<article id="post-2-2">
+<div class="meta">Chapter 2 · Post 2.2</div>
+<img src="img/Post2_3.jpeg" alt="Decision Architecture" class="article-img">
+<h2>Before Automation, Define the Decision Architecture</h2>
+<p>One of the most common questions in supply chain transformation is this: Can this decision be automated?</p>
+<p>It sounds reasonable. But it may not be the first question. A more fundamental one comes earlier: <strong>What decision, exactly, is the system being asked to make?</strong></p>
+<p>Is the system adjusting forecast? Recommending replenishment? Reallocating constrained stock? Approving an expedite? Breaking a frozen zone? Or simply surfacing an alert? These are not the same decision. Yet they are often treated as one automation agenda.</p>
+<p>A system cannot meaningfully automate a decision that the organisation itself has not clearly defined.</p>
+<p>For a planning decision to become operationally credible, five things need to be explicit.</p>
+<p>First, <strong>the decision itself</strong>. What is being decided? Second, <strong>the impact</strong> — not in KPI terms, but in margin terms. What is the financial cost of getting this decision wrong? Third, <strong>the constraints</strong>. What must not be broken, even if the model finds an attractive answer? Fourth, <strong>the escalation path</strong>. What can run automatically, and what still requires human intervention? Fifth, <strong>the feedback loop</strong>. How will the organisation learn from overrides, exceptions, and outcome gaps?</p>
+<div class="highlight">The model recommends discontinuing a SKU. The analysis looks sound. But no one has asked whether the overhead allocated to that SKU disappears with it — or simply gets redistributed across what remains. The planner hesitates. Commercial challenges it. Finance tries to reconcile it afterwards. What looked like automation becomes another version of assisted manual planning. Not because the model was necessarily wrong. But because the decision was never architected to absorb its own consequences.</div>
+<div class="tags"><span class="tag">Decision Architecture</span><span class="tag">Governance</span><span class="tag">No-Touch Planning</span></div>
+</article>
+
+<!-- POST 2.3 -->
+<article id="post-2-3">
+<div class="meta">Chapter 2 · Post 2.3</div>
+<img src="img/Post2_4.jpeg" alt="Planning vs Intelligence" class="article-img">
+<h2>A Planning System Is Not Yet Intelligence</h2>
+<p>Many organisations already have a planning system. That is not the same as having intelligence.</p>
+<p>Planning tells you what the rules say should happen next. Reorder points, safety stock, MOQ, production sequences — the system applies the logic it was given.</p>
+<p><strong>Intelligence tells you what happens to the margin when those rules are broken — and whether breaking them might actually be the right answer.</strong></p>
+<p>The distinction matters because in most supply chains, three structural barriers prevent SCM from functioning as a profit-decision orchestrator.</p>
+<p>First, <strong>the role is defined too narrowly</strong>. SCM is seen as an execution function — responsible for fulfilling demand, not shaping it. When profitability conversations happen, SCM is often not at the table.</p>
+<p>Second, <strong>bandwidth is consumed by firefighting</strong>. Planners spend the majority of their time managing exceptions, chasing shortages, and reconciling data between systems. There is little capacity left for the kind of forward-looking analysis that intelligence requires.</p>
+<p>Third, <strong>data is fragmented</strong>. Cost data sits in Finance. Demand signals sit in Sales. Production constraints sit in Operations. Inventory positions sit in Logistics. Assembling a cross-functional view for a single decision requires manual effort that cannot scale.</p>
+<div class="highlight">A planning system applies rules. Intelligence reveals the financial consequences of those rules — and creates the option to change them before the damage is done. That is the gap between operating and designing.</div>
+<div class="tags"><span class="tag">Intelligence</span><span class="tag">Planning vs. Simulation</span><span class="tag">SCM Role</span></div>
+</article>
+
+</div>
+
+<footer>
+  <p>© 2026 Nex & Bridge Co., Ltd. — SCM Intelligence & Data Analytics</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nex & Bridge — SCM Agentic Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--navy:#00338D;--navy2:#001F5B;--navy3:#0A2463;--navylight:#E8EDF5;
+--bg:#ffffff;--bg2:#F4F6FA;--bg3:#E8EDF5;--bg4:#D6DEEE;
+--text:#1E293B;--text2:#475569;--text3:#7C8DB5;
+--accent:#00338D;--accent2:#0077C8;--accent3:#00A3E0;
+--white:#ffffff;--red:#C8102E;--gold:#C69214;
+--font:'DM Sans',sans-serif;--mono:'JetBrains Mono',monospace;--display:'Playfair Display',serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;overflow-x:hidden}
+::selection{background:var(--navy);color:#fff}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,51,141,.08);transition:all .3s}
+.logo{font-family:var(--font);font-weight:700;font-size:1.15rem;letter-spacing:-.02em;color:var(--navy)}
+.logo span{color:var(--accent2);font-weight:300}
+nav ul{display:flex;gap:2.2rem;list-style:none}
+nav a{color:var(--text2);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color .2s}
+nav a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff;padding:.55rem 1.4rem;border-radius:4px;font-weight:600;font-size:.78rem;letter-spacing:.06em}
+.nav-cta:hover{color:#fff!important;background:var(--navy2)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(165deg,var(--navy) 0%,var(--navy2) 55%,#001240 100%)}
+.hero::before{content:'';position:absolute;top:-30%;right:-20%;width:800px;height:800px;background:radial-gradient(circle,rgba(0,119,200,.15)0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-20%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,163,224,.08)0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;padding:8rem 3rem 4rem}
+.hero-label{font-family:var(--mono);font-size:.72rem;color:var(--accent3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.hero-label::before{content:'';width:32px;height:1px;background:var(--accent3)}
+.hero h1{font-family:var(--display);font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:700;color:#fff;line-height:1.12;max-width:820px;margin-bottom:1.8rem}
+.hero h1 em{font-style:italic;color:var(--accent3);font-weight:400}
+.hero-sub{font-size:1.15rem;color:rgba(255,255,255,.7);max-width:600px;line-height:1.75;margin-bottom:2.8rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:4px;font-size:.85rem;font-weight:600;letter-spacing:.04em;text-decoration:none;transition:all .25s;cursor:pointer;border:none}
+.btn-primary{background:#fff;color:var(--navy)}
+.btn-primary:hover{opacity:.92;transform:translateY(-1px)}
+.btn-ghost{border:1px solid rgba(255,255,255,.3);color:#fff;background:transparent}
+.btn-ghost:hover{border-color:#fff;color:#fff}
+.hero-stats{display:flex;gap:3.5rem;margin-top:4.5rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.12)}
+.hero-stat .num{font-family:var(--mono);font-size:2rem;font-weight:700;color:var(--accent3)}
+.hero-stat .lbl{font-size:.75rem;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase;margin-top:.25rem}
+
+/* SECTIONS */
+section{padding:7rem 3rem}
+.container{max-width:1200px;margin:0 auto}
+.section-label{font-family:var(--mono);font-size:.7rem;color:var(--accent2);letter-spacing:.18em;text-transform:uppercase;margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
+.section-label::before{content:'';width:24px;height:1px;background:var(--accent2)}
+.section-title{font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:1rem}
+.section-desc{font-size:1rem;color:var(--text2);max-width:600px;line-height:1.75;margin-bottom:3.5rem}
+
+/* PROBLEMS */
+#problems{background:var(--bg2)}
+.problems-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
+.problem-card{background:var(--white);border:1px solid rgba(0,51,141,.08);border-radius:8px;padding:2.2rem;position:relative;overflow:hidden;transition:all .3s;box-shadow:0 1px 3px rgba(0,51,141,.04)}
+.problem-card:hover{border-color:rgba(0,51,141,.18);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,51,141,.08)}
+.problem-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--navy),var(--accent2));opacity:0;transition:opacity .3s}
+.problem-card:hover::before{opacity:1}
+.problem-icon{width:42px;height:42px;border-radius:8px;background:rgba(0,51,141,.06);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;font-size:1.1rem}
+.problem-card h3{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:.7rem}
+.problem-card p{font-size:.88rem;color:var(--text2);line-height:1.7}
+.problem-tag{display:inline-block;font-family:var(--mono);font-size:.65rem;color:var(--navy);letter-spacing:.1em;background:rgba(0,51,141,.06);padding:.25rem .7rem;border-radius:3px;margin-top:1rem}
+.problem-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3rem;padding:2rem;background:var(--white);border:1px solid rgba(0,51,141,.08);border-radius:10px;box-shadow:0 2px 8px rgba(0,51,141,.04)}
+.pstat{text-align:center;padding:0 1rem}
+.pstat:not(:last-child){border-right:1px solid rgba(0,51,141,.08)}
+.pstat-num{font-family:var(--mono);font-size:2.2rem;font-weight:700;color:var(--navy);line-height:1}
+.pstat-label{font-size:.78rem;color:var(--text2);line-height:1.5;margin-top:.5rem}
+.problem-scene{font-size:.8rem;color:var(--text3);line-height:1.65;margin-top:.8rem;padding:.8rem;background:var(--bg2);border-radius:4px;border-left:2px solid rgba(0,51,141,.15)}
+.problem-scene strong{color:var(--text2);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}
+
+/* FRAMEWORK */
+#framework{background:var(--bg)}
+.fw-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.fw-left h3{font-size:1.5rem;font-weight:700;color:var(--navy);margin-bottom:1rem}
+.fw-left p{color:var(--text2);font-size:.92rem;line-height:1.75;margin-bottom:1.5rem}
+.fw-workflow{display:flex;gap:.5rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.fw-step{background:var(--navy);border:none;padding:.6rem 1.1rem;border-radius:4px;font-size:.78rem;font-weight:600;color:#fff;display:flex;align-items:center;gap:.4rem}
+.fw-step .arrow{color:var(--accent3);font-size:.7rem}
+.axes-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.axis-item{background:var(--bg2);border:1px solid rgba(0,51,141,.06);border-radius:6px;padding:.9rem 1rem;transition:all .25s;cursor:default}
+.axis-item:hover{border-color:rgba(0,51,141,.2);background:var(--bg3);box-shadow:0 2px 8px rgba(0,51,141,.06)}
+.axis-num{font-family:var(--mono);font-size:.65rem;color:var(--accent2);letter-spacing:.08em;margin-bottom:.2rem}
+.axis-name{font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:.15rem}
+.axis-q{font-size:.72rem;color:var(--text3);font-style:italic}
+.fw-right{position:relative}
+.arch-card{background:var(--navy);border:none;border-radius:10px;padding:2rem;position:relative;overflow:hidden}
+.arch-card h4{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:1.5rem;text-align:center}
+.layer{display:flex;align-items:stretch;gap:1rem;margin-bottom:.8rem}
+.layer-num{width:32px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.layer-num span{font-family:var(--mono);font-size:.65rem;color:var(--accent3);writing-mode:vertical-lr;transform:rotate(180deg);letter-spacing:.1em}
+.layer-content{flex:1;border-radius:6px;padding:1rem 1.2rem;border-left:3px solid}
+.l4{background:rgba(0,163,224,.1);border-color:var(--accent3)}
+.l3{background:rgba(0,119,200,.1);border-color:var(--accent2)}
+.l2{background:rgba(198,146,20,.1);border-color:var(--gold)}
+.l1{background:rgba(200,16,46,.08);border-color:var(--red)}
+.layer-content h5{font-size:.8rem;font-weight:700;color:#fff;margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.05em}
+.layer-content p{font-size:.72rem;color:rgba(255,255,255,.6);line-height:1.5}
+.principles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.6rem;margin-top:1.2rem}
+.principle{text-align:center;padding:.7rem .5rem;border-radius:4px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
+.principle strong{display:block;font-size:.68rem;color:var(--accent3);margin-bottom:.15rem;letter-spacing:.05em}
+.principle span{font-size:.62rem;color:rgba(255,255,255,.5)}
+
+/* AGENTS */
+#agents{background:var(--bg2)}
+.agents-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.2rem}
+.agent-card{background:var(--white);border:1px solid rgba(0,51,141,.08);border-radius:8px;padding:1.8rem;position:relative;transition:all .3s;box-shadow:0 1px 3px rgba(0,51,141,.04)}
+.agent-card:hover{border-color:rgba(0,51,141,.18);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,51,141,.08)}
+.agent-header{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.agent-badge{font-family:var(--mono);font-size:.6rem;color:#fff;background:var(--navy);padding:.2rem .5rem;border-radius:3px;font-weight:700;letter-spacing:.08em}
+.agent-card h3{font-size:.95rem;font-weight:700;color:var(--navy)}
+.agent-card>p{font-size:.82rem;color:var(--text2);line-height:1.65;margin-bottom:1rem}
+.agent-detail{font-size:.72rem;color:var(--text3);line-height:1.6;padding:.8rem;background:var(--bg2);border-radius:4px;border-left:2px solid var(--navy)}
+.agent-detail strong{color:var(--text2)}
+
+/* SERVICES */
+#services{background:var(--bg)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.service-card{padding:2rem;border-radius:8px;border:1px solid rgba(0,51,141,.08);background:var(--bg2);transition:all .3s;position:relative}
+.service-card:hover{border-color:rgba(0,51,141,.2);box-shadow:0 4px 16px rgba(0,51,141,.06)}
+.service-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.service-card p{font-size:.82rem;color:var(--text2);line-height:1.65;margin-bottom:1rem}
+.service-meta{font-family:var(--mono);font-size:.65rem;color:var(--accent2);letter-spacing:.06em}
+
+/* INSIGHTS */
+#insights{background:var(--bg2)}
+.insights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
+.insight-card{background:var(--white);border:1px solid rgba(0,51,141,.06);border-radius:8px;overflow:hidden;transition:all .3s;box-shadow:0 1px 3px rgba(0,51,141,.04)}
+.insight-card:hover{border-color:rgba(0,51,141,.15);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,51,141,.06)}
+.insight-img{width:100%;height:180px;object-fit:cover;display:block}
+.insight-body{padding:1.5rem}
+.insight-cat{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);margin-bottom:.5rem}
+.insight-card h3{font-size:.95rem;font-weight:600;color:var(--navy);line-height:1.45;margin-bottom:.5rem}
+.insight-card p{font-size:.78rem;color:var(--text3);line-height:1.6}
+.insight-chapter{display:inline-block;font-family:var(--mono);font-size:.6rem;color:var(--text3);border:1px solid rgba(0,51,141,.1);padding:.15rem .5rem;border-radius:3px;margin-top:.8rem}
+
+/* CONTACT */
+#contact{background:var(--bg)}
+
+/* OPERATING MODEL */
+#model{background:var(--bg)}
+.model-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.model-flow{display:flex;flex-direction:column;gap:1rem}
+.model-node{padding:1.5rem;border-radius:8px;border:1px solid rgba(0,51,141,.08);background:var(--bg2);position:relative}
+.model-node.hub{background:var(--navy);color:#fff;border:none}
+.model-node.hub h4,.model-node.hub p{color:#fff}
+.model-node.hub p{opacity:.7}
+.model-node h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.model-node p{font-size:.8rem;color:var(--text2);line-height:1.6}
+.model-arrow{text-align:center;font-size:1.2rem;color:var(--accent2);line-height:1}
+.model-right h3{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:1rem}
+.channel-row{display:flex;gap:.8rem;margin-bottom:.8rem}
+.channel-badge{font-family:var(--mono);font-size:.65rem;background:var(--navy);color:#fff;padding:.3rem .7rem;border-radius:3px;white-space:nowrap}
+.channel-desc{font-size:.8rem;color:var(--text2);line-height:1.5}
+.metric-principle{margin-top:2rem;padding:1.5rem;background:var(--bg2);border-radius:8px;border:1px solid rgba(0,51,141,.08)}
+.metric-principle h4{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.8rem}
+.metric-table{width:100%;border-collapse:collapse;font-size:.78rem}
+.metric-table th{text-align:left;padding:.5rem .6rem;background:var(--navy);color:#fff;font-weight:600;font-size:.7rem;letter-spacing:.04em;text-transform:uppercase}
+.metric-table td{padding:.5rem .6rem;border-bottom:1px solid rgba(0,51,141,.06);color:var(--text2)}
+.metric-table tr:hover td{background:rgba(0,51,141,.02)}
+
+/* TECH & ROADMAP & RESULTS */
+#platform{background:var(--bg2)}
+.platform-sections{display:flex;flex-direction:column;gap:3.5rem}
+.plat-sub{margin-bottom:1.5rem}
+.plat-sub h3{font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.plat-sub p{font-size:.88rem;color:var(--text2)}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem}
+.tech-item{padding:1rem;background:var(--white);border:1px solid rgba(0,51,141,.06);border-radius:6px}
+.tech-item .tech-cat{font-family:var(--mono);font-size:.6rem;color:var(--accent2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.3rem}
+.tech-item .tech-name{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:.2rem}
+.tech-item .tech-use{font-size:.75rem;color:var(--text3);line-height:1.5}
+.roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.phase-card{padding:1.5rem;background:var(--white);border:1px solid rgba(0,51,141,.06);border-radius:8px;border-top:3px solid var(--navy)}
+.phase-card.active{border-top-color:var(--accent2);box-shadow:0 4px 16px rgba(0,51,141,.08)}
+.phase-label{font-family:var(--mono);font-size:.65rem;color:var(--accent2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.4rem}
+.phase-card h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.6rem}
+.phase-card p{font-size:.78rem;color:var(--text2);line-height:1.6;margin-bottom:.5rem}
+.phase-agents{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.6rem}
+.phase-agent{font-family:var(--mono);font-size:.58rem;background:rgba(0,51,141,.06);color:var(--navy);padding:.2rem .5rem;border-radius:3px}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.result-card{text-align:center;padding:1.5rem 1rem;background:var(--white);border:1px solid rgba(0,51,141,.06);border-radius:8px}
+.result-num{font-family:var(--mono);font-size:1.8rem;font-weight:700;color:var(--navy);line-height:1}
+.result-label{font-size:.78rem;color:var(--text2);margin-top:.4rem;line-height:1.4}
+.bench-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.bench-card{padding:1.5rem;background:var(--white);border:1px solid rgba(0,51,141,.06);border-radius:8px}
+.bench-card h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.bench-card .bench-what{font-size:.8rem;color:var(--text2);line-height:1.6;margin-bottom:.6rem}
+.bench-card .bench-result{font-size:.78rem;color:var(--accent2);font-weight:600}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-info h3{font-size:1.3rem;color:var(--navy);font-weight:700;margin-bottom:1rem}
+.contact-info p{color:var(--text2);font-size:.92rem;line-height:1.75;margin-bottom:2rem}
+.contact-detail{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;font-size:.88rem;color:var(--text2)}
+.contact-detail span{color:var(--navy)}
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.contact-form input,.contact-form textarea,.contact-form select{background:var(--bg2);border:1px solid rgba(0,51,141,.1);color:var(--text);padding:.85rem 1rem;border-radius:4px;font-family:var(--font);font-size:.88rem;outline:none;transition:border .2s}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--navy)}
+.contact-form textarea{min-height:120px;resize:vertical}
+.contact-form select option{background:var(--bg2)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+/* FOOTER */
+footer{padding:2.5rem 3rem;border-top:1px solid rgba(0,51,141,.08);text-align:center;background:var(--navy)}
+footer p{font-size:.75rem;color:rgba(255,255,255,.5)}
+
+/* HAMBURGER */
+.nav-burger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;z-index:101}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;flex-wrap:wrap}
+  .nav-burger{display:flex}
+  nav ul{display:none;flex-direction:column;width:100%;gap:0;padding-top:1rem;margin-top:1rem;border-top:1px solid rgba(0,51,141,.08)}
+  nav.open ul{display:flex}
+  nav.open .nav-burger span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+  nav.open .nav-burger span:nth-child(2){opacity:0}
+  nav.open .nav-burger span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+  nav ul li{padding:.6rem 0}
+  nav ul a{font-size:.9rem}
+  .nav-cta{display:inline-block;margin-top:.5rem}
+  section{padding:4rem 1.5rem}
+  .hero-inner{padding:6rem 1.5rem 3rem}
+  .hero h1{font-size:2rem}
+  .hero-stats{flex-wrap:wrap;gap:2rem}
+  .fw-wrapper{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .agents-grid{grid-template-columns:1fr}
+  .principles{grid-template-columns:1fr}
+  .problems-grid{grid-template-columns:1fr}
+  .problem-stats{grid-template-columns:1fr;gap:1rem}
+  .pstat:not(:last-child){border-right:none;border-bottom:1px solid rgba(0,51,141,.08);padding-bottom:1rem}
+  .services-grid{grid-template-columns:1fr}
+  .insights-grid{grid-template-columns:1fr}
+  .model-grid{grid-template-columns:1fr}
+  .roadmap{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:1fr 1fr}
+  .bench-grid{grid-template-columns:1fr}
+  .tech-grid{grid-template-columns:1fr}
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.animate{opacity:1}
+@media(prefers-reduced-motion:no-preference){
+  .animate{opacity:0;transform:translateY(30px)}
+  .animate.visible{animation:fadeUp .6s ease forwards}
+}
+.delay-1{animation-delay:.1s}.delay-2{animation-delay:.2s}.delay-3{animation-delay:.3s}.delay-4{animation-delay:.4s}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Nex <span>&</span> Bridge</div>
+  <button class="nav-burger" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="#problems" onclick="document.querySelector('nav').classList.remove('open')">Problems</a></li>
+    <li><a href="#framework" onclick="document.querySelector('nav').classList.remove('open')">Framework</a></li>
+    <li><a href="#agents" onclick="document.querySelector('nav').classList.remove('open')">Agents</a></li>
+    <li><a href="#platform" onclick="document.querySelector('nav').classList.remove('open')">Platform</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="document.querySelector('nav').classList.remove('open')">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">SCM Agentic Intelligence</div>
+    <h1>Your ERP tells you what happened. We simulate <em>what should happen next.</em></h1>
+    <p class="hero-sub">Independent SCM simulation platform that turns cost-structure visibility into executable profit decisions — without replacing your existing systems.</p>
+    <div class="hero-btns">
+      <a href="#framework" class="btn btn-primary">See Our Framework →</a>
+      <a href="#contact" class="btn btn-ghost">Book a Discovery Call</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">8</div><div class="lbl">Analytical Axes</div></div>
+      <div class="hero-stat"><div class="num">6</div><div class="lbl">AI Agents</div></div>
+      <div class="hero-stat"><div class="num">4</div><div class="lbl">Architecture Layers</div></div>
+      <div class="hero-stat"><div class="num">&lt;3min</div><div class="lbl">Optimisation Time</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section id="problems">
+  <div class="container">
+    <div class="section-label">The Problems We Solve</div>
+    <h2 class="section-title">The structural traps hiding inside your supply chain</h2>
+    <p class="section-desc">These are not failures of effort or talent. They are architectural defects in how decisions connect to financial outcomes. In every portfolio we have examined — across Korea, the US, and Japan — these patterns repeat.</p>
+
+    <div class="problem-stats animate">
+      <div class="pstat"><div class="pstat-num">15%</div><div class="pstat-label">of SKUs actively destroying value in a typical portfolio — not a rounding error, a structural feature</div></div>
+      <div class="pstat"><div class="pstat-num">31%</div><div class="pstat-label">of logistics inventory sitting beyond 90 days — capital trapped, options narrowing daily</div></div>
+      <div class="pstat"><div class="pstat-num">66%</div><div class="pstat-label">of C-level leaders dissatisfied with AI progress — the gap is not technology, it is decision architecture</div></div>
+    </div>
+
+    <div class="problems-grid">
+      <div class="problem-card animate">
+        <div class="problem-icon">⚠</div>
+        <h3>The Deletion Trap</h3>
+        <p>You removed the loss-making SKU. Costs didn't shrink — they redistributed across remaining products, creating new losses where none existed before.</p>
+        <div class="problem-scene"><strong>What happens:</strong> CEBIT reports 83 SKUs as loss-making. You discontinue them. But PROCO analysis reveals many were actually generating cash. The overhead they absorbed migrates to survivors. The upside was capped at exactly that SKU's contribution. The downside is open-ended.</div>
+        <div class="problem-tag">Overhead reallocation</div>
+      </div>
+      <div class="problem-card animate delay-1">
+        <div class="problem-icon">📊</div>
+        <h3>The Forecast Obsession</h3>
+        <p>Spending months improving forecast accuracy by 2%, while structural margin leakage from MOQ conflicts, pricing erosion, and bottleneck misallocation goes entirely undiagnosed.</p>
+        <div class="problem-scene"><strong>What happens:</strong> The organisation invests in ML-based demand forecasting. Accuracy improves from 70% to 72%. Meanwhile, overstock from MOQ-demand mismatch, promotional discounts exceeding the Golden Zone, and sub-optimal production sequencing silently destroy margin across hundreds of tail SKUs. No one measures the ROI of forecast improvement against the cost of structural neglect.</div>
+        <div class="problem-tag">Misallocated effort</div>
+      </div>
+      <div class="problem-card animate delay-2">
+        <div class="problem-icon">📋</div>
+        <h3>The Spreadsheet Ceiling</h3>
+        <p>Your planner manages 500 SKUs × channels × lots in Excel. The real question isn't what they're doing — it's what they structurally cannot see.</p>
+        <div class="problem-scene"><strong>What happens:</strong> Demand changes in the spreadsheet. But the supply plan doesn't auto-recalculate — the planner manually re-runs it hours later. That time gap is where stockouts and overstock are born. Lot-level shelf-life matching across temperature zones, channel-specific expiry rules, and cross-site rebalancing exceed human verification capacity at any meaningful scale.</div>
+        <div class="problem-tag">Cognitive limit</div>
+      </div>
+      <div class="problem-card animate delay-3">
+        <div class="problem-icon">🔄</div>
+        <h3>The Margin Inversion</h3>
+        <p>The highest unit-margin product consumes disproportionate bottleneck time. Prioritising it actually destroys total profit.</p>
+        <div class="problem-scene"><strong>What happens:</strong> Product B has $30 margin vs. Product A's $20. Every scheduler picks B first. But B takes 3 hours on the bottleneck while A takes 1. A generates $20/hr; B generates $10/hr. Prioritising B costs $600/week in a real scenario. Without T_eff (contribution per bottleneck-hour), the inversion is invisible — and it persists for years.</div>
+        <div class="problem-tag">T_eff blindness</div>
+      </div>
+      <div class="problem-card animate delay-4">
+        <div class="problem-icon">⏰</div>
+        <h3>The Two Clocks</h3>
+        <p>Holding cost accumulates while negotiation leverage declines. Once the curves cross, your options vanish.</p>
+        <div class="problem-scene"><strong>What happens:</strong> Three months ago, a 10% markdown would have cleared the stock. Sales said "let's park it." Marketing said "wait until it stops moving." Today the shelf life is critical, 40% off won't move it, and the channel isn't interested. They held firm to protect the margin. The margin was destroyed anyway. Product × lifecycle × season × channel × location — each combination draws a different curve. A single formula is impossible.</div>
+        <div class="problem-tag">Disposition timing</div>
+      </div>
+      <div class="problem-card animate delay-4">
+        <div class="problem-icon">🏗</div>
+        <h3>The Fragmented Simulation</h3>
+        <p>Your deletion model assumes freed capacity is absorbed. Your capacity model assumes the current mix holds. Your inventory model assumes the current plan is stable. Change one and the rest are already wrong.</p>
+        <div class="problem-scene"><strong>What happens:</strong> Different teams run different models, in different systems, on different cycles. Each model is internally consistent — but their boundary conditions are incompatible. Deleting an SKU changes the capacity mix. Changing the mix changes inventory behaviour. Changing inventory changes markdown timing. Every simulation's output is the next simulation's input. Without a connected chain, each "optimisation" is a local improvement that distorts the whole.</div>
+        <div class="problem-tag">Model disconnection</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRAMEWORK -->
+<section id="framework">
+  <div class="container">
+    <div class="section-label">Profit-Oriented SCM Framework</div>
+    <h2 class="section-title">8 analytical axes, one continuous workflow</h2>
+    <p class="section-desc">Every inventory position is evaluated not as cost, but as an investment asset — measured by its financial contribution across eight dimensions.</p>
+    <div class="fw-wrapper">
+      <div class="fw-left animate">
+        <div class="fw-workflow">
+          <div class="fw-step">Monitor</div>
+          <div class="fw-step"><span class="arrow">→</span> Diagnose</div>
+          <div class="fw-step"><span class="arrow">→</span> Simulate</div>
+          <div class="fw-step"><span class="arrow">→</span> Action & Track</div>
+        </div>
+        <div class="axes-grid">
+          <div class="axis-item"><div class="axis-num">AXIS 01</div><div class="axis-name">Profitability</div><div class="axis-q">Is this inventory making money?</div></div>
+          <div class="axis-item"><div class="axis-num">AXIS 02</div><div class="axis-name">Turnover</div><div class="axis-q">How fast does it sell?</div></div>
+          <div class="axis-item"><div class="axis-num">AXIS 03</div><div class="axis-name">Variability</div><div class="axis-q">Can demand be predicted?</div></div>
+          <div class="axis-item"><div class="axis-num">AXIS 04</div><div class="axis-name">Structural Conflict</div><div class="axis-q">Why does overstock occur?</div></div>
+          <div class="axis-item"><div class="axis-num">AXIS 05</div><div class="axis-name">Space & Cost</div><div class="axis-q">What does it cost to hold?</div></div>
+          <div class="axis-item"><div class="axis-num">AXIS 06</div><div class="axis-name">Service Level</div><div class="axis-q">What is the stockout risk?</div></div>
+          <div class="axis-item"><div class="axis-num">AXIS 07</div><div class="axis-name">Network Allocation</div><div class="axis-q">Is it in the right place?</div></div>
+          <div class="axis-item"><div class="axis-num">AXIS 08</div><div class="axis-name">Disposition</div><div class="axis-q">Dispose or hold — which is better?</div></div>
+        </div>
+        <p style="margin-top:1.5rem;font-size:.82rem;color:var(--text3);line-height:1.7"><strong style="color:var(--navy)">Decision metric principle:</strong> MC/BH for short-term scheduling (fixed costs don't change with sequencing). PROCO for portfolio decisions (captures SKU-specific fixed costs). CEBIT for reporting only — never for decisions.</p>
+      </div>
+      <div class="fw-right animate delay-2">
+        <div class="arch-card">
+          <h4>4-Layer Intelligence Architecture</h4>
+          <div class="layer"><div class="layer-num"><span>L4</span></div><div class="layer-content l4"><h5>Execution Handoff</h5><p>Confirmed daily production → API to APS/ERP → MES. Human-in-the-Loop: the planner always has the final word.</p></div></div>
+          <div class="layer"><div class="layer-num"><span>L3</span></div><div class="layer-content l3"><h5>UI & AI Interface</h5><p>Streamlit dashboard + Cortex AI Agent. Natural language → mathematical constraints. Scenario comparison in seconds.</p></div></div>
+          <div class="layer"><div class="layer-num"><span>L2</span></div><div class="layer-content l2"><h5>Optimisation Engine</h5><p>LP/MIP solver on Snowflake SPCS. Objective: maximise Σ(MC/BH × volume). 500 SKU × 10 sites × 14 days in under 3 minutes.</p></div></div>
+          <div class="layer"><div class="layer-num"><span>L1</span></div><div class="layer-content l1"><h5>Unified Data</h5><p>CDC → Dynamic Tables. Real-time Cost Table: SKU × channel × site PROCO. Cost Drivers auto-refreshed.</p></div></div>
+          <div class="principles">
+            <div class="principle"><strong>Zero Data Movement</strong><span>Compute goes to data, not the other way round</span></div>
+            <div class="principle"><strong>AI as Translator</strong><span>Shop-floor language ↔ mathematical constraints</span></div>
+            <div class="principle"><strong>Intelligence Layering</strong><span>Add a brain on top. Don't rip and replace.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATING MODEL -->
+<section id="model">
+  <div class="container">
+    <div class="section-label">Operating Model</div>
+    <h2 class="section-title">SCM Intelligence as a Service</h2>
+    <p class="section-desc">Each subsidiary building its own AI system faces local talent constraints and capability limits. A centralised service model eliminates this barrier.</p>
+    <div class="model-grid">
+      <div class="model-flow animate">
+        <div class="model-node hub">
+          <h4>Central Intelligence Hub</h4>
+          <p>Global data integration, simulation engine operation, Impact alternative generation, algorithm refinement. One team serves all subsidiaries from a single cloud platform.</p>
+        </div>
+        <div class="model-arrow">↕</div>
+        <div class="model-node">
+          <h4>Local Decision Nodes</h4>
+          <p>Each subsidiary's planner receives pre-computed Impact alternatives, interprets them in local context, selects the preferred scenario, and executes. No local AI expertise required.</p>
+        </div>
+        <div class="model-arrow">↕</div>
+        <div class="model-node">
+          <h4>Feedback Loop</h4>
+          <p>Execution results flow back to the Hub. Post-Game Analysis compares predicted vs. actual outcomes. Algorithms learn continuously. Override patterns are studied and absorbed.</p>
+        </div>
+        <div style="margin-top:1.5rem;padding:1rem;background:var(--bg2);border-radius:6px;border-left:2px solid var(--navy)">
+          <p style="font-size:.8rem;color:var(--text2);line-height:1.6;margin:0"><strong style="color:var(--navy)">Why this model works:</strong> Short lead-time environments receive capacity-based production mix scenarios. Long lead-time environments receive global parts allocation scenarios. Same platform, different outputs — tailored to the operational reality.</p>
+        </div>
+      </div>
+      <div class="animate delay-2">
+        <div class="model-right">
+          <h3>Service Channels</h3>
+          <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem">
+            <div><div class="channel-row"><span class="channel-badge">STREAMLIT</span><span class="channel-desc"><strong>Structured reports:</strong> auto-generated diagnostics, KPI monitoring, visual scenario comparison</span></div></div>
+            <div><div class="channel-row"><span class="channel-badge">CORTEX AI</span><span class="channel-desc"><strong>Unstructured deep analysis:</strong> natural language query → data retrieval → analysis → recommendation</span></div></div>
+            <div><div class="channel-row"><span class="channel-badge">API HANDOFF</span><span class="channel-desc"><strong>Execution bridge:</strong> confirmed optimisation results auto-transmitted to existing APS/ERP</span></div></div>
+          </div>
+        </div>
+        <div class="metric-principle">
+          <h4>Decision Metric Principle (이원화 원칙)</h4>
+          <table class="metric-table">
+            <thead><tr><th>Decision Type</th><th>Metric</th><th>Rationale</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Production scheduling</strong><br>(daily mix)</td><td>MC / BH</td><td>Only variable costs change with sequencing order. Including fixed costs in the objective function creates distortion.</td></tr>
+              <tr><td><strong>Portfolio decisions</strong><br>(delete / keep / reprice)</td><td>PROCO</td><td>Captures SKU-specific fixed costs: listing fees, promotions, dedicated overheads. MC alone cannot see these.</td></tr>
+              <tr><td><strong>Enterprise reporting</strong></td><td>CEBIT</td><td>Reference only. Never for decisions — indirect cost allocation makes it structurally misleading for action.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENTS -->
+<section id="agents">
+  <div class="container">
+    <div class="section-label">SCM Agentic Intelligence</div>
+    <h2 class="section-title">Six autonomous agents, one unified platform</h2>
+    <p class="section-desc">Each agent diagnoses, simulates, and recommends — with full financial impact visibility. The planner confirms. The system executes.</p>
+    <div class="agents-grid">
+      <div class="agent-card animate">
+        <div class="agent-header"><span class="agent-badge">AGENT 01</span><h3>SKU Rationalisation</h3></div>
+        <p>Automatically diagnoses the entire SKU portfolio: where money leaks, why it leaks, how severe it is, and what to do. Classifies every SKU into Deletion / Rationalisation / Normal with Track assignment.</p>
+        <div class="agent-detail"><strong>Key logic:</strong> MC/PROCO layered screening → demand health scoring (Green/Yellow/Red) → Deletion Trap simulation with overhead reallocation modelling → NPI gate assessment</div>
+      </div>
+      <div class="agent-card animate delay-1">
+        <div class="agent-header"><span class="agent-badge">AGENT 02</span><h3>Demand Validation</h3></div>
+        <p>Detects anomalous demand patterns, corrects ML over/under-prediction, and traces forecast error back to root causes — promotion miss, calendar gap, or POG omission.</p>
+        <div class="agent-detail"><strong>Key logic:</strong> YoY + trailing-3M comparison → weekday/month-start bias detection → channel-level MAPE/Bias tracking → 4-quadrant demand pattern classification (Steady/Seasonal/Odd/Random)</div>
+      </div>
+      <div class="agent-card animate delay-2">
+        <div class="agent-header"><span class="agent-badge">AGENT 03</span><h3>Safety Stock Optimisation</h3></div>
+        <p>Dynamically recalculates target inventory using a 3-axis classification (order frequency × CV × cycle regularity), replacing legacy fixed parameters with statistically grounded, tier-differentiated policies.</p>
+        <div class="agent-detail"><strong>Key logic:</strong> Aging ratio (elapsed ÷ shelf life × 100) for overstock detection — auto-adjusts across temperature zones. Periodic Review model with MOQ constraints. Winsorised σ for high-CV tails.</div>
+      </div>
+      <div class="agent-card animate delay-3">
+        <div class="agent-header"><span class="agent-badge">AGENT 04</span><h3>Production Mix Optimisation</h3></div>
+        <p>When capacity is constrained, simulates the optimal product mix using T_eff (MC per bottleneck hour) — not unit margin. Exposes margin-inversion traps invisible to traditional scheduling.</p>
+        <div class="agent-detail"><strong>Key logic:</strong> LP/MIP solver → Maximise Σ(MC/BH × volume) subject to demand, bottleneck capacity, shelf-life netting, MOQ, changeover. Switchable objective functions (margin → fill rate → claims).</div>
+      </div>
+      <div class="agent-card animate delay-4">
+        <div class="agent-header"><span class="agent-badge">AGENT 05</span><h3>Deletion Timing</h3></div>
+        <p>For confirmed loss-making SKUs, simulates the optimal discontinuation window — including fixed-cost redistribution impact, remaining inventory disposal, and dedicated raw-material run-down.</p>
+        <div class="agent-detail"><strong>Key logic:</strong> Deletion Trap simulation (mandatory) → Two Clocks analysis (holding cost vs. leverage decay) → BOM version mapping → PLAN/CONFIRM milestone auto-alerting</div>
+      </div>
+      <div class="agent-card animate delay-4">
+        <div class="agent-header"><span class="agent-badge">AGENT 06</span><h3>Disposition Optimisation</h3></div>
+        <p>For ageing and slow-moving inventory, calculates the optimal markdown / channel-switch / write-off combination using NRV-based TCO comparison and category-specific Golden Zone analysis.</p>
+        <div class="agent-detail"><strong>Key logic:</strong> TPD-PROCO correlation → Golden Zone identification (profit amount + margin rate simultaneously maximised) → B2C promotion vs. B2B liquidation vs. disposal TCO comparison</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORM: TECH + ROADMAP + RESULTS + BENCHMARKS -->
+<section id="platform">
+  <div class="container">
+    <div class="section-label">Platform & Roadmap</div>
+    <h2 class="section-title">Technology, timeline, and proven results</h2>
+    <p class="section-desc">Built on Snowflake AI Data Cloud. Designed for elastic simulation, not static reporting.</p>
+
+    <div class="platform-sections">
+
+      <!-- TECH STACK -->
+      <div>
+        <div class="plat-sub"><h3>Technology Stack</h3><p>Every component runs where the data lives — no extraction, no replication, no latency.</p></div>
+        <div class="tech-grid animate">
+          <div class="tech-item"><div class="tech-cat">Data Platform</div><div class="tech-name">Snowflake AI Data Cloud</div><div class="tech-use">Unified DW, Dynamic Tables, Marketplace (freight rates, FX, commodities, climate)</div></div>
+          <div class="tech-item"><div class="tech-cat">AI / LLM</div><div class="tech-name">Snowflake Cortex AI</div><div class="tech-use">Cortex Analyst + Search + Complete. Natural language agent orchestration</div></div>
+          <div class="tech-item"><div class="tech-cat">Optimisation</div><div class="tech-name">SPCS + PuLP/Gurobi</div><div class="tech-use">LP/MIP production mix optimisation. Elastic compute — scales for minutes, costs stop after</div></div>
+          <div class="tech-item"><div class="tech-cat">UI Layer</div><div class="tech-name">Streamlit</div><div class="tech-use">Monitor → Diagnose → Simulate → Action workflow. Scenario comparison dashboard</div></div>
+          <div class="tech-item"><div class="tech-cat">Planning System</div><div class="tech-name">Zionex GSCM</div><div class="tech-use">Weekly S&OP, MRP, PSI. System of Record for supply planning</div></div>
+          <div class="tech-item"><div class="tech-cat">Execution</div><div class="tech-name">SAP / Oracle EBS + MES</div><div class="tech-use">Transaction processing, production execution. Snowflake sits above, not instead of</div></div>
+          <div class="tech-item"><div class="tech-cat">Automation</div><div class="tech-name">Power Automate + UiPath</div><div class="tech-use">Orchestration conductor + GUI automation for legacy ERP interfaces</div></div>
+          <div class="tech-item"><div class="tech-cat">Future Path</div><div class="tech-name">RelationalAI</div><div class="tech-use">Knowledge graph + prescriptive reasoning. SKU-site-supplier-channel-BOM-equipment ontology</div></div>
+        </div>
+      </div>
+
+      <!-- ROADMAP -->
+      <div>
+        <div class="plat-sub"><h3>Execution Roadmap</h3><p>Phase-gated delivery. Each phase delivers a complete, usable capability — not a partial feature.</p></div>
+        <div class="roadmap animate">
+          <div class="phase-card active">
+            <div class="phase-label">Phase 1 · Q1–Q2</div>
+            <h4>Diagnostic Services</h4>
+            <p>Data model construction + Agent build → Analysis service delivery + Feedback improvement cycle for each agent.</p>
+            <div class="phase-agents">
+              <span class="phase-agent">SKU Rationalisation</span>
+              <span class="phase-agent">Demand Validation</span>
+              <span class="phase-agent">Safety Stock</span>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-label">Phase 2 · Q3–Q4</div>
+            <h4>Optimisation Services</h4>
+            <p>Production mix optimisation with LP/MIP solver. Deletion timing with overhead simulation. Disposition with Golden Zone analysis.</p>
+            <div class="phase-agents">
+              <span class="phase-agent">Production Mix</span>
+              <span class="phase-agent">Deletion Timing</span>
+              <span class="phase-agent">Disposition</span>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-label">Phase 3 · Year 2</div>
+            <h4>Autonomous Operations</h4>
+            <p>Daily S&OE profit optimisation with overnight Snowflake → Zionex sync. Factory sequencing PoC for high-changeover plants. Multi-objective function switching.</p>
+            <div class="phase-agents">
+              <span class="phase-agent">S&OE Daily Sync</span>
+              <span class="phase-agent">FP Sequencing PoC</span>
+              <span class="phase-agent">RelationalAI</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:1rem;padding:1rem;background:var(--white);border-radius:6px;border-left:2px solid var(--navy)">
+          <p style="font-size:.8rem;color:var(--text2);line-height:1.6;margin:0"><strong style="color:var(--navy)">Cut-over principle:</strong> Each phase replaces a complete workflow — not a partial feature. If a planner still needs to open Excel to finish the task, adoption fails. Even during phased rollout, the user experience must be: "This task no longer requires a spreadsheet."</p>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div>
+        <div class="plat-sub"><h3>Expected Impact</h3><p>Measured per-subsidiary PoC. These are operational targets, not projections.</p></div>
+        <div class="results-grid animate">
+          <div class="result-card"><div class="result-num">15%</div><div class="result-label">Inventory write-off reduction</div></div>
+          <div class="result-card"><div class="result-num">30%</div><div class="result-label">Loss-making SKU count resolved</div></div>
+          <div class="result-card"><div class="result-num">3hr→3min</div><div class="result-label">Scheduling cycle compressed</div></div>
+          <div class="result-card"><div class="result-num">75%</div><div class="result-label">Planner analysis time freed</div></div>
+        </div>
+        <div style="margin-top:1.2rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div style="padding:1rem;background:var(--white);border-radius:6px;border:1px solid rgba(0,51,141,.06)">
+            <p style="font-size:.8rem;color:var(--text2);line-height:1.6;margin:0"><strong style="color:var(--navy)">Financial visibility:</strong> Every SCM decision translates to PROCO impact — visible at the moment the decision is made, not reconciled weeks later.</p>
+          </div>
+          <div style="padding:1rem;background:var(--white);border-radius:6px;border:1px solid rgba(0,51,141,.06)">
+            <p style="font-size:.8rem;color:var(--text2);line-height:1.6;margin:0"><strong style="color:var(--navy)">Excel regression eliminated:</strong> Complete workflow cut-over ensures the system is where decisions are made — not where data is stored before being re-entered elsewhere.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BENCHMARKS -->
+      <div>
+        <div class="plat-sub"><h3>Global Benchmarks</h3><p>Organisations that have built intelligence layers above their operational systems.</p></div>
+        <div class="bench-grid animate">
+          <div class="bench-card">
+            <h4>Siemens Energy</h4>
+            <div class="bench-what">Consolidated 23 ECC instances into 2 S/4HANA, with Snowflake as the central analytics platform.</div>
+            <div class="bench-result">32% analytics efficiency gain · 2,000 hrs/year manual work eliminated · €1.2M/year saved</div>
+          </div>
+          <div class="bench-card">
+            <h4>AstraZeneca</h4>
+            <div class="bench-what">Zero-copy data mesh across global supply chain and clinical operations. Cross-functional analysis without data duplication.</div>
+            <div class="bench-result">Real-time cash burn rate analysis enabled across global operations</div>
+          </div>
+          <div class="bench-card">
+            <h4>Samsung SDS</h4>
+            <div class="bench-what">Cello Square logistics platform with ML-based ETA prediction and dynamic rerouting.</div>
+            <div class="bench-result">AI-driven logistics control tower operational at scale</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-label">Engagement Models</div>
+    <h2 class="section-title">How we deliver</h2>
+    <p class="section-desc">From rapid diagnostics to full platform build. Every engagement starts with data, ends with decisions.</p>
+    <div class="services-grid">
+      <div class="service-card animate">
+        <h3>SKU Profitability Diagnostic</h3>
+        <p>Full-portfolio MC → PROCO analysis. Identify structural loss patterns, overhead allocation traps, and pricing erosion by channel. Prioritised action list with Track assignment.</p>
+        <div class="service-meta">4–6 weeks · Diagnostic report + simulation</div>
+      </div>
+      <div class="service-card animate delay-1">
+        <h3>Inventory Architecture Redesign</h3>
+        <p>Safety stock recalibration, multi-site rebalancing, ageing-based disposition triggers. Statistical foundation replacing legacy fixed parameters.</p>
+        <div class="service-meta">PoC → Operational rollout</div>
+      </div>
+      <div class="service-card animate delay-2">
+        <h3>SCM Intelligence Platform</h3>
+        <p>Snowflake-based 4-Layer architecture: data integration, optimisation engine, AI agent interface, execution handoff. Designed to sit above your ERP — not replace it.</p>
+        <div class="service-meta">Phase-based build · 3–12 months</div>
+      </div>
+      <div class="service-card animate delay-3">
+        <h3>Agentic Intelligence Deployment</h3>
+        <p>Design, build, and deploy domain-specific AI Agents (Cortex AI) that diagnose, simulate, and recommend — connected to your data, governed by your decision rules.</p>
+        <div class="service-meta">Per-agent delivery · Feedback loop included</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section id="insights">
+  <div class="container">
+    <div class="section-label">Insights</div>
+    <h2 class="section-title">Thinking on supply chain intelligence</h2>
+    <p class="section-desc">From the LinkedIn series: practitioner perspectives on profit-oriented SCM, decision architecture, and the gap between planning systems and intelligence.</p>
+    <div style="margin-bottom:2rem"><a href="insights.html" style="font-size:.85rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:2px solid var(--accent2);padding-bottom:2px">View All Articles →</a></div>
+    <div class="insights-grid">
+      <a href="insights.html#post-1-4" class="insight-card animate" style="text-decoration:none">
+        <img src="img/Post1_4.jpeg" alt="Two Clocks" class="insight-img">
+        <div class="insight-body">
+          <div class="insight-cat">Inventory · Disposition</div>
+          <h3>The Two Clocks of Inventory: Balancing Cost vs. Leverage</h3>
+          <p>Inventory management involves two simultaneous, opposing metrics: the cost curve and the negotiation leverage curve. Understanding this intersection is critical before options vanish.</p>
+          <div class="insight-chapter">Chapter 1 · Profit Simulation</div>
+        </div>
+      </a>
+      <a href="insights.html#post-1-3" class="insight-card animate delay-1" style="text-decoration:none">
+        <img src="img/Post1_3.jpeg" alt="Deal With It Later" class="insight-img">
+        <div class="insight-body">
+          <div class="insight-cat">Inventory · Timing</div>
+          <h3>The High Price of "Deal With It Later"</h3>
+          <p>Delaying action on slow-moving inventory is consistently the most expensive decision an organisation can make, leading to total margin collapse.</p>
+          <div class="insight-chapter">Chapter 1 · Profit Simulation</div>
+        </div>
+      </a>
+      <a href="insights.html#post-1-2" class="insight-card animate delay-2" style="text-decoration:none">
+        <img src="img/Post1_2.jpeg" alt="3 Layers of SKU Loss" class="insight-img">
+        <div class="insight-body">
+          <div class="insight-cat">Profitability · SKU</div>
+          <h3>Beyond the "Unprofitable" Label: The 3 Layers of SKU Loss</h3>
+          <p>Classifying all loss-making SKUs under a single label prevents targeted resolution. Effective remediation requires distinguishing between three specific layers of loss.</p>
+          <div class="insight-chapter">Chapter 1 · Profit Simulation</div>
+        </div>
+      </a>
+      <a href="insights.html#post-1-1" class="insight-card animate delay-3" style="text-decoration:none">
+        <img src="img/Post1_1.jpeg" alt="Structural Traps" class="insight-img">
+        <div class="insight-body">
+          <div class="insight-cat">Planning · Structure</div>
+          <h3>What Consulting Taught Me — and What the Ground Made Me Realise</h3>
+          <p>Profit leakage follows the same structure, wherever you look. The Aggregation Trap and the Long-tail Trap explain why loss-making SKUs survive undetected.</p>
+          <div class="insight-chapter">Chapter 1 · Profit Simulation</div>
+        </div>
+      </a>
+      <a href="insights.html#post-2-1" class="insight-card animate delay-2" style="text-decoration:none">
+        <img src="img/Post2_2.jpeg" alt="No-Touch Planning" class="insight-img">
+        <div class="insight-body">
+          <div class="insight-cat">Planning · Systems</div>
+          <h3>Why No-Touch Planning Still Ends in Spreadsheets</h3>
+          <p>Planning systems do not all do the same job. Some consolidate plans. Others are where plans are actually formed, tested, and reshaped as conditions change. Only the second type moves closer to autonomy.</p>
+          <div class="insight-chapter">Chapter 2 · No-Touch Planning</div>
+        </div>
+      </a>
+      <a href="insights.html#post-2-2" class="insight-card animate delay-3" style="text-decoration:none">
+        <img src="img/Post2_3.jpeg" alt="Decision Architecture" class="insight-img">
+        <div class="insight-body">
+          <div class="insight-cat">Decision · Governance</div>
+          <h3>Before Automation, Define the Decision Architecture</h3>
+          <p>A system cannot meaningfully automate a decision that the organisation itself has not clearly defined. Five elements must be explicit before any planning decision becomes operationally credible.</p>
+          <div class="insight-chapter">Chapter 2 · No-Touch Planning</div>
+        </div>
+      </a>
+      <a href="insights.html#post-2-3" class="insight-card animate delay-1" style="text-decoration:none">
+        <img src="img/Post2_4.jpeg" alt="Planning vs Intelligence" class="insight-img">
+        <div class="insight-body">
+          <div class="insight-cat">Intelligence · Platform</div>
+          <h3>A Planning System Is Not Yet Intelligence</h3>
+          <p>Planning tells you what the rules say should happen next. Intelligence tells you what happens to the margin when rules are broken — and whether breaking them might actually be the right answer.</p>
+          <div class="insight-chapter">Chapter 2 · No-Touch Planning</div>
+        </div>
+      </a>
+      <a href="insights.html#post-1-6b" class="insight-card animate delay-2" style="text-decoration:none">
+        <img src="img/Post1_6.png" alt="Deletion Trap" class="insight-img">
+        <div class="insight-body">
+          <div class="insight-cat">Finance · Operations</div>
+          <h3>The Deletion Trap</h3>
+          <p>When a loss-making SKU is removed, the costs it absorbed don't disappear — they redistribute. The upside is capped. The downside is open-ended. Simulation before deletion is mandatory.</p>
+          <div class="insight-chapter">Chapter 1 · Profit Simulation</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info animate">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Start with a conversation</h2>
+        <p>Whether you're exploring a profitability diagnostic, evaluating an intelligence platform build, or simply want to discuss structural challenges in your supply chain — we'd welcome the conversation.</p>
+        <div class="contact-detail"><span>✉</span> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f16110c1618170b0c3f111a07111d0d161b181a511c1012">[email&#160;protected]</a></div>
+        <div class="contact-detail"><span>🌐</span> nexenbridge.com</div>
+        <p style="font-size:.82rem;color:var(--text3);margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(0,51,141,.08)"><strong style="color:var(--navy)">Nex & Bridge</strong> designs independent SCM data analytics platforms and simulation environments. We focus on explaining existing operational facts to support clear decision-making — rather than replacing existing operational systems.</p>
+      </div>
+      <div class="animate delay-2">
+        <div class="contact-form">
+          <div class="form-row">
+            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Company" required>
+          </div>
+          <input type="email" placeholder="Email" required>
+          <select>
+            <option value="">Area of interest</option>
+            <option>SKU Profitability Diagnostic</option>
+            <option>Inventory Architecture Redesign</option>
+            <option>SCM Intelligence Platform Build</option>
+            <option>Agentic Intelligence Deployment</option>
+            <option>General Enquiry</option>
+          </select>
+          <textarea placeholder="Tell us about your situation..."></textarea>
+          <button class="btn" style="width:100%;justify-content:center;background:var(--navy);color:#fff" type="button" onclick="alert('Thank you. We will be in touch shortly.')">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Nex & Bridge Co., Ltd. — SCM Intelligence & Data Analytics</p>
+</footer>
+
+<script>
+// Scroll animation with fallback
+try {
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})
+  },{threshold:0.08});
+  document.querySelectorAll('.animate').forEach(function(el){obs.observe(el)});
+} catch(e) {
+  document.querySelectorAll('.animate').forEach(function(el){el.classList.add('visible')});
+}
+// Safety net: show everything after 2 seconds
+setTimeout(function(){
+  document.querySelectorAll('.animate').forEach(function(el){el.classList.add('visible')});
+}, 2000);
+// Nav shrink
+window.addEventListener('scroll',function(){
+  document.querySelector('nav').style.padding = window.scrollY>80?'.8rem 3rem':'1.2rem 3rem';
+});
+</script>
+</body>
+</html>

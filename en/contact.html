@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Nex &amp; Bridge</title>
+<meta name="description" content="Tell us where you're starting from, and we'll help scope the right first engagement.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/contact.html">
+<link rel="alternate" hreflang="en" href="https://nexenbridge.com/en/contact.html">
+<link rel="canonical" href="https://nexenbridge.com/en/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+.contact-form label{font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.35rem;display:block}
+.form-field{display:flex;flex-direction:column}
+.consent-row{display:flex;align-items:flex-start;gap:.6rem;font-size:.82rem;color:var(--text2);line-height:1.6}
+.consent-row input{margin-top:.25rem}
+.form-note{font-size:.78rem;color:var(--text3);margin-top:.8rem;line-height:1.6}
+.form-done{display:none;background:rgba(11,138,90,.08);border:1px solid rgba(11,138,90,.25);color:var(--green);padding:1rem 1.2rem;border-radius:6px;font-size:.88rem;margin-top:1rem}
+.form-done.show{display:block}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <a href="/en/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li><a href="/en/">Home</a></li>
+    <li><a href="/en/company.html">Company</a></li>
+    <li><a href="/en/services/">Services</a></li>
+    <li><a href="/en/insights.html">Insights</a></li>
+    <li><a href="/en/contact.html" class="nav-cta" aria-current="page">Contact</a></li>
+    <li>
+      <div class="lang-switch">
+        <a href="/ko/contact.html">KO</a>
+        <a href="/en/contact.html" aria-current="true">EN</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">Contact</div>
+    <h1>Tell us where you're starting from,<br>and we'll <em>scope the first step</em></h1>
+    <p class="hero-sub">We size the initial engagement around decision priority, how ready your data and criteria are, and expected impact.</p>
+  </div>
+</section>
+
+<!-- ===== FORM ===== -->
+<section>
+  <div class="container container-narrow">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Tell us what's going on, and we'll take it from there.</h2>
+
+    <!--
+      No backend on GitHub Pages. This form builds a mailto: link from the
+      filled fields and hands off to the visitor's email client on submit.
+    -->
+    <form id="contactForm" class="contact-form" action="#">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="f-name">Name *</label>
+          <input type="text" id="f-name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="f-company">Company *</label>
+          <input type="text" id="f-company" name="company" required>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="f-email">Email *</label>
+        <input type="email" id="f-email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="f-topic">Area of Interest *</label>
+        <select id="f-topic" name="topic" required>
+          <option value="">Select one</option>
+          <option>Snowflake Cost Assessment</option>
+          <option>Access &amp; Security Design</option>
+          <option>Data &amp; AI Foundation</option>
+          <option>Knowledge &amp; Decision Sprint</option>
+          <option>Agentic Solution PoC</option>
+          <option>AgentOps Assessment</option>
+          <option>Agentic Enterprise Blueprint</option>
+          <option>General inquiry</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="f-message">Message</label>
+        <textarea id="f-message" name="message" placeholder="A short description of your situation helps."></textarea>
+      </div>
+      <label class="consent-row">
+        <input type="checkbox" id="f-consent" name="consent" required>
+        <span>I agree to the collection and use of my personal data. (<a href="/en/privacy.html" style="color:var(--navy);font-weight:600">View Privacy Policy</a>) *</span>
+      </label>
+      <div>
+        <button type="submit" class="btn btn-navy">Send</button>
+        <p class="form-note">Submitting opens your email app — send it from there to complete. If it doesn't open, email us directly at <a href="mailto:contact@nexenbridge.com" style="color:var(--navy)">contact@nexenbridge.com</a>.</p>
+        <div id="formDone" class="form-done">Your email app should be open. Please review and send.</div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== CONTACT INFO ===== -->
+<section class="bg-alt">
+  <div class="container container-narrow">
+    <div class="section-label">Contact Info</div>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <tbody>
+          <tr><td style="white-space:nowrap"><strong>Email</strong></td><td><a href="mailto:contact@nexenbridge.com" style="color:var(--navy);font-weight:600">contact@nexenbridge.com</a></td></tr>
+          <tr><td style="white-space:nowrap"><strong>Address</strong></td><td>1025, Union Center, 310 Gangnam-daero, Gangnam-gu, Seoul 06253, South Korea</td></tr>
+          <tr><td style="white-space:nowrap"><strong>Website</strong></td><td>nexenbridge.com</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top" style="grid-template-columns:1.5fr 1fr 1fr 1fr">
+      <div class="footer-brand">
+        <div class="logo">Nex <span>&amp;</span> Bridge</div>
+        <p>We connect enterprise knowledge, data, Agents, and operations into an Agentic Enterprise.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/en/company.html">About</a></li>
+          <li><a href="/en/services/">Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/en/insights.html">Insights</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Language</h4>
+        <ul>
+          <li><a href="/ko/contact.html">한국어 (Korean)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nex &amp; Bridge Co., Ltd.</p>
+      <div class="footer-legal">
+        <a href="https://nexenbridge.com">nexenbridge.com</a>
+        <a href="/en/privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+<script>
+(function () {
+  'use strict';
+  var form = document.getElementById('contactForm');
+  var done = document.getElementById('formDone');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var company = document.getElementById('f-company').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var topic = document.getElementById('f-topic').value;
+    var message = document.getElementById('f-message').value.trim();
+    var consent = document.getElementById('f-consent').checked;
+    if (!name || !company || !email || !topic || !consent) {
+      alert('Please fill in all required fields (name, company, email, area of interest, consent).');
+      return;
+    }
+    var subject = '[Website Inquiry] ' + topic + ' — ' + company;
+    var body = 'Name: ' + name + '\nCompany: ' + company + '\nEmail: ' + email + '\nArea of interest: ' + topic + '\n\nMessage:\n' + (message || '(none)');
+    var mailto = 'mailto:contact@nexenbridge.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+    window.location.href = mailto;
+    done.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>문의하기 | 넥스앤브릿지</title>
+<meta name="description" content="현재 과제와 준비도를 확인하고 어디서부터 시작할지 함께 정합니다.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/contact.html">
+<link rel="canonical" href="https://nexenbridge.com/ko/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+.contact-form label{font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.35rem;display:block}
+.form-field{display:flex;flex-direction:column}
+.consent-row{display:flex;align-items:flex-start;gap:.6rem;font-size:.82rem;color:var(--text2);line-height:1.6}
+.consent-row input{margin-top:.25rem}
+.form-note{font-size:.78rem;color:var(--text3);margin-top:.8rem;line-height:1.6}
+.form-done{display:none;background:rgba(11,138,90,.08);border:1px solid rgba(11,138,90,.25);color:var(--green);padding:1rem 1.2rem;border-radius:6px;font-size:.88rem;margin-top:1rem}
+.form-done.show{display:block}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li><a href="/ko/agentic-enterprise.html">Agentic Enterprise</a></li>
+    <li class="has-mega">
+      <a href="/ko/services/">서비스</a>
+      <button class="submenu-toggle" aria-label="서비스 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col">
+          <div class="mega-col-title">서비스 유형</div>
+          <a href="/ko/services/#consulting">Consulting</a>
+          <a href="/ko/services/#build">Build</a>
+          <a href="/ko/services/#application-service">Application Service</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">핵심 서비스 영역</div>
+          <a href="/ko/services/snowflake/" class="mega-featured"><span class="star">★</span> Snowflake Data &amp; AI</a>
+          <a href="/ko/services/snowflake/cost.html" class="mega-sub">└ 비용 최적화 (FinOps)</a>
+          <a href="/ko/services/snowflake/security.html" class="mega-sub">└ 접근권한·보안 설계</a>
+          <a href="/ko/services/knowledge.html">Enterprise Knowledge</a>
+          <a href="/ko/services/solution.html">Agentic Solution</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">공통 역량</div>
+          <a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a>
+          <a href="/ko/services/" class="mega-col-more">서비스 개요 전체 보기 →</a>
+        </div>
+      </div>
+    </li>
+    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li class="has-dropdown">
+      <a href="/ko/solutions/">적용 분야</a>
+      <button class="submenu-toggle" aria-label="적용 분야 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="dropdown">
+        <a href="/ko/solutions/">적용 분야 개요</a>
+        <a href="/ko/solutions/scm.html">Agentic SCM/SCP</a>
+      </div>
+    </li>
+    <li><a href="/ko/insights.html">Insights</a></li>
+    <li><a href="/ko/company.html">회사소개</a></li>
+    <li><a href="/ko/contact.html" class="nav-cta" aria-current="page">문의하기</a></li>
+    <li>
+      <div class="lang-switch">
+        <a href="/ko/contact.html" aria-current="true">KO</a>
+        <a href="/en/contact.html">EN</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">Contact</div>
+    <h1>우선 과제와 준비도를 확인해<br><em>시작 범위</em>를 제안합니다</h1>
+    <p class="hero-sub">의사결정 중요도, 업무 기준과 데이터 준비도, 예상 효과를 기준으로 초기 범위를 산정합니다.</p>
+  </div>
+</section>
+
+<!-- ===== 이런 상황이라면 여기서 시작합니다 ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">이런 상황이라면 여기서 시작합니다</div>
+    <h2 class="section-title">이런 상황이라면 여기서 시작합니다</h2>
+
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>고객의 현재 상태</th><th>권장 시작점</th><th>받게 되는 것</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Snowflake 비용이 빠르게 늘고 있다</strong></td><td><strong>Snowflake 비용 진단</strong></td><td>비용 진단 리포트 · 개선 항목 우선순위 · 예상 절감 범위</td></tr>
+          <tr><td><strong>데이터 접근 범위와 보안 설계를 정해야 한다</strong></td><td><strong>접근권한·보안 설계</strong></td><td>권한 체계 · 데이터 보호 정책 · 감사 기준 · Agent 접근 범위</td></tr>
+          <tr><td>Snowflake 도입·이전·활용 고도화가 필요하다</td><td><strong>Data &amp; AI Foundation</strong></td><td>목표 구조 · Data Model · Semantic Layer</td></tr>
+          <tr><td>업무 지식과 판단 기준이 흩어져 있다</td><td><strong>Knowledge &amp; Decision Sprint</strong></td><td>업무 개념·관계 정의 · Knowledge Graph · 판단 기준</td></tr>
+          <tr><td>명확한 업무를 Agent로 구현하고 싶다</td><td><strong>Agentic Solution PoC</strong></td><td>업무 Agent · 판단 화면 · 검증 결과</td></tr>
+          <tr><td>기존 Agent의 평가·통제가 어렵다</td><td><strong>AgentOps Assessment</strong></td><td>평가 자료 · 통제 기준 · 전환 계획</td></tr>
+          <tr><td>Agentic Enterprise의 방향과 범위가 불분명하다</td><td><strong>Agentic Enterprise Blueprint</strong></td><td>적용 후보 목록 · 준비도 진단 · 목표 구조 · 운영안 · 단계별 계획</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="lead mt-1" style="font-size:.85rem;color:var(--text3)">기간·비용은 표기하지 않습니다. 범위와 데이터 상태에 따라 달라지므로 상담에서 산정합니다.</p>
+  </div>
+</section>
+
+<!-- ===== 문의 폼 ===== -->
+<section class="bg-alt">
+  <div class="container container-narrow">
+    <div class="section-label">Contact Form</div>
+    <h2 class="section-title">해당하는 상황을 알려주시면, 현재 상태를 확인하고<br>시작 범위를 함께 정하겠습니다.</h2>
+
+    <!--
+      No backend on GitHub Pages. This form builds a mailto: link from the
+      filled fields and hands off to the visitor's email client on submit —
+      it actually sends today, unlike the previous form (alert() only, no
+      transport). Swap for a Formspree/Web3Forms POST once an account exists;
+      keep this mailto path as the no-JS / service-outage fallback either way.
+    -->
+    <form id="contactForm" class="contact-form" action="#">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="f-name">이름 *</label>
+          <input type="text" id="f-name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="f-company">회사 *</label>
+          <input type="text" id="f-company" name="company" required>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="f-email">이메일 *</label>
+        <input type="email" id="f-email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="f-topic">관심 영역 *</label>
+        <select id="f-topic" name="topic" required>
+          <option value="">선택해주세요</option>
+          <option>Snowflake 비용 진단</option>
+          <option>접근권한·보안 설계</option>
+          <option>Data &amp; AI Foundation</option>
+          <option>Knowledge &amp; Decision Sprint</option>
+          <option>Agentic Solution PoC</option>
+          <option>AgentOps Assessment</option>
+          <option>Agentic Enterprise Blueprint</option>
+          <option>일반 문의</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="f-message">내용</label>
+        <textarea id="f-message" name="message" placeholder="현재 상황을 간단히 알려주시면 도움이 됩니다."></textarea>
+      </div>
+      <label class="consent-row">
+        <input type="checkbox" id="f-consent" name="consent" required>
+        <span>개인정보 수집·이용에 동의합니다. (<a href="/ko/privacy.html" style="color:var(--navy);font-weight:600">처리방침 보기</a>) *</span>
+      </label>
+      <div>
+        <button type="submit" class="btn btn-navy">문의 보내기</button>
+        <p class="form-note">제출하시면 이메일 앱이 열리고, 보내기를 누르면 전송됩니다. 이메일 앱이 열리지 않으면 <a href="mailto:contact@nexenbridge.com" style="color:var(--navy)">contact@nexenbridge.com</a>으로 직접 보내주세요.</p>
+        <div id="formDone" class="form-done">이메일 앱을 열었습니다. 내용을 확인하고 보내기를 눌러주세요.</div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== 연락처 ===== -->
+<section>
+  <div class="container container-narrow">
+    <div class="section-label">Contact Info</div>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <tbody>
+          <tr><td style="white-space:nowrap"><strong>이메일</strong></td><td><a href="mailto:contact@nexenbridge.com" style="color:var(--navy);font-weight:600">contact@nexenbridge.com</a></td></tr>
+          <tr><td style="white-space:nowrap"><strong>주소</strong></td><td>서울 강남구 강남대로 310 유니온센터 1025호 (06253)</td></tr>
+          <tr><td style="white-space:nowrap"><strong>홈페이지</strong></td><td>nexenbridge.com</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">Nex <span>&amp;</span> Bridge</div>
+        <p>기업의 지식·데이터·업무 Agent·운영체계를 연결해 Agentic Enterprise를 구축합니다.</p>
+      </div>
+      <div class="footer-col">
+        <h4>서비스 유형</h4>
+        <ul>
+          <li><a href="/ko/services/#consulting">Consulting</a></li>
+          <li><a href="/ko/services/#build">Build</a></li>
+          <li><a href="/ko/services/#application-service">Application Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Snowflake Data &amp; AI</h4>
+        <ul>
+          <li><a href="/ko/services/snowflake/">개요</a></li>
+          <li><a href="/ko/services/snowflake/cost.html">비용 최적화</a></li>
+          <li><a href="/ko/services/snowflake/security.html">접근권한·보안</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>그 외 영역</h4>
+        <ul>
+          <li><a href="/ko/services/knowledge.html">Enterprise Knowledge</a></li>
+          <li><a href="/ko/services/solution.html">Agentic Solution</a></li>
+          <li><a href="/ko/services/agentops.html">AgentOps</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>적용 분야</h4>
+        <ul>
+          <li><a href="/ko/solutions/scm.html">Agentic SCM/SCP</a></li>
+          <li><a href="/ko/solutions/">확장 가능 분야 보기</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/ko/company.html">회사소개</a></li>
+          <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+          <li><a href="/ko/insights.html">Insights</a></li>
+          <li><a href="/ko/contact.html">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nex &amp; Bridge Co., Ltd.</p>
+      <div class="footer-legal">
+        <a href="https://nexenbridge.com">nexenbridge.com</a>
+        <a href="/ko/privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+<script>
+(function () {
+  'use strict';
+  var form = document.getElementById('contactForm');
+  var done = document.getElementById('formDone');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var company = document.getElementById('f-company').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var topic = document.getElementById('f-topic').value;
+    var message = document.getElementById('f-message').value.trim();
+    var consent = document.getElementById('f-consent').checked;
+    if (!name || !company || !email || !topic || !consent) {
+      alert('필수 항목(이름, 회사, 이메일, 관심 영역, 동의)을 확인해주세요.');
+      return;
+    }
+    var subject = '[웹사이트 문의] ' + topic + ' — ' + company;
+    var body = '이름: ' + name + '\n회사: ' + company + '\n이메일: ' + email + '\n관심 영역: ' + topic + '\n\n내용:\n' + (message || '(작성 없음)');
+    var mailto = 'mailto:contact@nexenbridge.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+    window.location.href = mailto;
+    done.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

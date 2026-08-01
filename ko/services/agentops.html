@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentOps &amp; Managed Operations — 넥스앤브릿지</title>
+<meta name="description" content="Agent를 배포하기 전부터 평가, 권한, 추적, 비용, 장애, 변경 기준을 정하고 운영 중인 Agent를 계속 점검합니다.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/services/agentops.html">
+<link rel="canonical" href="https://nexenbridge.com/ko/services/agentops.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li><a href="/ko/agentic-enterprise.html">Agentic Enterprise</a></li>
+    <li class="has-mega">
+      <a href="/ko/services/" aria-current="page">서비스</a>
+      <button class="submenu-toggle" aria-label="서비스 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col">
+          <div class="mega-col-title">서비스 유형</div>
+          <a href="/ko/services/#consulting">Consulting</a>
+          <a href="/ko/services/#build">Build</a>
+          <a href="/ko/services/#application-service">Application Service</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">핵심 서비스 영역</div>
+          <a href="/ko/services/snowflake/" class="mega-featured"><span class="star">★</span> Snowflake Data &amp; AI</a>
+          <a href="/ko/services/snowflake/cost.html" class="mega-sub">└ 비용 최적화 (FinOps)</a>
+          <a href="/ko/services/snowflake/security.html" class="mega-sub">└ 접근권한·보안 설계</a>
+          <a href="/ko/services/knowledge.html">Enterprise Knowledge</a>
+          <a href="/ko/services/solution.html">Agentic Solution</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">공통 역량</div>
+          <a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a>
+          <a href="/ko/services/" class="mega-col-more">서비스 개요 전체 보기 →</a>
+        </div>
+      </div>
+    </li>
+    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li class="has-dropdown">
+      <a href="/ko/solutions/">적용 분야</a>
+      <button class="submenu-toggle" aria-label="적용 분야 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="dropdown">
+        <a href="/ko/solutions/">적용 분야 개요</a>
+        <a href="/ko/solutions/scm.html">Agentic SCM/SCP</a>
+      </div>
+    </li>
+    <li><a href="/ko/insights.html">Insights</a></li>
+    <li><a href="/ko/company.html">회사소개</a></li>
+    <li><a href="/ko/contact.html" class="nav-cta">문의하기</a></li>
+    <li>
+      <div class="lang-switch">
+        <a href="/ko/services/agentops.html" aria-current="true">KO</a>
+        <a href="/en/services/agentops.html">EN</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== §1 HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">Cross-cutting Capability</div>
+    <h1>Agent 운영에 필요한<br>평가·권한·<em>추적 기준</em>을 설계합니다</h1>
+    <p class="hero-sub">정확성, 권한, 근거 추적, 중단 조건, 비용과 변경 절차를 배포 전에 정의합니다.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="container container-narrow">
+    <p class="lead">AgentOps는 공통 운영역량으로 구분합니다. Build에서는 평가·권한·추적 구조를 구현하고, Application Service에서는 모니터링·장애·변경·개선을 운영합니다.</p>
+  </div>
+</section>
+
+<!-- ===== §2 적용 대상 ===== -->
+<section class="bg-alt">
+  <div class="container container-narrow">
+    <div class="section-label">적용 대상</div>
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:.9rem">
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>Agent를 실제 업무에 배포하려는 기업</li>
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>기존 Agent의 정확성·권한·비용·감사가 불명확한 기업</li>
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>사용 결과를 다음 개선으로 연결하려는 기업</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== §3 적용 범위 ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">적용 범위</div>
+    <h2 class="section-title">적용 범위</h2>
+
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>역량</th><th>내용</th><th>산출물</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Evaluation &amp; Release</strong></td><td>Golden Set, 정확성·재현성·안전성 평가, 배포 게이트</td><td>Evaluation Set · Scorecard · Release Approval</td></tr>
+          <tr><td><strong>Guardrail &amp; Governance</strong></td><td>Model·Tool·Data·Policy 권한, Human Review, 예외·중단 기준</td><td>Control Policy · Role Matrix · Escalation Rule</td></tr>
+          <tr><td><strong>Agent 권한 경계</strong></td><td>Agent가 사용자 권한 범위를 넘지 않도록 실행 경계를 확인하고 유지</td><td>권한 매핑 · 우회 노출 점검 · 중단 조건</td></tr>
+          <tr><td><strong>Observability &amp; Audit</strong></td><td>Trace, 근거·도구 호출·비용·지연·실패·사용 패턴 관측</td><td>Dashboard · Audit Log · Incident Record</td></tr>
+          <tr><td><strong>Managed Agent Operations</strong></td><td>모니터링, 장애·변경, 성능 튜닝, 사용자 지원, SLA 운영</td><td>SLA Report · Change/Incident Management</td></tr>
+          <tr><td><strong>Knowledge &amp; Memory Evolution</strong></td><td>Override·실행 결과·피드백 분석, 지식·규칙·Memory 승격</td><td>Post-Game Analysis · Improvement Backlog · Approved Update</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §4 설계 원칙 ===== -->
+<section class="bg-alt">
+  <div class="container container-narrow">
+    <p class="pull-quote">평가와 권한, 추적 기준은 배포 전에<br>정해야 합니다.</p>
+    <p class="lead">운영 기준을 나중에 보완할 수도 있지만, 이미 만든 Agent와 업무 절차를 다시 손봐야 해 비용과 위험이 커집니다.</p>
+    <div class="note mt-2">
+      데이터 접근 권한 자체의 설계는 <a href="/ko/services/snowflake/security.html" style="color:var(--navy);font-weight:600">Snowflake Data &amp; AI의 접근권한·보안 설계</a>에서 다룹니다. AgentOps는 그 위에서 <strong>Agent의 실행 통제와 감사</strong>를 담당합니다.
+    </div>
+  </div>
+</section>
+
+<!-- ===== §5 CTA ===== -->
+<section class="bg-navy">
+  <div class="container container-narrow center">
+    <h2 class="section-title">이미 Agent를 운영하고 있다면</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto">현재 상태를 먼저 진단하고 필요한 통제와 운영 기준을 보완합니다.</p>
+    <a href="/ko/contact.html" class="btn btn-primary">AgentOps Assessment 문의 →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">Nex <span>&amp;</span> Bridge</div>
+        <p>기업의 지식·데이터·업무 Agent·운영체계를 연결해 Agentic Enterprise를 구축합니다.</p>
+      </div>
+      <div class="footer-col">
+        <h4>서비스 유형</h4>
+        <ul>
+          <li><a href="/ko/services/#consulting">Consulting</a></li>
+          <li><a href="/ko/services/#build">Build</a></li>
+          <li><a href="/ko/services/#application-service">Application Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Snowflake Data &amp; AI</h4>
+        <ul>
+          <li><a href="/ko/services/snowflake/">개요</a></li>
+          <li><a href="/ko/services/snowflake/cost.html">비용 최적화</a></li>
+          <li><a href="/ko/services/snowflake/security.html">접근권한·보안</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>그 외 영역</h4>
+        <ul>
+          <li><a href="/ko/services/knowledge.html">Enterprise Knowledge</a></li>
+          <li><a href="/ko/services/solution.html">Agentic Solution</a></li>
+          <li><a href="/ko/services/agentops.html">AgentOps</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>적용 분야</h4>
+        <ul>
+          <li><a href="/ko/solutions/scm.html">Agentic SCM/SCP</a></li>
+          <li><a href="/ko/solutions/">확장 가능 분야 보기</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/ko/company.html">회사소개</a></li>
+          <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+          <li><a href="/ko/insights.html">Insights</a></li>
+          <li><a href="/ko/contact.html">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nex &amp; Bridge Co., Ltd.</p>
+      <div class="footer-legal">
+        <a href="https://nexenbridge.com">nexenbridge.com</a>
+        <a href="/ko/privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>접근권한·보안 설계 | 넥스앤브릿지</title>
+<meta name="description" content="누가 어떤 데이터를 볼 수 있는지 설계합니다. Agent가 데이터를 조회하기 시작하면 사람 기준의 권한 체계만으로는 부족합니다.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/services/snowflake/security.html">
+<link rel="canonical" href="https://nexenbridge.com/ko/services/snowflake/security.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li><a href="/ko/agentic-enterprise.html">Agentic Enterprise</a></li>
+    <li class="has-mega">
+      <a href="/ko/services/">서비스</a>
+      <button class="submenu-toggle" aria-label="서비스 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col">
+          <div class="mega-col-title">서비스 유형</div>
+          <a href="/ko/services/#consulting">Consulting</a>
+          <a href="/ko/services/#build">Build</a>
+          <a href="/ko/services/#application-service">Application Service</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">핵심 서비스 영역</div>
+          <a href="/ko/services/snowflake/" class="mega-featured"><span class="star">★</span> Snowflake Data &amp; AI</a>
+          <a href="/ko/services/snowflake/cost.html" class="mega-sub">└ 비용 최적화 (FinOps)</a>
+          <a href="/ko/services/snowflake/security.html" class="mega-sub" aria-current="page">└ 접근권한·보안 설계</a>
+          <a href="/ko/services/knowledge.html">Enterprise Knowledge</a>
+          <a href="/ko/services/solution.html">Agentic Solution</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">공통 역량</div>
+          <a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a>
+          <a href="/ko/services/" class="mega-col-more">서비스 개요 전체 보기 →</a>
+        </div>
+      </div>
+    </li>
+    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li class="has-dropdown">
+      <a href="/ko/solutions/">적용 분야</a>
+      <button class="submenu-toggle" aria-label="적용 분야 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="dropdown">
+        <a href="/ko/solutions/">적용 분야 개요</a>
+        <a href="/ko/solutions/scm.html">Agentic SCM/SCP</a>
+      </div>
+    </li>
+    <li><a href="/ko/insights.html">Insights</a></li>
+    <li><a href="/ko/company.html">회사소개</a></li>
+    <li><a href="/ko/contact.html" class="nav-cta">문의하기</a></li>
+    <li>
+      <div class="lang-switch">
+        <a href="/ko/services/snowflake/security.html" aria-current="true">KO</a>
+        <a href="/en/services/snowflake/security.html">EN</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">도입 전에 통과해야 하는 관문</div>
+    <h1>누가 어떤 데이터를 볼 수 있는지<br><em>먼저 정</em>합니다</h1>
+    <p class="hero-sub">데이터를 한곳에 모으면 접근 범위를 다시 설계해야 합니다. 특히 Agent가 데이터를 조회하기 시작하면 <strong style="color:#fff">사람 기준으로 만든 권한 체계만으로는 부족합니다.</strong></p>
+  </div>
+</section>
+
+<!-- ===== 이런 상황에 필요합니다 ===== -->
+<section>
+  <div class="container container-narrow">
+    <div class="section-label">이런 상황에 필요합니다</div>
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:.9rem">
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>데이터를 통합하면서 부서별·역할별 접근 범위를 다시 정해야 한다</li>
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>개인정보·거래정보 등 보호 대상 항목이 포함된다</li>
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>보안 검토를 통과해야 도입을 진행할 수 있다</li>
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>Agent가 어느 데이터까지 볼 수 있는지 정하지 못했다</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 설계 범위 ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">Design Scope</div>
+    <h2 class="section-title">설계 범위</h2>
+
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>영역</th><th>설계 항목</th><th>Snowflake 구현 수단</th></tr></thead>
+        <tbody>
+          <tr><td><strong>권한 체계</strong></td><td>역할 계층, 업무 역할과 접근 역할 분리, 최소 권한, 권한 부여·회수 절차</td><td>RBAC Role Hierarchy · Functional/Access Role</td></tr>
+          <tr><td><strong>데이터 보호</strong></td><td>항목 단위 마스킹, 행 단위 접근 제한, 보호 대상 항목 분류</td><td>Dynamic Data Masking · Row Access Policy · Column-level Security</td></tr>
+          <tr><td><strong>분류·태깅</strong></td><td>데이터 민감도 분류와 정책 자동 적용</td><td>Object Tagging · Tag-based Masking Policy</td></tr>
+          <tr><td><strong>접근 경로</strong></td><td>네트워크 제한, 사설 연결, 인증 연계</td><td>Network Policy · PrivateLink · SSO(SAML)·SCIM·MFA</td></tr>
+          <tr><td><strong>감사 추적</strong></td><td>누가 언제 무엇을 조회했는지 기록·보존</td><td>Access History · Query History · Login History</td></tr>
+          <tr><td><strong>외부 공유</strong></td><td>협력사·계열사 데이터 제공 범위 통제</td><td>Secure Data Sharing · Reader Account</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Agent 권한 설계 ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">새로 필요한 항목</div>
+    <h2 class="section-title">Agent 권한 설계</h2>
+    <p class="section-desc">기존 보안 설계는 <strong>사람이 화면에서 조회하는 것</strong>을 전제로 만들어졌습니다. Agent가 들어오면 다음 질문이 새로 생깁니다.</p>
+
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>질문</th><th>설계 방식</th></tr></thead>
+        <tbody>
+          <tr><td>Agent는 <strong>누구의 권한으로</strong> 데이터를 조회하는가</td><td>서비스 계정 권한을 별도로 두지 않고, <strong>요청한 사용자의 권한 범위 안에서</strong> 실행되도록 설계합니다</td></tr>
+          <tr><td>Agent가 사용자보다 <strong>넓은 권한</strong>을 갖지 않는가</td><td>사용자가 직접 조회할 수 없는 데이터가 Agent 답변으로 우회 노출되지 않도록 경계를 확인합니다</td></tr>
+          <tr><td>데이터가 <strong>어디까지 나가는가</strong></td><td>모델 호출 시 데이터가 어느 경계를 벗어나는지 확인하고, 필요한 경우 플랫폼 내부에서 처리되는 방식을 선택합니다</td></tr>
+          <tr><td>Agent 실행을 <strong>추적할 수 있는가</strong></td><td>어떤 도구를 호출하고 어떤 데이터를 참조했는지 기록을 남깁니다</td></tr>
+          <tr><td><strong>중단 조건</strong>이 있는가</td><td>권한 밖 요청, 비정상 사용량, 예외 상황의 중단·에스컬레이션 기준을 정합니다</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="pull-quote">Agent에게 권한을 주는 일은 사람에게<br>계정을 주는 일과 다릅니다.</p>
+    <p class="lead">Agent는 지치지 않고, 빠르며, 여러 데이터를 동시에 조합합니다. 그래서 개별 권한이 맞아도 조합 결과가 문제가 될 수 있습니다.</p>
+
+    <div class="note mt-2">
+      이 항목은 <a href="/ko/services/agentops.html" style="color:var(--navy);font-weight:600">AgentOps의 Guardrail &amp; Governance</a>와 이어집니다. 여기서는 <strong>데이터 접근 권한</strong>을, AgentOps에서는 <strong>실행 통제와 감사</strong>를 다룹니다.
+    </div>
+  </div>
+</section>
+
+<!-- ===== 규제·내부 통제 대응 ===== -->
+<section class="bg-alt">
+  <div class="container container-narrow">
+    <div class="section-label">규제·내부 통제 대응</div>
+    <p class="lead">내부 보안 검토와 규제 요건에 필요한 설계 근거와 증적을 함께 정리합니다.</p>
+  </div>
+</section>
+
+<!-- ===== 설계 원칙 / 표기 안내 ===== -->
+<section class="tight">
+  <div class="container container-narrow">
+    <p class="pull-quote">데이터 모델과 지표·계산 기준을 표준화해<br>현업 분석과 Agent가 동일한 정의를 사용하도록 합니다.</p>
+    <div class="note">Snowflake 관련 공식 파트너·리셀러·자격 표기는 확인된 범위에서만 사용합니다. 기술지원의 범위와 SLA는 계약 시 명시합니다.</div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="bg-navy">
+  <div class="container container-narrow center">
+    <h2 class="section-title">Agent가 어느 데이터까지 볼 수 있는지 정하지 못했다면</h2>
+    <a href="/ko/contact.html" class="btn btn-primary">접근권한·보안 설계 상담 →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">Nex <span>&amp;</span> Bridge</div>
+        <p>기업의 지식·데이터·업무 Agent·운영체계를 연결해 Agentic Enterprise를 구축합니다.</p>
+      </div>
+      <div class="footer-col">
+        <h4>서비스 유형</h4>
+        <ul>
+          <li><a href="/ko/services/#consulting">Consulting</a></li>
+          <li><a href="/ko/services/#build">Build</a></li>
+          <li><a href="/ko/services/#application-service">Application Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Snowflake Data &amp; AI</h4>
+        <ul>
+          <li><a href="/ko/services/snowflake/">개요</a></li>
+          <li><a href="/ko/services/snowflake/cost.html">비용 최적화</a></li>
+          <li><a href="/ko/services/snowflake/security.html">접근권한·보안</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>그 외 영역</h4>
+        <ul>
+          <li><a href="/ko/services/knowledge.html">Enterprise Knowledge</a></li>
+          <li><a href="/ko/services/solution.html">Agentic Solution</a></li>
+          <li><a href="/ko/services/agentops.html">AgentOps</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>적용 분야</h4>
+        <ul>
+          <li><a href="/ko/solutions/scm.html">Agentic SCM/SCP</a></li>
+          <li><a href="/ko/solutions/">확장 가능 분야 보기</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/ko/company.html">회사소개</a></li>
+          <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+          <li><a href="/ko/insights.html">Insights</a></li>
+          <li><a href="/ko/contact.html">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nex &amp; Bridge Co., Ltd.</p>
+      <div class="footer-legal">
+        <a href="https://nexenbridge.com">nexenbridge.com</a>
+        <a href="/ko/privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

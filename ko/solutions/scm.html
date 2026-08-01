@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic SCM/SCP | 넥스앤브릿지</title>
+<meta name="description" content="손익·SKU, 수요·재고, 공급·생산계획, 계획운영을 Agent 기반 분석·시뮬레이션·의사결정 지원으로 구현합니다.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/solutions/scm.html">
+<link rel="canonical" href="https://nexenbridge.com/ko/solutions/scm.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li><a href="/ko/agentic-enterprise.html">Agentic Enterprise</a></li>
+    <li class="has-mega">
+      <a href="/ko/services/">서비스</a>
+      <button class="submenu-toggle" aria-label="서비스 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col">
+          <div class="mega-col-title">서비스 유형</div>
+          <a href="/ko/services/#consulting">Consulting</a>
+          <a href="/ko/services/#build">Build</a>
+          <a href="/ko/services/#application-service">Application Service</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">핵심 서비스 영역</div>
+          <a href="/ko/services/snowflake/" class="mega-featured"><span class="star">★</span> Snowflake Data &amp; AI</a>
+          <a href="/ko/services/snowflake/cost.html" class="mega-sub">└ 비용 최적화 (FinOps)</a>
+          <a href="/ko/services/snowflake/security.html" class="mega-sub">└ 접근권한·보안 설계</a>
+          <a href="/ko/services/knowledge.html">Enterprise Knowledge</a>
+          <a href="/ko/services/solution.html">Agentic Solution</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">공통 역량</div>
+          <a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a>
+          <a href="/ko/services/" class="mega-col-more">서비스 개요 전체 보기 →</a>
+        </div>
+      </div>
+    </li>
+    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li class="has-dropdown">
+      <a href="/ko/solutions/">적용 분야</a>
+      <button class="submenu-toggle" aria-label="적용 분야 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="dropdown">
+        <a href="/ko/solutions/">적용 분야 개요</a>
+        <a href="/ko/solutions/scm.html" aria-current="page">Agentic SCM/SCP</a>
+      </div>
+    </li>
+    <li><a href="/ko/insights.html">Insights</a></li>
+    <li><a href="/ko/company.html">회사소개</a></li>
+    <li><a href="/ko/contact.html" class="nav-cta">문의하기</a></li>
+    <li>
+      <div class="lang-switch">
+        <a href="/ko/solutions/scm.html" aria-current="true">KO</a>
+        <a href="/en/solutions/scm.html">EN</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== §1 HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">Flagship Solution</div>
+    <h1>서로 영향을 주는 계획 결정을<br><em>한 흐름</em>에서 다룹니다</h1>
+    <p class="hero-sub">손익, 수요, 재고, 공급, 생산계획은 따로 결정할 수 없습니다. 한 곳을 바꾸면 다른 곳의 전제가 흔들립니다. 같은 기준과 데이터 위에서 함께 판단할 수 있게 만듭니다.</p>
+  </div>
+</section>
+
+<!-- ===== §2 제공 기능 ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">제공 기능</div>
+    <h2 class="section-title">제공 기능</h2>
+
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>영역</th><th>다루는 업무</th></tr></thead>
+        <tbody>
+          <tr><td><strong>손익·SKU</strong></td><td>손익 진단, SKU 합리화, 단종 영향 분석, 처분 최적화</td></tr>
+          <tr><td><strong>수요·재고</strong></td><td>수요계획 검증, Bias·이상치 점검, 안전재고·목표재고 산정, 다거점 재배치</td></tr>
+          <tr><td><strong>공급·생산계획</strong></td><td>공급 제약 반영, 생산 믹스, 용량·자재·MOQ, 시퀀싱</td></tr>
+          <tr><td><strong>계획운영 자동화</strong></td><td>계획 점검, 예외·승인, 변경 이력, 회의자료, Action 추적</td></tr>
+          <tr><td><strong>시뮬레이션·최적화</strong></td><td>시나리오 비교, LP/MIP 최적화</td></tr>
+          <tr><td><strong>실행·추적</strong></td><td>APS/ERP·MES 실행 연계, 결과 추적</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §3 적용 방식 ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">적용 방식</div>
+    <h2 class="section-title">적용 방식</h2>
+
+    <div class="grid-3">
+      <div class="card animate">
+        <h3>업무 단위 적용</h3>
+        <p>위 영역 중 하나를 골라 Agent와 판단 화면을 구현합니다.</p>
+      </div>
+      <div class="card animate delay-1">
+        <h3>연계 적용</h3>
+        <p>서로 영향을 주는 두세 영역을 함께 다뤄 기준을 통일합니다.</p>
+      </div>
+      <div class="card animate delay-2">
+        <h3>통합 구축</h3>
+        <p>데이터 기반부터 실행 연계까지 하나의 환경으로 구축합니다.</p>
+      </div>
+    </div>
+
+    <p class="lead mt-2">기존 ERP·APS를 대체하지 않습니다. 그 위에서 판단에 필요한 분석과 근거를 만들고, 확정된 결과만 실행 시스템으로 넘깁니다.</p>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="bg-navy">
+  <div class="container container-narrow center">
+    <h2 class="section-title">계획 결정이 서로 영향을 주고 있다면</h2>
+    <a href="/ko/contact.html" class="btn btn-primary">적용 가능성 상담하기 →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">Nex <span>&amp;</span> Bridge</div>
+        <p>기업의 지식·데이터·업무 Agent·운영체계를 연결해 Agentic Enterprise를 구축합니다.</p>
+      </div>
+      <div class="footer-col">
+        <h4>서비스 유형</h4>
+        <ul>
+          <li><a href="/ko/services/#consulting">Consulting</a></li>
+          <li><a href="/ko/services/#build">Build</a></li>
+          <li><a href="/ko/services/#application-service">Application Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Snowflake Data &amp; AI</h4>
+        <ul>
+          <li><a href="/ko/services/snowflake/">개요</a></li>
+          <li><a href="/ko/services/snowflake/cost.html">비용 최적화</a></li>
+          <li><a href="/ko/services/snowflake/security.html">접근권한·보안</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>그 외 영역</h4>
+        <ul>
+          <li><a href="/ko/services/knowledge.html">Enterprise Knowledge</a></li>
+          <li><a href="/ko/services/solution.html">Agentic Solution</a></li>
+          <li><a href="/ko/services/agentops.html">AgentOps</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>적용 분야</h4>
+        <ul>
+          <li><a href="/ko/solutions/scm.html">Agentic SCM/SCP</a></li>
+          <li><a href="/ko/solutions/">확장 가능 분야 보기</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/ko/company.html">회사소개</a></li>
+          <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+          <li><a href="/ko/insights.html">Insights</a></li>
+          <li><a href="/ko/contact.html">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nex &amp; Bridge Co., Ltd.</p>
+      <div class="footer-legal">
+        <a href="https://nexenbridge.com">nexenbridge.com</a>
+        <a href="/ko/privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

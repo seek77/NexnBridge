@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enterprise Knowledge Engineering — 넥스앤브릿지</title>
+<meta name="description" content="사람과 문서에 흩어진 업무 개념, 규칙, 예외, 판단 근거를 Agent와 현업이 함께 쓸 수 있는 기준으로 정리합니다.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/services/knowledge.html">
+<link rel="canonical" href="https://nexenbridge.com/ko/services/knowledge.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li><a href="/ko/agentic-enterprise.html">Agentic Enterprise</a></li>
+    <li class="has-mega">
+      <a href="/ko/services/" aria-current="page">서비스</a>
+      <button class="submenu-toggle" aria-label="서비스 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col">
+          <div class="mega-col-title">서비스 유형</div>
+          <a href="/ko/services/#consulting">Consulting</a>
+          <a href="/ko/services/#build">Build</a>
+          <a href="/ko/services/#application-service">Application Service</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">핵심 서비스 영역</div>
+          <a href="/ko/services/snowflake/" class="mega-featured"><span class="star">★</span> Snowflake Data &amp; AI</a>
+          <a href="/ko/services/snowflake/cost.html" class="mega-sub">└ 비용 최적화 (FinOps)</a>
+          <a href="/ko/services/snowflake/security.html" class="mega-sub">└ 접근권한·보안 설계</a>
+          <a href="/ko/services/knowledge.html">Enterprise Knowledge</a>
+          <a href="/ko/services/solution.html">Agentic Solution</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">공통 역량</div>
+          <a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a>
+          <a href="/ko/services/" class="mega-col-more">서비스 개요 전체 보기 →</a>
+        </div>
+      </div>
+    </li>
+    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li class="has-dropdown">
+      <a href="/ko/solutions/">적용 분야</a>
+      <button class="submenu-toggle" aria-label="적용 분야 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="dropdown">
+        <a href="/ko/solutions/">적용 분야 개요</a>
+        <a href="/ko/solutions/scm.html">Agentic SCM/SCP</a>
+      </div>
+    </li>
+    <li><a href="/ko/insights.html">Insights</a></li>
+    <li><a href="/ko/company.html">회사소개</a></li>
+    <li><a href="/ko/contact.html" class="nav-cta">문의하기</a></li>
+    <li>
+      <div class="lang-switch">
+        <a href="/ko/services/knowledge.html" aria-current="true">KO</a>
+        <a href="/en/services/knowledge.html">EN</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== §1 HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">Core Service Area</div>
+    <h1>업무 지식과 판단 기준을<br>조직의 <em>관리 자산</em>으로 전환합니다</h1>
+    <p class="hero-sub"><strong style="color:#fff">Enterprise Knowledge Engineering</strong>은 업무 개념, 규칙, 예외, 출처와 책임자를 정의합니다.</p>
+  </div>
+</section>
+
+<!-- ===== §2 적용 대상 ===== -->
+<section>
+  <div class="container container-narrow">
+    <div class="section-label">적용 대상</div>
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:.9rem">
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative">
+        <span style="position:absolute;left:0;color:var(--accent2)">—</span>업무 지식이 사람과 문서에 흩어져 있는 기업
+      </li>
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative">
+        <span style="position:absolute;left:0;color:var(--accent2)">—</span>담당자마다 판단 기준이 다른 기업
+      </li>
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative">
+        <span style="position:absolute;left:0;color:var(--accent2)">—</span>RAG를 구축했지만 일관된 분석과 판단이 어려운 기업
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== §3 Build 범위 ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">Build Scope</div>
+    <h2 class="section-title">Build 범위</h2>
+
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>구축 항목</th><th>내용</th><th>산출물</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Business Ontology 구축</strong></td><td>핵심 업무 개념, 속성, 관계, 상태, 이벤트, 책임과 판단 문맥 정의</td><td>Ontology Model · Concept Dictionary · Relationship Map</td></tr>
+          <tr><td><strong>Knowledge Graph 구축</strong></td><td>문서·데이터·규정·조직·업무 객체·판단 근거를 Node/Edge로 연결</td><td>Enterprise/Domain KG · Graph Schema · Provenance</td></tr>
+          <tr><td><strong>Knowledge Ingestion &amp; Linking</strong></td><td>원천 수집, 추출, Entity Resolution, 관계 매핑, 중복·충돌 처리</td><td>Ingestion Pipeline · Entity Map · Quality Rule</td></tr>
+          <tr><td><strong>Decision Knowledge 구축</strong></td><td>Decision Question, 지표, 임계값, 예외, 승인, 실행 조건 구조화</td><td>Decision Tree · Approved Logic · Decision Brief</td></tr>
+          <tr><td><strong>Knowledge Service &amp; Reasoning API</strong></td><td>Agent와 애플리케이션이 Graph를 조회·탐색·추론하도록 서비스화</td><td>Knowledge API · Graph Query · Retrieval/Reasoning Service</td></tr>
+          <tr><td><strong>Knowledge Governance</strong></td><td>근거 등급, 소유자, 버전, 권한, 승인, 변경·폐기 절차</td><td>Knowledge Catalog · Access Policy · Change Workflow</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §4 설계 원칙 ===== -->
+<section>
+  <div class="container container-narrow center">
+    <p class="pull-quote" style="display:inline-block;text-align:left">검색 대상 지식과 의사결정에 사용할<br>기준·절차를 함께 정의합니다.</p>
+    <p style="color:var(--text3);font-family:var(--mono);font-size:.8rem;margin-top:1rem">RAG retrieves knowledge. KOAA orchestrates analysis with knowledge.</p>
+  </div>
+</section>
+
+<!-- ===== §5 CTA ===== -->
+<section class="bg-navy">
+  <div class="container container-narrow center">
+    <h2 class="section-title">업무 지식이 흩어져 있다면</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto">Knowledge &amp; Decision Sprint로 시작할 수 있습니다.</p>
+    <a href="/ko/contact.html" class="btn btn-primary">Knowledge &amp; Decision Sprint 문의 →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">Nex <span>&amp;</span> Bridge</div>
+        <p>기업의 지식·데이터·업무 Agent·운영체계를 연결해 Agentic Enterprise를 구축합니다.</p>
+      </div>
+      <div class="footer-col">
+        <h4>서비스 유형</h4>
+        <ul>
+          <li><a href="/ko/services/#consulting">Consulting</a></li>
+          <li><a href="/ko/services/#build">Build</a></li>
+          <li><a href="/ko/services/#application-service">Application Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Snowflake Data &amp; AI</h4>
+        <ul>
+          <li><a href="/ko/services/snowflake/">개요</a></li>
+          <li><a href="/ko/services/snowflake/cost.html">비용 최적화</a></li>
+          <li><a href="/ko/services/snowflake/security.html">접근권한·보안</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>그 외 영역</h4>
+        <ul>
+          <li><a href="/ko/services/knowledge.html">Enterprise Knowledge</a></li>
+          <li><a href="/ko/services/solution.html">Agentic Solution</a></li>
+          <li><a href="/ko/services/agentops.html">AgentOps</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>적용 분야</h4>
+        <ul>
+          <li><a href="/ko/solutions/scm.html">Agentic SCM/SCP</a></li>
+          <li><a href="/ko/solutions/">확장 가능 분야 보기</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/ko/company.html">회사소개</a></li>
+          <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+          <li><a href="/ko/insights.html">Insights</a></li>
+          <li><a href="/ko/contact.html">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nex &amp; Bridge Co., Ltd.</p>
+      <div class="footer-legal">
+        <a href="https://nexenbridge.com">nexenbridge.com</a>
+        <a href="/ko/privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

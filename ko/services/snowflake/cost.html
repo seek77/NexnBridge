@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snowflake 비용 최적화 (FinOps) | 넥스앤브릿지</title>
+<meta name="description" content="웨어하우스 운영, 쿼리 효율, 스토리지 정책, 가속 기능 설정을 점검해 Snowflake 비용 절감 가능 범위를 산정합니다.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/services/snowflake/cost.html">
+<link rel="canonical" href="https://nexenbridge.com/ko/services/snowflake/cost.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li><a href="/ko/agentic-enterprise.html">Agentic Enterprise</a></li>
+    <li class="has-mega">
+      <a href="/ko/services/">서비스</a>
+      <button class="submenu-toggle" aria-label="서비스 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col">
+          <div class="mega-col-title">서비스 유형</div>
+          <a href="/ko/services/#consulting">Consulting</a>
+          <a href="/ko/services/#build">Build</a>
+          <a href="/ko/services/#application-service">Application Service</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">핵심 서비스 영역</div>
+          <a href="/ko/services/snowflake/" class="mega-featured"><span class="star">★</span> Snowflake Data &amp; AI</a>
+          <a href="/ko/services/snowflake/cost.html" class="mega-sub" aria-current="page">└ 비용 최적화 (FinOps)</a>
+          <a href="/ko/services/snowflake/security.html" class="mega-sub">└ 접근권한·보안 설계</a>
+          <a href="/ko/services/knowledge.html">Enterprise Knowledge</a>
+          <a href="/ko/services/solution.html">Agentic Solution</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-title">공통 역량</div>
+          <a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a>
+          <a href="/ko/services/" class="mega-col-more">서비스 개요 전체 보기 →</a>
+        </div>
+      </div>
+    </li>
+    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li class="has-dropdown">
+      <a href="/ko/solutions/">적용 분야</a>
+      <button class="submenu-toggle" aria-label="적용 분야 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="dropdown">
+        <a href="/ko/solutions/">적용 분야 개요</a>
+        <a href="/ko/solutions/scm.html">Agentic SCM/SCP</a>
+      </div>
+    </li>
+    <li><a href="/ko/insights.html">Insights</a></li>
+    <li><a href="/ko/company.html">회사소개</a></li>
+    <li><a href="/ko/contact.html" class="nav-cta">문의하기</a></li>
+    <li>
+      <div class="lang-switch">
+        <a href="/ko/services/snowflake/cost.html" aria-current="true">KO</a>
+        <a href="/en/services/snowflake/cost.html">EN</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">가장 빠르게 효과를 확인할 수 있는 시작점</div>
+    <h1>쓰는 만큼 내는 구조에서는,<br><em>무엇에 쓰는지 아는 것</em>이 먼저입니다</h1>
+    <p class="hero-sub">Snowflake 비용은 웨어하우스 운영 방식, 쿼리 효율, 스토리지 정책, 가속 기능 설정에 따라 크게 달라집니다. 같은 업무를 하면서도 비용 차이가 나는 지점을 찾아 구조를 바꿉니다.</p>
+  </div>
+</section>
+
+<!-- ===== 이런 상황에 필요합니다 ===== -->
+<section>
+  <div class="container container-narrow">
+    <div class="section-label">이런 상황에 필요합니다</div>
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:.9rem">
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>도입 후 크레딧 소비가 예상보다 빠르게 늘고 있다</li>
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>어느 팀·어느 업무가 얼마를 쓰는지 구분되지 않는다</li>
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>비용을 줄이라는 요구는 있는데 어디를 손대야 할지 모른다</li>
+      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>예산 초과를 사후에 알게 된다</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 점검 항목 ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">Checklist</div>
+    <h2 class="section-title">점검 항목</h2>
+
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>영역</th><th>확인하는 것</th></tr></thead>
+        <tbody>
+          <tr><td><strong>웨어하우스 운영</strong></td><td>크기 적정성, Auto-suspend 설정, Multi-cluster 정책, 유휴 크레딧</td></tr>
+          <tr><td><strong>쿼리 효율</strong></td><td>스캔 파티션 비율, Local/Remote Spill, 반복 실행, 결과 캐시 활용률</td></tr>
+          <tr><td><strong>스토리지</strong></td><td>Time Travel 보존기간, Fail-safe, 미사용 테이블·클론, 스테이지 잔여 파일</td></tr>
+          <tr><td><strong>가속 기능</strong></td><td>Clustering 재클러스터링 비용, Materialized View, Search Optimization, Query Acceleration의 비용 대비 효과</td></tr>
+          <tr><td><strong>데이터 적재</strong></td><td>Snowpipe·COPY 선택, 파일 크기, Dynamic Tables 리프레시 주기</td></tr>
+          <tr><td><strong>워크로드 분리</strong></td><td>업무별 웨어하우스 분리, 우선순위, 동시성 처리</td></tr>
+          <tr><td><strong>가시성·거버넌스</strong></td><td>Object Tagging, Resource Monitor, 예산 알림, 팀별 쇼백·차지백</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 서비스 구성 ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Service Structure</div>
+    <h2 class="section-title">서비스 구성</h2>
+
+    <div class="steps">
+      <div class="step animate">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-q">Consulting</div>
+          <div class="step-title">Cost Assessment</div>
+          <div class="step-desc">현재 비용 구조 분석, 낭비 지점 식별, <strong>절감 가능액 산정</strong>. 산출물 — 비용 진단 리포트 · 개선 항목 우선순위 · 예상 절감 범위</div>
+        </div>
+      </div>
+      <div class="step animate delay-1">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-q">Build</div>
+          <div class="step-title">Optimization</div>
+          <div class="step-desc">웨어하우스 재설계, 쿼리·데이터 레이아웃 개선, 정책 적용. 산출물 — 변경 내역 · 적용 전후 비교 · 운영 기준</div>
+        </div>
+      </div>
+      <div class="step animate delay-2">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-q">Application Service</div>
+          <div class="step-title">Managed FinOps</div>
+          <div class="step-desc">지속 모니터링, 예산·알림 운영, 월간 리포트, 태깅·쇼백. 산출물 — 월간 비용 리포트 · 이상 감지 · 개선 Backlog</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">이 서비스는 Consulting · Build · Application Service 세 유형이 하나의 영역에서 어떻게 이어지는지 보여주는 대표 사례입니다. 진단만 받고 끝낼 수도 있고, 실행까지 맡길 수도 있고, 이후 지속 관리로 이어갈 수도 있습니다.</div>
+  </div>
+</section>
+
+<!-- ===== 왜 여기서 시작하기 좋은가 ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">왜 여기서 시작하기 좋은가</div>
+
+    <div class="grid-2 mt-1">
+      <div class="card animate">
+        <h3>효과를 숫자로 확인</h3>
+        <p>적용 전후 크레딧 소비를 직접 비교할 수 있습니다.</p>
+      </div>
+      <div class="card animate delay-1">
+        <h3>짧은 기간</h3>
+        <p>Cost Assessment는 2~3주 범위에서 수행합니다.</p>
+      </div>
+      <div class="card animate delay-2">
+        <h3>낮은 위험</h3>
+        <p>업무 시스템을 바꾸지 않고 운영 설정과 쿼리부터 다룹니다.</p>
+      </div>
+      <div class="card animate delay-3">
+        <h3>다음 과제로 연결</h3>
+        <p>비용을 보려면 데이터 구조와 사용 패턴을 함께 봐야 합니다. 그 과정에서 모델링·Semantic Layer 개선 과제가 자연스럽게 드러납니다.</p>
+      </div>
+    </div>
+
+    <div class="note mt-2"><strong>절감률을 숫자로 광고하지 않습니다.</strong> 절감 폭은 현재 구성 상태에 따라 크게 달라지므로, 진단 결과로 예상 범위를 제시하고 실측으로 확인합니다.</div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="bg-navy">
+  <div class="container container-narrow center">
+    <h2 class="section-title">Snowflake 크레딧 소비가 예상보다 빠르다면</h2>
+    <a href="/ko/contact.html" class="btn btn-primary">Snowflake 비용 진단 문의 →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">Nex <span>&amp;</span> Bridge</div>
+        <p>기업의 지식·데이터·업무 Agent·운영체계를 연결해 Agentic Enterprise를 구축합니다.</p>
+      </div>
+      <div class="footer-col">
+        <h4>서비스 유형</h4>
+        <ul>
+          <li><a href="/ko/services/#consulting">Consulting</a></li>
+          <li><a href="/ko/services/#build">Build</a></li>
+          <li><a href="/ko/services/#application-service">Application Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Snowflake Data &amp; AI</h4>
+        <ul>
+          <li><a href="/ko/services/snowflake/">개요</a></li>
+          <li><a href="/ko/services/snowflake/cost.html">비용 최적화</a></li>
+          <li><a href="/ko/services/snowflake/security.html">접근권한·보안</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>그 외 영역</h4>
+        <ul>
+          <li><a href="/ko/services/knowledge.html">Enterprise Knowledge</a></li>
+          <li><a href="/ko/services/solution.html">Agentic Solution</a></li>
+          <li><a href="/ko/services/agentops.html">AgentOps</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>적용 분야</h4>
+        <ul>
+          <li><a href="/ko/solutions/scm.html">Agentic SCM/SCP</a></li>
+          <li><a href="/ko/solutions/">확장 가능 분야 보기</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/ko/company.html">회사소개</a></li>
+          <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+          <li><a href="/ko/insights.html">Insights</a></li>
+          <li><a href="/ko/contact.html">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nex &amp; Bridge Co., Ltd.</p>
+      <div class="footer-legal">
+        <a href="https://nexenbridge.com">nexenbridge.com</a>
+        <a href="/ko/privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

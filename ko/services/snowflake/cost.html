@@ -3,23 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Snowflake 비용 최적화 (FinOps) | 넥스앤브릿지</title>
-<meta name="description" content="웨어하우스 운영, 쿼리 효율, 스토리지 정책, 가속 기능 설정을 점검해 Snowflake 비용 개선 후보와 측정 기준을 정리합니다.">
+<title>Snowflake 비용·사용량 검토 (FinOps) | 넥스앤브릿지</title>
+<meta name="description" content="Snowflake 청구 내역과 사용량을 함께 확인하고 측정 기준, 개선 우선순위, 변경 전후 검증과 운영 범위를 현재 환경에 맞춰 정합니다.">
 <link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/services/snowflake/cost.html">
 <link rel="canonical" href="https://nexenbridge.com/ko/services/snowflake/cost.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nex &amp; Bridge">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="Snowflake 비용 최적화 (FinOps) | 넥스앤브릿지">
-<meta property="og:description" content="웨어하우스 운영, 쿼리 효율, 스토리지 정책과 가속 기능을 점검해 Snowflake 비용 개선 후보와 측정 기준을 정리합니다.">
+<meta property="og:title" content="Snowflake 비용·사용량 검토 (FinOps) | 넥스앤브릿지">
+<meta property="og:description" content="Snowflake 청구 내역과 사용량을 함께 확인하고 측정 기준, 개선 우선순위, 변경 전후 검증과 운영 범위를 현재 환경에 맞춰 정합니다.">
 <meta property="og:url" content="https://nexenbridge.com/ko/services/snowflake/cost.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Snowflake 비용 최적화 (FinOps) | 넥스앤브릿지">
-<meta name="twitter:description" content="Snowflake 비용 구조를 점검하고 개선 후보와 측정 기준을 정리합니다.">
+<meta name="twitter:title" content="Snowflake 비용·사용량 검토 (FinOps) | 넥스앤브릿지">
+<meta name="twitter:description" content="Snowflake 비용이 생긴 이유와 실제 사용량을 함께 확인해 검토 범위를 정합니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Snowflake 비용·사용량 검토 (FinOps) | 넥스앤브릿지",
+  "url": "https://nexenbridge.com/ko/services/snowflake/cost.html",
+  "description": "Snowflake 청구 내역과 사용량을 함께 확인하고 측정 기준, 개선 우선순위, 변경 전후 검증과 운영 범위를 현재 환경에 맞춰 정합니다.",
+  "inLanguage": "ko-KR"
+}
+</script>
 </head>
 <body>
 
@@ -30,7 +40,7 @@
   <ul class="nav-menu">
     <li><a href="/ko/agentic-enterprise.html">Agentic Enterprise</a></li>
     <li class="has-mega">
-      <a href="/ko/services/">서비스</a>
+      <a href="/ko/services/" aria-current="location">서비스</a>
       <button class="submenu-toggle" aria-label="서비스 하위메뉴 열기"><span class="chev"></span></button>
       <div class="mega-menu">
         <div class="mega-col">
@@ -43,7 +53,7 @@
           <div class="mega-col-title">핵심 서비스 영역</div>
           <a href="/ko/services/snowflake/">Snowflake Data &amp; AI</a>
           <a href="/ko/services/snowflake/cost.html" class="mega-sub" aria-current="page">└ 비용 최적화 (FinOps)</a>
-          <a href="/ko/services/snowflake/security.html" class="mega-sub">└ 접근권한·보안 설계</a>
+          <a href="/ko/services/snowflake/security.html" class="mega-sub">└ 접근권한·보안</a>
           <a href="/ko/services/knowledge.html">Enterprise Knowledge</a>
           <a href="/ko/services/solution.html">Agentic Solution</a>
         </div>
@@ -69,127 +79,283 @@
     <li>
       <div class="lang-switch">
         <a href="/ko/services/snowflake/cost.html" aria-current="true">KO</a>
-        <a href="/en/services/#snowflake">EN</a>
+        <a href="/en/services/#snowflake" aria-label="영문 서비스 개요의 Snowflake Data &amp; AI 영역">EN</a>
       </div>
     </li>
   </ul>
 </nav>
 
-<!-- ===== HERO ===== -->
+<!-- ===== §1 HERO ===== -->
 <section class="hero hero-sm">
   <div class="hero-inner">
-    <div class="hero-label">비용 구조를 확인하는 첫 단계</div>
-    <h1>쓰는 만큼 내는 구조에서는,<br><em>무엇에 쓰는지 아는 것</em>이 먼저입니다</h1>
-    <p class="hero-sub">Snowflake 비용은 웨어하우스 운영 방식, 쿼리 효율, 스토리지 정책, 가속 기능 설정에 따라 크게 달라집니다. 같은 업무를 하면서도 비용 차이가 나는 지점을 찾아 구조를 바꿉니다.</p>
-  </div>
-</section>
-
-<!-- ===== 이런 상황에 필요합니다 ===== -->
-<section>
-  <div class="container container-narrow">
-    <div class="section-label">이런 상황에 필요합니다</div>
-    <ul style="list-style:none;display:flex;flex-direction:column;gap:.9rem">
-      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>도입 후 크레딧 소비가 예상보다 빠르게 늘고 있다</li>
-      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>어느 팀·어느 업무가 얼마를 쓰는지 구분되지 않는다</li>
-      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>비용을 줄이라는 요구는 있는데 어디를 손대야 할지 모른다</li>
-      <li style="font-size:1rem;color:var(--text2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent2)">—</span>예산 초과를 사후에 알게 된다</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ===== 점검 항목 ===== -->
-<section class="bg-alt">
-  <div class="container">
-    <div class="section-label">Checklist</div>
-    <h2 class="section-title">점검 항목</h2>
-
-    <div class="tbl-wrap">
-      <table class="tbl">
-        <thead><tr><th>영역</th><th>확인하는 것</th></tr></thead>
-        <tbody>
-          <tr><td><strong>웨어하우스 운영</strong></td><td>크기 적정성, Auto-suspend 설정, Multi-cluster 정책, 유휴 크레딧</td></tr>
-          <tr><td><strong>쿼리 효율</strong></td><td>스캔 파티션 비율, Local/Remote Spill, 반복 실행, 결과 캐시 활용률</td></tr>
-          <tr><td><strong>스토리지</strong></td><td>Time Travel 보존기간, Fail-safe, 미사용 테이블·클론, 스테이지 잔여 파일</td></tr>
-          <tr><td><strong>가속 기능</strong></td><td>Clustering 재클러스터링 비용, Materialized View, Search Optimization, Query Acceleration의 비용 대비 효과</td></tr>
-          <tr><td><strong>데이터 적재</strong></td><td>Snowpipe·COPY 선택, 파일 크기, Dynamic Tables 리프레시 주기</td></tr>
-          <tr><td><strong>워크로드 분리</strong></td><td>업무별 웨어하우스 분리, 우선순위, 동시성 처리</td></tr>
-          <tr><td><strong>가시성·거버넌스</strong></td><td>Object Tagging, Resource Monitor, 예산 알림, 팀별 쇼백·차지백</td></tr>
-        </tbody>
-      </table>
+    <div class="hero-label">Snowflake Cost &amp; FinOps</div>
+    <h1>비용만 줄이는 것이 아니라,<br><em>어디에 얼마나 쓰는지</em>부터 확인합니다</h1>
+    <p class="hero-sub">청구 내역과 웨어하우스·쿼리·스토리지 사용량을 같은 기간과 업무 기준으로 살펴봅니다. 어떤 변경을 먼저 검토할지, 변경 효과를 어떤 기준으로 측정할지, 운영 중 누가 확인할지는 현재 환경을 본 뒤 합의합니다.</p>
+    <div class="hero-btns">
+      <a href="#cost-flow" class="btn btn-primary">검토 흐름 보기 ↓</a>
+      <a href="/ko/contact.html?pkg=cost" class="btn btn-ghost">비용 검토 범위 상담하기 →</a>
+    </div>
+    <div class="hero-structure">
+      <div class="hs-item">
+        <div class="hs-key">Usage</div>
+        <div class="hs-val">비용이 발생한 사용량<small>웨어하우스·쿼리·스토리지·서비스</small></div>
+      </div>
+      <div class="hs-item">
+        <div class="hs-key">Measure</div>
+        <div class="hs-val">같은 조건의 비교<small>기간·업무량·성능·데이터 갱신</small></div>
+      </div>
+      <div class="hs-item">
+        <div class="hs-key">Change</div>
+        <div class="hs-val">우선순위와 검증<small>업무 영향·변경 위험·운영 책임</small></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 서비스 구성 ===== -->
+<!-- ===== §2 이런 상황이라면 ===== -->
 <section>
   <div class="container">
-    <div class="section-label">Service Structure</div>
-    <h2 class="section-title">서비스 구성</h2>
+    <div class="section-label">이런 상황이라면</div>
+    <h2 class="section-title">총액만 보면 어느 업무·워크로드의 사용 방식을 바꿔야 할지 알기 어렵습니다</h2>
+    <p class="section-desc">비용은 사용량과 설정뿐 아니라 업무량, 처리 시점과 성능 조건의 영향을 받습니다. 청구액만 줄이려 하면 필요한 업무까지 영향을 받을 수 있습니다.</p>
 
-    <div class="steps">
-      <div class="step animate">
-        <div class="step-num">1</div>
-        <div>
-          <div class="step-q">Consulting</div>
-          <div class="step-title">Cost Assessment</div>
-          <div class="step-desc">현재 비용 구조 분석, 불필요한 사용 후보 식별, <strong>개선 효과 측정 기준 정리</strong>. 산출물 — 비용 진단 리포트 · 개선 항목 우선순위 · 측정 지표</div>
-        </div>
-      </div>
-      <div class="step animate delay-1">
-        <div class="step-num">2</div>
-        <div>
-          <div class="step-q">Build</div>
-          <div class="step-title">Optimization</div>
-          <div class="step-desc">웨어하우스 재설계, 쿼리·데이터 레이아웃 개선, 정책 적용. 산출물 — 변경 내역 · 적용 전후 비교 · 운영 기준</div>
-        </div>
-      </div>
-      <div class="step animate delay-2">
-        <div class="step-num">3</div>
-        <div>
-          <div class="step-q">Application Service</div>
-          <div class="step-title">Managed FinOps</div>
-          <div class="step-desc">지속 모니터링, 예산·알림 운영, 월간 리포트, 태깅·쇼백. 산출물 — 월간 비용 리포트 · 이상 감지 · 개선 Backlog</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">비용 진단만 진행하거나, 합의한 개선 항목의 적용과 Managed FinOps까지 필요한 범위를 선택할 수 있습니다. 운영 범위와 SLA는 계약에서 명시합니다.</div>
-  </div>
-</section>
-
-<!-- ===== 왜 여기서 시작하기 좋은가 ===== -->
-<section class="bg-alt">
-  <div class="container">
-    <div class="section-label">왜 여기서 시작하기 좋은가</div>
-
-    <div class="grid-2 mt-1">
+    <div class="grid-4">
       <div class="card animate">
-        <h3>적용 전후 사용량 비교</h3>
-        <p>적용 전후 크레딧 소비를 직접 비교할 수 있습니다.</p>
+        <div class="card-num">01 OWNER</div>
+        <h3>어느 팀과 업무의 사용인지 구분하기 어려울 때</h3>
+        <p>계정 전체 비용을 워크로드와 담당자, 프로젝트나 서비스 기준으로 나누어 볼 수 있는지 확인합니다.</p>
       </div>
       <div class="card animate delay-1">
-        <h3>범위를 먼저 확인</h3>
-        <p>계정 규모, 사용 이력, 점검 대상을 확인한 뒤 진단 범위와 기간을 정합니다.</p>
+        <div class="card-num">02 CHANGE</div>
+        <h3>사용량이 늘어난 이유를 설명하기 어려울 때</h3>
+        <p>업무량 변화와 설정 변경, 반복 실행이나 새로운 기능 사용 중 어떤 요인이 영향을 주었는지 살펴봅니다.</p>
       </div>
       <div class="card animate delay-2">
-        <h3>변경 전 진단</h3>
-        <p>운영 설정과 쿼리를 먼저 점검하고, 변경할 항목과 적용 순서를 구분합니다.</p>
+        <div class="card-num">03 TRADE-OFF</div>
+        <h3>비용과 성능 조건을 함께 비교해야 할 때</h3>
+        <p>응답 시간과 동시 처리, 데이터 갱신 시점처럼 유지해야 할 조건을 비용과 함께 확인합니다.</p>
       </div>
       <div class="card animate delay-3">
-        <h3>다음 과제로 연결</h3>
-        <p>비용을 보려면 데이터 구조와 사용 패턴을 함께 봐야 합니다. 그 과정에서 모델링·Semantic Layer 개선 과제가 자연스럽게 드러납니다.</p>
+        <div class="card-num">04 BASELINE</div>
+        <h3>변경했지만 효과를 같은 조건에서 비교하기 어려울 때</h3>
+        <p>비교 기간과 업무량, 성능 조건이 달라 단순한 적용 전후 금액만으로 판단하기 어려운지 확인합니다.</p>
       </div>
     </div>
-
-    <div class="note mt-2">비용 변화는 현재 구성과 사용 패턴에 따라 달라집니다. 적용 전 기준값과 변경 후 사용량을 같은 조건에서 비교해 개선 여부를 확인합니다.</div>
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
+<!-- ===== §3 함께 확인할 자료 ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">함께 확인할 자료</div>
+    <h2 class="section-title">청구 내역과 실제 사용량을 같은 기준으로 읽습니다</h2>
+    <p class="section-desc">공유 가능한 범위에서 비용이 발생한 기간과 사용 주체, 워크로드와 운영 조건을 연결합니다. 모든 자료가 있어야 시작할 수 있는 것은 아닙니다.</p>
+
+    <div class="grid-3">
+      <div class="card animate">
+        <div class="card-num">BILLING</div>
+        <h3>청구와 사용 내역</h3>
+        <p>기간별 비용과 크레딧 사용, 계정·서비스별 구분과 현재 확인 가능한 청구 기준을 살펴봅니다.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">COMPUTE</div>
+        <h3>컴퓨트 사용</h3>
+        <p>웨어하우스 크기와 실행 시간, 유휴 시간, 동시 처리와 작업 시간대를 확인합니다.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">WORKLOAD</div>
+        <h3>쿼리와 워크로드</h3>
+        <p>반복 실행과 처리량, 스캔·메모리 사용, 실행 주기와 업무별 성능 조건을 살펴봅니다.</p>
+      </div>
+      <div class="card animate">
+        <div class="card-num">DATA</div>
+        <h3>스토리지와 데이터 처리</h3>
+        <p>데이터 보관과 복제, 적재·갱신 방식, 전송이나 별도 서비스 사용 중 확인할 항목을 정합니다.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">OWNERSHIP</div>
+        <h3>사용 주체와 분류 기준</h3>
+        <p>팀과 프로젝트, 애플리케이션, 서비스 계정을 구분할 태그와 담당자 정보가 있는지 확인합니다.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">CONDITION</div>
+        <h3>유지해야 할 업무 조건</h3>
+        <p>응답 시간과 가용 시간, 데이터 갱신 주기, 마감 일정처럼 변경 뒤에도 지켜야 할 조건을 정합니다.</p>
+      </div>
+    </div>
+
+    <p class="note mt-2"><strong>자료 범위</strong> — 확인할 계정과 기간, 필요한 접근 권한은 상담 후 합의합니다. 자료가 부족하거나 구분 기준이 없다면 먼저 보완할 항목으로 남깁니다.</p>
+  </div>
+</section>
+
+<!-- ===== §4 측정 기준 ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">측정 기준</div>
+    <h2 class="section-title">변경 전에 무엇을 같은 조건으로 비교할지 정합니다</h2>
+    <p class="section-desc">업무량이 달라졌는데 총비용만 비교하면 변경 효과를 잘못 해석할 수 있습니다. 비용과 사용량, 유지해야 할 업무 조건을 함께 봅니다.</p>
+
+    <div class="grid-4">
+      <div class="card animate">
+        <div class="card-num">PERIOD</div>
+        <h3>비교 기간</h3>
+        <p>마감이나 배치, 성수기처럼 사용 패턴이 다른 시기를 구분해 비교할 기간을 정합니다.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">UNIT</div>
+        <h3>비용을 나눌 단위</h3>
+        <p>팀·업무·쿼리·파이프라인 등 현재 환경에서 설명 가능한 단위를 고릅니다.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">BASELINE</div>
+        <h3>기준 사용량</h3>
+        <p>처리 건수와 데이터량, 실행 횟수처럼 비용 변화를 설명할 기준값을 정합니다.</p>
+      </div>
+      <div class="card animate delay-3">
+        <div class="card-num">GUARDRAIL</div>
+        <h3>유지할 조건</h3>
+        <p>응답 시간과 실패율, 데이터 갱신 시점 등 비용과 함께 확인할 조건을 합의합니다.</p>
+      </div>
+    </div>
+
+    <p class="pull-quote">비용 감소만으로 변경을 평가하지 않습니다.<br>업무량과 성능, 데이터 갱신 조건을 함께 봅니다.</p>
+  </div>
+</section>
+
+<!-- ===== §5 우선순위와 변경 범위 ===== -->
+<section class="bg-alt" id="cost-flow">
+  <div class="container">
+    <div class="section-label">우선순위와 변경 범위</div>
+    <h2 class="section-title">절감 가능성뿐 아니라 업무 영향과 변경 위험을 함께 봅니다</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div>
+          <div class="step-q">SIGNAL</div>
+          <div class="step-title">비용과 사용량이 달라진 지점을 찾습니다</div>
+          <div class="step-desc">기간과 계정, 서비스와 워크로드별로 변화가 큰 지점과 확인이 필요한 사용을 구분합니다.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div>
+          <div class="step-q">CONTEXT</div>
+          <div class="step-title">업무 목적과 담당자를 연결합니다</div>
+          <div class="step-desc">해당 사용이 어떤 업무에 필요한지, 성능과 처리 시점 조건은 무엇인지 담당자와 확인합니다.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div>
+          <div class="step-q">CANDIDATE</div>
+          <div class="step-title">변경을 검토할 후보를 구분합니다</div>
+          <div class="step-desc">설정과 실행 시간, 쿼리·데이터 구조, 보관·갱신 방식 중 확인할 대상을 현재 환경에 맞춰 정리합니다.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div>
+          <div class="step-q">PRIORITY</div>
+          <div class="step-title">예상되는 영향과 위험을 보고 우선순위를 정합니다</div>
+          <div class="step-desc">예상되는 비용 영향과 적용 난이도, 업무 중단 위험과 검증 가능성을 함께 비교합니다.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div>
+          <div class="step-q">AGREE</div>
+          <div class="step-title">적용할 변경과 검증 책임을 합의합니다</div>
+          <div class="step-desc">누가 변경을 승인하고 어떤 조건으로 적용·중단·복구할지, 무엇을 인수 기준으로 볼지 정합니다.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="note mt-2"><strong>개선 범위</strong> — 확인된 후보가 모두 변경 대상으로 이어지는 것은 아닙니다. 실제 적용 대상과 순서, 고객과 넥스앤브릿지의 역할은 영향과 검증 조건을 확인한 뒤 합의합니다.</p>
+  </div>
+</section>
+
+<!-- ===== §6 변경 검증 ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">변경 검증</div>
+    <h2 class="section-title">적용 전후를 같은 기준으로 비교하고 업무 영향도 확인합니다</h2>
+    <p class="section-desc">금액 차이만 보지 않고 사용량과 성능, 데이터 처리 조건이 어떻게 달라졌는지 확인합니다. 검증할 항목과 허용 범위는 변경 전에 정합니다.</p>
+
+    <div class="grid-3">
+      <div class="card animate">
+        <div class="card-num">BEFORE</div>
+        <h3>변경 전 기준</h3>
+        <p>비교할 기간과 워크로드, 비용·사용량과 성능 조건을 남깁니다.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">CHANGE</div>
+        <h3>변경 항목과 책임</h3>
+        <p>무엇을 누가 승인해 바꾸는지, 다른 변경과 어떻게 구분할지 정합니다.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">COMPARE</div>
+        <h3>같은 조건의 비교</h3>
+        <p>업무량과 실행 시점이 다른 경우 그 차이를 표시하고 비교 방법을 정합니다.</p>
+      </div>
+      <div class="card animate">
+        <div class="card-num">IMPACT</div>
+        <h3>성능과 데이터 영향</h3>
+        <p>응답 시간과 처리 실패, 데이터 갱신이나 품질에 예상하지 못한 영향이 없는지 확인합니다.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">EXCEPTION</div>
+        <h3>예외와 복구</h3>
+        <p>허용 범위를 벗어나면 중단하거나 이전 상태로 돌아갈 조건과 담당자를 정합니다.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">DECISION</div>
+        <h3>유지·조정 결정</h3>
+        <p>확인한 결과를 바탕으로 변경을 유지할지, 조정하거나 되돌릴지 담당자가 결정합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §7 운영 연결 ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">운영 연결</div>
+    <h2 class="section-title">한 번의 검토와 지속적인 비용 관리를 구분합니다</h2>
+    <p class="section-desc">현재 상태를 확인하는 일, 합의한 변경을 적용·검증하는 일과 이후 사용량을 계속 관리하는 일은 필요한 책임이 다릅니다.</p>
+
+    <div class="grid-3">
+      <div class="card animate">
+        <div class="card-num">REVIEW</div>
+        <h3>비용·사용량 범위 검토</h3>
+        <p>현재 확인 가능한 자료와 측정 기준, 우선 살펴볼 워크로드와 참여자를 정합니다.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">CHANGE SUPPORT</div>
+        <h3>합의한 변경 지원</h3>
+        <p>적용이 필요한 경우 대상과 승인 절차, 검증 방법과 인수 범위를 별도로 합의합니다.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">MANAGED FINOPS</div>
+        <h3>지속 관리 지원</h3>
+        <p>사용량 확인과 알림, 정기 검토와 변경 관리 중 고객 운영 조직에 필요한 역할을 정할 수 있습니다.</p>
+      </div>
+    </div>
+
+    <p class="note mt-2"><strong>Managed FinOps</strong> — 제공 가능한 운영 지원 방식입니다. 관리 대상과 확인 주기, 알림·보고 방식, 변경 승인, 양측의 책임과 제외 범위는 계약에서 정하며 SLA는 해당 계약 범위에 따라 적용합니다.</p>
+  </div>
+</section>
+
+<!-- ===== §8 CTA ===== -->
 <section class="bg-navy">
   <div class="container container-narrow center">
-    <h2 class="section-title">Snowflake 크레딧 소비가 예상보다 빠르다면</h2>
-    <a href="/ko/contact.html?pkg=cost" class="btn btn-primary">비용 진단 범위 확인하기 →</a>
+    <div class="section-label" style="justify-content:center">상담</div>
+    <h2 class="section-title">현재 비용과 사용량을<br>어떤 기준으로 볼지부터 정합니다</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto">확인할 계정과 기간, 비용이 궁금한 업무나 워크로드, 현재 운영 담당자를 알려주시면 우선 검토할 범위를 정합니다.</p>
+    <div class="hero-btns" style="justify-content:center">
+      <a href="/ko/contact.html?pkg=cost" class="btn btn-primary">비용 검토 범위 상담하기 →</a>
+      <a href="/ko/services/snowflake/" class="btn btn-ghost">Snowflake 서비스 개요 보기</a>
+    </div>
   </div>
 </section>
 
@@ -199,7 +365,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="logo">Nex <span>&amp;</span> Bridge</div>
-        <p>기업의 지식·데이터·업무 Agent·운영체계를 연결해 Agentic Enterprise를 구축합니다.</p>
+        <p>업무 지식과 데이터 기준을 연결해 Agentic Enterprise의 운영 체계를 설계합니다.</p>
       </div>
       <div class="footer-col">
         <h4>서비스 유형</h4>
@@ -218,7 +384,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>그 외 영역</h4>
+        <h4>Agentic Enterprise</h4>
         <ul>
           <li><a href="/ko/services/knowledge.html">Enterprise Knowledge</a></li>
           <li><a href="/ko/services/solution.html">Agentic Solution</a></li>
@@ -229,11 +395,11 @@
         <h4>적용 분야</h4>
         <ul>
           <li><a href="/ko/solutions/scm.html">Agentic SCM/SCP</a></li>
-          <li><a href="/ko/solutions/">확장 가능 분야 보기</a></li>
+          <li><a href="/ko/solutions/">적용 검토 분야 보기</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Company</h4>
+        <h4>회사</h4>
         <ul>
           <li><a href="/ko/company.html">회사소개</a></li>
           <li><a href="/ko/how-we-work.html">일하는 방식</a></li>

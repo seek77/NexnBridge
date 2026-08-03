@@ -31,6 +31,22 @@
 html{scroll-behavior:smooth;font-size:16px;scroll-padding-top:var(--nav-h)}
 body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 :lang(en) body,body:lang(en){font-family:var(--font-en)}
+html:lang(ko) :where(
+  .hero h1,
+  .hero-sub,
+  .section-title,
+  .section-desc,
+  .lead,
+  .pull-quote,
+  .card h3,
+  .card p,
+  .step-title,
+  .step-desc,
+  .pkg-state,
+  .brief-row .br-k,
+  .brief-row .br-v,
+  .note
+){word-break:keep-all;overflow-wrap:anywhere}
 ::selection{background:var(--navy);color:#fff}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -39,6 +55,7 @@ a{color:inherit}
    NAV
    ========================================================================== */
 nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.93);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,51,141,.08);transition:padding .3s}
+nav.site-nav.is-scrolled{padding-block:.7rem}
 .logo{font-family:var(--font-en);font-weight:700;font-size:1.15rem;letter-spacing:-.02em;color:var(--navy);text-decoration:none;white-space:nowrap}
 .logo span{color:var(--accent2);font-weight:300}
 
@@ -359,6 +376,12 @@ footer.site-footer{background:var(--navy);color:#fff;padding:3rem 3rem 2rem}
   .mega-menu,.dropdown{position:static!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:none!important;left:auto!important;top:auto!important;box-shadow:none!important;border:none!important;border-radius:0!important;width:100%!important;grid-template-columns:1fr!important;gap:1.1rem;padding:.3rem 0 .6rem 1rem;display:none}
   li.open .mega-menu,li.open .dropdown{display:grid!important}
   li.has-dropdown.open .dropdown{display:flex!important;flex-direction:column}
+}
+
+@media(max-width:480px){
+  .grid-2,.grid-3,.grid-4,.area-row{grid-template-columns:minmax(0,1fr)}
+  .card,.step>*,.pkg-row>*,.brief-row>*{min-width:0}
+  .nav-menu a,.pkg-name{white-space:normal;overflow-wrap:anywhere}
 }
 
 /* ==========================================================================

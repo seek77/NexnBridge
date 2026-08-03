@@ -41,10 +41,12 @@
   }
   setTimeout(function () { targets.forEach(reveal); }, 2500);
 
-  // Nav padding on scroll
+  // Compact the nav vertically on scroll without overriding responsive side padding
   if (nav) {
-    window.addEventListener('scroll', function () {
-      nav.style.padding = window.scrollY > 80 ? '.7rem 3rem' : '1rem 3rem';
-    }, { passive: true });
+    var syncNavState = function () {
+      nav.classList.toggle('is-scrolled', window.scrollY > 80);
+    };
+    syncNavState();
+    window.addEventListener('scroll', syncNavState, { passive: true });
   }
 })();

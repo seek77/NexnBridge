@@ -6,7 +6,17 @@
 <title>문의하기 | 넥스앤브릿지</title>
 <meta name="description" content="현재 과제와 준비도를 확인하고 어디서부터 시작할지 함께 정합니다.">
 <link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/contact.html">
+<link rel="alternate" hreflang="en" href="https://nexenbridge.com/en/contact.html">
 <link rel="canonical" href="https://nexenbridge.com/ko/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nex &amp; Bridge">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="문의하기 | 넥스앤브릿지">
+<meta property="og:description" content="현재 과제와 준비도를 확인하고 어디서부터 시작할지 함께 정합니다.">
+<meta property="og:url" content="https://nexenbridge.com/ko/contact.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="문의하기 | 넥스앤브릿지">
+<meta name="twitter:description" content="현재 과제와 준비도를 알려주시면 시작 범위를 함께 정합니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -41,7 +51,7 @@
         </div>
         <div class="mega-col">
           <div class="mega-col-title">핵심 서비스 영역</div>
-          <a href="/ko/services/snowflake/" class="mega-featured"><span class="star">★</span> Snowflake Data &amp; AI</a>
+          <a href="/ko/services/snowflake/">Snowflake Data &amp; AI</a>
           <a href="/ko/services/snowflake/cost.html" class="mega-sub">└ 비용 최적화 (FinOps)</a>
           <a href="/ko/services/snowflake/security.html" class="mega-sub">└ 접근권한·보안 설계</a>
           <a href="/ko/services/knowledge.html">Enterprise Knowledge</a>
@@ -87,14 +97,14 @@
 <!-- ===== 이런 상황이라면 여기서 시작합니다 ===== -->
 <section>
   <div class="container">
-    <div class="section-label">이런 상황이라면 여기서 시작합니다</div>
+    <div class="section-label">권장 시작점</div>
     <h2 class="section-title">이런 상황이라면 여기서 시작합니다</h2>
 
     <div class="tbl-wrap">
       <table class="tbl">
         <thead><tr><th>고객의 현재 상태</th><th>권장 시작점</th><th>받게 되는 것</th></tr></thead>
         <tbody>
-          <tr><td><strong>Snowflake 비용이 빠르게 늘고 있다</strong></td><td><strong>Snowflake 비용 진단</strong></td><td>비용 진단 리포트 · 개선 항목 우선순위 · 예상 절감 범위</td></tr>
+          <tr><td><strong>Snowflake 비용이 빠르게 늘고 있다</strong></td><td><strong>Snowflake 비용 진단</strong></td><td>비용 진단 리포트 · 개선 항목 우선순위 · 측정 지표</td></tr>
           <tr><td><strong>데이터 접근 범위와 보안 설계를 정해야 한다</strong></td><td><strong>접근권한·보안 설계</strong></td><td>권한 체계 · 데이터 보호 정책 · 감사 기준 · Agent 접근 범위</td></tr>
           <tr><td>Snowflake 도입·이전·활용 고도화가 필요하다</td><td><strong>Data &amp; AI Foundation</strong></td><td>목표 구조 · Data Model · Semantic Layer</td></tr>
           <tr><td>업무 지식과 판단 기준이 흩어져 있다</td><td><strong>Knowledge &amp; Decision Sprint</strong></td><td>업무 개념·관계 정의 · Knowledge Graph · 판단 기준</td></tr>
@@ -105,7 +115,7 @@
       </table>
     </div>
 
-    <p class="lead mt-1" style="font-size:.85rem;color:var(--text3)">기간·비용은 표기하지 않습니다. 범위와 데이터 상태에 따라 달라지므로 상담에서 산정합니다.</p>
+    <p class="lead mt-1" style="font-size:.85rem;color:var(--text3)">기간과 비용은 업무 범위와 데이터 상태를 확인한 뒤 안내합니다.</p>
   </div>
 </section>
 
@@ -115,14 +125,7 @@
     <div class="section-label">Contact Form</div>
     <h2 class="section-title">해당하는 상황을 알려주시면, 현재 상태를 확인하고<br>시작 범위를 함께 정하겠습니다.</h2>
 
-    <!--
-      No backend on GitHub Pages. This form builds a mailto: link from the
-      filled fields and hands off to the visitor's email client on submit —
-      it actually sends today, unlike the previous form (alert() only, no
-      transport). Swap for a Formspree/Web3Forms POST once an account exists;
-      keep this mailto path as the no-JS / service-outage fallback either way.
-    -->
-    <form id="contactForm" class="contact-form" action="#">
+    <form id="contactForm" class="contact-form" action="mailto:contact@nexenbridge.com" method="post" enctype="text/plain">
       <div class="form-row">
         <div class="form-field">
           <label for="f-name">이름 *</label>
@@ -146,6 +149,7 @@
           <option>Data &amp; AI Foundation</option>
           <option>Knowledge &amp; Decision Sprint</option>
           <option>Agentic Solution PoC</option>
+          <option>Agentic SCM/SCP</option>
           <option>AgentOps Assessment</option>
           <option>Agentic Enterprise Blueprint</option>
           <option>일반 문의</option>
@@ -153,16 +157,20 @@
       </div>
       <div class="form-field">
         <label for="f-message">내용</label>
-        <textarea id="f-message" name="message" placeholder="현재 상황을 간단히 알려주시면 도움이 됩니다."></textarea>
+        <textarea id="f-message" name="message" maxlength="2000" placeholder="현재 상황을 간단히 알려주시면 도움이 됩니다. 개인정보나 기밀정보는 입력하지 마세요."></textarea>
       </div>
       <label class="consent-row">
         <input type="checkbox" id="f-consent" name="consent" required>
         <span>개인정보 수집·이용에 동의합니다. (<a href="/ko/privacy.html" style="color:var(--navy);font-weight:600">처리방침 보기</a>) *</span>
       </label>
+      <p class="form-note">필수 항목은 이름, 회사명, 이메일, 관심 영역이며 문의 내용은 선택 항목입니다. 문의 응대를 위해 사용하고 처리 완료 후 1년간 보관합니다. 동의를 거부할 수 있지만 이 이메일 작성 기능은 사용할 수 없습니다.</p>
+      <noscript>
+        <p class="form-note">JavaScript를 사용할 수 없는 환경입니다. <a href="mailto:contact@nexenbridge.com" style="color:var(--navy)">contact@nexenbridge.com</a>으로 직접 이메일을 보내주세요.</p>
+      </noscript>
       <div>
-        <button type="submit" class="btn btn-navy">문의 보내기</button>
-        <p class="form-note">제출하시면 이메일 앱이 열리고, 보내기를 누르면 전송됩니다. 이메일 앱이 열리지 않으면 <a href="mailto:contact@nexenbridge.com" style="color:var(--navy)">contact@nexenbridge.com</a>으로 직접 보내주세요.</p>
-        <div id="formDone" class="form-done">이메일 앱을 열었습니다. 내용을 확인하고 보내기를 눌러주세요.</div>
+        <button type="submit" class="btn btn-navy">이메일 문의 작성하기</button>
+        <p class="form-note">이 사이트에서 문의가 자동 접수되지는 않습니다. 버튼을 누르면 이메일 앱에 문의 내용이 작성되며, 앱에서 보내기를 눌러야 전달됩니다. 이메일 앱이 열리지 않으면 <a href="mailto:contact@nexenbridge.com" style="color:var(--navy)">contact@nexenbridge.com</a>으로 직접 보내주세요.</p>
+        <div id="formDone" class="form-done" role="status" aria-live="polite">이메일 작성 화면을 요청했습니다. 앱이 열리면 내용을 확인한 뒤 보내기를 눌러주세요.</div>
       </div>
     </form>
   </div>
@@ -249,7 +257,24 @@
   'use strict';
   var form = document.getElementById('contactForm');
   var done = document.getElementById('formDone');
+  var topicSelect = document.getElementById('f-topic');
   if (!form) return;
+
+  var topicByPackage = {
+    cost: 'Snowflake 비용 진단',
+    security: '접근권한·보안 설계',
+    foundation: 'Data & AI Foundation',
+    knowledge: 'Knowledge & Decision Sprint',
+    solution: 'Agentic Solution PoC',
+    scm: 'Agentic SCM/SCP',
+    agentops: 'AgentOps Assessment',
+    blueprint: 'Agentic Enterprise Blueprint'
+  };
+  var packageName = new URLSearchParams(window.location.search).get('pkg');
+  if (packageName && topicByPackage[packageName] && topicSelect) {
+    topicSelect.value = topicByPackage[packageName];
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var name = document.getElementById('f-name').value.trim();
@@ -263,7 +288,7 @@
       return;
     }
     var subject = '[웹사이트 문의] ' + topic + ' — ' + company;
-    var body = '이름: ' + name + '\n회사: ' + company + '\n이메일: ' + email + '\n관심 영역: ' + topic + '\n\n내용:\n' + (message || '(작성 없음)');
+    var body = '이름: ' + name + '\n회사: ' + company + '\n이메일: ' + email + '\n관심 영역: ' + topic + '\n개인정보 수집·이용 동의: 동의\n\n내용:\n' + (message || '(작성 없음)');
     var mailto = 'mailto:contact@nexenbridge.com'
       + '?subject=' + encodeURIComponent(subject)
       + '&body=' + encodeURIComponent(body);

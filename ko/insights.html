@@ -4,9 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insights | 넥스앤브릿지</title>
-<meta name="description" content="손익 중심 SCM, 업무 지식, 의사결정 구조, Agent 운영에서 현장에서 확인한 문제와 방법을 정리합니다.">
+<meta name="description" content="손익 중심 SCM, 업무 지식, 의사결정 구조, AI 운영의 문제와 적용 방법을 정리합니다.">
 <link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/insights.html">
 <link rel="canonical" href="https://nexenbridge.com/ko/insights.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nex &amp; Bridge">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="Insights | 넥스앤브릿지">
+<meta property="og:description" content="손익 중심 SCM, 업무 지식, 의사결정 구조, AI 운영의 문제와 적용 방법을 정리합니다.">
+<meta property="og:url" content="https://nexenbridge.com/ko/insights.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Insights | 넥스앤브릿지">
+<meta name="twitter:description" content="데이터·AI 업무의 문제와 적용 방법을 실무 관점에서 정리합니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -17,10 +26,6 @@
 .article-body p{font-size:.95rem;color:var(--text2);line-height:1.9;margin-bottom:1.2rem}
 .article-body ul{margin:0 0 1.2rem 1.2rem;color:var(--text2);font-size:.95rem;line-height:1.9}
 .article-meta{display:flex;gap:1rem;align-items:center;font-family:var(--mono);font-size:.7rem;color:var(--text3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1rem}
-.soon-card{background:var(--bg2);border:1px dashed rgba(0,51,141,.18);border-radius:8px;padding:1.6rem;opacity:.75}
-.soon-card .soon-tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:.6rem;display:block}
-.soon-card h3{font-size:.95rem;font-weight:700;color:var(--text2);margin-bottom:.5rem}
-.soon-card p{font-size:.82rem;color:var(--text3);line-height:1.6}
 </style>
 </head>
 <body>
@@ -43,7 +48,7 @@
         </div>
         <div class="mega-col">
           <div class="mega-col-title">핵심 서비스 영역</div>
-          <a href="/ko/services/snowflake/" class="mega-featured"><span class="star">★</span> Snowflake Data &amp; AI</a>
+          <a href="/ko/services/snowflake/">Snowflake Data &amp; AI</a>
           <a href="/ko/services/snowflake/cost.html" class="mega-sub">└ 비용 최적화 (FinOps)</a>
           <a href="/ko/services/snowflake/security.html" class="mega-sub">└ 접근권한·보안 설계</a>
           <a href="/ko/services/knowledge.html">Enterprise Knowledge</a>
@@ -81,8 +86,8 @@
 <section class="hero hero-sm">
   <div class="hero-inner">
     <div class="hero-label">Insights</div>
-    <h1>현장에서 확인한 문제와<br><em>방법</em>을 정리합니다</h1>
-    <p class="hero-sub">손익 중심 SCM, 업무 지식, 의사결정 구조, Agent 운영에서 다뤄 온 주제입니다.</p>
+    <h1>데이터·AI 업무의 문제와<br><em>적용 방법</em>을 정리합니다</h1>
+    <p class="hero-sub">손익 중심 SCM, 업무 지식, 의사결정 구조, AI 운영을 실무 관점에서 설명합니다.</p>
   </div>
 </section>
 
@@ -90,7 +95,7 @@
 <section>
   <div class="container article-body">
     <div class="article-meta">Snowflake Data &amp; AI · 2026</div>
-    <h1 style="font-size:1.7rem;color:var(--navy);font-weight:700;line-height:1.4;margin-bottom:1.5rem">Snowflake 비용은 왜 늘어나는가</h1>
+    <h2 style="font-size:1.7rem;color:var(--navy);font-weight:700;line-height:1.4;margin-bottom:1.5rem">Snowflake 비용은 왜 늘어나는가</h2>
 
     <p>Snowflake는 쓰는 만큼 내는 구조입니다. 이 단순한 규칙이 오히려 비용 관리를 어렵게 만듭니다. 사용량에 상한이 없고, 크레딧은 웨어하우스가 켜져 있는 매초 소모되며, 늘어난 비용이 어느 팀의 어느 업무에서 왔는지는 청구서만 봐서는 알 수 없습니다.</p>
 
@@ -116,26 +121,7 @@
 
     <p class="pull-quote">문제는 Snowflake의 과금 방식이 아니라,<br>무엇에 쓰는지 구분하지 못하는 상태입니다.</p>
 
-    <p>넥스앤브릿지는 이 일곱 영역을 점검하는 <a href="/ko/services/snowflake/cost.html" style="color:var(--navy);font-weight:600">Snowflake 비용 진단(Cost Assessment)</a>을 2~3주 범위에서 수행합니다. 업무 시스템을 바꾸지 않고 운영 설정과 쿼리부터 다루기 때문에 위험이 낮고, 적용 전후 크레딧 소비를 직접 비교해 효과를 숫자로 확인할 수 있습니다.</p>
-  </div>
-</section>
-
-<!-- ===== 준비 중 ===== -->
-<section class="bg-alt">
-  <div class="container">
-    <div class="section-label">다음 글 (준비 중)</div>
-    <div class="grid-2">
-      <div class="soon-card">
-        <span class="soon-tag">Preparing</span>
-        <h3>Agent에게 권한을 준다는 것</h3>
-        <p>개별 권한이 맞아도 조합 결과가 문제가 되는 이유. 사람 기준 권한 체계의 한계.</p>
-      </div>
-      <div class="soon-card">
-        <span class="soon-tag">Preparing</span>
-        <h3>지식은 검색 대상이 아니다</h3>
-        <p>RAG로 문서를 찾을 수 있게 됐는데도 판단이 안 되는 이유.</p>
-      </div>
-    </div>
+    <p>넥스앤브릿지의 <a href="/ko/services/snowflake/cost.html" style="color:var(--navy);font-weight:600">Snowflake 비용 진단(Cost Assessment)</a>은 이 일곱 영역을 점검합니다. 진단 범위와 기간은 계정 규모, 사용 이력, 점검 대상에 따라 상담 후 정합니다. 운영 설정과 쿼리를 먼저 살펴보고, 변경을 적용할 때는 전후 크레딧 사용량을 비교합니다.</p>
   </div>
 </section>
 

@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agentic SCM/SCP 적용 모델 | 넥스앤브릿지</title>
-<meta name="description" content="수요·재고·공급·생산계획처럼 서로 연결된 SCM/SCP 의사결정에 Agentic Enterprise를 적용할 때 필요한 업무 기준과 데이터, 판단·운영 흐름을 설명합니다.">
+<title>SCM Applications | Agentic Analytics 적용 | 넥스앤브릿지</title>
+<meta name="description" content="수요·재고·공급·생산·물류 데이터를 기반으로 예외 감지, 원인 분석, 예측, 시뮬레이션과 계획 검토를 지원하는 SCM Application을 구축합니다.">
 <link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/solutions/scm.html">
 <link rel="canonical" href="https://nexenbridge.com/ko/solutions/scm.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nex &amp; Bridge">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="Agentic SCM/SCP 적용 모델 | 넥스앤브릿지">
-<meta property="og:description" content="수요·재고·공급·생산계획처럼 서로 연결된 SCM/SCP 의사결정에 Agentic Enterprise를 적용할 때 필요한 업무 기준과 데이터, 판단·운영 흐름을 설명합니다.">
+<meta property="og:title" content="SCM Applications | Agentic Analytics 적용 | 넥스앤브릿지">
+<meta property="og:description" content="SCM의 분석·계획 체계를 Agentic Analytics로 고도화하고 업무 Application으로 구현합니다.">
 <meta property="og:url" content="https://nexenbridge.com/ko/solutions/scm.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Agentic SCM/SCP 적용 모델 | 넥스앤브릿지">
-<meta name="twitter:description" content="수요·재고·공급·생산계획처럼 서로 연결된 SCM/SCP 의사결정에 Agentic Enterprise를 적용할 때 필요한 업무 기준과 데이터, 판단·운영 흐름을 설명합니다.">
+<meta name="twitter:title" content="SCM Applications | Agentic Analytics 적용 | 넥스앤브릿지">
+<meta name="twitter:description" content="SCM의 분석·계획 체계를 Agentic Analytics로 고도화하고 업무 Application으로 구현합니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -23,10 +23,10 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Agentic SCM/SCP 적용 모델 | 넥스앤브릿지",
+  "@type": "Service",
+  "name": "SCM Applications",
   "url": "https://nexenbridge.com/ko/solutions/scm.html",
-  "description": "수요·재고·공급·생산계획처럼 서로 연결된 SCM/SCP 의사결정에 Agentic Enterprise를 적용할 때 필요한 업무 기준과 데이터, 판단·운영 흐름을 설명합니다.",
+  "description": "수요, 재고, 공급, 생산과 물류 데이터를 기반으로 예외 감지, 원인 분석, 예측, 시뮬레이션과 계획 검토를 지원하는 SCM Application을 구축합니다.",
   "inLanguage": "ko-KR"
 }
 </script>
@@ -67,245 +67,117 @@
 <!-- ===== §1 HERO ===== -->
 <section class="hero hero-sm">
   <div class="hero-inner">
-    <div class="hero-label">SCM/SCP 적용 모델</div>
-    <h1>수요가 바뀌었을 때<br><em>무엇을 함께 다시 결정해야 하는가</em></h1>
-    <p class="hero-sub">수요, 재고, 공급, 생산계획과 손익은 서로 영향을 줍니다. Agentic SCM/SCP에서는 한 영역의 변화가 다른 계획에 미치는 영향과 가능한 대안을 AI 에이전트가 정리하고, 담당자가 이를 검토해 결정합니다.</p>
-    <div class="hero-btns">
-      <a href="#decision-flow" class="btn btn-primary">적용 흐름 보기 ↓</a>
-      <a href="/ko/contact.html?pkg=scm" class="btn btn-ghost">적용 범위 상담하기 →</a>
-    </div>
-    <div class="hero-structure">
-      <div class="hs-item">
-        <div class="hs-key">Decision Scope</div>
-        <div class="hs-val">연결된 계획 결정<small>수요·재고·공급·생산계획</small></div>
-      </div>
-      <div class="hs-item">
-        <div class="hs-key">AI Agent</div>
-        <div class="hs-val">판단 자료 준비<small>근거·대안·영향·미확인 사항</small></div>
-      </div>
-      <div class="hs-item">
-        <div class="hs-key">Decision Owner</div>
-        <div class="hs-val">사람의 검토와 승인<small>승인·보류·추가 확인</small></div>
-      </div>
-    </div>
+    <div class="hero-label">SCM Applications</div>
+    <h1>SCM의 분석·계획 체계를<br><em>Agentic Analytics로 고도화합니다</em></h1>
+    <p class="hero-sub">수요·재고·공급·생산·물류 데이터를 업무 기준과 연결하고, 변화 신호와 원인, 예상 영향과 대안을 분석합니다. 예측·시뮬레이션·최적화 모델과 Agent를 결합해 계획 검토와 실행을 지원하는 Application을 구축합니다.</p>
+    <div class="hero-btns"><a href="/ko/contact.html?pkg=scm" class="btn btn-primary">적용 과제 상담하기 →</a><a href="#application-scope" class="btn btn-ghost">적용 범위 보기 ↓</a></div>
   </div>
 </section>
 
-<!-- ===== §2 현업에서 확인할 장면 ===== -->
+<!-- ===== §2 BUSINESS CONTEXT ===== -->
 <section>
   <div class="container">
-    <div class="section-label">이런 상황이라면</div>
-    <h2 class="section-title">계획 하나를 바꿨을 때 다른 계획과 손익이 어떻게 달라지는지 보기 어렵습니다</h2>
-    <p class="section-desc">각 계획의 수치는 볼 수 있어도, 변경 영향을 같은 기준으로 비교하기는 어렵습니다.</p>
-
-    <div class="grid-4">
-      <div class="card animate">
-        <div class="card-num">01 계획 불일치</div>
-        <h3>수요 전망은 바뀌었는데 재고·생산계획은 그대로일 때</h3>
-        <p>변경된 수요를 재고와 생산량, 공급계획에 어떻게 반영할지 다시 따져봐야 합니다.</p>
-      </div>
-      <div class="card animate delay-1">
-        <div class="card-num">02 동시 위험</div>
-        <h3>과잉재고와 결품 위험이 동시에 나타날 때</h3>
-        <p>어느 품목·거점에 문제가 있는지 확인하고 대응 순서를 정해야 합니다.</p>
-      </div>
-      <div class="card animate delay-2">
-        <div class="card-num">03 제약과 대안</div>
-        <h3>용량·자재·납기 제약 때문에 실행 가능한 대안을 고르기 어려울 때</h3>
-        <p>용량, 자재, 최소 주문 수량과 납기를 함께 놓고 선택지를 좁혀야 합니다.</p>
-      </div>
-      <div class="card animate delay-3">
-        <div class="card-num">04 결정 이후</div>
-        <h3>결정 이유와 후속 조치가 남지 않을 때</h3>
-        <p>누가 어떤 근거로 결정했는지, 무엇을 실행하고 언제 결과를 다시 볼지 기록할 필요가 있습니다.</p>
-      </div>
+    <div class="section-label">SCM Decision Context</div>
+    <h2 class="section-title">수요·재고·공급·생산계획은 하나의 변화에 함께 영향을 받습니다</h2>
+    <p class="section-desc">수요 전망이나 공급 조건이 달라지면 재고, 생산, 물류와 손익도 함께 바뀝니다. 그러나 데이터와 분석 주기, 계획 기준이 기능별로 나뉘어 있으면 전체 영향을 확인하고 실행 가능한 대안을 비교하기 어렵습니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>Demand Volatility</h3><p>수요 변화와 예측 오차가 재고·공급·생산계획에 미치는 영향을 함께 확인합니다.</p></div>
+      <div class="card animate delay-1"><h3>Inventory Trade-offs</h3><p>서비스 수준, 안전재고, MOQ, 유통기한과 재고 비용 사이의 균형을 분석합니다.</p></div>
+      <div class="card animate"><h3>Supply Constraints</h3><p>자재와 생산능력, 리드타임, 납기와 물류 제약을 반영해 실행 가능한 계획을 검토합니다.</p></div>
+      <div class="card animate delay-1"><h3>Profitability Impact</h3><p>계획 변경이 매출과 원가, 재고 처분, 제품·고객별 수익성에 미치는 영향을 분석합니다.</p></div>
     </div>
-
-    <p class="note mt-2"><strong>표현 기준</strong> — 위 장면과 아래 Decision Brief는 적용 모델을 설명하기 위한 예시이며, 특정 고객의 실제 수행 사례나 도입 성과를 의미하지 않습니다.</p>
   </div>
 </section>
 
-<!-- ===== §3 함께 살펴볼 의사결정 ===== -->
-<section class="bg-alt">
+<!-- ===== §3 APPLICATION SCOPE ===== -->
+<section class="bg-alt" id="application-scope">
   <div class="container">
-    <div class="section-label">먼저 고를 질문</div>
-    <h2 class="section-title">기능 목록보다 먼저, 결정할 질문을 좁힙니다</h2>
-    <p class="section-desc">SCM/SCP 전체를 한 번에 다루지 않습니다. 반복해서 검토하는 업무 중 결과의 영향을 확인할 수 있고 최종 판단자가 분명한 결정부터 고릅니다.</p>
-
-    <div class="grid-4">
-      <div class="card animate">
-        <div class="card-num">01 손익·SKU</div>
-        <h3>어떤 SKU를 유지하고, 조정하거나 단종할 것인가</h3>
-        <p>품목별 손익, 수요, 재고와 공급 조건을 함께 비교합니다.</p>
-      </div>
-      <div class="card animate delay-1">
-        <div class="card-num">02 수요·재고</div>
-        <h3>수요 변화에 따라 재고 기준을 어떻게 조정할 것인가</h3>
-        <p>수요계획과 실적, 현재 재고와 입고 예정량, 서비스 수준을 비교해 예외 품목을 찾습니다.</p>
-      </div>
-      <div class="card animate delay-2">
-        <div class="card-num">03 공급·생산</div>
-        <h3>용량·자재·납기 제약을 고려해 어떤 공급·생산 대안을 선택할 것인가</h3>
-        <p>각 대안이 생산량, 재고와 납기에 미치는 영향을 비교합니다.</p>
-      </div>
-      <div class="card animate delay-3">
-        <div class="card-num">04 계획 운영</div>
-        <h3>어떤 예외를 담당자가 확인하고 승인해야 하는가</h3>
-        <p>검토 대상과 승인 기준, 후속 조치 담당자와 결과를 다시 확인할 시점을 정합니다.</p>
-      </div>
+    <div class="section-label">Application Scope</div>
+    <h2 class="section-title">SCM 전반이 아니라 우선순위가 높은 의사결정 과제부터 적용합니다</h2>
+    <p class="section-desc">고객의 계획 프로세스와 데이터 환경을 기준으로 개선 효과와 실행 가능성이 명확한 업무를 선정합니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>Demand &amp; Forecast Review</h3><p>예측 Bias와 이상치, 이벤트 반영, 계획 변경 폭과 수요 위험을 점검합니다.</p></div>
+      <div class="card animate delay-1"><h3>Inventory Policy</h3><p>품목·거점별 안전재고와 목표재고, 서비스 수준, 재배치와 처분 대안을 검토합니다.</p></div>
+      <div class="card animate"><h3>Supply &amp; Production Planning</h3><p>자재·용량·MOQ·납기 제약을 반영해 공급과 생산계획의 시나리오를 비교합니다.</p></div>
+      <div class="card animate delay-1"><h3>S&amp;OP &amp; S&amp;OE</h3><p>계획 대비 실적과 주요 예외, 시나리오별 Trade-off, 결정 사항과 Action을 관리합니다.</p></div>
+      <div class="card animate"><h3>Logistics &amp; Cost</h3><p>운송 조건과 물동량, 재고 위치, 물류비와 서비스 영향을 함께 분석합니다.</p></div>
+      <div class="card animate delay-1"><h3>Planning Operations &amp; Exception Management</h3><p>계획 일정과 데이터 완전성, 예외 우선순위, 검토·승인, 회의자료와 Action을 관리합니다.</p></div>
     </div>
-
-    <p class="note mt-2"><strong>범위 안내</strong> — 실제 범위는 고객의 업무, 데이터, 시스템과 책임 구조를 확인한 뒤 합의합니다.</p>
   </div>
 </section>
 
-<!-- ===== §4 판단 흐름 ===== -->
-<section id="decision-flow">
+<!-- ===== §4 DECISION FLOW ===== -->
+<section>
   <div class="container">
-    <div class="section-label">판단 흐름</div>
-    <h2 class="section-title">AI 에이전트가 준비하고 담당자가 결정합니다</h2>
-    <p class="section-desc">정답 하나를 자동으로 내리지 않습니다. 합의한 기준과 데이터를 바탕으로 무엇이 달라졌는지와 대안별 영향을 비교할 수 있게 정리합니다.</p>
-
+    <div class="section-label">Decision Flow</div>
+    <h2 class="section-title">예외를 찾는 데서 끝나지 않고 원인·대안·영향을 함께 검토합니다</h2>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div>
-          <div class="step-q">DECISION</div>
-          <div class="step-title">결정할 문제와 책임자를 정합니다</div>
-          <div class="step-desc">이번 검토에서 무엇을 결정할지, 누가 검토하고 어떤 조건에서 승인·보류할지 먼저 정합니다.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div>
-          <div class="step-q">EVIDENCE</div>
-          <div class="step-title">필요한 데이터와 판단 기준, 제약을 연결합니다</div>
-          <div class="step-desc">수요계획과 실적, 재고, 주문, 공급·생산 능력, 비용과 리드타임 중 대상 결정에 필요한 근거만 확인합니다.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div>
-          <div class="step-q">DECISION BRIEF</div>
-          <div class="step-title">변화와 영향, 대안, 미확인 사항을 정리합니다</div>
-          <div class="step-desc">AI 에이전트는 변화 내용, 적용한 전제와 제약, 대안별 영향, 추가 확인 항목을 한 화면에서 비교할 수 있게 정리합니다.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div>
-          <div class="step-q">APPROVAL</div>
-          <div class="step-title">담당자가 승인할지, 보류할지, 추가로 확인할지 정합니다</div>
-          <div class="step-desc">담당자는 업무 맥락과 실행 가능성을 검토합니다. 근거가 부족하면 결정을 보류하고 필요한 내용을 더 확인합니다.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">05</div>
-        <div>
-          <div class="step-q">OPERATION</div>
-          <div class="step-title">실행 내용과 결과를 기록해 다음 계획에서 확인합니다</div>
-          <div class="step-desc">선택한 대안, 담당자와 반영 시점을 기록하고 실행 과정에서 생긴 예외와 결과를 확인합니다. 이후 판단 기준을 바꿀지 다시 검토합니다.</div>
-        </div>
-      </div>
+      <div class="step"><div class="step-num">01</div><div><div class="step-q">DETECT</div><div class="step-title">변화 신호와 계획 예외를 식별합니다</div><div class="step-desc">계획과 실적, 기준 범위와 추세를 비교해 확인이 필요한 품목·거점·기간을 선별합니다.</div></div></div>
+      <div class="step"><div class="step-num">02</div><div><div class="step-q">DIAGNOSE</div><div class="step-title">원인과 연결된 영향을 분석합니다</div><div class="step-desc">수요, 재고, 공급, 생산과 물류 데이터를 단계적으로 확인해 원인 후보와 파급 영향을 분석합니다.</div></div></div>
+      <div class="step"><div class="step-num">03</div><div><div class="step-q">SIMULATE</div><div class="step-title">업무 조건과 제약을 반영한 시나리오를 계산합니다</div><div class="step-desc">수요·공급 조건과 정책을 변경해 재고, 서비스 수준, 생산과 손익의 변화를 비교합니다.</div></div></div>
+      <div class="step"><div class="step-num">04</div><div><div class="step-q">REVIEW</div><div class="step-title">대안별 효과와 위험을 검토합니다</div><div class="step-desc">대안의 예상 효과, 가정과 제약조건, 미확인 사항을 함께 제시합니다.</div></div></div>
+      <div class="step"><div class="step-num">05</div><div><div class="step-q">EXECUTE &amp; LEARN</div><div class="step-title">확정된 계획을 연계하고 결과를 다음 분석에 반영합니다</div><div class="step-desc">승인된 계획과 Action을 실행 시스템에 전달하고 계획 대비 실적과 변경 효과를 기록합니다.</div></div></div>
     </div>
-
-    <p class="pull-quote">계획 수치만 남기지 않고,<br>변경 이유와 승인 책임도 함께 기록합니다.</p>
   </div>
 </section>
 
-<!-- ===== §5 Decision Brief 예시 ===== -->
+<!-- ===== §5 ANALYTICS & PLANNING MODELS ===== -->
 <section class="bg-alt">
   <div class="container">
-    <div class="section-label">Decision Brief 예시</div>
-    <h2 class="section-title">결정에 필요한 내용을 한 화면에서 확인합니다</h2>
-    <p class="section-desc">아래 화면은 공급 제약이 생겼을 때 계획 변경을 검토하는 예시입니다. 항목과 대안은 고객의 기준과 데이터에 따라 달라집니다.</p>
-
-    <div class="brief">
-      <div class="brief-head">
-        <div class="bh-title">Decision Brief — 공급 제약에 따른 계획 변경 검토</div>
-        <div class="bh-tag">설명용 예시 · 실제 고객 사례 아님</div>
-      </div>
-      <div class="brief-row">
-        <div class="br-n">01</div>
-        <div>
-          <div class="br-k">결정할 문제</div>
-          <div class="br-v">공급 제약이 발생한 품목의 생산·배분 계획을 어떻게 조정할 것인가</div>
-        </div>
-      </div>
-      <div class="brief-row">
-        <div class="br-n">02</div>
-        <div>
-          <div class="br-k">확인할 근거</div>
-          <div class="br-v">수요계획, 현재고와 입고 예정, 생산 능력, 자재 제약, 리드타임과 고객·품목 우선순위</div>
-        </div>
-      </div>
-      <div class="brief-row">
-        <div class="br-n">03</div>
-        <div>
-          <div class="br-k">대안과 영향</div>
-          <div class="br-v">현재 계획 유지, 생산량 조정, 배분 순서 변경 등 검토 가능한 대안과 각 대안이 재고·공급·생산에 미치는 영향을 비교</div>
-        </div>
-      </div>
-      <div class="brief-row critical">
-        <div class="br-n">04</div>
-        <div>
-          <div class="br-k">담당자가 확인할 내용</div>
-          <div class="br-v">기존 우선순위를 벗어나는 예외, 고객 영향, 적용 시점, 확인되지 않은 가정과 실행 승인 여부</div>
-        </div>
-      </div>
-      <div class="brief-row">
-        <div class="br-n">05</div>
-        <div>
-          <div class="br-k">결정 이후</div>
-          <div class="br-v">승인한 대안, 담당자, 반영 대상, 결과 확인 시점과 후속 조치를 기록</div>
-        </div>
-      </div>
+    <div class="section-label">Analytics &amp; Planning Models</div>
+    <h2 class="section-title">업무 특성에 맞는 분석·예측·시뮬레이션·최적화 모델을 적용합니다</h2>
+    <p class="section-desc">모든 문제를 LLM으로 해결하지 않습니다. 정형 계산과 예측, 제약조건을 다루는 분석 모델을 사용하고 Agent가 업무 질문에 따라 필요한 데이터와 모델을 실행하도록 구성합니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>SCM Data Foundation</h3><p>품목·고객·거점·BOM·재고·주문·계획과 실적 데이터를 일관된 기준으로 제공합니다.</p></div>
+      <div class="card animate delay-1"><h3>Business Rules &amp; Knowledge</h3><p>계획 주기와 정책, 임계값, 제약과 예외, 지표 산식과 업무 기준을 구조화합니다.</p></div>
+      <div class="card animate"><h3>Forecast &amp; Statistical Models</h3><p>수요 패턴과 변동성, 예측 오차, 위험 범위와 주요 영향 요인을 분석합니다.</p></div>
+      <div class="card animate delay-1"><h3>Simulation &amp; Optimization</h3><p>What-if 분석과 재고·공급·생산 시뮬레이션, 필요한 경우 LP/MIP 최적화를 적용합니다.</p></div>
+      <div class="card animate"><h3>Agent Skills</h3><p>예외 분석과 계획 검토 절차, 데이터·모델 사용 조건, 검증 규칙을 업무별 Skill로 정의합니다.</p></div>
+      <div class="card animate delay-1"><h3>Planning Application</h3><p>신호와 원인, 시나리오와 대안, 근거와 Action을 검토할 수 있는 업무 화면을 구성합니다.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== §6 범위와 책임 ===== -->
+<!-- ===== §6 DATA & SYSTEM INTEGRATION ===== -->
 <section>
   <div class="container">
-    <div class="section-label">누가 무엇을 맡는가</div>
-    <h2 class="section-title">데이터 연결보다 먼저 책임 범위를 합의합니다</h2>
-    <p class="section-desc">필요한 데이터와 시스템뿐 아니라 누가 기준을 확인하고, 결과를 승인하며, 구축 이후 운영을 맡을지 함께 정해야 합니다.</p>
-
-    <div class="grid-3">
-      <div class="card animate">
-        <div class="card-num">CUSTOMER</div>
-        <h3>업무 기준과 최종 결정</h3>
-        <p>고객은 대상 의사결정의 목적과 우선순위, 적용할 기준과 예외를 정하고 데이터 접근 범위와 최종 승인자를 확인합니다.</p>
-      </div>
-      <div class="card animate delay-1">
-        <div class="card-num">NEX &amp; BRIDGE</div>
-        <h3>판단 흐름의 설계와 검증</h3>
-        <p>넥스앤브릿지는 합의한 범위 안에서 사용할 데이터와 판단 기준, AI 에이전트가 준비할 자료, 담당자의 검토 지점과 검증 방법을 설계합니다.</p>
-      </div>
-      <div class="card animate delay-2">
-        <div class="card-num">OPERATION</div>
-        <h3>운영과 지원 조건</h3>
-        <p>운영 지원이 필요하면 지원 대상과 변경 절차, 양측의 책임과 제외 범위를 Managed Service 계약과 SLA에 명시합니다.</p>
-      </div>
+    <div class="section-label">Data &amp; System Integration</div>
+    <h2 class="section-title">기존 ERP·APS·MES를 대체하지 않고 분석과 계획 의사결정을 보완합니다</h2>
+    <p class="section-desc">Snowflake를 중심으로 SCM 데이터를 통합하고, 기존 계획·실행 시스템과 필요한 범위만 연계합니다. 고객 환경에 따라 기존 데이터 플랫폼이나 다른 분석 서비스를 활용할 수 있습니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>Data Foundation</h3><p>SAP·ERP와 WMS·TMS·MES, 계획 시스템의 데이터와 이력을 분석 목적에 맞게 구성합니다.</p></div>
+      <div class="card animate delay-1"><h3>Planning Integration</h3><p>기존 APS와 계획 도구의 입력·출력, 버전과 변경 이력을 연계해 분석의 일관성을 유지합니다.</p></div>
+      <div class="card animate"><h3>Execution Handoff</h3><p>검토·승인된 계획과 Action만 실행 시스템에 전달하고 처리 상태와 실패를 추적합니다.</p></div>
+      <div class="card animate delay-1"><h3>Trace &amp; Feedback</h3><p>분석 근거와 계획 변경, 실행 결과를 기록해 다음 계획과 정책 개선에 활용합니다.</p></div>
     </div>
-
-    <p class="note mt-2"><strong>기존 시스템과의 경계</strong> — ERP·APS·MES 등 현재 시스템을 유지할지, 어떤 데이터를 읽고 어떤 결과를 연계할지는 고객 환경과 승인 절차를 확인해 정합니다. 특정한 연계 또는 교체 방식을 미리 전제하지 않습니다.</p>
+    <div class="note">데이터 기반이 필요한 경우 <a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a> 및 <a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a>과 함께 수행합니다.</div>
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
+<!-- ===== §7 DELIVERY APPROACH ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">Delivery Approach</div>
+    <h2 class="section-title">업무 질문 하나를 선정해 데이터와 효과를 검증한 뒤 확장합니다</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><div><div class="step-q">USE CASE &amp; VALUE</div><div class="step-title">분석·계획 과제와 기대 효과를 정의합니다</div><div class="step-desc">현재 의사결정 절차와 반복되는 예외, 목표 지표와 적용 우선순위를 정합니다.</div></div></div>
+      <div class="step"><div class="step-num">02</div><div><div class="step-q">DATA &amp; KNOWLEDGE</div><div class="step-title">필요한 데이터와 업무 기준을 확인합니다</div><div class="step-desc">데이터의 가용성과 품질, 계획 규칙과 제약, 지표와 예외 기준을 구조화합니다.</div></div></div>
+      <div class="step"><div class="step-num">03</div><div><div class="step-q">PROTOTYPE &amp; EVALUATE</div><div class="step-title">대표 시나리오로 분석 모델과 효과를 검증합니다</div><div class="step-desc">실제 데이터와 업무 사례를 사용해 분석 품질과 실행 가능성, 예상 효과를 평가합니다.</div></div></div>
+      <div class="step"><div class="step-num">04</div><div><div class="step-q">BUILD &amp; INTEGRATE</div><div class="step-title">Application을 구축하고 기존 시스템과 연계합니다</div><div class="step-desc">분석 모델과 Agent, 업무 화면과 검토 절차를 구현하고 필요한 데이터·실행 연계를 적용합니다.</div></div></div>
+      <div class="step"><div class="step-num">05</div><div><div class="step-q">OPERATE &amp; IMPROVE</div><div class="step-title">운영 결과를 평가하고 적용 범위를 확장합니다</div><div class="step-desc">품질과 사용 효과, 계획 대비 실적을 점검하고 Model·Skill·Knowledge를 개선합니다.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §8 CONTACT ===== -->
 <section class="bg-navy">
   <div class="container container-narrow center">
-    <div class="section-label" style="justify-content:center">상담</div>
-    <h2 class="section-title">반복해서 검토하는<br>계획 의사결정 하나부터 시작합니다</h2>
-    <p class="section-desc" style="margin-left:auto;margin-right:auto">대상 업무와 사용 중인 데이터·시스템, 현재 판단 기준, 최종 승인자와 운영 조건을 확인해 첫 범위를 정합니다.</p>
-    <div class="hero-btns" style="justify-content:center">
-      <a href="/ko/contact.html?pkg=scm" class="btn btn-primary">SCM/SCP 적용 범위 상담하기 →</a>
-      <a href="/ko/agentic-enterprise.html" class="btn btn-ghost">Agentic Enterprise 운영 모델 보기</a>
-    </div>
+    <div class="section-label" style="justify-content:center">Contact</div>
+    <h2 class="section-title">우선순위가 높은 SCM 분석·계획 과제를 검토합니다</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto">현재 반복해서 분석하는 예외와 계획 의사결정, 사용 중인 데이터와 시스템, 필요한 예측·시뮬레이션 범위를 바탕으로 첫 적용 과제를 정합니다.</p>
+    <a href="/ko/contact.html?pkg=scm" class="btn btn-primary">SCM Applications 상담하기 →</a>
   </div>
 </section>
-
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
   <div class="footer-inner">

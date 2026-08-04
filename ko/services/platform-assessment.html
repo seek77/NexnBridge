@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Platform Assessment &amp; Architecture | AI 플랫폼 도입 검토 | 넥스앤브릿지</title>
+<meta name="description" content="적용 업무와 지식·데이터 준비도, 보안, 기존 시스템과 운영 조건을 진단하고 Snowflake·Cloud AI·온프레미스 플랫폼을 비교해 목표 아키텍처와 구축 로드맵을 수립합니다.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/services/platform-assessment.html">
+<link rel="canonical" href="https://nexenbridge.com/ko/services/platform-assessment.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nex &amp; Bridge">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="AI Platform Assessment &amp; Architecture | AI 플랫폼 도입 검토 | 넥스앤브릿지">
+<meta property="og:description" content="업무·데이터·보안과 운영 조건을 기준으로 AI 플랫폼과 배포 구조, 구축 로드맵을 정합니다.">
+<meta property="og:url" content="https://nexenbridge.com/ko/services/platform-assessment.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI Platform Assessment &amp; Architecture | AI 플랫폼 도입 검토 | 넥스앤브릿지">
+<meta name="twitter:description" content="업무·데이터·보안과 운영 조건을 기준으로 AI 플랫폼과 배포 구조, 구축 로드맵을 정합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AI Platform Assessment & Architecture",
+  "provider": {"@type": "Organization", "name": "Nex & Bridge"},
+  "url": "https://nexenbridge.com/ko/services/platform-assessment.html",
+  "description": "적용 업무와 지식·데이터 준비도, 보안, 기존 시스템과 운영 조건을 진단하고 AI 플랫폼, 목표 아키텍처와 구축 로드맵을 수립하는 Consulting 서비스입니다.",
+  "areaServed": "KR",
+  "inLanguage": "ko-KR"
+}
+</script>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li class="has-mega">
+      <a href="/ko/services/snowflake/">Snowflake</a>
+      <button class="submenu-toggle" aria-label="Snowflake 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col"><a class="mega-featured" href="/ko/services/snowflake/">Snowflake 서비스</a></div>
+        <div class="mega-col"><div class="mega-col-title">Build &amp; Migrate</div><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></div>
+        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="/ko/services/">Agentic Enterprise</a>
+      <button class="submenu-toggle" aria-label="Agentic Enterprise 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col"><a class="mega-featured" href="/ko/services/">Agentic Enterprise 서비스</a><div class="mega-col-title">Plan &amp; Design</div><a href="/ko/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></div>
+        <div class="mega-col"><div class="mega-col-title">Build</div><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></div>
+        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      </div>
+    </li>
+    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li><a href="/ko/insights.html">Insights</a></li>
+    <li><a href="/ko/company.html">회사소개</a></li>
+    <li><a href="/ko/contact.html" class="nav-cta">문의하기</a></li>
+    <li><div class="lang-switch"><a href="/ko/" aria-current="true">KO</a><a href="/en/">EN</a></div></li>
+  </ul>
+</nav>
+
+<!-- ===== §1 HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">AI Platform Assessment &amp; Architecture</div>
+    <h1>적용 업무의 특성에 맞는<br><em>AI 플랫폼과 구축 방식을 검토합니다</em></h1>
+    <p class="hero-sub">업무의 복잡성과 필요한 지식·데이터, 보안 정책, 기존 시스템과 운영 환경을 기준으로 Snowflake·Cloud AI·온프레미스 플랫폼을 비교하고 목표 아키텍처와 구축 로드맵을 수립합니다.</p>
+    <div class="hero-btns"><a href="/ko/contact.html?pkg=platform-assessment" class="btn btn-primary">AI 플랫폼 도입 검토하기 →</a><a href="/ko/services/" class="btn btn-ghost">Agentic Enterprise 서비스 보기</a></div>
+  </div>
+</section>
+
+<!-- ===== §2 STARTING QUESTIONS ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Starting Questions</div>
+    <h2 class="section-title">제품 비교만으로는 도입 범위를 정하기 어렵습니다</h2>
+    <p class="section-desc">같은 플랫폼도 적용 업무와 데이터 위치, 보안 정책, 기존 시스템, 운영 조직에 따라 적합성이 달라집니다. 플랫폼을 먼저 정하면 필요한 데이터와 지식이 준비되지 않거나 PoC 이후 운영 구조를 다시 설계하는 문제가 생길 수 있습니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>어떤 업무에 적용할 것인가</h3><p>분석과 검색, 보고, 판단과 승인 중 AI가 담당할 업무와 사람이 책임질 범위를 확인합니다.</p></div>
+      <div class="card animate delay-1"><h3>무엇을 근거로 작동할 것인가</h3><p>필요한 데이터와 문서, 업무 규칙과 전문가 지식의 위치, 품질과 최신성을 확인합니다.</p></div>
+      <div class="card animate"><h3>어디에서 운영할 것인가</h3><p>데이터 반출, 망분리, 개인정보와 기밀정보 정책을 기준으로 Cloud·On-Premise·Hybrid 구성을 검토합니다.</p></div>
+      <div class="card animate delay-1"><h3>누가 운영하고 통제할 것인가</h3><p>모델과 Knowledge, Agent, 권한, 비용과 변경을 관리할 조직과 승인 절차를 정합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §3 CONSULTING SCOPE ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">Consulting Scope</div>
+    <h2 class="section-title">업무 선정부터 목표 구조와 실행계획까지 검토합니다</h2>
+    <div class="grid-2">
+      <div class="card animate"><h3>Use Case Discovery</h3><p>AX 전략과 현업 과제에서 AI 적용 후보를 찾고 업무 가치, 실현 가능성, 위험과 우선순위를 평가합니다.</p></div>
+      <div class="card animate delay-1"><h3>Readiness Assessment</h3><p>업무 기준과 Knowledge, 데이터, 기술 환경, 조직과 통제 기준의 현재 상태와 보완 과제를 진단합니다.</p></div>
+      <div class="card animate"><h3>Platform Assessment</h3><p>Snowflake, Cloud AI, 국내 상용 AI 플랫폼과 오픈소스 구성을 동일한 평가 기준으로 비교합니다.</p></div>
+      <div class="card animate delay-1"><h3>Target Architecture</h3><p>Knowledge, Data, Model, Agent, Application과 AgentOps의 역할, 배치 위치와 연계 구조를 설계합니다.</p></div>
+      <div class="card animate"><h3>Operating Model</h3><p>업무 책임자와 IT 운영 조직의 역할, Human Review, 권한, 평가, 배포와 변경관리 기준을 정합니다.</p></div>
+      <div class="card animate delay-1"><h3>Delivery Roadmap</h3><p>PoC에서 검증할 사항과 구축·전환 범위, 비용과 일정, 운영 준비와 확산 순서를 수립합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §4 ASSESSMENT CRITERIA ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Assessment Criteria</div>
+    <h2 class="section-title">기능 수보다 고객 환경에서의 적합성을 비교합니다</h2>
+    <p class="section-desc">제안서의 기능 유무만 비교하지 않습니다. 실제 업무 시나리오와 고객 데이터로 검증할 항목을 정하고, 플랫폼 도입 후 필요한 연계와 운영 비용까지 평가합니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>Business &amp; Application Fit</h3><p>대상 업무의 정확성, 응답시간, 승인과 예외처리, 업무 화면과 기존 절차에 필요한 기능을 확인합니다.</p></div>
+      <div class="card animate delay-1"><h3>Knowledge &amp; Data Fit</h3><p>정형·비정형 데이터, Semantic Layer, 검색과 Knowledge Graph, 최신성, 품질과 출처 관리 요건을 평가합니다.</p></div>
+      <div class="card animate"><h3>Security &amp; Governance</h3><p>데이터 위치와 반출, 접근권한, 개인정보·기밀정보, 모델 학습과 로그, 감사 요건을 확인합니다.</p></div>
+      <div class="card animate delay-1"><h3>Integration &amp; Architecture</h3><p>ERP와 업무시스템, Snowflake와 데이터 플랫폼, API와 도구 연계, 모델과 Application의 배치 구조를 검토합니다.</p></div>
+      <div class="card animate"><h3>Model &amp; Platform Flexibility</h3><p>업무별 모델 선택, 교체와 확장 가능성, 특정 모델·플랫폼 의존도와 기술 변화에 대한 대응 범위를 평가합니다.</p></div>
+      <div class="card animate delay-1"><h3>Cost &amp; Operability</h3><p>라이선스와 사용량, 인프라, 구축·운영 인력, 모니터링과 기술지원까지 포함한 전체 비용과 운영 난이도를 검토합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §5 DEPLOYMENT ARCHITECTURE ===== -->
+<section class="bg-alt" id="deployment">
+  <div class="container">
+    <div class="section-label">Deployment Architecture</div>
+    <h2 class="section-title">Cloud·On-Premise·Hybrid는 보안 정책과 운영 조건으로 정합니다</h2>
+    <p class="section-desc">배포 환경은 단순한 인프라 선택이 아닙니다. 데이터와 Knowledge의 위치, 모델 실행, Agent가 사용할 도구, 로그와 운영 책임의 경계를 결정합니다.</p>
+    <div class="grid-3">
+      <div class="card animate"><div class="card-num">CLOUD</div><h3>Snowflake 중심 구성</h3><p>클라우드 사용이 가능하고 데이터가 Snowflake에 있는 환경에서는 별도 복제와 연계를 줄일 수 있는 Snowflake 중심 구성을 우선 검토합니다.</p></div>
+      <div class="card animate delay-1"><div class="card-num">ON-PREMISE</div><h3>폐쇄망·망분리 구성</h3><p>데이터 반출이 제한된 환경에서는 국내 상용 AI 플랫폼과 오픈소스 모델·검색·Knowledge 구성을 고객 인프라와 운영 기준에 맞춰 비교합니다.</p></div>
+      <div class="card animate delay-2"><div class="card-num">HYBRID</div><h3>환경별 역할 분담</h3><p>민감 데이터와 내부 업무는 고객 환경에 두고 허용된 데이터와 AI 기능은 클라우드에서 운영하도록 역할과 통제 경계를 정합니다.</p></div>
+    </div>
+    <div class="note">특정 배포 방식이나 플랫폼을 정답으로 전제하지 않습니다. 다만 클라우드 데이터와 AI를 통합하는 과제에서는 Snowflake를 주요 기준 플랫폼으로 검토합니다.</div>
+  </div>
+</section>
+
+<!-- ===== §6 DECISIONS ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Decisions</div>
+    <h2 class="section-title">검토가 끝나면 구축에 필요한 결정을 명확하게 남깁니다</h2>
+    <div class="grid-2">
+      <div class="card animate"><h3>우선 적용 업무</h3><p>첫 구축 대상과 제외 범위, 업무 가치와 위험, 성공 여부를 판단할 기준을 정합니다.</p></div>
+      <div class="card animate delay-1"><h3>준비·보완 과제</h3><p>구축 전에 정비할 업무 기준과 Knowledge, 데이터, 보안과 조직 과제를 구분합니다.</p></div>
+      <div class="card animate"><h3>플랫폼과 목표 구조</h3><p>선정한 플랫폼과 선택 근거, 구성요소의 역할, 데이터 흐름과 기존 시스템 연계를 정의합니다.</p></div>
+      <div class="card animate delay-1"><h3>PoC와 구축 로드맵</h3><p>PoC 검증 항목과 평가 기준, 구축 단계, 예상 비용과 일정, 운영 전환과 확산 순서를 정합니다.</p></div>
+    </div>
+    <div class="note">Assessment 결과는 특정 제품 구매를 전제로 하지 않습니다. 평가 기준과 확인된 근거, 전제조건과 남은 위험을 함께 제시합니다.</div>
+  </div>
+</section>
+
+<!-- ===== §7 AI-NATIVE CONSULTING ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">AI-Native Consulting</div>
+    <h2 class="section-title">AI-Native Assessment로 업무와 기술자료를 체계적으로 분석합니다</h2>
+    <p class="section-desc">AX 전략, 업무 문서, 프로세스, 데이터 모델, 시스템 구성도, 보안 정책과 후보 플랫폼 자료를 AI로 분석합니다. 요구사항과 평가 기준, 충족 여부와 추가 확인 사항을 구조화하고, 복수 모델 검토와 원문 대조를 통해 분석 근거와 일관성을 관리합니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>Source Analysis</h3><p>문서와 인터뷰 기록에서 업무 요구, 데이터와 시스템 의존관계, 보안·운영 제약을 파악합니다.</p></div>
+      <div class="card animate delay-1"><h3>Requirements Structuring</h3><p>서로 다른 문서와 조직에서 제시한 요구사항을 비교 가능한 항목과 우선순위로 구조화합니다.</p></div>
+      <div class="card animate"><h3>Evaluation Criteria</h3><p>업무와 기술 요구를 후보 플랫폼에 적용할 평가 기준과 검증 질문으로 구체화합니다.</p></div>
+      <div class="card animate delay-1"><h3>Candidate Comparison</h3><p>후보별 충족 여부와 차이, 전제조건과 추가 검증이 필요한 항목을 동일한 기준으로 비교합니다.</p></div>
+      <div class="card animate"><h3>Evidence &amp; Open Items</h3><p>평가 근거를 원문과 기술자료에 대조하고 상충하거나 확인되지 않은 내용은 별도로 관리합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §8 CONTACT ===== -->
+<section class="bg-navy">
+  <div class="container container-narrow center">
+    <div class="section-label" style="justify-content:center">Contact</div>
+    <h2 class="section-title">현재 검토 중인 업무와 플랫폼을 알려주세요</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto">적용 업무와 후보 플랫폼, 데이터 환경, 보안 정책, 기존 PoC와 운영 계획을 확인하고 Assessment 범위와 우선 검토 항목을 정합니다.</p>
+    <a href="/ko/contact.html?pkg=platform-assessment" class="btn btn-primary">AI Platform Assessment 문의하기 →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake 데이터 기반부터 Agentic Enterprise 구축과 운영까지 제공합니다.</p></div>
+      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/ko/services/snowflake/">Snowflake 서비스</a></li><li><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
+      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/ko/services/">Agentic Enterprise 서비스</a></li><li><a href="/ko/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
+      <div class="footer-col"><h4>회사</h4><ul><li><a href="/ko/how-we-work.html">일하는 방식</a></li><li><a href="/ko/insights.html">Insights</a></li><li><a href="/ko/company.html">회사소개</a></li><li><a href="/ko/contact.html">문의하기</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/ko/privacy.html">개인정보처리방침</a></div></div>
+  </div>
+</footer>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAP to Snowflake Migration | SAP 데이터 전환 | 넥스앤브릿지</title>
+<meta name="description" content="SAP ECC·S/4HANA·BW의 데이터 구조와 이력을 분석하고 Snowflake로 전환합니다. 전환 설계, 데이터 이관, 정합성 검증과 Cut-over를 수행합니다.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/services/snowflake/sap-migration.html">
+<link rel="canonical" href="https://nexenbridge.com/ko/services/snowflake/sap-migration.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nex &amp; Bridge">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="SAP to Snowflake Migration | SAP 데이터 전환 | 넥스앤브릿지">
+<meta property="og:description" content="SAP 데이터의 구조와 이력, 업무 의미를 분석하고 Snowflake로 전환합니다.">
+<meta property="og:url" content="https://nexenbridge.com/ko/services/snowflake/sap-migration.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SAP to Snowflake Migration | SAP 데이터 전환 | 넥스앤브릿지">
+<meta name="twitter:description" content="SAP 데이터의 구조와 이력, 업무 의미를 분석하고 Snowflake로 전환합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SAP to Snowflake Migration",
+  "provider": {"@type": "Organization", "name": "Nex & Bridge"},
+  "url": "https://nexenbridge.com/ko/services/snowflake/sap-migration.html",
+  "description": "SAP ECC·S/4HANA·BW의 데이터 구조와 이력을 분석하고 Snowflake로 전환합니다.",
+  "areaServed": "KR",
+  "inLanguage": "ko-KR"
+}
+</script>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li class="has-mega">
+      <a href="/ko/services/snowflake/">Snowflake</a>
+      <button class="submenu-toggle" aria-label="Snowflake 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col"><a class="mega-featured" href="/ko/services/snowflake/">Snowflake 서비스</a></div>
+        <div class="mega-col"><div class="mega-col-title">Build &amp; Migrate</div><a href="/ko/services/snowflake/#data-foundation">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/#data-engineering">Data Engineering &amp; Integration</a></div>
+        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/snowflake/#managed-service">FinOps &amp; Managed Services</a></div>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="/ko/services/">Agentic Enterprise</a>
+      <button class="submenu-toggle" aria-label="Agentic Enterprise 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col"><a class="mega-featured" href="/ko/services/">Agentic Enterprise 서비스</a><div class="mega-col-title">Plan &amp; Design</div><a href="/ko/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a></div>
+        <div class="mega-col"><div class="mega-col-title">Build</div><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></div>
+        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      </div>
+    </li>
+    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li><a href="/ko/insights.html">Insights</a></li>
+    <li><a href="/ko/company.html">회사소개</a></li>
+    <li><a href="/ko/contact.html" class="nav-cta">문의하기</a></li>
+    <li><div class="lang-switch"><a href="/ko/" aria-current="true">KO</a><a href="/en/">EN</a></div></li>
+  </ul>
+</nav>
+
+<!-- ===== §1 HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">SAP to Snowflake Migration</div>
+    <h1>SAP 데이터를 Snowflake로 전환하고<br><em>분석과 AI 활용 기반을 구축합니다</em></h1>
+    <p class="hero-sub">ECC·S/4HANA·BW의 데이터 구조와 이력, 인터페이스와 배치 현황을 분석합니다. 전환 대상과 이력 범위, 데이터 모델과 검증 기준을 정하고 이관 이후 안정화까지 수행합니다.</p>
+    <div class="hero-btns"><a href="/ko/contact.html?pkg=sap-migration" class="btn btn-primary">전환 범위 검토하기 →</a><a href="/ko/services/snowflake/" class="btn btn-ghost">Snowflake 서비스 보기</a></div>
+  </div>
+</section>
+
+<!-- ===== §2 MIGRATION PERSPECTIVE ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Migration Perspective</div>
+    <h2 class="section-title">SAP 데이터의 구조, 이력과 업무 의미를 함께 전환합니다</h2>
+    <p class="section-desc">SAP 데이터는 테이블만 복제해서는 기존 업무에서 사용하던 의미와 계산 기준을 그대로 활용하기 어렵습니다. 현재 사용 중인 리포트와 배치, 인터페이스, 마스터·트랜잭션·이력 데이터와 후속 시스템을 확인하고 Snowflake에서 필요한 데이터 구조를 설계합니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>데이터 구조</h3><p>SAP 모듈과 테이블의 관계, Key와 코드, 참조 구조를 분석합니다.</p></div>
+      <div class="card animate delay-1"><h3>업무 이력</h3><p>분석과 추적에 필요한 이력 범위와 시점 기준을 정합니다.</p></div>
+      <div class="card animate"><h3>계산 기준</h3><p>기존 리포트와 프로그램에 적용된 계산식과 집계 기준을 확인합니다.</p></div>
+      <div class="card animate delay-1"><h3>연계 현황</h3><p>인터페이스, 배치와 기존 DW·데이터마트의 사용 관계를 분석합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §3 DELIVERY SCOPE ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">Delivery Scope</div>
+    <h2 class="section-title">현황 분석부터 Cut-over와 안정화까지 수행합니다</h2>
+    <div class="grid-2">
+      <div class="card animate"><div class="card-num">01</div><h3>현황 분석</h3><p>SAP 데이터 구조와 이력, 인터페이스, 배치 및 현재 활용 현황을 분석합니다.</p><p>추출 방식은 SAP 버전과 허용된 인터페이스, 변경 데이터 처리 요건과 원천 시스템 부하를 확인해 결정합니다.</p></div>
+      <div class="card animate delay-1"><div class="card-num">02</div><h3>전환 설계</h3><p>전환 대상과 이력 범위, Source-to-Target Mapping, 데이터 모델과 전환 순서를 정합니다.</p></div>
+      <div class="card animate"><div class="card-num">03</div><h3>이관 및 검증</h3><p>데이터 추출·변환·적재 파이프라인을 구축하고, 원천 시스템과 Snowflake 간 정합성을 검증합니다.</p></div>
+      <div class="card animate delay-1"><div class="card-num">04</div><h3>Cut-over 및 안정화</h3><p>업무 운영을 고려해 전환을 실행하고, 전환 이후 데이터와 파이프라인 상태를 점검합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §4 MIGRATION TARGETS ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Migration Targets</div>
+    <h2 class="section-title">SAP와 기존 데이터 환경을 함께 검토합니다</h2>
+    <div class="grid-2">
+      <div class="card animate"><h3>SAP ECC·S/4HANA</h3><p>업무 모듈별 데이터와 마스터, 트랜잭션 및 이력 데이터를 분석합니다.</p></div>
+      <div class="card animate delay-1"><h3>SAP BW</h3><p>InfoProvider, Query와 기존 리포트의 사용 현황을 확인하고 전환 범위를 정합니다.</p></div>
+      <div class="card animate"><h3>기존 DW·데이터마트</h3><p>SAP 데이터를 가공해 사용하던 기존 모델과 계산식, 배치 작업을 함께 검토합니다.</p></div>
+      <div class="card animate delay-1"><h3>인터페이스·후속 시스템</h3><p>SAP 데이터를 사용하는 업무 시스템, 분석 도구와 외부 연계에 미치는 영향을 확인합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §5 AFTER MIGRATION ===== -->
+<section class="bg-alt">
+  <div class="container container-narrow">
+    <div class="section-label">After Migration</div>
+    <h2 class="section-title">전환 이후 필요한 데이터 활용 범위로 확장합니다</h2>
+    <p class="section-desc">분석과 AI 활용이 필요한 경우, SAP 데이터를 Enterprise Data Model과 Semantic Layer에 반영합니다. BI와 AI가 같은 업무 용어와 계산 기준을 사용할 수 있도록 AI-Ready Data Foundation으로 확장합니다.</p>
+    <a href="/ko/services/snowflake/#data-foundation" class="btn btn-navy">AI-Ready Data Foundation 보기 →</a>
+  </div>
+</section>
+
+<!-- ===== §6 EXPERIENCE ===== -->
+<section>
+  <div class="container container-narrow">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">SAP ERP와 데이터 활용 경험을 바탕으로 전환 범위를 정합니다</h2>
+    <p class="section-desc">SAP ERP, BI·DW, Data Governance와 전사 시스템 구축 경험을 바탕으로 현재 업무에서 실제로 사용하는 데이터와 이력을 확인합니다.</p>
+    <p class="section-desc">테이블 수만으로 범위를 산정하지 않고, 업무 프로세스와 리포트, 데이터 사용 목적과 운영 제약을 함께 검토합니다.</p>
+  </div>
+</section>
+
+<!-- ===== §7 CONTACT ===== -->
+<section class="bg-navy">
+  <div class="container container-narrow center">
+    <div class="section-label" style="justify-content:center">Contact</div>
+    <h2 class="section-title">현재 SAP 환경과 데이터 활용 과제를 알려주세요</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto">SAP 버전과 사용 모듈, BW·DW 운영 현황, 전환 대상과 활용 목적을 확인한 후 우선 검토할 범위를 제안합니다.</p>
+    <a href="/ko/contact.html?pkg=sap-migration" class="btn btn-primary">SAP 전환 문의하기 →</a>
+  </div>
+</section>
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake 데이터 기반부터 Agentic Enterprise 구축과 운영까지 제공합니다.</p></div>
+      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/ko/services/snowflake/">Snowflake 서비스</a></li><li><a href="/ko/services/snowflake/#data-foundation">AI-Ready Data Foundation</a></li><li><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/ko/services/snowflake/#data-engineering">Data Engineering &amp; Integration</a></li><li><a href="/ko/services/snowflake/#managed-service">FinOps &amp; Managed Services</a></li></ul></div>
+      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/ko/services/">Agentic Enterprise 서비스</a></li><li><a href="/ko/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
+      <div class="footer-col"><h4>회사</h4><ul><li><a href="/ko/how-we-work.html">일하는 방식</a></li><li><a href="/ko/insights.html">Insights</a></li><li><a href="/ko/company.html">회사소개</a></li><li><a href="/ko/contact.html">문의하기</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/ko/privacy.html">개인정보처리방침</a></div></div>
+  </div>
+</footer>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

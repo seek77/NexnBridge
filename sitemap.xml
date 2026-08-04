@@ -2,22 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://nexenbridge.com/</loc></url>
   <url><loc>https://nexenbridge.com/ko/</loc></url>
-  <url><loc>https://nexenbridge.com/ko/agentic-enterprise.html</loc></url>
-  <url><loc>https://nexenbridge.com/ko/company.html</loc></url>
-  <url><loc>https://nexenbridge.com/ko/contact.html</loc></url>
-  <url><loc>https://nexenbridge.com/ko/how-we-work.html</loc></url>
-  <url><loc>https://nexenbridge.com/ko/insights.html</loc></url>
-  <url><loc>https://nexenbridge.com/ko/services/</loc></url>
-  <url><loc>https://nexenbridge.com/ko/services/agentops.html</loc></url>
-  <url><loc>https://nexenbridge.com/ko/services/knowledge.html</loc></url>
-  <url><loc>https://nexenbridge.com/ko/services/solution.html</loc></url>
   <url><loc>https://nexenbridge.com/ko/services/snowflake/</loc></url>
   <url><loc>https://nexenbridge.com/ko/services/snowflake/cost.html</loc></url>
   <url><loc>https://nexenbridge.com/ko/services/snowflake/security.html</loc></url>
-  <url><loc>https://nexenbridge.com/ko/solutions/</loc></url>
+  <url><loc>https://nexenbridge.com/ko/services/</loc></url>
+  <url><loc>https://nexenbridge.com/ko/services/knowledge.html</loc></url>
+  <url><loc>https://nexenbridge.com/ko/services/solution.html</loc></url>
+  <url><loc>https://nexenbridge.com/ko/services/agentops.html</loc></url>
   <url><loc>https://nexenbridge.com/ko/solutions/scm.html</loc></url>
+  <url><loc>https://nexenbridge.com/ko/insights.html</loc></url>
+  <url><loc>https://nexenbridge.com/ko/company.html</loc></url>
+  <url><loc>https://nexenbridge.com/ko/contact.html</loc></url>
   <url><loc>https://nexenbridge.com/en/</loc></url>
+  <url><loc>https://nexenbridge.com/en/services/</loc></url>
+  <url><loc>https://nexenbridge.com/en/insights.html</loc></url>
   <url><loc>https://nexenbridge.com/en/company.html</loc></url>
   <url><loc>https://nexenbridge.com/en/contact.html</loc></url>
-  <url><loc>https://nexenbridge.com/en/services/</loc></url>
 </urlset>

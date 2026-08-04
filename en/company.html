@@ -19,16 +19,12 @@
   <a href="/en/" class="logo">Nex <span>&amp;</span> Bridge</a>
   <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-menu">
-    <li><a href="/en/">Home</a></li>
-    <li><a href="/en/company.html" aria-current="page">Company</a></li>
-    <li><a href="/en/services/">Services</a></li>
+    <li class="has-dropdown"><a href="/en/services/#snowflake">Snowflake</a><button class="submenu-toggle" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#snowflake">Snowflake Services</a><a href="/en/services/#sap-migration">SAP to Snowflake Migration</a><a href="/en/services/#managed-service">FinOps &amp; Managed Service</a></div></li>
+    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Enterprise AI</a><button class="submenu-toggle" aria-label="Open Enterprise AI menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#platform-architecture">Platform Assessment &amp; Architecture</a><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge</a><a href="/en/services/#agent-application">AI Agent &amp; Application</a></div></li>
+    <li><a href="/en/insights.html">Insights</a></li>
+    <li><a href="/en/company.html">Company</a></li>
     <li><a href="/en/contact.html" class="nav-cta">Contact</a></li>
-    <li>
-      <div class="lang-switch">
-        <a href="/ko/company.html">KO</a>
-        <a href="/en/company.html" aria-current="true">EN</a>
-      </div>
-    </li>
+    <li><div class="lang-switch"><a href="/ko/">KO</a><a href="/en/" aria-current="true">EN</a></div></li>
   </ul>
 </nav>
 
@@ -36,8 +32,8 @@
 <section class="hero hero-sm">
   <div class="hero-inner">
     <div class="hero-label">Company</div>
-    <h1>Nex &amp; Bridge builds the<br><em>Agentic Enterprise</em></h1>
-    <p class="hero-sub">Not a strategy deck, not a single Agent. We connect enterprise knowledge, data, Agents, and operations into one working environment.</p>
+    <h1>We build enterprise data foundations<br>and <em>Enterprise AI</em></h1>
+    <p class="hero-sub">Nex &amp; Bridge provides Snowflake Services and Enterprise AI Engineering—from data architecture and migration to AI Agents, business applications, and managed operations.</p>
   </div>
 </section>
 
@@ -49,11 +45,11 @@
     <div class="tbl-wrap">
       <table class="tbl">
         <tbody>
-          <tr><td>Direction</td><td><strong>Agentic Enterprise</strong></td></tr>
-          <tr><td>Engagement models</td><td><strong>Consulting · Build · Application Service</strong></td></tr>
-          <tr><td>Core service areas</td><td>Enterprise Knowledge · <strong>Snowflake Data &amp; AI</strong> · Agentic Solution</td></tr>
-          <tr><td>Cross-cutting capability</td><td>AgentOps</td></tr>
-          <tr><td>Flagship domain</td><td><strong>Agentic SCM/SCP</strong></td></tr>
+          <tr><td>Business lines</td><td><strong>Snowflake Services · Enterprise AI Engineering</strong></td></tr>
+          <tr><td>Delivery lifecycle</td><td>Advise · Engineer · Run</td></tr>
+          <tr><td>Snowflake services</td><td>Data Foundation · SAP Migration · Data Engineering · Managed Service</td></tr>
+          <tr><td>Enterprise AI</td><td>Platform Architecture · Enterprise Knowledge · AI Agent &amp; Application · AgentOps</td></tr>
+          <tr><td>Implementation assets</td><td>SCM/SCP use cases and reusable components</td></tr>
           <tr><td>Methodology</td><td><strong>KOAA</strong></td></tr>
           <tr><td>Delivery model</td><td><strong>AI-Native Project Delivery</strong></td></tr>
         </tbody>
@@ -159,8 +155,8 @@
       <table class="tbl">
         <tbody>
           <tr><td style="white-space:nowrap"><strong>Name</strong></td><td>Nex &amp; Bridge Co., Ltd.</td></tr>
-          <tr><td style="white-space:nowrap"><strong>Engagement models</strong></td><td>Consulting · Build · Application Service</td></tr>
-          <tr><td style="white-space:nowrap"><strong>Core service areas</strong></td><td>Enterprise Knowledge · Snowflake Data &amp; AI · Agentic Solution</td></tr>
+          <tr><td style="white-space:nowrap"><strong>Business lines</strong></td><td>Snowflake Services · Enterprise AI Engineering</td></tr>
+          <tr><td style="white-space:nowrap"><strong>Delivery lifecycle</strong></td><td>Advise · Engineer · Run</td></tr>
           <tr><td style="white-space:nowrap"><strong>Address</strong></td><td>1025, Union Center, 310 Gangnam-daero, Gangnam-gu, Seoul 06253, South Korea</td></tr>
           <tr><td style="white-space:nowrap"><strong>Contact</strong></td><td><a href="/en/contact.html" style="color:var(--navy);font-weight:600">contact@nexenbridge.com</a></td></tr>
           <tr><td style="white-space:nowrap"><strong>Website</strong></td><td>nexenbridge.com</td></tr>
@@ -174,41 +170,15 @@
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-top" style="grid-template-columns:1.5fr 1fr 1fr 1fr">
-      <div class="footer-brand">
-        <div class="logo">Nex <span>&amp;</span> Bridge</div>
-        <p>We connect enterprise knowledge, data, Agents, and operations into an Agentic Enterprise.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/en/company.html">About</a></li>
-          <li><a href="/en/services/">Services</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="/en/contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Language</h4>
-        <ul>
-          <li><a href="/ko/">한국어 (Korean)</a></li>
-        </ul>
-      </div>
+    <div class="footer-top">
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, enterprise AI engineering, and managed operations.</p></div>
+      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/#snowflake">Services</a></li><li><a href="/en/services/#sap-migration">SAP Migration</a></li><li><a href="/en/services/#managed-service">Managed Service</a></li></ul></div>
+      <div class="footer-col"><h4>Enterprise AI</h4><ul><li><a href="/en/services/#platform-architecture">Platform &amp; Architecture</a></li><li><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge</a></li><li><a href="/en/services/#agent-application">AI Agent &amp; Application</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/insights.html">Insights</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Nex &amp; Bridge Co., Ltd.</p>
-      <div class="footer-legal">
-        <a href="https://nexenbridge.com">nexenbridge.com</a>
-        <a href="/en/privacy.html">Privacy Policy</a>
-      </div>
-    </div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy</a></div></div>
   </div>
 </footer>
-
 <script src="/assets/js/site.js"></script>
 </body>
 </html>

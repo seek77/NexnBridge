@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>문의하기 | 넥스앤브릿지</title>
-<meta name="description" content="현재 과제와 준비 상태, 필요한 서비스와 우선 검토 범위를 넥스앤브릿지와 함께 정합니다.">
+<meta name="description" content="검토 중인 업무와 데이터 환경을 바탕으로 필요한 서비스와 시작 범위를 확인합니다.">
 <link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/contact.html">
 <link rel="alternate" hreflang="en" href="https://nexenbridge.com/en/contact.html">
 <link rel="canonical" href="https://nexenbridge.com/ko/contact.html">
@@ -12,11 +12,11 @@
 <meta property="og:site_name" content="Nex &amp; Bridge">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:title" content="문의하기 | 넥스앤브릿지">
-<meta property="og:description" content="현재 과제와 준비 상태, 필요한 서비스와 우선 검토 범위를 넥스앤브릿지와 함께 정합니다.">
+<meta property="og:description" content="검토 중인 업무와 데이터 환경을 바탕으로 필요한 서비스와 시작 범위를 확인합니다.">
 <meta property="og:url" content="https://nexenbridge.com/ko/contact.html">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="문의하기 | 넥스앤브릿지">
-<meta name="twitter:description" content="현재 과제와 준비 상태, 필요한 서비스와 우선 검토 범위를 넥스앤브릿지와 함께 정합니다.">
+<meta name="twitter:description" content="검토 중인 업무와 데이터 환경을 바탕으로 필요한 서비스와 시작 범위를 확인합니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -27,7 +27,7 @@
   "@type": "ContactPage",
   "name": "문의하기 | 넥스앤브릿지",
   "url": "https://nexenbridge.com/ko/contact.html",
-  "description": "현재 과제와 준비 상태, 필요한 서비스와 우선 검토 범위를 넥스앤브릿지와 함께 정합니다.",
+  "description": "검토 중인 업무와 데이터 환경을 바탕으로 필요한 서비스와 시작 범위를 확인합니다.",
   "inLanguage": "ko-KR"
 }
 </script>
@@ -78,8 +78,8 @@
 <section class="hero hero-sm">
   <div class="hero-inner">
     <div class="hero-label">Contact</div>
-    <h1>우선 과제와 준비 상태를 확인해<br><em>시작 범위</em>를 함께 정합니다</h1>
-    <p class="hero-sub">업무의 중요도와 반복성, 기준·데이터의 준비 상태, 담당자와 운영 조건을 확인해 우선 검토할 범위를 정합니다.</p>
+    <h1>현재 과제와 업무 특성에 맞는<br><em>시작 범위</em>를 검토합니다</h1>
+    <p class="hero-sub">검토 중인 업무와 데이터 환경, 기대 효과를 알려주세요. 우선 확인할 범위와 필요한 서비스를 정리합니다.</p>
   </div>
 </section>
 
@@ -133,16 +133,18 @@
         <label for="f-topic">관심 영역 *</label>
         <select id="f-topic" name="topic" required>
           <option value="">선택해주세요</option>
+          <option>Snowflake Services</option>
           <option>AI-Ready Data Foundation</option>
           <option>SAP to Snowflake Migration</option>
-          <option>Enterprise Data Model &amp; Standards</option>
-          <option>Data Integration &amp; Pipeline Engineering</option>
-          <option>Analytics &amp; AI Applications</option>
-          <option>Snowflake FinOps &amp; Managed Service</option>
-          <option>Enterprise AI Architecture &amp; Platform</option>
+          <option>Data Engineering &amp; Integration</option>
+          <option>FinOps &amp; Managed Services</option>
+          <option>Agentic Enterprise 서비스 검토</option>
+          <option>AI Platform Assessment &amp; Architecture</option>
           <option>Enterprise Knowledge Engineering</option>
-          <option>AI Agent &amp; Application Engineering</option>
+          <option>Agentic Analytics &amp; Applications</option>
           <option>AgentOps &amp; Managed Operations</option>
+          <option>Profitability &amp; Portfolio Analytics</option>
+          <option>SCM Applications</option>
           <option>일반 문의</option>
         </select>
       </div>
@@ -205,15 +207,23 @@
   if (!form) return;
 
   var topicByPackage = {
-    cost: 'Snowflake FinOps & Managed Service',
-    security: 'Snowflake FinOps & Managed Service',
+    cost: 'FinOps & Managed Services',
+    security: 'FinOps & Managed Services',
+    'managed-services': 'FinOps & Managed Services',
     foundation: 'AI-Ready Data Foundation',
-    knowledge: 'Enterprise Knowledge Engineering',
-    solution: 'AI Agent & Application Engineering',
-    scm: 'AI Agent & Application Engineering',
-    agentops: 'AgentOps & Managed Operations',
+    'data-foundation': 'AI-Ready Data Foundation',
     migration: 'SAP to Snowflake Migration',
-    blueprint: 'Enterprise AI Architecture & Platform'
+    'sap-migration': 'SAP to Snowflake Migration',
+    'data-engineering': 'Data Engineering & Integration',
+    'agentic-enterprise': 'Agentic Enterprise 서비스 검토',
+    blueprint: 'AI Platform Assessment & Architecture',
+    'platform-assessment': 'AI Platform Assessment & Architecture',
+    knowledge: 'Enterprise Knowledge Engineering',
+    solution: 'Agentic Analytics & Applications',
+    applications: 'Agentic Analytics & Applications',
+    profitability: 'Profitability & Portfolio Analytics',
+    scm: 'SCM Applications',
+    agentops: 'AgentOps & Managed Operations'
   };
   var packageName = new URLSearchParams(window.location.search).get('pkg');
   if (packageName && topicByPackage[packageName] && topicSelect) {

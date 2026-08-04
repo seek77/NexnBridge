@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Engineering &amp; Integration | Snowflake 데이터 통합·파이프라인 | 넥스앤브릿지</title>
+<meta name="description" content="ERP·MES·SCM·CRM, 데이터베이스, 파일, API와 이벤트 데이터를 Snowflake에 통합합니다. Batch·CDC·Streaming 파이프라인과 변환, 품질 검증, 모니터링과 변경 대응을 구축합니다.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/services/snowflake/data-engineering.html">
+<link rel="canonical" href="https://nexenbridge.com/ko/services/snowflake/data-engineering.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nex &amp; Bridge">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="Data Engineering &amp; Integration | Snowflake 데이터 통합·파이프라인 | 넥스앤브릿지">
+<meta property="og:description" content="업무에 필요한 데이터를 제때 제공할 수 있도록 Snowflake 데이터 통합과 파이프라인을 구축합니다.">
+<meta property="og:url" content="https://nexenbridge.com/ko/services/snowflake/data-engineering.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Data Engineering &amp; Integration | Snowflake 데이터 통합·파이프라인 | 넥스앤브릿지">
+<meta name="twitter:description" content="업무에 필요한 데이터를 제때 제공할 수 있도록 Snowflake 데이터 통합과 파이프라인을 구축합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Data Engineering & Integration",
+  "provider": {"@type": "Organization", "name": "Nex & Bridge"},
+  "url": "https://nexenbridge.com/ko/services/snowflake/data-engineering.html",
+  "description": "ERP·MES·SCM·CRM, 데이터베이스, 파일, API와 이벤트 데이터를 Snowflake에 통합하고 Batch·CDC·Streaming 파이프라인과 운영 체계를 구축합니다.",
+  "areaServed": "KR",
+  "inLanguage": "ko-KR"
+}
+</script>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li class="has-mega">
+      <a href="/ko/services/snowflake/">Snowflake</a>
+      <button class="submenu-toggle" aria-label="Snowflake 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col"><a class="mega-featured" href="/ko/services/snowflake/">Snowflake 서비스</a></div>
+        <div class="mega-col"><div class="mega-col-title">Build &amp; Migrate</div><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></div>
+        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="/ko/services/">Agentic Enterprise</a>
+      <button class="submenu-toggle" aria-label="Agentic Enterprise 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col"><a class="mega-featured" href="/ko/services/">Agentic Enterprise 서비스</a><div class="mega-col-title">Plan &amp; Design</div><a href="/ko/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a></div>
+        <div class="mega-col"><div class="mega-col-title">Build</div><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></div>
+        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      </div>
+    </li>
+    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li><a href="/ko/insights.html">Insights</a></li>
+    <li><a href="/ko/company.html">회사소개</a></li>
+    <li><a href="/ko/contact.html" class="nav-cta">문의하기</a></li>
+    <li><div class="lang-switch"><a href="/ko/" aria-current="true">KO</a><a href="/en/">EN</a></div></li>
+  </ul>
+</nav>
+
+<!-- ===== §1 HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">Data Engineering &amp; Integration</div>
+    <h1>업무에 필요한 데이터를 제때 제공하는<br><em>Snowflake 파이프라인을 구축합니다</em></h1>
+    <p class="hero-sub">ERP·MES·SCM·CRM, 데이터베이스, 파일, API와 이벤트 데이터를 Snowflake에 통합합니다. 데이터 사용 시점과 원천 시스템 부하, 필요한 이력, 오류 복구와 보안 요건을 확인해 Batch·CDC·Streaming 방식을 정하고, 변환·검증·모니터링까지 구현합니다.</p>
+    <div class="hero-btns"><a href="/ko/contact.html?pkg=data-engineering" class="btn btn-primary">데이터 연계 검토하기 →</a><a href="/ko/services/snowflake/" class="btn btn-ghost">Snowflake 서비스 보기</a></div>
+  </div>
+</section>
+
+<!-- ===== §2 DELIVERY PERSPECTIVE ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Delivery Perspective</div>
+    <h2 class="section-title">연결 방식보다 데이터가 사용되는 조건을 먼저 확인합니다</h2>
+    <p class="section-desc">같은 원천 데이터라도 일 마감 후 사용하면 되는지, 업무 중 즉시 반영해야 하는지에 따라 설계가 달라집니다. 현재 상태만 필요한지 모든 변경 이력이 필요한지, 장애 시 어느 시점부터 다시 처리해야 하는지도 함께 정해야 합니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>업무 사용 시점</h3><p>보고, 분석과 업무 Application에서 데이터가 필요한 주기와 허용 지연 시간을 확인합니다.</p></div>
+      <div class="card animate delay-1"><h3>원천 시스템 제약</h3><p>허용된 인터페이스와 조회 부하, 네트워크, 보안 정책과 운영 시간대를 확인합니다.</p></div>
+      <div class="card animate"><h3>이력과 변경 처리</h3><p>현재 상태와 변경 이력의 보존 범위, 삭제·취소·정정 데이터의 처리 기준을 정합니다.</p></div>
+      <div class="card animate delay-1"><h3>장애와 복구 기준</h3><p>실패 감지, 재처리, 중복 방지, Backfill과 원천 데이터 대사 방식을 설계합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §3 SERVICE SCOPE ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">Service Scope</div>
+    <h2 class="section-title">수집부터 변환, 검증과 운영까지 구축합니다</h2>
+    <div class="grid-2">
+      <div class="card animate"><h3>Source Integration</h3><p>ERP·MES·SCM·CRM, 데이터베이스, SaaS, 파일, API와 이벤트 등 필요한 원천을 Snowflake에 연계합니다.</p></div>
+      <div class="card animate delay-1"><h3>Batch, CDC &amp; Streaming</h3><p>데이터 변경 특성과 활용 시점에 맞춰 정기 적재, 변경 데이터 수집과 실시간 처리 방식을 적용합니다.</p></div>
+      <div class="card animate"><h3>Transformation &amp; Orchestration</h3><p>원천 데이터를 업무 활용 구조로 변환하고, 작업 순서와 의존관계, 실행 주기와 오류 처리 기준을 구현합니다.</p></div>
+      <div class="card animate delay-1"><h3>Quality &amp; Reconciliation</h3><p>건수와 금액, Key, 중복, 누락, 최신성 등 필요한 검증 규칙을 적용하고 원천 시스템과 결과를 대사합니다.</p></div>
+      <div class="card animate"><h3>Pipeline Operations</h3><p>처리 상태와 지연, 오류, Schema 변경과 사용량을 모니터링하고 운영 중 발생하는 변경에 대응합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §4 KNOWLEDGE-DRIVEN MAPPING ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Knowledge-Driven Mapping</div>
+    <h2 class="section-title">컬럼을 옮기는 것이 아니라 업무 기준을 변환 로직에 반영합니다</h2>
+    <p class="section-desc">원천과 대상 컬럼의 이름만 맞추면 같은 코드와 금액도 업무에서 다르게 해석될 수 있습니다. 코드의 의미와 유효기간, 취소·정정 처리, 단위와 통화, 집계 기준과 이력 생성 규칙을 확인해 파이프라인에 반영합니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>Source-to-Target Mapping</h3><p>원천 필드와 대상 구조의 관계를 정의하고 변환, 기본값과 예외 처리 기준을 명확하게 기록합니다.</p></div>
+      <div class="card animate delay-1"><h3>Business Rules</h3><p>업무 문서와 리포트, SQL에 적용된 코드 해석과 계산식, 필터와 집계 기준을 확인합니다.</p></div>
+      <div class="card animate"><h3>History &amp; Correction</h3><p>발생일과 반영일, 유효기간, 취소와 정정, 지연 도착 데이터가 이력에 반영되는 방식을 정합니다.</p></div>
+      <div class="card animate delay-1"><h3>Data Contract</h3><p>필수 데이터와 형식, 제공 주기, 품질 기준과 변경 통지 원칙을 원천 시스템 담당자와 합의합니다.</p></div>
+    </div>
+    <div class="note">업무 객체, 지표와 계산 기준을 전사 데이터 모델과 Semantic Views로 정의하는 작업은 <a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a>에서 다룹니다. 이 페이지에서는 해당 기준에 맞는 데이터를 지속적으로 공급하는 파이프라인을 구축합니다.</div>
+  </div>
+</section>
+
+<!-- ===== §5 AI-NATIVE DELIVERY ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">AI-Native Delivery</div>
+    <h2 class="section-title">AI로 분석과 문서화를 빠르게 하고 엔지니어가 구현 결과를 검증합니다</h2>
+    <p class="section-desc">기존 DDL과 SQL, 인터페이스 명세, 배치 작업과 오류 로그를 AI로 분석해 매핑과 변환 로직, 테스트 조건과 변경 영향을 정리합니다. AI가 작성한 초안은 원천 시스템과 업무 기준을 아는 담당자와 데이터 엔지니어가 검토합니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>Metadata &amp; Code Analysis</h3><p>Schema, DDL, SQL과 인터페이스 명세에서 데이터 흐름과 변환 의존관계를 파악합니다.</p></div>
+      <div class="card animate delay-1"><h3>Mapping &amp; Logic Draft</h3><p>Source-to-Target Mapping과 변환 규칙, 확인이 필요한 예외 항목의 초안을 작성합니다.</p></div>
+      <div class="card animate"><h3>Test &amp; Impact Analysis</h3><p>대사 조건과 경계값, 변경 영향과 회귀 테스트 대상을 도출해 검증 범위를 정리합니다.</p></div>
+      <div class="card animate delay-1"><h3>Engineering Review</h3><p>엔지니어가 보안, 성능과 데이터 정합성을 검토하고 실제 실행 결과를 기준으로 수정합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §6 IMPLEMENTATION AND OPERATIONS ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Implementation &amp; Operations</div>
+    <h2 class="section-title">원천 환경과 운영 요건에 맞는 구성을 선택합니다</h2>
+    <p class="section-desc">Snowflake의 기본 기능을 우선 검토하되 특정 도구를 전제로 설계하지 않습니다. 원천 시스템의 인터페이스 정책과 네트워크, 데이터량과 변경 빈도, 필요한 지연 시간과 고객이 운영 중인 도구를 기준으로 구성을 정합니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>Ingestion</h3><p>파일 기반 적재, Snowpipe, Snowpipe Streaming, Openflow와 외부 연계 도구 중 요건에 맞는 방식을 적용합니다.</p></div>
+      <div class="card animate delay-1"><h3>Transformation</h3><p>SQL, Dynamic Tables, Streams와 Tasks 등으로 변환과 증분 처리, 작업 의존관계를 구현합니다.</p></div>
+      <div class="card animate"><h3>Quality &amp; Observability</h3><p>완전성, 최신성, 중복과 정합성 기준을 모니터링하고 지연과 오류를 확인할 수 있도록 구성합니다.</p></div>
+      <div class="card animate delay-1"><h3>Change &amp; Recovery</h3><p>Schema 변경, 재처리, Backfill과 장애 복구 절차를 정하고 운영 이력을 남깁니다.</p></div>
+    </div>
+    <div class="note">구체적인 기술 구성은 Snowflake Edition과 Region, 네트워크, 원천 시스템 라이선스와 보안 요건을 확인한 후 결정합니다.</div>
+  </div>
+</section>
+
+<!-- ===== §7 EXPERIENCE ===== -->
+<section class="bg-alt">
+  <div class="container container-narrow">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">업무 시스템과 데이터 활용 경험을 기준으로 연계 범위를 정합니다</h2>
+    <p class="section-desc">SAP ERP와 전사 시스템, BI·DW, Data Governance와 데이터 인터페이스 구축 경험을 바탕으로 현재 사용 중인 데이터와 후속 업무를 확인합니다.</p>
+    <p class="section-desc">인터페이스 수만으로 범위를 정하지 않고, 데이터가 사용되는 시점과 이력, 정합성 기준, 장애가 업무에 미치는 영향과 운영 제약을 함께 검토합니다.</p>
+  </div>
+</section>
+
+<!-- ===== §8 CONTACT ===== -->
+<section class="bg-navy">
+  <div class="container container-narrow center">
+    <div class="section-label" style="justify-content:center">Contact</div>
+    <h2 class="section-title">현재 원천 시스템과 데이터 제공 과제를 알려주세요</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto">대상 시스템과 인터페이스, 데이터 제공 주기, 지연과 장애 현황, 필요한 이력과 대사 기준을 확인한 후 우선 구축할 연계 범위를 검토합니다.</p>
+    <a href="/ko/contact.html?pkg=data-engineering" class="btn btn-primary">Data Engineering 문의하기 →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake 데이터 기반부터 Agentic Enterprise 구축과 운영까지 제공합니다.</p></div>
+      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/ko/services/snowflake/">Snowflake 서비스</a></li><li><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
+      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/ko/services/">Agentic Enterprise 서비스</a></li><li><a href="/ko/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
+      <div class="footer-col"><h4>회사</h4><ul><li><a href="/ko/how-we-work.html">일하는 방식</a></li><li><a href="/ko/insights.html">Insights</a></li><li><a href="/ko/company.html">회사소개</a></li><li><a href="/ko/contact.html">문의하기</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/ko/privacy.html">개인정보처리방침</a></div></div>
+  </div>
+</footer>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

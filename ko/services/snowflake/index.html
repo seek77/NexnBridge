@@ -43,8 +43,8 @@
       <button class="submenu-toggle" aria-label="Snowflake 하위메뉴 열기"><span class="chev"></span></button>
       <div class="mega-menu">
         <div class="mega-col"><a class="mega-featured" href="/ko/services/snowflake/">Snowflake 서비스</a></div>
-        <div class="mega-col"><div class="mega-col-title">Build &amp; Migrate</div><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/#data-engineering">Data Engineering &amp; Integration</a></div>
-        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/snowflake/#managed-service">FinOps &amp; Managed Services</a></div>
+        <div class="mega-col"><div class="mega-col-title">Build &amp; Migrate</div><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></div>
+        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
       </div>
     </li>
     <li class="has-mega">
@@ -82,8 +82,8 @@
     <div class="grid-2">
       <a class="card card-featured card-link animate" href="/ko/services/snowflake/data-foundation.html"><div class="featured-tag">Foundation</div><h3>AI-Ready Data Foundation</h3><p>업무 문서, 리포트, SQL과 현업 질문을 AI로 분석하고, 그 결과를 Enterprise Data Model과 Semantic Views에 반영해 분석과 AI가 사용할 데이터 기반을 구축합니다.</p><span class="card-more">자세히 보기 →</span></a>
       <a class="card card-featured card-link animate delay-1" href="/ko/services/snowflake/sap-migration.html"><div class="featured-tag">Migration</div><h3>SAP to Snowflake Migration</h3><p>SAP ECC·S/4HANA·BW의 데이터와 이력을 분석하고, Snowflake로의 이관과 검증을 수행합니다.</p><span class="card-more">자세히 보기 →</span></a>
-      <a class="card card-featured card-link animate" href="#data-engineering"><div class="featured-tag">Engineering</div><h3>Data Engineering &amp; Integration</h3><p>ERP·MES·CRM과 외부 데이터를 통합하고, 필요한 데이터를 안정적으로 제공하는 데이터 파이프라인을 구축합니다.</p><span class="card-more">자세히 보기 →</span></a>
-      <a class="card card-featured card-link animate delay-1" href="#managed-service"><div class="featured-tag">Operate</div><h3>FinOps &amp; Managed Services</h3><p>Snowflake의 비용, 성능, 보안, 데이터 파이프라인과 변경 사항을 지속적으로 관리합니다.</p><span class="card-more">자세히 보기 →</span></a>
+      <a class="card card-featured card-link animate" href="/ko/services/snowflake/data-engineering.html"><div class="featured-tag">Engineering</div><h3>Data Engineering &amp; Integration</h3><p>ERP·MES·SCM·CRM과 외부 데이터를 통합하고, 업무 사용 시점과 이력·복구 기준을 반영한 Snowflake 파이프라인을 구축합니다.</p><span class="card-more">자세히 보기 →</span></a>
+      <a class="card card-featured card-link animate delay-1" href="/ko/services/snowflake/managed-services.html"><div class="featured-tag">Operate</div><h3>FinOps &amp; Managed Services</h3><p>Snowflake의 비용, 성능, 보안, 데이터 파이프라인과 변경 사항을 지속적으로 관리합니다.</p><span class="card-more">자세히 보기 →</span></a>
     </div>
   </div>
 </section>
@@ -111,16 +111,12 @@
 
 <!-- ===== §5 DATA ENGINEERING ===== -->
 <section class="bg-alt" id="data-engineering">
-  <div class="container">
+  <div class="container container-narrow">
     <div class="section-label">Data Engineering &amp; Integration</div>
-    <h2 class="section-title">필요한 데이터를 안정적으로 공급합니다</h2>
-    <p class="section-desc">업무 시스템과 외부 데이터의 변경 사항을 Snowflake에 반영하고, 분석과 AI가 사용할 수 있는 형태로 가공합니다.</p>
-    <div class="grid-2">
-      <div class="card animate"><h3>Source Integration</h3><p>ERP·MES·CRM, 데이터베이스, 파일과 API 등 필요한 원천을 연계합니다.</p></div>
-      <div class="card animate delay-1"><h3>Data Pipeline</h3><p>Batch, CDC와 Streaming 요건에 맞춰 수집·적재 파이프라인을 구축합니다.</p></div>
-      <div class="card animate"><h3>Transformation &amp; Quality</h3><p>업무 활용에 필요한 변환 로직과 품질 규칙, 오류 처리 기준을 적용합니다.</p></div>
-      <div class="card animate delay-1"><h3>Pipeline Operations</h3><p>처리 상태와 지연, 오류를 모니터링하고 원천 시스템 변경에 대응합니다.</p></div>
-    </div>
+    <h2 class="section-title">데이터가 사용되는 조건에서 파이프라인을 설계합니다</h2>
+    <p class="section-desc">업무 사용 시점과 원천 시스템 부하, 필요한 이력, 장애 복구와 정합성 기준을 확인해 Batch·CDC·Streaming 방식을 정합니다.</p>
+    <p class="section-desc">업무 문서와 SQL, 인터페이스 명세를 AI로 분석해 매핑과 테스트 초안을 작성하고, 엔지니어가 실제 데이터와 실행 결과를 기준으로 검증합니다.</p>
+    <a href="/ko/services/snowflake/data-engineering.html" class="btn btn-navy">Data Engineering 자세히 보기 →</a>
   </div>
 </section>
 
@@ -128,13 +124,9 @@
 <section id="managed-service">
   <div class="container">
     <div class="section-label">FinOps &amp; Managed Services</div>
-    <h2 class="section-title">구축 이후 비용·성능·보안을 관리합니다</h2>
-    <p class="section-desc">사용량과 운영 현황을 지속적으로 점검하고, 비용과 성능을 조정하며 보안과 데이터 파이프라인의 변경을 관리합니다.</p>
-    <div class="grid-3">
-      <a class="card card-link animate" href="/ko/services/snowflake/cost.html"><h3>Cost Optimization</h3><p>Warehouse, Storage와 Query 사용량을 분석하고 비용 개선 과제를 관리합니다.</p><span class="card-more">비용 최적화 보기 →</span></a>
-      <a class="card card-link animate delay-1" href="/ko/services/snowflake/security.html"><h3>Security &amp; Access Control</h3><p>역할과 업무 목적에 맞춰 접근권한과 민감정보 보호 기준을 점검합니다.</p><span class="card-more">보안 서비스 보기 →</span></a>
-      <div class="card animate delay-2"><h3>Data Operations</h3><p>데이터 파이프라인의 실행 상태와 오류, 변경 사항을 관리하고 안정적인 운영을 지원합니다.</p></div>
-    </div>
+    <h2 class="section-title">구축 이후 비용·성능·보안과 데이터 운영을 관리합니다</h2>
+    <p class="section-desc">사용량과 업무 변화에 맞춰 비용과 성능, 접근권한, 데이터 파이프라인을 점검합니다. 이상 징후와 개선 과제를 관리하고 합의된 범위에서 장애와 변경, 기술 문의에 대응합니다.</p>
+    <a href="/ko/services/snowflake/managed-services.html" class="btn btn-navy">FinOps &amp; Managed Services 자세히 보기 →</a>
   </div>
 </section>
 
@@ -162,7 +154,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake 데이터 기반부터 Agentic Enterprise 구축과 운영까지 제공합니다.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/ko/services/snowflake/">Snowflake 서비스</a></li><li><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/ko/services/snowflake/#data-engineering">Data Engineering &amp; Integration</a></li><li><a href="/ko/services/snowflake/#managed-service">FinOps &amp; Managed Services</a></li></ul></div>
+      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/ko/services/snowflake/">Snowflake 서비스</a></li><li><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
       <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/ko/services/">Agentic Enterprise 서비스</a></li><li><a href="/ko/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
       <div class="footer-col"><h4>회사</h4><ul><li><a href="/ko/how-we-work.html">일하는 방식</a></li><li><a href="/ko/insights.html">Insights</a></li><li><a href="/ko/company.html">회사소개</a></li><li><a href="/ko/contact.html">문의하기</a></li></ul></div>
     </div>

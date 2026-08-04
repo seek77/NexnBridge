@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Ready Data Foundation | Snowflake 데이터 기반 구축 | 넥스앤브릿지</title>
+<meta name="description" content="업무 문서, 리포트, SQL과 현업 질문을 AI로 분석해 업무 객체, 관계, 지표와 계산 기준을 도출하고, Enterprise Data Model과 Semantic Views에 반영해 Snowflake 데이터 기반을 구축합니다.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/services/snowflake/data-foundation.html">
+<link rel="canonical" href="https://nexenbridge.com/ko/services/snowflake/data-foundation.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nex &amp; Bridge">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="AI-Ready Data Foundation | Snowflake 데이터 기반 구축 | 넥스앤브릿지">
+<meta property="og:description" content="업무지식을 AI로 분석하고 전문가 검토를 거쳐 데이터 모델과 Semantic Views에 반영합니다.">
+<meta property="og:url" content="https://nexenbridge.com/ko/services/snowflake/data-foundation.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI-Ready Data Foundation | Snowflake 데이터 기반 구축 | 넥스앤브릿지">
+<meta name="twitter:description" content="업무지식을 AI로 분석하고 전문가 검토를 거쳐 데이터 모델과 Semantic Views에 반영합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AI-Ready Data Foundation",
+  "provider": {"@type": "Organization", "name": "Nex & Bridge"},
+  "url": "https://nexenbridge.com/ko/services/snowflake/data-foundation.html",
+  "description": "업무 문서, 리포트, SQL과 현업 질문을 AI로 분석해 업무 객체, 관계, 지표와 계산 기준을 도출하고, Enterprise Data Model과 Semantic Views에 반영해 Snowflake 데이터 기반을 구축합니다.",
+  "areaServed": "KR",
+  "inLanguage": "ko-KR"
+}
+</script>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li class="has-mega">
+      <a href="/ko/services/snowflake/">Snowflake</a>
+      <button class="submenu-toggle" aria-label="Snowflake 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col"><a class="mega-featured" href="/ko/services/snowflake/">Snowflake 서비스</a></div>
+        <div class="mega-col"><div class="mega-col-title">Build &amp; Migrate</div><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/#data-engineering">Data Engineering &amp; Integration</a></div>
+        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/snowflake/#managed-service">FinOps &amp; Managed Services</a></div>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="/ko/services/">Agentic Enterprise</a>
+      <button class="submenu-toggle" aria-label="Agentic Enterprise 하위메뉴 열기"><span class="chev"></span></button>
+      <div class="mega-menu">
+        <div class="mega-col"><a class="mega-featured" href="/ko/services/">Agentic Enterprise 서비스</a><div class="mega-col-title">Plan &amp; Design</div><a href="/ko/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a></div>
+        <div class="mega-col"><div class="mega-col-title">Build</div><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></div>
+        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      </div>
+    </li>
+    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li><a href="/ko/insights.html">Insights</a></li>
+    <li><a href="/ko/company.html">회사소개</a></li>
+    <li><a href="/ko/contact.html" class="nav-cta">문의하기</a></li>
+    <li><div class="lang-switch"><a href="/ko/" aria-current="true">KO</a><a href="/en/">EN</a></div></li>
+  </ul>
+</nav>
+
+<!-- ===== §1 HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">AI-Ready Data Foundation</div>
+    <h1>업무지식을 바탕으로 데이터의 의미를 정의하고<br><em>AI가 사용할 수 있는 Snowflake 기반을 구축합니다</em></h1>
+    <p class="hero-sub">업무 문서, 리포트, SQL과 현업의 분석 기준을 AI로 분석해 업무 객체, 관계, 지표와 계산 기준을 도출합니다. 전문가 검토를 거쳐 Enterprise Data Model과 Semantic Views에 반영하고, 실제 업무 질문으로 검증합니다.</p>
+    <div class="hero-btns"><a href="/ko/contact.html?pkg=data-foundation" class="btn btn-primary">데이터 기반 검토하기 →</a><a href="/ko/services/snowflake/" class="btn btn-ghost">Snowflake 서비스 보기</a></div>
+  </div>
+</section>
+
+<!-- ===== §2 KNOWLEDGE-DRIVEN ENGINEERING ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Knowledge-Driven Engineering</div>
+    <h2 class="section-title">테이블 구조가 아니라 업무지식에서 시작합니다</h2>
+    <p class="section-desc">기존 데이터 모델만 분석해서는 지표의 의미와 계산 기준, 업무 예외를 충분히 파악하기 어렵습니다. 업무 문서, 기존 리포트와 SQL, 현업 질문을 함께 분석해 데이터에 반영해야 할 업무 개념과 기준을 확인합니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><div class="card-num">01</div><h3>업무지식 분석</h3><p>업무 문서와 지표 정의, 리포트, SQL, 현업 질문에서 실제로 사용하는 용어와 계산 기준을 확인합니다.</p></div>
+      <div class="card animate delay-1"><div class="card-num">02</div><h3>AI 기반 초안 작성</h3><p>AI를 이용해 업무 객체와 관계, 지표, 계산식, 동의어와 확인이 필요한 항목을 도출합니다.</p></div>
+      <div class="card animate"><div class="card-num">03</div><h3>전문가 검토</h3><p>현업과 데이터 전문가가 AI가 도출한 내용을 검토하고, 적용할 정의와 예외 기준을 확정합니다.</p></div>
+      <div class="card animate delay-1"><div class="card-num">04</div><h3>모델 구현과 검증</h3><p>확정된 기준을 Enterprise Data Model과 Semantic Views에 반영하고 실제 업무 질문으로 결과를 확인합니다.</p></div>
+    </div>
+    <div class="note"><strong>AI-Native 구축 방식</strong><br>업무 문서·리포트·SQL·현업 질문 → AI 기반 분석과 초안 작성 → 전문가 검토 → 데이터 모델·Semantic Views 구현 → 실제 질문으로 검증</div>
+  </div>
+</section>
+
+<!-- ===== §3 SERVICE SCOPE ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">Service Scope</div>
+    <h2 class="section-title">데이터 구조, 업무 의미와 통제 기준을 함께 설계합니다</h2>
+    <div class="grid-2">
+      <div class="card animate"><h3>Data Rationalization</h3><p>중복된 데이터마트, 테이블, 코드와 계산식을 분석합니다. 실제 활용 목적에 필요한 데이터와 이력 범위를 정하고 불필요한 복잡성을 줄입니다.</p></div>
+      <div class="card animate delay-1"><h3>Enterprise Data Model &amp; Standards</h3><p>업무 Domain과 Master, Transaction, History를 구분하고 Grain, Key, Code, Naming과 공통 Dimension 기준을 정합니다.</p></div>
+      <div class="card animate"><h3>Semantic Layer &amp; Semantic Views</h3><p>업무 객체와 관계, Dimension, Fact, Metric, 계산 기준, 설명과 동의어를 정의합니다. Semantic View는 물리·논리 데이터 모델을 대신하지 않으며, 검증된 모델 위에 업무에서 사용하는 의미와 분석 기준을 제공합니다.</p></div>
+      <div class="card animate delay-1"><h3>Data Quality &amp; Lineage</h3><p>주요 데이터의 품질 규칙과 소유자, 원천과 변환 이력, 변경 영향을 관리할 기준을 정하고 Snowflake 환경에 적용합니다.</p></div>
+      <div class="card animate"><h3>Security &amp; Access Control</h3><p>역할과 업무 목적에 따라 데이터 접근 범위를 구분하고, 민감정보 보호와 권한 변경 기준을 적용합니다.</p></div>
+    </div>
+    <div class="note"><strong>구축 범위</strong><br>원천 데이터 정비 → Enterprise Data Model → Semantic Layer &amp; Semantic Views → 품질·계보·접근통제 → Analytics · AI Agent · Application</div>
+  </div>
+</section>
+
+<!-- ===== §4 WHY AI-READY ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Why AI-Ready</div>
+    <h2 class="section-title">데이터를 모아 두는 것과 실제로 사용할 수 있게 만드는 것은 다릅니다</h2>
+    <p class="section-desc">데이터가 Snowflake에 적재되어 있어도 시스템별 코드와 기준이 다르고, 계산식이 리포트와 프로그램에 흩어져 있으면 분석 결과가 달라집니다. AI도 같은 제약을 받습니다. 물리 테이블을 그대로 노출하기 전에 데이터 구조와 업무 기준을 정리해야 합니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>중복된 데이터 구조</h3><p>같은 고객, 제품과 거래를 시스템과 데이터마트마다 다른 구조와 코드로 관리합니다.</p></div>
+      <div class="card animate delay-1"><h3>분산된 계산 기준</h3><p>매출, 원가, 재고와 같은 지표의 계산식이 리포트와 SQL, 업무 문서에 나뉘어 있습니다.</p></div>
+      <div class="card animate"><h3>확인하기 어려운 품질과 계보</h3><p>값의 출처와 변환 과정, 품질 책임자와 변경 영향을 바로 확인하기 어렵습니다.</p></div>
+      <div class="card animate delay-1"><h3>일관되지 않은 접근권한</h3><p>사용자와 업무 목적에 따라 허용할 데이터 범위와 민감정보 보호 기준이 정리되지 않은 경우가 많습니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §5 ANALYTICS AND AI ACCESS ===== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-label">Analytics &amp; AI Access</div>
+    <h2 class="section-title">데이터 유형과 사용 목적에 맞는 접근 방식을 적용합니다</h2>
+    <div class="grid-2">
+      <div class="card animate"><h3>정형 데이터 분석</h3><p>Semantic Views와 Cortex Analyst를 적용해 자연어 질문을 업무 기준에 맞는 SQL 분석으로 전환합니다. 대표 질문과 검증된 SQL을 기준으로 정확도를 점검하고 변경에 따른 회귀를 관리합니다.</p></div>
+      <div class="card animate delay-1"><h3>문서와 비정형 데이터 검색</h3><p>문서의 메타데이터와 접근권한, 검색 단위를 정비하고 Cortex Search를 적용해 Enterprise Search와 RAG에서 사용할 검색 기반을 구성합니다.</p></div>
+    </div>
+    <div class="note">문서와 업무 지식의 구조화·검증, Knowledge Graph 구축은 <a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a>에서 다룹니다. Agent와 업무 화면의 본격적인 구축은 <a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a>에서 수행합니다.</div>
+  </div>
+</section>
+
+<!-- ===== §6 VALIDATION ===== -->
+<section>
+  <div class="container">
+    <div class="section-label">Validation</div>
+    <h2 class="section-title">데이터 적재 여부가 아니라 실제 분석 결과로 확인합니다</h2>
+    <div class="grid-2">
+      <div class="card animate"><h3>원천 데이터 대사</h3><p>건수와 금액, 주요 Key와 이력 데이터가 원천 시스템과 일치하는지 확인합니다.</p></div>
+      <div class="card animate delay-1"><h3>지표와 계산 기준 검증</h3><p>현업에서 사용하는 리포트와 계산 결과를 기준으로 지표 정의와 집계 로직을 확인합니다.</p></div>
+      <div class="card animate"><h3>대표 질문 평가</h3><p>자주 사용하는 업무 질문과 검증된 SQL을 평가 기준으로 삼아 자연어 분석 결과를 점검합니다.</p></div>
+      <div class="card animate delay-1"><h3>권한과 변경 영향 확인</h3><p>역할별 데이터 노출 범위와 모델·지표 변경이 기존 분석에 미치는 영향을 확인합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §7 EXPERIENCE ===== -->
+<section class="bg-alt">
+  <div class="container container-narrow">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">업무와 데이터 활용 경험을 바탕으로 필요한 기반을 정합니다</h2>
+    <p class="section-desc">BI·DW, Data Governance, SAP ERP와 전사 시스템 구축 경험을 바탕으로 현재 사용 중인 데이터와 리포트, 업무 기준을 확인합니다.</p>
+    <p class="section-desc">테이블과 기능의 수보다 실제 활용 과제에 필요한 데이터 범위, 이력, 계산 기준과 운영 제약을 중심으로 설계합니다.</p>
+  </div>
+</section>
+
+<!-- ===== §8 CONTACT ===== -->
+<section class="bg-navy">
+  <div class="container container-narrow center">
+    <div class="section-label" style="justify-content:center">Contact</div>
+    <h2 class="section-title">현재 데이터 환경과 활용 과제를 알려주세요</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto">원천 시스템과 기존 DW·데이터마트, 주요 분석과 AI 활용 목적을 확인한 후 우선 정비할 데이터 범위와 추진 방식을 검토합니다.</p>
+    <a href="/ko/contact.html?pkg=data-foundation" class="btn btn-primary">AI-Ready Data Foundation 문의하기 →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake 데이터 기반부터 Agentic Enterprise 구축과 운영까지 제공합니다.</p></div>
+      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/ko/services/snowflake/">Snowflake 서비스</a></li><li><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/ko/services/snowflake/#data-engineering">Data Engineering &amp; Integration</a></li><li><a href="/ko/services/snowflake/#managed-service">FinOps &amp; Managed Services</a></li></ul></div>
+      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/ko/services/">Agentic Enterprise 서비스</a></li><li><a href="/ko/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
+      <div class="footer-col"><h4>회사</h4><ul><li><a href="/ko/how-we-work.html">일하는 방식</a></li><li><a href="/ko/insights.html">Insights</a></li><li><a href="/ko/company.html">회사소개</a></li><li><a href="/ko/contact.html">문의하기</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/ko/privacy.html">개인정보처리방침</a></div></div>
+  </div>
+</footer>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

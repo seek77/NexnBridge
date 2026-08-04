@@ -4,128 +4,186 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Nex &amp; Bridge</title>
-<meta name="description" content="Tell us where you're starting from, and we'll help scope the right first engagement.">
+<meta name="description" content="Contact Nex &amp; Bridge about your business need, current data environment, and intended outcome. We will help identify a practical starting point.">
 <link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/contact.html">
 <link rel="alternate" hreflang="en" href="https://nexenbridge.com/en/contact.html">
 <link rel="canonical" href="https://nexenbridge.com/en/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nex &amp; Bridge">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Contact | Nex &amp; Bridge">
+<meta property="og:description" content="Contact Nex &amp; Bridge about your business need, current data environment, and intended outcome. We will help identify a practical starting point.">
+<meta property="og:url" content="https://nexenbridge.com/en/contact.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Contact | Nex &amp; Bridge">
+<meta name="twitter:description" content="Contact Nex &amp; Bridge about your business need, current data environment, and intended outcome. We will help identify a practical starting point.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact | Nex & Bridge",
+  "url": "https://nexenbridge.com/en/contact.html",
+  "description": "Contact Nex & Bridge about your business need, current data environment, and intended outcome. We will help identify a practical starting point.",
+  "inLanguage": "en-US"
+}
+</script>
 <style>
 .contact-form label{font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.35rem;display:block}
 .form-field{display:flex;flex-direction:column}
-.consent-row{display:flex;align-items:flex-start;gap:.6rem;font-size:.82rem;color:var(--text2);line-height:1.6}
-.consent-row input{margin-top:.25rem}
-.form-note{font-size:.78rem;color:var(--text3);margin-top:.8rem;line-height:1.6}
-.form-done{display:none;background:rgba(11,138,90,.08);border:1px solid rgba(11,138,90,.25);color:var(--green);padding:1rem 1.2rem;border-radius:6px;font-size:.88rem;margin-top:1rem}
+.contact-form input:not([type="checkbox"]),.contact-form textarea,.contact-form select{background:var(--white);border-color:var(--text3)}
+.contact-form label.consent-row{display:flex;align-items:flex-start;gap:.6rem;font-size:.82rem;font-weight:400;color:var(--text2);line-height:1.6;margin-bottom:0}
+.contact-form .consent-row input[type="checkbox"]{width:1rem;height:1rem;min-height:0;flex:0 0 auto;margin-top:.25rem;padding:0;accent-color:var(--navy)}
+.contact-form input:focus-visible,.contact-form textarea:focus-visible,.contact-form select:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.form-note{font-size:.78rem;color:var(--text2);margin-top:.8rem;line-height:1.6}
+.form-done{display:none;background:rgba(11,138,90,.08);border:1px solid rgba(11,138,90,.25);color:#075d3e;padding:1rem 1.2rem;border-radius:6px;font-size:.88rem;margin-top:1rem}
 .form-done.show{display:block}
+table.tbl.contact-details{min-width:0}
+table.tbl.contact-details th[scope="row"]{text-align:left;padding:.75rem .9rem;background:transparent;color:var(--navy);font-weight:700;font-size:.85rem;letter-spacing:0;text-transform:none;white-space:nowrap;border-bottom:1px solid rgba(0,51,141,.08);vertical-align:top}
+table.tbl.contact-details td{overflow-wrap:anywhere}
 </style>
 </head>
 <body>
 
 <!-- ===== NAV ===== -->
-<nav class="site-nav">
+<nav class="site-nav" aria-label="Primary">
   <a href="/en/" class="logo">Nex <span>&amp;</span> Bridge</a>
-  <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-menu">
-    <li class="has-dropdown"><a href="/en/services/#snowflake">Snowflake</a><button class="submenu-toggle" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#snowflake">Snowflake Services</a><a href="/en/services/#sap-migration">SAP to Snowflake Migration</a><a href="/en/services/#managed-service">FinOps &amp; Managed Service</a></div></li>
-    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Enterprise AI</a><button class="submenu-toggle" aria-label="Open Enterprise AI menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#platform-architecture">Platform Assessment &amp; Architecture</a><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge</a><a href="/en/services/#agent-application">AI Agent &amp; Application</a></div></li>
-    <li><a href="/en/insights.html">Insights</a></li>
+    <li class="has-dropdown"><a href="/en/services/#snowflake">Snowflake</a><button class="submenu-toggle" type="button" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#snowflake">Snowflake Services</a><a href="/en/services/#data-foundation">AI-Ready Data Foundation</a><a href="/en/services/#sap-migration">SAP to Snowflake Migration</a><a href="/en/services/#managed-service">FinOps &amp; Managed Services</a></div></li>
+    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise</a><button class="submenu-toggle" type="button" aria-label="Open Agentic Enterprise menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a><a href="/en/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge Engineering</a><a href="/en/services/#agent-application">Agentic Analytics &amp; Applications</a></div></li>
+    <li><a href="/en/how-we-work.html">How We Work</a></li>
     <li><a href="/en/company.html">Company</a></li>
-    <li><a href="/en/contact.html" class="nav-cta">Contact</a></li>
-    <li><div class="lang-switch"><a href="/ko/">KO</a><a href="/en/" aria-current="true">EN</a></div></li>
+    <li><a href="/en/contact.html" class="nav-cta" aria-current="page">Contact</a></li>
+    <li><div class="lang-switch"><a href="/ko/contact.html">KO</a><a href="/en/contact.html" aria-current="true">EN</a></div></li>
   </ul>
 </nav>
 
-<!-- ===== HERO ===== -->
+<main id="main-content">
+<!-- ===== §1 HERO ===== -->
 <section class="hero hero-sm">
   <div class="hero-inner">
     <div class="hero-label">Contact</div>
-    <h1>Tell us where you're starting from,<br>and we'll <em>scope the first step</em></h1>
-    <p class="hero-sub">We size the initial engagement around decision priority, how ready your data and criteria are, and expected impact.</p>
+    <h1>Tell us what you’re considering.<br><em>We’ll help identify where to start.</em></h1>
+    <p class="hero-sub">Share the business need, current data environment, and intended outcome. We’ll review what to assess first and which services may be relevant.</p>
   </div>
 </section>
 
-<!-- ===== FORM ===== -->
+<!-- ===== §2 RECOMMENDED STARTING POINTS ===== -->
 <section>
-  <div class="container container-narrow">
-    <div class="section-label">Get in Touch</div>
-    <h2 class="section-title">Tell us what's going on, and we'll take it from there.</h2>
+  <div class="container">
+    <div class="section-label">Recommended Starting Points</div>
+    <h2 class="section-title">Common starting points for an initial review</h2>
 
-    <!--
-      No backend on GitHub Pages. This form builds a mailto: link from the
-      filled fields and hands off to the visitor's email client on submit.
-    -->
-    <form id="contactForm" class="contact-form" action="#">
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Your current situation</th><th>Recommended starting point</th><th>What we review first</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Need to understand what is driving changes in Snowflake usage and cost</strong></td><td><strong>Snowflake Cost &amp; Usage Review</strong></td><td>Current usage patterns · How costs are assessed · Priority areas to review · How changes will be validated</td></tr>
+          <tr><td><strong>Need to define data-access boundaries and security standards</strong></td><td><strong>Snowflake Access &amp; Security Review</strong></td><td>People and systems with access · Data scope · Current permissions · Audit logs · AI agent access</td></tr>
+          <tr><td>Need to define the scope for Snowflake adoption, migration, or expanded use</td><td><strong>Snowflake Data Foundation Scoping</strong></td><td>Current environment · Systems to connect · Priority work · Validation approach · Operational responsibilities</td></tr>
+          <tr><td>Business knowledge and decision criteria are fragmented</td><td><strong>Enterprise Knowledge Scoping</strong></td><td>Business questions · Existing materials and participants · Initial priorities</td></tr>
+          <tr><td>Need to choose where to apply AI agents and define accountability</td><td><strong>Agentic Analytics &amp; Applications Scoping</strong></td><td>Workflow in scope · Roles for AI agents and people · Required inputs · What to validate first</td></tr>
+          <tr><td>Accountability for evaluating, changing, or deactivating AI agents in use is unclear</td><td><strong>AgentOps Review: Operations &amp; Controls</strong></td><td>AI agents in scope · Current records · Evaluation criteria · Authority to change or stop agents · Support needs</td></tr>
+          <tr><td>Need to define the direction and starting scope for an Agentic Enterprise</td><td><strong>Agentic Enterprise Scoping</strong></td><td>Decision in scope · Current criteria and data · Decision owner · Operating conditions · Initial priorities</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="lead mt-1" style="font-size:.85rem;color:var(--text2)">We discuss timing and fees after reviewing the scope of work and the current state of the data.</p>
+  </div>
+</section>
+
+<!-- ===== §3 CONTACT FORM ===== -->
+<section class="bg-alt">
+  <div class="container container-narrow">
+    <div class="section-label">Contact Form</div>
+    <h2 class="section-title">Tell us about your initiative and select an area of interest</h2>
+
+    <form id="contactForm" class="contact-form" action="mailto:contact@nexenbridge.com" method="post" enctype="text/plain">
       <div class="form-row">
         <div class="form-field">
           <label for="f-name">Name *</label>
-          <input type="text" id="f-name" name="name" required>
+          <input type="text" id="f-name" name="name" autocomplete="name" required>
         </div>
         <div class="form-field">
           <label for="f-company">Company *</label>
-          <input type="text" id="f-company" name="company" required>
+          <input type="text" id="f-company" name="company" autocomplete="organization" required>
         </div>
       </div>
       <div class="form-field">
         <label for="f-email">Email *</label>
-        <input type="email" id="f-email" name="email" required>
+        <input type="email" id="f-email" name="email" autocomplete="email" required>
       </div>
       <div class="form-field">
-        <label for="f-topic">Area of Interest *</label>
+        <label for="f-topic">Area of interest *</label>
         <select id="f-topic" name="topic" required>
-          <option value="">Select one</option>
-          <option>Snowflake Cost Assessment</option>
-          <option>Access &amp; Security Design</option>
-          <option>Data &amp; AI Foundation</option>
-          <option>Knowledge &amp; Decision Sprint</option>
-          <option>Agentic Solution PoC</option>
-          <option>AgentOps Assessment</option>
-          <option>Agentic Enterprise Blueprint</option>
-          <option>General inquiry</option>
+          <option value="">Choose an area</option>
+          <option>Snowflake Services</option>
+          <option>AI-Ready Data Foundation</option>
+          <option>SAP to Snowflake Migration</option>
+          <option>Data Engineering &amp; Integration</option>
+          <option>FinOps &amp; Managed Services</option>
+          <option>Agentic Enterprise Services</option>
+          <option>AI Platform Assessment &amp; Architecture</option>
+          <option>Enterprise Knowledge Engineering</option>
+          <option>Agentic Analytics &amp; Applications</option>
+          <option>AgentOps &amp; Managed Operations</option>
+          <option>Profitability &amp; Portfolio Analytics</option>
+          <option>SCM Applications</option>
+          <option>General Inquiry</option>
         </select>
       </div>
       <div class="form-field">
-        <label for="f-message">Message</label>
-        <textarea id="f-message" name="message" placeholder="A short description of your situation helps."></textarea>
+        <label for="f-message">Message (optional)</label>
+        <textarea id="f-message" name="message" maxlength="2000" aria-describedby="message-guidance" placeholder="Briefly describe your current situation, what you want to assess, and your data environment."></textarea>
+        <p id="message-guidance" class="form-note">Do not include any additional personal or confidential information.</p>
       </div>
       <label class="consent-row">
-        <input type="checkbox" id="f-consent" name="consent" required>
-        <span>I agree to the collection and use of my personal data. (<a href="/en/privacy.html" style="color:var(--navy);font-weight:600">View Privacy Policy</a>) *</span>
+        <input type="checkbox" id="f-consent" name="consent" aria-describedby="form-collection-note" required>
+        <span>I consent to Nex &amp; Bridge collecting and using my personal information as described in the <a href="/en/privacy.html" style="color:var(--navy);font-weight:600">Privacy Policy</a>. *</span>
       </label>
+      <p id="form-collection-note" class="form-note">Name, company, email, area of interest, and consent are required. The message is optional. We use this information to respond to your inquiry and retain it for one year after the inquiry is resolved. You may decline to consent, but the email-draft feature will not be available.</p>
+      <noscript>
+        <p class="form-note">JavaScript is unavailable. Email <a href="mailto:contact@nexenbridge.com" style="color:var(--navy)">contact@nexenbridge.com</a> directly instead.</p>
+      </noscript>
       <div>
-        <button type="submit" class="btn btn-navy">Send</button>
-        <p class="form-note">Submitting opens your email app — send it from there to complete. If it doesn't open, email us directly at <a href="mailto:contact@nexenbridge.com" style="color:var(--navy)">contact@nexenbridge.com</a>.</p>
-        <div id="formDone" class="form-done">Your email app should be open. Please review and send.</div>
+        <button type="submit" class="btn btn-navy" aria-describedby="email-handoff-note">Open Email Draft</button>
+        <p id="email-handoff-note" class="form-note">This website does not submit your inquiry automatically. The button opens a draft in your email app. Review the message and select Send to deliver it. If your email app does not open, email <a href="mailto:contact@nexenbridge.com" style="color:var(--navy)">contact@nexenbridge.com</a> directly.</p>
+        <div id="formDone" class="form-done" role="status" aria-live="polite">Check your email app for the draft. If it is available, review the message and select Send.</div>
       </div>
     </form>
   </div>
 </section>
 
-<!-- ===== CONTACT INFO ===== -->
-<section class="bg-alt">
+<!-- ===== §4 CONTACT INFORMATION ===== -->
+<section>
   <div class="container container-narrow">
-    <div class="section-label">Contact Info</div>
+    <div class="section-label">Contact Information</div>
+    <h2 class="section-title">Contact Nex &amp; Bridge directly</h2>
     <div class="tbl-wrap">
-      <table class="tbl">
+      <table class="tbl contact-details">
         <tbody>
-          <tr><td style="white-space:nowrap"><strong>Email</strong></td><td><a href="mailto:contact@nexenbridge.com" style="color:var(--navy);font-weight:600">contact@nexenbridge.com</a></td></tr>
-          <tr><td style="white-space:nowrap"><strong>Address</strong></td><td>1025, Union Center, 310 Gangnam-daero, Gangnam-gu, Seoul 06253, South Korea</td></tr>
-          <tr><td style="white-space:nowrap"><strong>Website</strong></td><td>nexenbridge.com</td></tr>
+          <tr><th scope="row">Email</th><td><a href="mailto:contact@nexenbridge.com" style="color:var(--navy);font-weight:600">contact@nexenbridge.com</a></td></tr>
+          <tr><th scope="row">Address</th><td>Suite 1025, Union Center, 310 Gangnam-daero, Gangnam-gu, Seoul 06253</td></tr>
+          <tr><th scope="row">Website</th><td><a href="https://nexenbridge.com" style="color:var(--navy);font-weight:600">nexenbridge.com</a></td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
+</main>
 
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, enterprise AI engineering, and managed operations.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/#snowflake">Services</a></li><li><a href="/en/services/#sap-migration">SAP Migration</a></li><li><a href="/en/services/#managed-service">Managed Service</a></li></ul></div>
-      <div class="footer-col"><h4>Enterprise AI</h4><ul><li><a href="/en/services/#platform-architecture">Platform &amp; Architecture</a></li><li><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge</a></li><li><a href="/en/services/#agent-application">AI Agent &amp; Application</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/insights.html">Insights</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, Agentic Enterprise services, and managed operations.</p></div>
+      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/#snowflake">Snowflake Services</a></li><li><a href="/en/services/#data-foundation">AI-Ready Data Foundation</a></li><li><a href="/en/services/#sap-migration">SAP to Snowflake Migration</a></li><li><a href="/en/services/#managed-service">FinOps &amp; Managed Services</a></li></ul></div>
+      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a></li><li><a href="/en/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a></li><li><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/#agent-application">Agentic Analytics &amp; Applications</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html" aria-current="page">Contact</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy</a></div></div>
   </div>
@@ -136,21 +194,47 @@
   'use strict';
   var form = document.getElementById('contactForm');
   var done = document.getElementById('formDone');
+  var topicSelect = document.getElementById('f-topic');
   if (!form) return;
+
+  var topicByPackage = {
+    cost: 'FinOps & Managed Services',
+    security: 'FinOps & Managed Services',
+    'managed-services': 'FinOps & Managed Services',
+    foundation: 'AI-Ready Data Foundation',
+    'data-foundation': 'AI-Ready Data Foundation',
+    migration: 'SAP to Snowflake Migration',
+    'sap-migration': 'SAP to Snowflake Migration',
+    'data-engineering': 'Data Engineering & Integration',
+    'agentic-enterprise': 'Agentic Enterprise Services',
+    blueprint: 'AI Platform Assessment & Architecture',
+    'platform-assessment': 'AI Platform Assessment & Architecture',
+    knowledge: 'Enterprise Knowledge Engineering',
+    solution: 'Agentic Analytics & Applications',
+    applications: 'Agentic Analytics & Applications',
+    profitability: 'Profitability & Portfolio Analytics',
+    scm: 'SCM Applications',
+    agentops: 'AgentOps & Managed Operations'
+  };
+  var packageName = new URLSearchParams(window.location.search).get('pkg');
+  if (packageName && topicByPackage[packageName] && topicSelect) {
+    topicSelect.value = topicByPackage[packageName];
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var name = document.getElementById('f-name').value.trim();
     var company = document.getElementById('f-company').value.trim();
     var email = document.getElementById('f-email').value.trim();
     var topic = document.getElementById('f-topic').value;
-    var message = document.getElementById('f-message').value.trim();
+    var message = document.getElementById('f-message').value.trim().replace(/\r?\n/g, '\r\n');
     var consent = document.getElementById('f-consent').checked;
     if (!name || !company || !email || !topic || !consent) {
-      alert('Please fill in all required fields (name, company, email, area of interest, consent).');
+      alert('Please complete all required fields.');
       return;
     }
     var subject = '[Website Inquiry] ' + topic + ' — ' + company;
-    var body = 'Name: ' + name + '\nCompany: ' + company + '\nEmail: ' + email + '\nArea of interest: ' + topic + '\n\nMessage:\n' + (message || '(none)');
+    var body = 'Name: ' + name + '\r\nCompany: ' + company + '\r\nEmail: ' + email + '\r\nArea of interest: ' + topic + '\r\nConsent to collect and use personal information: Yes\r\n\r\nMessage:\r\n' + (message || '(not provided)');
     var mailto = 'mailto:contact@nexenbridge.com'
       + '?subject=' + encodeURIComponent(subject)
       + '&body=' + encodeURIComponent(body);

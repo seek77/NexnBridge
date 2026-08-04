@@ -4,29 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy | Nex &amp; Bridge</title>
-<meta name="description" content="How Nex & Bridge collects, uses, retains, and destroys personal data submitted through this website.">
+<meta name="description" content="How Nex &amp; Bridge handles personal information received by email from website inquiries.">
 <link rel="canonical" href="https://nexenbridge.com/en/privacy.html">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
+<style>
+table.tbl.policy-table{min-width:0}
+table.tbl.policy-table th[scope="row"]{text-align:left;padding:.75rem .9rem;background:transparent;color:var(--navy);font-weight:700;font-size:.85rem;letter-spacing:0;text-transform:none;white-space:nowrap;border-bottom:1px solid rgba(0,51,141,.08);vertical-align:top}
+table.tbl.policy-table td{overflow-wrap:anywhere}
+@media(max-width:480px){
+  table.tbl.policy-table,table.tbl.policy-table tbody,table.tbl.policy-table tr,table.tbl.policy-table th[scope="row"],table.tbl.policy-table td{display:block;width:100%}
+  table.tbl.policy-table tr{padding:.65rem 0;border-bottom:1px solid rgba(0,51,141,.08)}
+  table.tbl.policy-table tr:last-child{border-bottom:0}
+  table.tbl.policy-table th[scope="row"],table.tbl.policy-table td{padding:.2rem .7rem;border-bottom:0;white-space:normal}
+}
+</style>
 </head>
 <body>
 
 <!-- ===== NAV ===== -->
-<nav class="site-nav">
+<nav class="site-nav" aria-label="Primary">
   <a href="/en/" class="logo">Nex <span>&amp;</span> Bridge</a>
-  <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-menu">
-    <li class="has-dropdown"><a href="/en/services/#snowflake">Snowflake</a><button class="submenu-toggle" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#snowflake">Snowflake Services</a><a href="/en/services/#sap-migration">SAP to Snowflake Migration</a><a href="/en/services/#managed-service">FinOps &amp; Managed Service</a></div></li>
-    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Enterprise AI</a><button class="submenu-toggle" aria-label="Open Enterprise AI menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#platform-architecture">Platform Assessment &amp; Architecture</a><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge</a><a href="/en/services/#agent-application">AI Agent &amp; Application</a></div></li>
-    <li><a href="/en/insights.html">Insights</a></li>
+    <li class="has-dropdown"><a href="/en/services/#snowflake">Snowflake</a><button class="submenu-toggle" type="button" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#snowflake">Snowflake Services</a><a href="/en/services/#data-foundation">AI-Ready Data Foundation</a><a href="/en/services/#sap-migration">SAP to Snowflake Migration</a><a href="/en/services/#managed-service">FinOps &amp; Managed Services</a></div></li>
+    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise</a><button class="submenu-toggle" type="button" aria-label="Open Agentic Enterprise menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a><a href="/en/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge Engineering</a><a href="/en/services/#agent-application">Agentic Analytics &amp; Applications</a></div></li>
+    <li><a href="/en/how-we-work.html">How We Work</a></li>
     <li><a href="/en/company.html">Company</a></li>
     <li><a href="/en/contact.html" class="nav-cta">Contact</a></li>
-    <li><div class="lang-switch"><a href="/ko/">KO</a><a href="/en/" aria-current="true">EN</a></div></li>
+    <li><div class="lang-switch"><a href="/ko/privacy.html">KO</a><a href="/en/privacy.html" aria-current="true">EN</a></div></li>
   </ul>
 </nav>
 
+<main id="main-content">
+<!-- ===== §1 HERO ===== -->
 <section class="hero hero-sm">
   <div class="hero-inner">
     <div class="hero-label">Privacy Policy</div>
@@ -34,58 +47,61 @@
   </div>
 </section>
 
+<!-- ===== §2 POLICY ===== -->
 <section>
   <div class="container container-narrow">
-    <p class="lead">Nex &amp; Bridge Co., Ltd. (the "Company") collects and uses personal data submitted through the contact form on this website. A business email address, combined with a name, can identify a specific individual and is treated as personal data under South Korea's Personal Information Protection Act (PIPA). This policy explains how we handle it.</p>
+    <p class="lead">Nex &amp; Bridge Co., Ltd. (the “Company”) collects and uses personal information only when a visitor sends an inquiry from their own email app and the Company receives it in its mailbox. A business email address combined with a name can identify a specific individual and therefore constitutes personal information. This policy explains how that information is collected, used, retained, and destroyed.</p>
 
-    <h2 class="section-title" style="font-size:1.15rem;margin-top:2.5rem">1. What We Collect, and Why</h2>
+    <h2 class="section-title" style="font-size:1.15rem;margin-top:2.5rem">1. Information We Collect and Why</h2>
     <div class="tbl-wrap">
-      <table class="tbl">
+      <table class="tbl policy-table">
         <tbody>
-          <tr><td style="white-space:nowrap"><strong>Data collected</strong></td><td>Name, company, email address, area of interest, message</td></tr>
-          <tr><td style="white-space:nowrap"><strong>Purpose</strong></td><td>Responding to inquiries and scoping engagements</td></tr>
-          <tr><td style="white-space:nowrap"><strong>Method</strong></td><td>Website contact form (sent directly via the visitor's own email client)</td></tr>
-          <tr><td style="white-space:nowrap"><strong>Retention</strong></td><td>1 year after the inquiry is resolved, then deleted without delay</td></tr>
+          <tr><th scope="row">Required information</th><td>Name, company name, email address, and area of interest</td></tr>
+          <tr><th scope="row">Optional information</th><td>Message</td></tr>
+          <tr><th scope="row">Purpose</th><td>Responding to inquiries and conducting consultations</td></tr>
+          <tr><th scope="row">Collection method</th><td>The visitor sends the inquiry from their own email app, and the Company receives it in its mailbox</td></tr>
+          <tr><th scope="row">Retention period</th><td>One year after the inquiry has been handled; the information is then destroyed without delay</td></tr>
         </tbody>
       </table>
     </div>
 
-    <h2 class="section-title" style="font-size:1.15rem;margin-top:2.5rem">2. Processing and Third-Party Sharing</h2>
-    <p class="lead">This form doesn't run through a server or any third-party form-processing service. When you submit it, <strong style="color:var(--navy)">your own email application</strong> opens with the message pre-filled, and you send it yourself to <strong style="color:var(--navy)">contact@nexenbridge.com</strong>.</p>
-    <p class="lead">No personal data is entrusted to a third party or transferred outside your jurisdiction in this process. If our contact process later moves to a third-party form service, this policy will be updated in advance to name the processor and destination country.</p>
+    <h2 class="section-title" style="font-size:1.15rem;margin-top:2.5rem">2. How the Inquiry Is Delivered</h2>
+    <p class="lead">The website does not store information entered in the inquiry form on a separate server or with an external form-processing service. Selecting the inquiry button opens a draft message in the visitor’s own email app. The Company receives the inquiry only after the visitor selects Send and the message is delivered to <strong style="color:var(--navy)">contact@nexenbridge.com</strong>.</p>
 
     <h2 class="section-title" style="font-size:1.15rem;margin-top:2.5rem">3. Your Rights</h2>
-    <p class="lead">You may request access to, correction or deletion of, or a halt to processing of your personal data at any time. Email <a href="mailto:contact@nexenbridge.com" style="color:var(--navy);font-weight:600">contact@nexenbridge.com</a> and we'll act without delay.</p>
+    <p class="lead">You may request access to your personal information or ask the Company to correct, delete, or stop processing it at any time. Email <a href="mailto:contact@nexenbridge.com" style="color:var(--navy);font-weight:600">contact@nexenbridge.com</a>. The Company will take action without delay.</p>
 
-    <h2 class="section-title" style="font-size:1.15rem;margin-top:2.5rem">4. Destruction</h2>
-    <p class="lead">Personal data is destroyed without delay once the retention period ends or the purpose is fulfilled. Electronic files are deleted using methods that prevent recovery.</p>
+    <h2 class="section-title" style="font-size:1.15rem;margin-top:2.5rem">4. Destruction Procedure</h2>
+    <p class="lead">The Company destroys personal information without delay when the retention period expires or the purpose of processing has been fulfilled. Electronic files are deleted using methods that prevent recovery or reproduction.</p>
 
     <h2 class="section-title" style="font-size:1.15rem;margin-top:2.5rem">5. Privacy Officer</h2>
     <div class="tbl-wrap">
-      <table class="tbl">
+      <table class="tbl policy-table">
         <tbody>
-          <tr><td style="white-space:nowrap"><strong>Name</strong></td><td>정기철 (Jeong Gi-cheol)</td></tr>
-          <tr><td style="white-space:nowrap"><strong>Title</strong></td><td>Director</td></tr>
-          <tr><td style="white-space:nowrap"><strong>Contact</strong></td><td><a href="mailto:contact@nexenbridge.com" style="color:var(--navy);font-weight:600">contact@nexenbridge.com</a></td></tr>
+          <tr><th scope="row">Name</th><td>KICHUL JUNG</td></tr>
+          <tr><th scope="row">Title</th><td>EXECUTIVE DIRECTOR</td></tr>
+          <tr><th scope="row">Contact</th><td><a href="mailto:contact@nexenbridge.com" style="color:var(--navy);font-weight:600">contact@nexenbridge.com</a></td></tr>
         </tbody>
       </table>
     </div>
+    <p class="lead">You may contact the Privacy Officer with privacy-related questions or complaints, or for assistance in resolving a privacy-related issue that arises while using the Company’s services.</p>
 
     <h2 class="section-title" style="font-size:1.15rem;margin-top:2.5rem">6. Effective Date</h2>
     <p class="lead">This policy is effective as of August 1, 2026.</p>
   </div>
 </section>
+</main>
 
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, enterprise AI engineering, and managed operations.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/#snowflake">Services</a></li><li><a href="/en/services/#sap-migration">SAP Migration</a></li><li><a href="/en/services/#managed-service">Managed Service</a></li></ul></div>
-      <div class="footer-col"><h4>Enterprise AI</h4><ul><li><a href="/en/services/#platform-architecture">Platform &amp; Architecture</a></li><li><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge</a></li><li><a href="/en/services/#agent-application">AI Agent &amp; Application</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/insights.html">Insights</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, Agentic Enterprise services, and managed operations.</p></div>
+      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/#snowflake">Snowflake Services</a></li><li><a href="/en/services/#data-foundation">AI-Ready Data Foundation</a></li><li><a href="/en/services/#sap-migration">SAP to Snowflake Migration</a></li><li><a href="/en/services/#managed-service">FinOps &amp; Managed Services</a></li></ul></div>
+      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a></li><li><a href="/en/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a></li><li><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/#agent-application">Agentic Analytics &amp; Applications</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy</a></div></div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html" aria-current="page">Privacy</a></div></div>
   </div>
 </footer>
 <script src="/assets/js/site.js"></script>

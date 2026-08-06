@@ -52,8 +52,8 @@ table.tbl.contact-details td{overflow-wrap:anywhere}
   <a href="/en/" class="logo">Nex <span>&amp;</span> Bridge</a>
   <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-menu">
-    <li class="has-dropdown"><a href="/en/services/#snowflake">Snowflake</a><button class="submenu-toggle" type="button" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#snowflake">Snowflake Services</a><a href="/en/services/#data-foundation">AI-Ready Data Foundation</a><a href="/en/services/#sap-migration">SAP to Snowflake Migration</a><a href="/en/services/#managed-service">FinOps &amp; Managed Services</a></div></li>
-    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise</a><button class="submenu-toggle" type="button" aria-label="Open Agentic Enterprise menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a><a href="/en/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge Engineering</a><a href="/en/services/#agent-application">Agentic Analytics &amp; Applications</a></div></li>
+    <li class="has-dropdown"><a href="/en/services/snowflake/">Snowflake</a><button class="submenu-toggle" type="button" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/snowflake/">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div></li>
+    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise</a><button class="submenu-toggle" type="button" aria-label="Open Agentic Enterprise menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></div></li>
     <li><a href="/en/how-we-work.html">How We Work</a></li>
     <li><a href="/en/company.html">Company</a></li>
     <li><a href="/en/contact.html" class="nav-cta" aria-current="page">Contact</a></li>
@@ -81,18 +81,18 @@ table.tbl.contact-details td{overflow-wrap:anywhere}
       <table class="tbl">
         <thead><tr><th>Your current situation</th><th>Recommended starting point</th><th>What we review first</th></tr></thead>
         <tbody>
-          <tr><td><strong>Need to understand what is driving changes in Snowflake usage and cost</strong></td><td><strong>Snowflake Cost &amp; Usage Review</strong></td><td>Current usage patterns · How costs are assessed · Priority areas to review · How changes will be validated</td></tr>
-          <tr><td><strong>Need to define data-access boundaries and security standards</strong></td><td><strong>Snowflake Access &amp; Security Review</strong></td><td>People and systems with access · Data scope · Current permissions · Audit logs · AI agent access</td></tr>
+          <tr><td><strong>Need to understand what is driving changes in Snowflake usage and cost</strong></td><td><strong>Snowflake Cost &amp; Usage Review</strong></td><td>Current usage patterns · Cost and usage measurement basis · Priority areas to review · How changes will be validated</td></tr>
+          <tr><td><strong>Need to define data-access boundaries and security requirements</strong></td><td><strong>Snowflake Access &amp; Security Review</strong></td><td>People and systems with access · Data scope · Current permissions · Access and change records · AI agent access</td></tr>
           <tr><td>Need to define the scope for Snowflake adoption, migration, or expanded use</td><td><strong>Snowflake Data Foundation Scoping</strong></td><td>Current environment · Systems to connect · Priority work · Validation approach · Operational responsibilities</td></tr>
           <tr><td>Business knowledge and decision criteria are fragmented</td><td><strong>Enterprise Knowledge Scoping</strong></td><td>Business questions · Existing materials and participants · Initial priorities</td></tr>
           <tr><td>Need to choose where to apply AI agents and define accountability</td><td><strong>Agentic Analytics &amp; Applications Scoping</strong></td><td>Workflow in scope · Roles for AI agents and people · Required inputs · What to validate first</td></tr>
-          <tr><td>Accountability for evaluating, changing, or deactivating AI agents in use is unclear</td><td><strong>AgentOps Review: Operations &amp; Controls</strong></td><td>AI agents in scope · Current records · Evaluation criteria · Authority to change or stop agents · Support needs</td></tr>
-          <tr><td>Need to define the direction and starting scope for an Agentic Enterprise</td><td><strong>Agentic Enterprise Scoping</strong></td><td>Decision in scope · Current criteria and data · Decision owner · Operating conditions · Initial priorities</td></tr>
+          <tr><td>Responsibility for evaluating, changing, or deactivating AI agents already in use is unclear</td><td><strong>AgentOps Review: Operations &amp; Controls</strong></td><td>AI agents in scope · Current records · Evaluation criteria · Authority to change or stop agents · Support needs</td></tr>
+          <tr><td>Need to set the direction and initial scope for an Agentic Enterprise initiative</td><td><strong>Agentic Enterprise Scoping</strong></td><td>Decision in scope · Current criteria and data · Decision owner · Operating conditions · Initial priorities</td></tr>
         </tbody>
       </table>
     </div>
 
-    <p class="lead mt-1" style="font-size:.85rem;color:var(--text2)">We discuss timing and fees after reviewing the scope of work and the current state of the data.</p>
+    <p class="lead mt-1" style="font-size:.85rem;color:var(--text2)">We discuss timing and fees after reviewing the scope of work and the current data environment.</p>
   </div>
 </section>
 
@@ -106,22 +106,24 @@ table.tbl.contact-details td{overflow-wrap:anywhere}
       <div class="form-row">
         <div class="form-field">
           <label for="f-name">Name *</label>
-          <input type="text" id="f-name" name="name" autocomplete="name" required>
+          <input type="text" id="f-name" name="name" autocomplete="name" maxlength="120" required>
         </div>
         <div class="form-field">
           <label for="f-company">Company *</label>
-          <input type="text" id="f-company" name="company" autocomplete="organization" required>
+          <input type="text" id="f-company" name="company" autocomplete="organization" maxlength="160" required>
         </div>
       </div>
       <div class="form-field">
         <label for="f-email">Email *</label>
-        <input type="email" id="f-email" name="email" autocomplete="email" required>
+        <input type="email" id="f-email" name="email" autocomplete="email" maxlength="254" required>
       </div>
       <div class="form-field">
         <label for="f-topic">Area of interest *</label>
         <select id="f-topic" name="topic" required>
           <option value="">Choose an area</option>
           <option>Snowflake Services</option>
+          <option>Snowflake Cost &amp; Usage Review</option>
+          <option>Snowflake Access &amp; Security Review</option>
           <option>AI-Ready Data Foundation</option>
           <option>SAP to Snowflake Migration</option>
           <option>Data Engineering &amp; Integration</option>
@@ -152,7 +154,7 @@ table.tbl.contact-details td{overflow-wrap:anywhere}
       <div>
         <button type="submit" class="btn btn-navy" aria-describedby="email-handoff-note">Open Email Draft</button>
         <p id="email-handoff-note" class="form-note">This website does not submit your inquiry automatically. The button opens a draft in your email app. Review the message and select Send to deliver it. If your email app does not open, email <a href="mailto:contact@nexenbridge.com" style="color:var(--navy)">contact@nexenbridge.com</a> directly.</p>
-        <div id="formDone" class="form-done" role="status" aria-live="polite">Check your email app for the draft. If it is available, review the message and select Send.</div>
+        <div id="formDone" class="form-done" role="status" aria-live="polite">Check your email app for the draft. If it appears, review the message and select Send.</div>
       </div>
     </form>
   </div>
@@ -181,8 +183,8 @@ table.tbl.contact-details td{overflow-wrap:anywhere}
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, Agentic Enterprise services, and managed operations.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/#snowflake">Snowflake Services</a></li><li><a href="/en/services/#data-foundation">AI-Ready Data Foundation</a></li><li><a href="/en/services/#sap-migration">SAP to Snowflake Migration</a></li><li><a href="/en/services/#managed-service">FinOps &amp; Managed Services</a></li></ul></div>
-      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a></li><li><a href="/en/services/#platform-architecture">AI Platform Assessment &amp; Architecture</a></li><li><a href="/en/services/#enterprise-knowledge">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/#agent-application">Agentic Analytics &amp; Applications</a></li></ul></div>
+      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/snowflake/">Snowflake Services</a></li><li><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
+      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a></li><li><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></li><li><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html" aria-current="page">Contact</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy</a></div></div>
@@ -198,8 +200,8 @@ table.tbl.contact-details td{overflow-wrap:anywhere}
   if (!form) return;
 
   var topicByPackage = {
-    cost: 'FinOps & Managed Services',
-    security: 'FinOps & Managed Services',
+    cost: 'Snowflake Cost & Usage Review',
+    security: 'Snowflake Access & Security Review',
     'managed-services': 'FinOps & Managed Services',
     foundation: 'AI-Ready Data Foundation',
     'data-foundation': 'AI-Ready Data Foundation',

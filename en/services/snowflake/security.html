@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snowflake Access &amp; Security Review | Nex &amp; Bridge</title>
+<meta name="description" content="Review how users, service accounts, connected tools, and AI agents access Snowflake data. Define access boundaries, approval responsibilities, access records, change controls, and verification criteria for the agreed scope.">
+<link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/services/snowflake/security.html">
+<link rel="alternate" hreflang="en" href="https://nexenbridge.com/en/services/snowflake/security.html">
+<link rel="canonical" href="https://nexenbridge.com/en/services/snowflake/security.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nex &amp; Bridge">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Snowflake Access &amp; Security Review | Nex &amp; Bridge">
+<meta property="og:description" content="Review how users, service accounts, connected tools, and AI agents access Snowflake data. Define access boundaries, approval responsibilities, access records, change controls, and verification criteria for the agreed scope.">
+<meta property="og:url" content="https://nexenbridge.com/en/services/snowflake/security.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Snowflake Access &amp; Security Review | Nex &amp; Bridge">
+<meta name="twitter:description" content="Review how users, service accounts, connected tools, and AI agents access Snowflake data. Define access boundaries, approval responsibilities, access records, change controls, and verification criteria for the agreed scope.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Snowflake Access & Security Review",
+  "provider": {"@type": "Organization", "name": "Nex & Bridge"},
+  "url": "https://nexenbridge.com/en/services/snowflake/security.html",
+  "description": "Review how users, service accounts, connected tools, and AI agents access Snowflake data. Define access boundaries, approval responsibilities, access records, change controls, and verification criteria for the agreed scope.",
+  "inLanguage": "en-US"
+}
+</script>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav" aria-label="Primary">
+  <a href="/en/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-menu">
+    <li class="has-dropdown"><a href="/en/services/snowflake/">Snowflake</a><button class="submenu-toggle" type="button" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/snowflake/">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div></li>
+    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise</a><button class="submenu-toggle" type="button" aria-label="Open Agentic Enterprise menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></div></li>
+    <li><a href="/en/how-we-work.html">How We Work</a></li>
+    <li><a href="/en/company.html">Company</a></li>
+    <li><a href="/en/contact.html" class="nav-cta">Contact</a></li>
+    <li><div class="lang-switch"><a href="/ko/services/snowflake/security.html">KO</a><a href="/en/services/snowflake/security.html" aria-current="true">EN</a></div></li>
+  </ul>
+</nav>
+
+<main id="main-content">
+<!-- ===== §1 HERO ===== -->
+<section class="hero hero-sm">
+  <div class="hero-inner">
+    <div class="hero-label">Snowflake Access &amp; Security</div>
+    <h1>Understand who can access which Snowflake data.<br><em>Define access boundaries before changing permissions.</em></h1>
+    <p class="hero-sub">Review users, roles, service accounts, BI and integration tools, and AI agents based on the data they can access and the actions they can perform. We connect current permissions with access paths, records, and approval responsibilities, then agree whether changes or verification are needed, what should happen next, and who is responsible.</p>
+    <div class="hero-btns">
+      <a href="#security-flow" class="btn btn-primary">See How the Review Works ↓</a>
+      <a href="/en/contact.html?pkg=security" class="btn btn-ghost">Discuss an Access Review →</a>
+    </div>
+    <div class="hero-structure">
+      <div class="hs-item">
+        <div class="hs-key">Subject</div>
+        <div class="hs-val">Who has access<small>People · service accounts · tools · AI agents</small></div>
+      </div>
+      <div class="hs-item">
+        <div class="hs-key">Data</div>
+        <div class="hs-val">What they can access and do<small>Read · change · share · execute</small></div>
+      </div>
+      <div class="hs-item">
+        <div class="hs-key">Control</div>
+        <div class="hs-val">How access is governed<small>Permissions · paths · records · ownership</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §2 REVIEW CONTEXT ===== -->
+<section id="security-context">
+  <div class="container">
+    <div class="section-label">When a Review Is Needed</div>
+    <h2 class="section-title">A role matrix alone does not show how data is actually accessed</h2>
+    <p class="section-desc">Data may also be accessed through service accounts, connected applications, BI and integration tools, APIs, and AI agents. Reviewing user roles alone can miss those paths.</p>
+    <div class="grid-4">
+      <div class="card animate">
+        <div class="card-num">01 ROLE</div>
+        <h3>Roles and grants have accumulated</h3>
+        <p>Identify who requests, approves, reviews, and revokes access, and whether the permissions are still used.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">02 DATA</div>
+        <h3>Protected data and allowed actions are not clearly defined</h3>
+        <p>Review which read, change, and sharing actions are needed for each business purpose and data-sensitivity level.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">03 SERVICE</div>
+        <h3>A shared service account has broad access</h3>
+        <p>Distinguish the permissions each application or integration requires from permissions that are no longer used.</p>
+      </div>
+      <div class="card animate delay-3">
+        <div class="card-num">04 AGENT</div>
+        <h3>AI agent access boundaries are unclear</h3>
+        <p>Define whose authority the agent uses, what it may retrieve or combine, and which activities must be recorded.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== §3 REVIEW SCOPE ===== -->
+<section class="bg-alt" id="review-scope">
+  <div class="container">
+    <div class="section-label">What We Review Together</div>
+    <h2 class="section-title">Review identities, data, permissions, access paths, and records as one system</h2>
+    <p class="section-desc">A permission name does not reveal the full access path. The review connects each identity to the data and actions available through its access paths, the records captured, and the owners responsible for approval and change decisions.</p>
+    <div class="grid-3">
+      <div class="card animate">
+        <div class="card-num">IDENTITY</div>
+        <h3>Access Identities</h3>
+        <p>Distinguish users and roles, service accounts, applications, external tools, and AI agents.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">DATA</div>
+        <h3>Data &amp; Protection Level</h3>
+        <p>Identify the databases, schemas, tables, fields, sensitivity levels, and business uses within the agreed scope.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">PERMISSION</div>
+        <h3>Permitted Actions</h3>
+        <p>Define which identities need to read, change, execute, own, or share data and which actions must remain restricted.</p>
+      </div>
+      <div class="card animate">
+        <div class="card-num">PATH</div>
+        <h3>Access Paths</h3>
+        <p>Review login methods, network paths, BI and integration tools, APIs, and the authentication used to access the data.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">RECORD</div>
+        <h3>Access &amp; Change Records</h3>
+        <p>Define which login, query, execution, and permission-change records need to be reviewed and retained.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">OWNER</div>
+        <h3>Approval &amp; Lifecycle Ownership</h3>
+        <p>Clarify responsibility for access requests, approvals, periodic reviews, revocation, and exception handling.</p>
+      </div>
+    </div>
+    <p class="note mt-2"><strong>Review scope</strong> — The accounts, data, roles, access paths, and period covered by access records are agreed before work begins. The review does not assume that every data set and connected system will be included at once.</p>
+  </div>
+</section>
+
+<!-- ===== §4 AI AGENT ACCESS ===== -->
+<section id="agent-access">
+  <div class="container">
+    <div class="section-label">AI Agent Access</div>
+    <h2 class="section-title">Define the identity, data, tools, and stop conditions for each AI agent</h2>
+    <p class="section-desc">An AI agent may use several data sources and tools in one workflow. The access review must therefore consider both individual permissions and what combined results or follow-on actions may expose.</p>
+    <div class="grid-3">
+      <div class="card animate">
+        <div class="card-num">IDENTITY</div>
+        <h3>Which identity does the agent use?</h3>
+        <p>Decide whether the agent uses a dedicated identity or operates within the requesting user’s permitted scope.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">DATA &amp; TOOL</div>
+        <h3>Which data and tools may it use?</h3>
+        <p>Define the data and the query or execution tools required for the business purpose, together with actions that are not allowed.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">OUTPUT</div>
+        <h3>What may the output reveal?</h3>
+        <p>Review not only source-data permissions but also what may be exposed when results from multiple data sets are combined.</p>
+      </div>
+      <div class="card animate">
+        <div class="card-num">TRACE</div>
+        <h3>Which activity must be recorded?</h3>
+        <p>Define the records needed for user requests, data references, tool calls, and processing results.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">STOP</div>
+        <h3>When must the agent stop and escalate?</h3>
+        <p>Set conditions for stopping and handing work to an owner when a request exceeds the agent’s authority, the user’s identity cannot be confirmed, or an exception occurs.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">CHANGE</div>
+        <h3>Who changes or revokes access?</h3>
+        <p>Assign an approver to review, change, suspend, or revoke permissions when the agent’s responsibilities change.</p>
+      </div>
+    </div>
+    <p class="note mt-2"><strong>Connection to AgentOps</strong> — This page addresses data-access boundaries. Agent evaluation, execution controls, deployment, and change management are reviewed separately under <a href="/en/services/agentops.html" style="color:var(--navy);font-weight:600">AgentOps &amp; Managed Operations</a>.</p>
+  </div>
+</section>
+
+<!-- ===== §5 REVIEW FLOW ===== -->
+<section class="bg-alt" id="security-flow">
+  <div class="container">
+    <div class="section-label">Review Flow</div>
+    <h2 class="section-title">Establish current access before deciding what should change</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div>
+          <div class="step-q">SCOPE</div>
+          <div class="step-title">Select the accounts, data, and business activities to review</div>
+          <div class="step-desc">Prioritize critical workloads, protected data, new connected tools, and AI agents for the agreed review scope.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div>
+          <div class="step-q">CURRENT ACCESS</div>
+          <div class="step-title">Map current roles and actual access paths</div>
+          <div class="step-desc">Review relationships among users, service accounts, and roles, together with permitted actions, login paths, tools, APIs, and available records.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div>
+          <div class="step-q">INTENDED ACCESS</div>
+          <div class="step-title">Define required access and approval responsibilities</div>
+          <div class="step-desc">Confirm the data and actions each identity needs, and assign responsibility for exceptions, approvals, and revocation.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div>
+          <div class="step-q">GAP &amp; CHANGE</div>
+          <div class="step-title">Distinguish current access from intended access</div>
+          <div class="step-desc">Identify excessive or insufficient permissions, unused accounts, and record gaps that may require further review or change.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div>
+          <div class="step-q">VERIFY &amp; OPERATE</div>
+          <div class="step-title">Define responsibilities for changes, verification, and ongoing operations</div>
+          <div class="step-desc">Determine whether changes and testing are needed and, if so, who is responsible for approval, implementation, revocation, and exception handling.</div>
+        </div>
+      </div>
+    </div>
+    <p class="note mt-2"><strong>Separate responsibilities</strong> — Current-state review, policy design, permission changes, and verification are distinct scopes of work. The required stages and responsible parties are defined after reviewing the client’s environment and approval process. Those responsibilities are then documented in the agreement.</p>
+  </div>
+</section>
+
+<!-- ===== §6 CHANGE VERIFICATION ===== -->
+<section id="change-verification">
+  <div class="container">
+    <div class="section-label">Verification Conditions</div>
+    <h2 class="section-title">If permissions change, define what must be allowed, denied, and recorded</h2>
+    <p class="section-desc">The items below are examples of verification criteria that may be agreed when change and testing are in scope. The actual activities and responsible parties are defined in the agreement.</p>
+    <div class="grid-3">
+      <div class="card animate">
+        <div class="card-num">ALLOW</div>
+        <h3>Allowed Access</h3>
+        <p>Confirm that the designated identity can reach the required data and perform the intended actions.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">DENY</div>
+        <h3>Denied Access</h3>
+        <p>Confirm that out-of-scope data, actions, and unapproved access paths are blocked as intended.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">AGENT</div>
+        <h3>AI Agent Boundaries</h3>
+        <p>Review how the agent stops when a request exceeds the user’s permitted scope or calls a tool that is not allowed.</p>
+      </div>
+      <div class="card animate">
+        <div class="card-num">TRACE</div>
+        <h3>Records &amp; Traceability</h3>
+        <p>Check whether the required level of detail shows who accessed which data, what actions they performed, and when.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">CHANGE</div>
+        <h3>Change &amp; Revocation</h3>
+        <p>Check whether permissions are updated or revoked through the agreed process after a role change or the end of an assignment.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">RECOVERY</div>
+        <h3>Exceptions &amp; Recovery</h3>
+        <p>Review the procedure for stopping work and confirming the previous state if a change has an unexpected business impact.</p>
+      </div>
+    </div>
+    <p class="note mt-2"><strong>Verification scope</strong> — Test scenarios, allow and deny criteria, accounts and data, and the acceptance owner are agreed before a change. Evidence formats required for a specific regulation or internal review are defined separately after the applicable requirements are confirmed.</p>
+  </div>
+</section>
+
+<!-- ===== §7 RESPONSIBILITIES & OPERATIONS ===== -->
+<section class="bg-alt" id="responsibilities">
+  <div class="container">
+    <div class="section-label">Responsibilities &amp; Operations</div>
+    <h2 class="section-title">Separate data ownership, approval authority, and implementation responsibility</h2>
+    <div class="grid-3">
+      <div class="card animate">
+        <div class="card-num">CUSTOMER</div>
+        <h3>Protection Criteria &amp; Access Approval</h3>
+        <p>The client confirms the protection level and business access requirements for its data, then names the final approver and operating owner.</p>
+      </div>
+      <div class="card animate delay-1">
+        <div class="card-num">NEX &amp; BRIDGE</div>
+        <h3>Current-State &amp; Role Review</h3>
+        <p>Nex &amp; Bridge documents the current environment and identifies priority review items. Responsibilities for later stages are defined in the agreement after the client’s environment and approval process are understood.</p>
+      </div>
+      <div class="card animate delay-2">
+        <div class="card-num">OPERATION</div>
+        <h3>Change, Revocation &amp; Exception Support</h3>
+        <p>Determine separately whether ongoing access reviews, permission changes, revocation, and investigations of unusual access require operational support.</p>
+      </div>
+    </div>
+    <p class="note mt-2"><strong>Operating support</strong> — Recurring access reviews and operating support may be agreed as part of Managed Services. The agreement defines the managed scope, support hours, change authority, responsibilities, exclusions, and any applicable service-level commitments.</p>
+  </div>
+</section>
+
+<!-- ===== §8 CONTACT ===== -->
+<section class="bg-navy" id="contact">
+  <div class="container container-narrow center">
+    <div class="section-label" style="justify-content:center">Contact</div>
+    <h2 class="section-title">Start with the identities and data that matter most</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto">Tell us which accounts and data should be reviewed first, the current roles and service accounts, any planned AI agent use, and who owns access approval. We will help define the initial review scope.</p>
+    <div class="hero-btns" style="justify-content:center">
+      <a href="/en/contact.html?pkg=security" class="btn btn-primary">Discuss an Access &amp; Security Review →</a>
+      <a href="/en/services/snowflake/" class="btn btn-ghost">View Snowflake Services</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, Agentic Enterprise services, and managed operations.</p></div>
+      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/snowflake/">Snowflake Services</a></li><li><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
+      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a></li><li><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></li><li><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy</a></div></div>
+  </div>
+</footer>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

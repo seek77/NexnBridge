@@ -68,36 +68,37 @@
 </section>
 <section class="bg-alt" id="problem-framing">
   <div class="container">
-<div id="nb-question-design" aria-label="AI design for business questions" data-lang="en" data-details="on">
-  <div class="nb-eyebrow">BUSINESS-LED AI DESIGN</div>
-  <h2>The business question shapes<br>how AI should work.</h2>
-  <p class="nb-intro">For the same business task, the choice of models, tools, and workflow affects accuracy, speed, and cost. Nex &amp; Bridge combines LLMs, data analysis, simulation, and optimization to build solutions suited to the task and its business constraints.</p>
-  <div class="nb-pickers" role="group" aria-label="Choose a business question">
-    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="monitor"><span class="nb-num" aria-hidden="true">01</span><span class="nb-pick-name">Monitor</span><span class="nb-check" aria-hidden="true">✓</span></button>
-    <button class="nb-pick" type="button" disabled aria-pressed="true" aria-controls="nb-question-example" data-question="diagnose"><span class="nb-num" aria-hidden="true">02</span><span class="nb-pick-name">Diagnose</span><span class="nb-check" aria-hidden="true">✓</span></button>
-    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="predict"><span class="nb-num" aria-hidden="true">03</span><span class="nb-pick-name">Predict</span><span class="nb-check" aria-hidden="true">✓</span></button>
-    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="simulate"><span class="nb-num" aria-hidden="true">04</span><span class="nb-pick-name">Simulate</span><span class="nb-check" aria-hidden="true">✓</span></button>
-    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="decide"><span class="nb-num" aria-hidden="true">05</span><span class="nb-pick-name">Decide</span><span class="nb-check" aria-hidden="true">✓</span></button>
-    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="act"><span class="nb-num" aria-hidden="true">06</span><span class="nb-pick-name">Act</span><span class="nb-check" aria-hidden="true">✓</span></button>
-  </div>
-  <div class="nb-example" id="nb-question-example" aria-live="polite" aria-atomic="true">
-    <div class="nb-question">
-      <div class="nb-context"><span>Profitability · design example</span><span data-field="category">DIAGNOSIS</span></div>
-      <h3 data-field="question">What is driving the decline in profitability?</h3>
+    <div id="nb-question-design" aria-label="Business analysis examples" data-lang="en">
+      <div class="nb-eyebrow">BUSINESS QUESTIONS</div>
+      <h2>Business questions.<br>Grounded in your business.</h2>
+      <p class="nb-intro">Agents query data, investigate causes, and compare alternatives, adapting the analysis to the question and the findings.</p>
+      <p class="nb-intro">Nex &amp; Bridge captures your metric definitions, calculation rules, and business policies, and provides validated tools for complex, recurring calculations. Agents use this foundation to pursue the analysis each question requires.</p>
+      <p class="nb-invitation">Explore the questions through a profitability example.</p>
+      <div class="nb-pickers" role="group" aria-label="Choose a business question">
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="monitor"><span class="nb-pick-copy"><span class="nb-pick-name">What has changed?</span><span class="nb-pick-type">Monitoring</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="true" aria-controls="nb-question-example" data-question="diagnose"><span class="nb-pick-copy"><span class="nb-pick-name">Why did it change?</span><span class="nb-pick-type">Diagnosis</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="predict"><span class="nb-pick-copy"><span class="nb-pick-name">What lies ahead?</span><span class="nb-pick-type">Forecasting</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="simulate"><span class="nb-pick-copy"><span class="nb-pick-name">What if we change it?</span><span class="nb-pick-type">Simulation</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="decide"><span class="nb-pick-copy"><span class="nb-pick-name">Which option works best?</span><span class="nb-pick-type">Decision support</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="act"><span class="nb-pick-copy"><span class="nb-pick-name">Can we act on it?</span><span class="nb-pick-type">Controlled action</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+      </div>
+      <div class="nb-example" id="nb-question-example" aria-live="polite" aria-atomic="true">
+        <div class="nb-question">
+          <div class="nb-context"><span>Profitability · illustrative example</span><span data-field="category">Diagnosis</span></div>
+          <h3 data-field="question">Why has profitability fallen while revenue has grown?</h3>
+          <p class="nb-analysis" data-field="summary">Compare the effects of price, volume, and product mix, then investigate discount terms and cost details where the variance remains unexplained.</p>
+        </div>
+        <ul class="nb-basis" aria-label="Business context and analytical tools">
+          <li class="nb-basis-card"><h4>Business definitions</h4><p>Profit measures, cost allocation rules, and discount terms</p><span class="nb-tech">Knowledge · Semantic Model</span></li>
+          <li class="nb-basis-card"><h4>Validated calculations</h4><p>Profit variance decomposition by price, volume, mix, and cost</p><span class="nb-tech">SQL · Views · Calculation models</span></li>
+          <li class="nb-basis-card"><h4>Further investigation</h4><p>Customer and channel comparisons, contract terms, and exceptions</p><span class="nb-tech">Agent · Data queries · Document search</span></li>
+        </ul>
+      </div>
+      <div class="nb-bottom">
+        <p>See how we define business knowledge and analytical requirements.</p>
+        <div class="nb-links"><a href="/en/services/knowledge.html">Knowledge Engineering →</a><a href="/en/how-we-work.html">How We Work →</a></div>
+      </div>
     </div>
-    <div class="nb-flow-area">
-      <ol class="nb-flow" aria-label="Workflow for the selected business question">
-        <li><span class="nb-step-number" aria-hidden="true">1</span><span class="nb-step-title">Review performance</span><span class="nb-step-detail">Metrics, periods, and comparators</span></li>
-        <li><span class="nb-step-number" aria-hidden="true">2</span><span class="nb-step-title">Break down the drivers</span><span class="nb-step-detail">Price, volume, mix, and cost</span></li>
-        <li><span class="nb-step-number" aria-hidden="true">3</span><span class="nb-step-title">Investigate gaps</span><span class="nb-step-detail">Evidence for unexplained changes</span></li>
-        <li><span class="nb-step-number" aria-hidden="true">4</span><span class="nb-step-title">Explain the impact</span><span class="nb-step-detail">Reconcile contributions to the total</span></li>
-      </ol>
-      <div class="nb-tools"><span class="nb-tools-label">Components</span><span class="nb-tool">Knowledge</span><span class="nb-tool">SQL &amp; calculation models</span><span class="nb-tool">Agent</span><span class="nb-tool">Verification</span></div>
-    </div>
-    <div class="nb-design-note"><strong>Design choice</strong> <span data-field="note">Use established calculations for variance analysis, with additional investigation where the results need explanation.</span></div>
-  </div>
-  <p class="nb-bottom"><strong>Operating experience. Hands-on delivery.</strong><br>The consultants who define the business rules and exceptions also implement and verify the solution.<br><a href="/en/how-we-work.html#problem-framing">How We Work →</a></p>
-</div>
   </div>
 </section>
 <section id="agentic-enterprise-services">

@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/question-design.css">
 </head>
 <body>
 
@@ -68,15 +69,36 @@
 </section>
 <section class="bg-alt" id="problem-framing">
   <div class="container">
-    <div class="section-label">How We Work</div>
-    <h2 class="section-title">문제 정의와 AI 구현을 분리하지 않습니다</h2>
-    <p class="section-desc">현업·컨설팅 경험으로 문제와 해결 방향을 구체화한 컨설턴트가 구현과 검증까지 수행합니다. 업무의 판단 기준과 예외를 명세에 담고, 실제 구현 결과에 반영됐는지 확인합니다.</p>
-    <div class="grid-3">
-      <div class="card animate"><div class="card-num">01 PROBLEM</div><h3>경험 기반 문제 정의</h3><p>현재 요청뿐 아니라 업무의 원인과 제약, 개선 기회를 검토해 해결할 문제를 구체화합니다.</p></div>
-      <div class="card animate"><div class="card-num">02 KNOWLEDGE</div><h3>업무 로직의 명시화</h3><p>업무 개념·계산식·판단 조건·예외를 사람이 이해하고 검증할 수 있는 명세로 작성합니다.</p></div>
-      <div class="card animate"><div class="card-num">03 DELIVERY</div><h3>직접 구현과 검증</h3><p>명세를 기준으로 AI와 전문 엔지니어링을 활용해 구현하고, 업무 시나리오로 반영 결과를 확인합니다.</p></div>
+<div id="nb-question-design" aria-label="업무 질문별 AI 설계" data-lang="ko" data-details="on">
+  <div class="nb-eyebrow">BUSINESS-LED AI DESIGN</div>
+  <h2>업무 특성에 맞게<br>AI의 실행 방식을 설계합니다</h2>
+  <p class="nb-intro">어떤 질문인지에 따라 분석 도구와 실행 절차가 달라집니다.</p>
+  <div class="nb-pickers" role="group" aria-label="업무 질문 선택">
+    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="monitor"><span class="nb-num" aria-hidden="true">01</span><span class="nb-pick-name">현황</span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <button class="nb-pick" type="button" disabled aria-pressed="true" aria-controls="nb-question-example" data-question="diagnose"><span class="nb-num" aria-hidden="true">02</span><span class="nb-pick-name">원인</span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="predict"><span class="nb-num" aria-hidden="true">03</span><span class="nb-pick-name">예측</span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="simulate"><span class="nb-num" aria-hidden="true">04</span><span class="nb-pick-name">시뮬레이션</span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="decide"><span class="nb-num" aria-hidden="true">05</span><span class="nb-pick-name">대안</span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="act"><span class="nb-num" aria-hidden="true">06</span><span class="nb-pick-name">실행</span><span class="nb-check" aria-hidden="true">✓</span></button>
+  </div>
+  <div class="nb-example" id="nb-question-example" aria-live="polite" aria-atomic="true">
+    <div class="nb-question">
+      <div class="nb-context"><span>수익성 분석 · 설계 예시</span><span data-field="category">DIAGNOSIS</span></div>
+      <h3 data-field="question">수익성이 떨어진 이유는 무엇인가?</h3>
     </div>
-    <a href="/ko/how-we-work.html#problem-framing" class="card-more">문제 정의 방식 보기 →</a>
+    <div class="nb-flow-area">
+      <ol class="nb-flow" aria-label="선택한 업무의 처리 흐름">
+        <li><span class="nb-step-number" aria-hidden="true">1</span><span class="nb-step-title">실적 확인</span><span class="nb-step-detail">지표·기간·비교 기준</span></li>
+        <li><span class="nb-step-number" aria-hidden="true">2</span><span class="nb-step-title">영향 분해</span><span class="nb-step-detail">가격·물량·제품 구성·원가</span></li>
+        <li><span class="nb-step-number" aria-hidden="true">3</span><span class="nb-step-title">추가 근거 확인</span><span class="nb-step-detail">설명되지 않는 변동 조사</span></li>
+        <li><span class="nb-step-number" aria-hidden="true">4</span><span class="nb-step-title">원인별 영향 제시</span><span class="nb-step-detail">전체 변동과 합계 대조</span></li>
+      </ol>
+      <div class="nb-tools"><span class="nb-tools-label">구성 요소</span><span class="nb-tool">Knowledge</span><span class="nb-tool">SQL·계산 모델</span><span class="nb-tool">Agent</span><span class="nb-tool">검증</span></div>
+    </div>
+    <div class="nb-design-note"><strong>설계 판단</strong> <span data-field="note">정해진 차이 분석은 계산 절차로, 설명이 부족한 부분은 추가 탐색으로 처리합니다.</span></div>
+  </div>
+  <p class="nb-bottom"><strong>현업 경험을 실행 설계로.</strong><br>업무의 판단 기준과 예외를 구체화한 컨설턴트가 구현·검증까지 수행합니다.<br><a href="/ko/how-we-work.html#problem-framing">일하는 방식 보기 →</a></p>
+</div>
   </div>
 </section>
 <section id="agentic-enterprise-services">
@@ -159,5 +181,6 @@
   </div>
 </footer>
 <script src="/assets/js/site.js"></script>
+<script src="/assets/js/question-design.js"></script>
 </body>
 </html>

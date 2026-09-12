@@ -21,6 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/question-design.css">
 </head>
 <body>
 
@@ -67,15 +68,36 @@
 </section>
 <section class="bg-alt" id="problem-framing">
   <div class="container">
-    <div class="section-label">How We Work</div>
-    <h2 class="section-title">Problem framing and AI implementation.<br>One delivery team.</h2>
-    <p class="section-desc">The consultants who define the problem and shape the solution also carry out implementation and verification. Business rules and exceptions are captured in explicit specifications and checked against the working application.</p>
-    <div class="grid-3">
-      <div class="card animate"><div class="card-num">01 PROBLEM</div><h3>Experience-Based Problem Framing</h3><p>Look beyond the initial request to identify underlying causes, constraints, and opportunities for improvement.</p></div>
-      <div class="card animate"><div class="card-num">02 KNOWLEDGE</div><h3>Explicit Business Logic</h3><p>Express concepts, calculations, decision criteria, and exceptions in specifications that people can inspect and verify.</p></div>
-      <div class="card animate"><div class="card-num">03 DELIVERY</div><h3>Implementation and Verification</h3><p>Implement against the specifications using AI-assisted development and specialist engineering, then verify the result against business scenarios.</p></div>
+<div id="nb-question-design" aria-label="AI design for business questions" data-lang="en" data-details="on">
+  <div class="nb-eyebrow">BUSINESS-LED AI DESIGN</div>
+  <h2>The business question shapes<br>how AI should work.</h2>
+  <p class="nb-intro">Different questions call for different tools, workflows, and controls.</p>
+  <div class="nb-pickers" role="group" aria-label="Choose a business question">
+    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="monitor"><span class="nb-num" aria-hidden="true">01</span><span class="nb-pick-name">Monitor</span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <button class="nb-pick" type="button" disabled aria-pressed="true" aria-controls="nb-question-example" data-question="diagnose"><span class="nb-num" aria-hidden="true">02</span><span class="nb-pick-name">Diagnose</span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="predict"><span class="nb-num" aria-hidden="true">03</span><span class="nb-pick-name">Predict</span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="simulate"><span class="nb-num" aria-hidden="true">04</span><span class="nb-pick-name">Simulate</span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="decide"><span class="nb-num" aria-hidden="true">05</span><span class="nb-pick-name">Decide</span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="act"><span class="nb-num" aria-hidden="true">06</span><span class="nb-pick-name">Act</span><span class="nb-check" aria-hidden="true">✓</span></button>
+  </div>
+  <div class="nb-example" id="nb-question-example" aria-live="polite" aria-atomic="true">
+    <div class="nb-question">
+      <div class="nb-context"><span>Profitability · design example</span><span data-field="category">DIAGNOSIS</span></div>
+      <h3 data-field="question">What is driving the decline in profitability?</h3>
     </div>
-    <a href="/en/how-we-work.html#problem-framing" class="card-more">Our Approach to Problem Framing →</a>
+    <div class="nb-flow-area">
+      <ol class="nb-flow" aria-label="Workflow for the selected business question">
+        <li><span class="nb-step-number" aria-hidden="true">1</span><span class="nb-step-title">Review performance</span><span class="nb-step-detail">Metrics, periods, and comparators</span></li>
+        <li><span class="nb-step-number" aria-hidden="true">2</span><span class="nb-step-title">Break down the drivers</span><span class="nb-step-detail">Price, volume, mix, and cost</span></li>
+        <li><span class="nb-step-number" aria-hidden="true">3</span><span class="nb-step-title">Investigate gaps</span><span class="nb-step-detail">Evidence for unexplained changes</span></li>
+        <li><span class="nb-step-number" aria-hidden="true">4</span><span class="nb-step-title">Explain the impact</span><span class="nb-step-detail">Reconcile contributions to the total</span></li>
+      </ol>
+      <div class="nb-tools"><span class="nb-tools-label">Components</span><span class="nb-tool">Knowledge</span><span class="nb-tool">SQL &amp; calculation models</span><span class="nb-tool">Agent</span><span class="nb-tool">Verification</span></div>
+    </div>
+    <div class="nb-design-note"><strong>Design choice</strong> <span data-field="note">Use established calculations for variance analysis, with additional investigation where the results need explanation.</span></div>
+  </div>
+  <p class="nb-bottom"><strong>Operating experience. Hands-on delivery.</strong><br>The consultants who define the business rules and exceptions also implement and verify the solution.<br><a href="/en/how-we-work.html#problem-framing">How We Work →</a></p>
+</div>
   </div>
 </section>
 <section id="agentic-enterprise-services">
@@ -158,5 +180,6 @@
   </div>
 </footer>
 <script src="/assets/js/site.js"></script>
+<script src="/assets/js/question-design.js"></script>
 </body>
 </html>

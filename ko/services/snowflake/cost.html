@@ -35,26 +35,27 @@
 <body>
 
 <!-- ===== NAV ===== -->
-<nav class="site-nav">
+<nav class="site-nav" aria-label="주 메뉴">
   <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
-  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
-  <ul class="nav-menu">
+  <button class="nav-burger" type="button" aria-label="메뉴" aria-expanded="false" aria-controls="primary-menu"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="primary-menu">
     <li class="has-mega">
-      <a href="/ko/services/snowflake/">Snowflake</a>
-      <button class="submenu-toggle" aria-label="Snowflake 하위메뉴 열기"><span class="chev"></span></button>
-      <div class="mega-menu">
-        <div class="mega-col"><a class="mega-featured" href="/ko/services/snowflake/">Snowflake 서비스</a></div>
-        <div class="mega-col"><div class="mega-col-title">Build &amp; Migrate</div><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></div>
-        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+      <a href="/ko/services/">서비스</a>
+      <button class="submenu-toggle" type="button" aria-label="서비스 하위메뉴" aria-expanded="false" aria-controls="services-menu"><span class="chev"></span></button>
+      <div class="mega-menu" id="services-menu">
+        <div class="mega-overview"><a href="/ko/services/" class="mega-featured">서비스 전체 보기 →</a></div>
+        <div class="mega-col"><div class="mega-col-title">전략·지식</div><a href="/ko/services/platform-assessment.html">AI 전략·아키텍처</a><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></div>
+        <div class="mega-col"><div class="mega-col-title"><a href="/ko/services/data-platform.html">데이터 플랫폼·엔지니어링</a></div><a href="/ko/services/snowflake/" class="mega-featured">Snowflake Services</a><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+        <div class="mega-col"><div class="mega-col-title">Application·운영</div><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
       </div>
     </li>
     <li class="has-mega">
-      <a href="/ko/services/">Agentic Enterprise</a>
-      <button class="submenu-toggle" aria-label="Agentic Enterprise 하위메뉴 열기"><span class="chev"></span></button>
-      <div class="mega-menu">
-        <div class="mega-col"><a class="mega-featured" href="/ko/services/">Agentic Enterprise 서비스</a><div class="mega-col-title">Plan &amp; Design</div><a href="/ko/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></div>
-        <div class="mega-col"><div class="mega-col-title">Build</div><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></div>
-        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      <a href="/ko/solutions/">Applications</a>
+      <button class="submenu-toggle" type="button" aria-label="Applications 하위메뉴" aria-expanded="false" aria-controls="applications-menu"><span class="chev"></span></button>
+      <div class="mega-menu mega-applications" id="applications-menu">
+        <a href="/ko/solutions/" class="mega-featured">Applications 전체 보기 →</a>
+        <a href="/ko/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a>
+        <a href="/ko/solutions/scm.html">SCM Applications</a>
       </div>
     </li>
     <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
@@ -69,7 +70,7 @@
 <section class="hero hero-sm">
   <div class="hero-inner">
     <div class="hero-label">Snowflake Cost &amp; FinOps</div>
-    <h1>비용만 줄이는 것이 아니라,<br><em>어디에 얼마나 쓰는지</em>부터 확인합니다</h1>
+    <h1>업무 성능을 고려한<br><em>Snowflake 비용 최적화</em></h1>
     <p class="hero-sub">청구 내역과 웨어하우스·쿼리·스토리지 사용량을 같은 기간과 업무 기준으로 살펴봅니다. 어떤 변경을 먼저 검토할지, 변경 효과를 어떤 기준으로 측정할지, 운영 중 누가 확인할지는 현재 환경을 본 뒤 합의합니다.</p>
     <div class="hero-btns">
       <a href="#cost-flow" class="btn btn-primary">검토 흐름 보기 ↓</a>
@@ -96,7 +97,7 @@
 <section>
   <div class="container">
     <div class="section-label">이런 상황이라면</div>
-    <h2 class="section-title">총액만 보면 어느 업무·워크로드의 사용 방식을 바꿔야 할지 알기 어렵습니다</h2>
+    <h2 class="section-title">워크로드별 비용 구조와 개선 요인을 분석합니다</h2>
     <p class="section-desc">비용은 사용량과 설정뿐 아니라 업무량, 처리 시점과 성능 조건의 영향을 받습니다. 청구액만 줄이려 하면 필요한 업무까지 영향을 받을 수 있습니다.</p>
 
     <div class="grid-4">
@@ -128,7 +129,7 @@
 <section class="bg-alt">
   <div class="container">
     <div class="section-label">함께 확인할 자료</div>
-    <h2 class="section-title">청구 내역과 실제 사용량을 같은 기준으로 읽습니다</h2>
+    <h2 class="section-title">청구 내역과 사용량의 통합 분석</h2>
     <p class="section-desc">공유 가능한 범위에서 비용이 발생한 기간과 사용 주체, 워크로드와 운영 조건을 연결합니다. 모든 자료가 있어야 시작할 수 있는 것은 아닙니다.</p>
 
     <div class="grid-3">
@@ -172,7 +173,7 @@
 <section>
   <div class="container">
     <div class="section-label">측정 기준</div>
-    <h2 class="section-title">변경 전에 무엇을 같은 조건으로 비교할지 정합니다</h2>
+    <h2 class="section-title">개선 효과를 평가할 기준선을 설정합니다</h2>
     <p class="section-desc">업무량이 달라졌는데 총비용만 비교하면 변경 효과를 잘못 해석할 수 있습니다. 비용과 사용량, 유지해야 할 업무 조건을 함께 봅니다.</p>
 
     <div class="grid-4">
@@ -206,7 +207,7 @@
 <section class="bg-alt" id="cost-flow">
   <div class="container">
     <div class="section-label">우선순위와 변경 범위</div>
-    <h2 class="section-title">절감 가능성뿐 아니라 업무 영향과 변경 위험을 함께 봅니다</h2>
+    <h2 class="section-title">절감 효과·업무 영향·변경 위험을 종합 평가합니다</h2>
 
     <div class="steps">
       <div class="step">
@@ -330,7 +331,7 @@
 <section class="bg-navy">
   <div class="container container-narrow center">
     <div class="section-label" style="justify-content:center">상담</div>
-    <h2 class="section-title">현재 비용과 사용량을<br>어떤 기준으로 볼지부터 정합니다</h2>
+    <h2 class="section-title">비용 진단의 범위와 평가 기준을 검토합니다</h2>
     <p class="section-desc" style="margin-left:auto;margin-right:auto">확인할 계정과 기간, 비용이 궁금한 업무나 워크로드, 현재 운영 담당자를 알려주시면 우선 검토할 범위를 정합니다.</p>
     <div class="hero-btns" style="justify-content:center">
       <a href="/ko/contact.html?pkg=cost" class="btn btn-primary">비용 검토 범위 상담하기 →</a>
@@ -343,9 +344,9 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake 데이터 기반부터 Agentic Enterprise 구축과 운영까지 제공합니다.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/ko/services/snowflake/">Snowflake 서비스</a></li><li><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
-      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/ko/services/">Agentic Enterprise 서비스</a></li><li><a href="/ko/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>현업과 컨설팅 경험을 바탕으로 기업의 지식·데이터와 AI Application을 설계·구현합니다.</p></div>
+      <div class="footer-col"><h4>서비스</h4><ul><li><a href="/ko/services/">서비스 전체 보기</a></li><li><a href="/ko/services/platform-assessment.html">AI 전략·아키텍처</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/data-platform.html">데이터 플랫폼·엔지니어링</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li><li><a href="/ko/services/snowflake/">Snowflake Services</a></li></ul></div>
+      <div class="footer-col"><h4>Applications</h4><ul><li><a href="/ko/solutions/">Applications 전체 보기</a></li><li><a href="/ko/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a></li><li><a href="/ko/solutions/scm.html">SCM Applications</a></li></ul></div>
       <div class="footer-col"><h4>회사</h4><ul><li><a href="/ko/how-we-work.html">일하는 방식</a></li><li><a href="/ko/insights.html">Insights</a></li><li><a href="/ko/company.html">회사소개</a></li><li><a href="/ko/contact.html">문의하기</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/ko/privacy.html">개인정보처리방침</a></div></div>

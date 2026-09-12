@@ -38,11 +38,29 @@
 <!-- ===== NAV ===== -->
 <nav class="site-nav" aria-label="Primary">
   <a href="/en/" class="logo">Nex <span>&amp;</span> Bridge</a>
-  <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
-  <ul class="nav-menu">
-    <li class="has-dropdown"><a href="/en/services/snowflake/">Snowflake</a><button class="submenu-toggle" type="button" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/snowflake/">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div></li>
-    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise</a><button class="submenu-toggle" type="button" aria-label="Open Agentic Enterprise menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html" aria-current="page">AgentOps &amp; Managed Operations</a></div></li>
+  <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-menu"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="primary-menu">
+    <li class="has-mega">
+      <a href="/en/services/">Services</a>
+      <button class="submenu-toggle" type="button" aria-label="Services submenu" aria-expanded="false" aria-controls="services-menu"><span class="chev"></span></button>
+      <div class="mega-menu" id="services-menu">
+        <div class="mega-overview"><a href="/en/services/" class="mega-featured">Explore All Services →</a></div>
+        <div class="mega-col"><div class="mega-col-title">Strategy &amp; Knowledge</div><a href="/en/services/platform-assessment.html">AI Strategy &amp; Architecture</a><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></div>
+        <div class="mega-col"><div class="mega-col-title"><a href="/en/services/data-platform.html">Data Platforms &amp; Engineering</a></div><a href="/en/services/snowflake/" class="mega-featured">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+        <div class="mega-col"><div class="mega-col-title">Applications &amp; Operations</div><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html" aria-current="page">AgentOps &amp; Managed Operations</a></div>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="/en/solutions/">Applications</a>
+      <button class="submenu-toggle" type="button" aria-label="Applications submenu" aria-expanded="false" aria-controls="applications-menu"><span class="chev"></span></button>
+      <div class="mega-menu mega-applications" id="applications-menu">
+        <a href="/en/solutions/" class="mega-featured">Explore Applications →</a>
+        <a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a>
+        <a href="/en/solutions/scm.html">SCM Applications</a>
+      </div>
+    </li>
     <li><a href="/en/how-we-work.html">How We Work</a></li>
+    <li><a href="/en/insights.html">Insights</a></li>
     <li><a href="/en/company.html">Company</a></li>
     <li><a href="/en/contact.html" class="nav-cta">Contact</a></li>
     <li><div class="lang-switch"><a href="/ko/services/agentops.html">KO</a><a href="/en/services/agentops.html" aria-current="true">EN</a></div></li>
@@ -114,6 +132,23 @@
   </div>
 </section>
 
+<section id="evaluation-engineering">
+  <div class="container">
+    <div class="section-label">Evaluation Engineering</div>
+    <h2 class="section-title">Find the failure before choosing the fix</h2>
+    <p class="section-desc">An incorrect number may originate in source data, a metric definition, retrieval, or calculation. Scoring the final answer rarely reveals which part needs to change. Operational evaluation follows the evidence through execution and tests the proposed fix.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>Retest work that already succeeded</h3><p>Fixing a failed question can change a previously correct result. Include routine workflows and exceptions in regression tests, alongside held-out cases not used during development. Fix the comparison versions, data cut-off, and expected results so the effect of a change is visible.</p></div>
+      <div class="card animate delay-1"><h3>Assess calculations and explanations differently</h3><p>Code and rules check totals, formulas, input formats, and permissions. Expert review provides the reference for assessing explanations; LLM scoring can assist. Choose each evaluator for the type of error it needs to detect.</p></div>
+      <div class="card animate"><h3>Look upstream of the final response</h3><p>Execution traces show retrieved documents, rule and model versions, and tool inputs and results. They help distinguish missing knowledge from retrieval, calculation, and execution failures. Record only what is needed, with sensitive-data masking and access controls.</p></div>
+      <div class="card animate delay-1"><h3>Review gains and regressions together</h3><p>Compare versions under the same conditions, considering correctness, serious failures, response time, and cost. Introduce approved versions to a limited scope, with stopping and recovery criteria for problems encountered in operation.</p></div>
+      <div class="card animate"><h3>Set retry rules for the actual task</h3><p>A failed search may be safe to repeat. Repeating an order submission can create a duplicate transaction. Define retries, time and cost limits by task, and prevent duplicate external effects. Escalate when limits are reached or evidence is insufficient.</p></div>
+      <div class="card animate delay-1"><h3>Update the knowledge or procedure that failed</h3><p>A missing business rule may call for a knowledge update; an incorrect analytical sequence may require a skill or tool change. Review evidence and impact, then test and approve before release. Changes to model weights are a separate decision.</p></div>
+    </div>
+    <p class="note">Operating records provide evidence for improvement. Approved knowledge and skill changes are distinct from model training, and changes to evaluation criteria also need a history. <a href="/en/how-we-work.html#eval-driven-development">Development methodology →</a></p>
+  </div>
+</section>
+
 <!-- ===== §5 LIFECYCLE GOVERNANCE ===== -->
 <section class="bg-alt" id="lifecycle-governance">
   <div class="container">
@@ -175,12 +210,12 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, Agentic Enterprise services, and managed operations.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/snowflake/">Snowflake Services</a></li><li><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
-      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a></li><li><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></li><li><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html" aria-current="page">AgentOps &amp; Managed Operations</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Business-led consulting and hands-on engineering for enterprise knowledge, data, and AI applications.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="/en/services/">All Services</a></li><li><a href="/en/services/platform-assessment.html">AI Strategy &amp; Architecture</a></li><li><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/data-platform.html">Data Platforms &amp; Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></li><li><a href="/en/services/snowflake/">Snowflake Services</a></li></ul></div>
+      <div class="footer-col"><h4>Applications</h4><ul><li><a href="/en/solutions/">All Applications</a></li><li><a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a></li><li><a href="/en/solutions/scm.html">SCM Applications</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/insights.html">Insights</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy</a></div></div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy Policy</a></div></div>
   </div>
 </footer>
 <script src="/assets/js/site.js"></script>

@@ -37,26 +37,27 @@
 <body>
 
 <!-- ===== NAV ===== -->
-<nav class="site-nav">
+<nav class="site-nav" aria-label="주 메뉴">
   <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
-  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
-  <ul class="nav-menu">
+  <button class="nav-burger" type="button" aria-label="메뉴" aria-expanded="false" aria-controls="primary-menu"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="primary-menu">
     <li class="has-mega">
-      <a href="/ko/services/snowflake/">Snowflake</a>
-      <button class="submenu-toggle" aria-label="Snowflake 하위메뉴 열기"><span class="chev"></span></button>
-      <div class="mega-menu">
-        <div class="mega-col"><a class="mega-featured" href="/ko/services/snowflake/">Snowflake 서비스</a></div>
-        <div class="mega-col"><div class="mega-col-title">Build &amp; Migrate</div><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></div>
-        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+      <a href="/ko/services/">서비스</a>
+      <button class="submenu-toggle" type="button" aria-label="서비스 하위메뉴" aria-expanded="false" aria-controls="services-menu"><span class="chev"></span></button>
+      <div class="mega-menu" id="services-menu">
+        <div class="mega-overview"><a href="/ko/services/" class="mega-featured">서비스 전체 보기 →</a></div>
+        <div class="mega-col"><div class="mega-col-title">전략·지식</div><a href="/ko/services/platform-assessment.html">AI 전략·아키텍처</a><a href="/ko/services/knowledge.html" aria-current="page">Enterprise Knowledge Engineering</a></div>
+        <div class="mega-col"><div class="mega-col-title"><a href="/ko/services/data-platform.html">데이터 플랫폼·엔지니어링</a></div><a href="/ko/services/snowflake/" class="mega-featured">Snowflake Services</a><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+        <div class="mega-col"><div class="mega-col-title">Application·운영</div><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
       </div>
     </li>
     <li class="has-mega">
-      <a href="/ko/services/">Agentic Enterprise</a>
-      <button class="submenu-toggle" aria-label="Agentic Enterprise 하위메뉴 열기"><span class="chev"></span></button>
-      <div class="mega-menu">
-        <div class="mega-col"><a class="mega-featured" href="/ko/services/">Agentic Enterprise 서비스</a><div class="mega-col-title">Plan &amp; Design</div><a href="/ko/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></div>
-        <div class="mega-col"><div class="mega-col-title">Build</div><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></div>
-        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      <a href="/ko/solutions/">Applications</a>
+      <button class="submenu-toggle" type="button" aria-label="Applications 하위메뉴" aria-expanded="false" aria-controls="applications-menu"><span class="chev"></span></button>
+      <div class="mega-menu mega-applications" id="applications-menu">
+        <a href="/ko/solutions/" class="mega-featured">Applications 전체 보기 →</a>
+        <a href="/ko/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a>
+        <a href="/ko/solutions/scm.html">SCM Applications</a>
       </div>
     </li>
     <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
@@ -97,7 +98,7 @@
 <section class="bg-alt" id="build-scope">
   <div class="container">
     <div class="section-label">Build Scope</div>
-    <h2 class="section-title">Knowledge Model부터 조회·추론 서비스까지 구축합니다</h2>
+    <h2 class="section-title">Knowledge 모델링과 조회·추론 서비스</h2>
     <div class="grid-2">
       <div class="card animate"><h3>Business Ontology</h3><p>핵심 업무 개념과 속성, 관계, 상태, 이벤트, 책임과 판단 맥락을 정의합니다.</p></div>
       <div class="card animate delay-1"><h3>Knowledge Graph</h3><p>문서와 데이터, 규정, 조직, 업무 객체와 판단 근거를 식별 가능한 Node와 관계로 구성합니다.</p></div>
@@ -130,7 +131,7 @@
 <section class="bg-alt">
   <div class="container">
     <div class="section-label">LLM-Native Knowledge Engineering</div>
-    <h2 class="section-title">LLM 기반 추출과 검증을 Knowledge Engineering 전 과정에 적용합니다</h2>
+    <h2 class="section-title">LLM 기반 Knowledge Engineering</h2>
     <p class="section-desc">문서와 데이터에서 개체·관계·Business Rules를 추출하고, Schema 기반 Ontology 모델링, Entity Resolution, 근거 대조, Multi-Model Review와 품질 검증을 거쳐 관리 가능한 Knowledge로 구축합니다. 승인 상태와 버전, 변경 영향도 같은 기준으로 지속적으로 관리합니다.</p>
     <div class="grid-2">
       <div class="card animate"><h3>Source Analysis &amp; Extraction</h3><p>규정과 매뉴얼, 데이터 사전, SQL, 보고서와 인터뷰 기록에서 업무 개념과 관계, 규칙 후보와 근거 위치를 추출합니다.</p></div>
@@ -140,26 +141,41 @@
       <div class="card animate"><h3>Rule &amp; Quality Validation</h3><p>식별자와 필수 속성, 허용 관계, Business Rules와 실제 업무 질문을 이용해 구조와 내용의 품질을 검사합니다.</p></div>
       <div class="card animate delay-1"><h3>Approval, Version &amp; Change</h3><p>확인된 내용과 미확정 내용을 구분하고 승인 상태, 버전, 변경·폐기 이력과 Agent·Application에 미치는 영향을 관리합니다.</p></div>
     </div>
-    <div class="note"><strong>재사용 가능한 구축 체계</strong> — Ontology Schema, 추출·검증 Guidance와 Skill, Business Rules, 대표 질문과 테스트 케이스를 재사용 가능한 엔지니어링 자산으로 관리합니다. Git 기반 버전 관리는 이를 구현하는 방법 중 하나입니다.</div>
+    <div class="note"><strong>추출 결과의 확인</strong> — 복수 모델의 검토는 누락과 해석 차이를 찾는 데 활용합니다. 최종 근거는 모델 간 합의가 아니라 원문과 업무 기준이며, 확인되지 않은 내용은 승인된 지식과 구분합니다.</div>
+    <div class="note"><strong>방법론과 실행 Skill</strong> — 문서가 바뀔 때마다 추출과 검토를 처음부터 다시 설계할 필요는 없습니다. 작업 순서, 입력·출력 Schema, 사용할 도구와 예외 처리를 Skill로 정리하고 검증 코드·테스트 사례와 함께 관리합니다. 권한과 중단 조건은 실행 코드에 적용하며, Git 등 고객의 개발·승인 체계에서 지식과 Skill의 변경 이력을 관리합니다.</div>
   </div>
 </section>
 
 <!-- ===== §6 IMPLEMENTATION ARCHITECTURE ===== -->
-<section>
+<section id="technical-architecture">
   <div class="container">
-    <div class="section-label">Product-Independent Architecture</div>
-    <h2 class="section-title">Knowledge Model과 구현 기술을 분리합니다</h2>
-    <p class="section-desc">Ontology, Business Rules, 출처와 검증 기준은 특정 제품과 독립적으로 관리합니다. 실제 저장·검색·탐색·추론 구조는 데이터 규모, 질의 방식, 보안과 운영 환경에 따라 Snowflake, 관계형·그래프 저장소, 검색 서비스와 API를 조합해 구성합니다.</p>
+    <div class="section-label">Knowledge Architecture</div>
+    <h2 class="section-title">업무의 의미와 판단 기준을 AI 설계에 반영합니다</h2>
+    <p class="section-desc">같은 ‘매출’도 조직과 보고 목적에 따라 계산 기준이 다릅니다. 제품과 고객을 구분하는 방식, 원가 배부와 예외 처리도 기업마다 다릅니다. 이러한 차이를 명확히 하고, AI가 분석에 사용할 기준으로 구현하는 것이 Knowledge Engineering입니다.</p>
     <div class="grid-2">
-      <div class="card animate"><h3>Knowledge Model</h3><p>Ontology Schema, 개체와 관계, Business Rules와 Provenance Model을 구현 제품과 분리해 정의합니다.</p></div>
-      <div class="card animate delay-1"><h3>Build &amp; Validation Pipeline</h3><p>원천 수집, LLM 추출, Entity Resolution, 규칙·근거 검증과 승인된 Knowledge 반영 절차를 자동화 가능한 파이프라인으로 구성합니다.</p></div>
-      <div class="card animate"><h3>Knowledge Store</h3><p>테이블과 관계형 저장소, Graph Database, 검색 인덱스 중 데이터 형태와 관계 탐색, 성능 요건에 필요한 저장 구조를 선택합니다.</p></div>
-      <div class="card animate delay-1"><h3>Search &amp; Reasoning Services</h3><p>Keyword·Vector·Graph 검색과 Query, API를 조합해 RAG와 Agent가 필요한 Knowledge와 근거에 접근하도록 합니다.</p></div>
-      <div class="card animate"><h3>Security &amp; Governance</h3><p>원천 데이터의 접근권한을 유지하고 Knowledge의 권한, 출처, 승인 상태, 사용 이력과 변경 추적 기준을 적용합니다.</p></div>
-      <div class="card animate delay-1"><h3>Deployment &amp; Operations</h3><p>Snowflake·Cloud·On-Premise·Hybrid 환경에 맞춰 구성하고 모델과 Schema, Pipeline과 Service의 배포·변경 단위를 관리합니다.</p></div>
+      <div class="card animate"><h3>업무 용어와 관계</h3><p>판매처와 최종 고객을 구분하지 않으면 고객별 실적의 의미도 달라집니다. Ontology에 각 개념의 정의와 관계를 명시하고 원천 데이터와 대응시킵니다. 여러 시스템이 같은 의미를 공유하거나 관계에서 새로운 사실을 추론해야 할 때 RDF·OWL을 활용할 수 있습니다.</p></div>
+      <div class="card animate delay-1"><h3>데이터 누락과 규칙 위반</h3><p>원가가 누락된 제품을 수익성이 높은 제품으로 해석해서는 안 됩니다. 필수값, 허용 관계, 값의 범위를 검사하고 문제가 있는 항목을 분리합니다. RDF 그래프는 SHACL로, 테이블은 SQL 검사와 지원되는 데이터베이스 제약으로 검증할 수 있습니다.</p></div>
+      <div class="card animate"><h3>지표의 계산과 집계</h3><p>매출에 반품을 언제 반영할지, 공통비를 어떤 기준으로 배부할지가 수치의 의미를 결정합니다. Semantic Model에 계산식·집계 단위·기간·조인 기준을 명시하고 Semantic View나 승인된 SQL에 반영합니다. 계산 결과는 기준 보고서나 검증 데이터와 대조합니다.</p></div>
+      <div class="card animate delay-1"><h3>분석에 필요한 근거</h3><p>규정이 개정되면 유사한 문서를 찾는 것만으로는 부족합니다. Knowledge Service는 적용 시점과 승인 상태, 조회 권한을 확인해 분석에 쓸 근거를 제공합니다. 자료의 성격에 따라 Keyword·Vector 검색, SQL, Graph 질의를 조합하고 출처와 버전을 함께 남깁니다.</p></div>
+      <div class="card animate"><h3>분석과 실행의 경계</h3><p>가격 변경안을 제시하는 것과 실제 가격을 바꾸는 것은 다른 권한입니다. Agent의 Tool 호출 전에 입력 Schema, 업무 조건과 승인 여부를 코드로 확인합니다. 데이터 변경과 외부 전송에는 중복 실행 방지, 재시도 기준과 감사 기록이 필요합니다.</p></div>
+      <div class="card animate delay-1"><h3>기준 변경의 영향</h3><p>원가 배부 기준 하나가 바뀌어도 지표, 보고서와 Agent의 설명이 함께 달라질 수 있습니다. Knowledge·규칙·Skill·조회 서비스의 버전과 의존 관계를 추적하고, 영향을 받는 분석을 다시 테스트합니다. 배포 단위와 이전 버전으로 복구할 범위도 이 관계를 기준으로 정합니다.</p></div>
     </div>
-    <div class="note"><strong>기술 선택 원칙</strong> — Knowledge Graph는 개체와 관계, 규칙과 근거를 표현하는 논리 구조입니다. Graph Database는 복잡한 관계 탐색과 규모, 성능 요건이 있을 때 선택하며 모든 Knowledge 구축에 필수적인 제품은 아닙니다.</div>
-    <div class="note"><a href="/ko/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a>에서는 고객 환경과 보안·운영 조건을 기준으로 저장소와 플랫폼, 배포 구조를 비교합니다.</div>
+    <p class="note"><strong>고객 환경에 맞는 구성</strong> — 기존 데이터·검색 서비스를 활용하며 관계 탐색과 추론 요건에 따라 Graph Database나 OWL 엔진을 선택합니다. 전용 Knowledge Graph 제품 도입을 전제로 하지 않습니다. 구체적인 기술 구성은 <a href="/ko/services/platform-assessment.html">아키텍처 검토</a>에서 정합니다.</p>
+  </div>
+</section>
+
+<section class="bg-alt" id="implementation-example">
+  <div class="container">
+    <div class="section-label">Design Example · 수익성 분석</div>
+    <h2 class="section-title">수익성 하락의 원인을 설명하려면</h2>
+    <p class="section-desc">“어떤 제품의 수익성이 왜 하락했는가?”라는 질문에는 계산보다 먼저 정리할 기준이 있습니다. 아래는 이를 Knowledge와 분석 절차에 반영하는 설계 예시입니다.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>비교할 수익성의 기준</h3><p>매출총이익과 공헌이익은 답하는 질문이 다릅니다. 사용할 지표, 비교 기간, 비용 배부와 일회성 비용의 처리 기준을 정하고 제품·고객·거래 데이터에 대응시킵니다.</p></div>
+      <div class="card animate delay-1"><h3>분석에서 제외하거나 확인할 항목</h3><p>원가 누락, 코드 중복, 통화·단위 불일치를 먼저 확인합니다. 미확정 비용을 임의로 채워 계산하기보다, 분석 가능한 범위와 추가 확인이 필요한 항목을 구분해 제시합니다.</p></div>
+      <div class="card animate"><h3>원인별 변동의 계산</h3><p>가격·물량·제품 구성·원가의 영향을 검증된 SQL과 계산 모듈로 분석합니다. LLM은 분석 순서와 해석을 지원하고, 원인별 기여도 합계가 전체 변동과 일치하는지는 계산 코드로 확인합니다.</p></div>
+      <div class="card animate delay-1"><h3>결과 검토와 후속 조치</h3><p>분석 결과에는 적용 지표와 규칙 버전, 데이터 기준일, 가정과 예외를 남깁니다. 가격 조정이나 제품 구성 변경을 검토할 수 있도록 근거를 제시하되, 실제 변경은 해당 업무의 권한과 승인 절차에 따릅니다.</p></div>
+    </div>
+    <div class="note"><a href="/ko/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a> · <a href="/ko/services/agentops.html#evaluation-engineering">운영 평가와 변경 검증</a></div>
   </div>
 </section>
 
@@ -167,7 +183,7 @@
 <section class="bg-alt">
   <div class="container">
     <div class="section-label">Knowledge in Use</div>
-    <h2 class="section-title">구축한 Knowledge를 검색에만 두지 않고 업무에 적용합니다</h2>
+    <h2 class="section-title">업무 분석과 실행을 위한 Knowledge 활용</h2>
     <div class="grid-2">
       <div class="card animate"><h3>Knowledge Search &amp; RAG</h3><p>질문과 관련된 문서, 개념과 근거를 찾고 출처와 적용 범위를 확인할 수 있도록 제공합니다.</p></div>
       <div class="card animate delay-1"><h3>Agentic Analytics</h3><p>Agent가 분석할 지표와 확인 순서, 판단 조건과 예외, 결과에 제시할 근거로 Knowledge를 사용합니다.</p></div>
@@ -192,9 +208,9 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake 데이터 기반부터 Agentic Enterprise 구축과 운영까지 제공합니다.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/ko/services/snowflake/">Snowflake 서비스</a></li><li><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
-      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/ko/services/">Agentic Enterprise 서비스</a></li><li><a href="/ko/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>현업과 컨설팅 경험을 바탕으로 기업의 지식·데이터와 AI Application을 설계·구현합니다.</p></div>
+      <div class="footer-col"><h4>서비스</h4><ul><li><a href="/ko/services/">서비스 전체 보기</a></li><li><a href="/ko/services/platform-assessment.html">AI 전략·아키텍처</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/data-platform.html">데이터 플랫폼·엔지니어링</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li><li><a href="/ko/services/snowflake/">Snowflake Services</a></li></ul></div>
+      <div class="footer-col"><h4>Applications</h4><ul><li><a href="/ko/solutions/">Applications 전체 보기</a></li><li><a href="/ko/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a></li><li><a href="/ko/solutions/scm.html">SCM Applications</a></li></ul></div>
       <div class="footer-col"><h4>회사</h4><ul><li><a href="/ko/how-we-work.html">일하는 방식</a></li><li><a href="/ko/insights.html">Insights</a></li><li><a href="/ko/company.html">회사소개</a></li><li><a href="/ko/contact.html">문의하기</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/ko/privacy.html">개인정보처리방침</a></div></div>

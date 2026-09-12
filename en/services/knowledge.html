@@ -37,11 +37,29 @@
 <!-- ===== NAV ===== -->
 <nav class="site-nav" aria-label="Primary">
   <a href="/en/" class="logo">Nex <span>&amp;</span> Bridge</a>
-  <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
-  <ul class="nav-menu">
-    <li class="has-dropdown"><a href="/en/services/snowflake/">Snowflake</a><button class="submenu-toggle" type="button" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/snowflake/">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div></li>
-    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise</a><button class="submenu-toggle" type="button" aria-label="Open Agentic Enterprise menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a><a href="/en/services/knowledge.html" aria-current="page">Enterprise Knowledge Engineering</a><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></div></li>
+  <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-menu"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="primary-menu">
+    <li class="has-mega">
+      <a href="/en/services/">Services</a>
+      <button class="submenu-toggle" type="button" aria-label="Services submenu" aria-expanded="false" aria-controls="services-menu"><span class="chev"></span></button>
+      <div class="mega-menu" id="services-menu">
+        <div class="mega-overview"><a href="/en/services/" class="mega-featured">Explore All Services →</a></div>
+        <div class="mega-col"><div class="mega-col-title">Strategy &amp; Knowledge</div><a href="/en/services/platform-assessment.html">AI Strategy &amp; Architecture</a><a href="/en/services/knowledge.html" aria-current="page">Enterprise Knowledge Engineering</a></div>
+        <div class="mega-col"><div class="mega-col-title"><a href="/en/services/data-platform.html">Data Platforms &amp; Engineering</a></div><a href="/en/services/snowflake/" class="mega-featured">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+        <div class="mega-col"><div class="mega-col-title">Applications &amp; Operations</div><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="/en/solutions/">Applications</a>
+      <button class="submenu-toggle" type="button" aria-label="Applications submenu" aria-expanded="false" aria-controls="applications-menu"><span class="chev"></span></button>
+      <div class="mega-menu mega-applications" id="applications-menu">
+        <a href="/en/solutions/" class="mega-featured">Explore Applications →</a>
+        <a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a>
+        <a href="/en/solutions/scm.html">SCM Applications</a>
+      </div>
+    </li>
     <li><a href="/en/how-we-work.html">How We Work</a></li>
+    <li><a href="/en/insights.html">Insights</a></li>
     <li><a href="/en/company.html">Company</a></li>
     <li><a href="/en/contact.html" class="nav-cta">Contact</a></li>
     <li><div class="lang-switch"><a href="/ko/services/knowledge.html">KO</a><a href="/en/services/knowledge.html" aria-current="true">EN</a></div></li>
@@ -122,26 +140,41 @@
       <div class="card animate"><h3>Rule &amp; Quality Validation</h3><p>Check identifiers, required attributes, permitted relationships, and business rules, and use representative questions to validate the structure and content.</p></div>
       <div class="card animate delay-1"><h3>Approval, Versioning &amp; Change</h3><p>Separate approved knowledge from unresolved items and manage approval status, versioning, change and retirement history, and impact on agents and applications.</p></div>
     </div>
-    <div class="note">Ontology schemas, extraction and validation guidance, reusable workflows and skills, business rules, representative questions, and test cases can be managed as engineering assets. Git-based version control is one possible implementation.</div>
+    <div class="note"><strong>Checking extracted knowledge</strong> — Cross-model review helps reveal omissions and differences in interpretation. The evidence remains the source material and business criteria, not agreement between models. Unresolved claims are kept separate from approved knowledge.</div>
+    <div class="note"><strong>Methods and executable skills</strong> — A revised document should not require the extraction process to be designed again from scratch. Skills capture the procedure, input and output schemas, tools, and exception handling alongside validation code and test cases. Permissions and stopping conditions are enforced in code. Knowledge and skill changes follow the client's development and approval process, using Git or another suitable versioning system.</div>
   </div>
 </section>
 
 <!-- ===== §6 PRODUCT-INDEPENDENT ARCHITECTURE ===== -->
 <section id="product-independent-architecture">
   <div class="container">
-    <div class="section-label">Product-Independent Architecture</div>
-    <h2 class="section-title">Separate the knowledge model from the technology used to implement it</h2>
-    <p class="section-desc">The ontology, business rules, provenance, and validation criteria are managed independently of the products used to implement them. Storage, search, relationship traversal, and service components are selected according to data volume, query patterns, security requirements, and the operating environment.</p>
+    <div class="section-label">Knowledge Architecture</div>
+    <h2 class="section-title" id="technical-architecture" style="scroll-margin-top:112px">Business meaning belongs in the AI design</h2>
+    <p class="section-desc">Even “revenue” can mean different things across departments and reports. Customer definitions, cost allocations, and exceptions also vary by business. Knowledge engineering makes those distinctions explicit and implements the criteria an AI system needs to use.</p>
     <div class="grid-2">
-      <div class="card animate"><h3>Knowledge Model</h3><p>Define ontology schemas, entities and relationships, business rules, and the provenance model independently of the implementation technology.</p></div>
-      <div class="card animate delay-1"><h3>Build &amp; Validation Pipeline</h3><p>Design an automation-ready pipeline for source collection, LLM extraction, entity resolution, rule and evidence validation, and publication of approved knowledge to the knowledge store.</p></div>
-      <div class="card animate"><h3>Knowledge Store</h3><p>Select tables, relational stores, graph databases, and search indexes according to the data structure, relationship-traversal needs, and performance requirements.</p></div>
-      <div class="card animate delay-1"><h3>Search &amp; Reasoning Services</h3><p>Combine keyword, vector, and graph search with query services and APIs so RAG systems and agents can access the required knowledge, relationships, rules, and evidence.</p></div>
-      <div class="card animate"><h3>Security &amp; Governance</h3><p>Preserve source-data access controls and implement controls for permissions, provenance, approval status, usage history, and change tracking in the knowledge layer.</p></div>
-      <div class="card animate delay-1"><h3>Deployment &amp; Operations</h3><p>Configure the architecture for Snowflake, cloud, on-premises, or hybrid environments and define release and change boundaries for models, schemas, pipelines, and services.</p></div>
+      <div class="card animate"><h3>Business terms and relationships</h3><p>A sold-to account and an end customer answer different questions about sales performance. An ontology defines those concepts and their relationships, mapped to source data. RDF and OWL are options where systems need a shared vocabulary or formal inference across relationships.</p></div>
+      <div class="card animate delay-1"><h3>Missing data and invalid records</h3><p>A product with no recorded cost must not appear to be highly profitable. Checks for required values, permitted relationships, and ranges identify records that need attention. RDF graphs can be validated with SHACL; tables can use SQL checks and supported database constraints.</p></div>
+      <div class="card animate"><h3>Metric calculations and aggregation</h3><p>When returns enter revenue, or how overhead is allocated, changes what a number means. A semantic model captures formulas, reporting grain, periods, and join rules for implementation in semantic views or approved SQL. Results are reconciled to reference reports or test data.</p></div>
+      <div class="card animate delay-1"><h3>Evidence relevant to the analysis</h3><p>Once a policy changes, finding a similar document is not enough. A knowledge service checks effective dates, approval status, and access before providing evidence. Keyword and vector search, SQL, and graph queries are selected to suit the material, with source and version information retained.</p></div>
+      <div class="card animate"><h3>The boundary between analysis and action</h3><p>Proposing a price change and applying it require different permissions. Code checks tool inputs, business conditions, and approvals before execution. Writes and external transmissions need duplicate-action prevention, retry rules, and audit records.</p></div>
+      <div class="card animate delay-1"><h3>The impact of a changed definition</h3><p>One revised allocation rule can affect metrics, reports, and an agent's explanation. Version and dependency records identify the knowledge, rules, skills, and query services involved. Affected analyses are retested, with release and rollback scope based on those dependencies.</p></div>
     </div>
-    <div class="note">A Knowledge Graph is the logical structure used to represent entities, relationships, rules, and evidence. A graph database is an implementation option when relationship traversal, scale, or performance requirements call for one; it is not required for every knowledge system.</div>
-    <div class="note"><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a> compares storage, platform, and deployment options against the client’s security and operating requirements.</div>
+    <p class="note"><strong>Architecture fitted to the client</strong> — Existing data and search services can be used, with graph databases or OWL reasoners selected for specific traversal and inference requirements. A dedicated Knowledge Graph product is not a prerequisite. The technology configuration is determined during <a href="/en/services/platform-assessment.html">architecture assessment</a>.</p>
+  </div>
+</section>
+
+<section class="bg-alt" id="implementation-example">
+  <div class="container">
+    <div class="section-label">Design Example · Profitability Analysis</div>
+    <h2 class="section-title">What explains a decline in profitability?</h2>
+    <p class="section-desc">The question “Which products have become less profitable, and why?” requires more than a calculation. This design example shows how the underlying definitions shape both the knowledge model and the analysis.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>Choose the right basis for comparison</h3><p>Gross profit and contribution margin answer different questions. Specify the metric, comparison period, allocation rules, and treatment of one-off costs, then map those definitions to product, customer, and transaction data.</p></div>
+      <div class="card animate delay-1"><h3>Identify gaps before calculating</h3><p>Check missing costs, duplicate codes, and currency or unit mismatches. Rather than fill unresolved costs with silent assumptions, distinguish what can be analyzed from what needs further investigation.</p></div>
+      <div class="card animate"><h3>Calculate the drivers of change</h3><p>Use tested SQL and calculation modules to assess price, volume, mix, and cost effects. The LLM supports analytical sequencing and interpretation; code checks that individual contributions reconcile to the total variance.</p></div>
+      <div class="card animate delay-1"><h3>Support review and follow-up</h3><p>Keep metric and rule versions, the data cut-off, assumptions, and exceptions with the result. Provide evidence for a pricing or portfolio review, while actual changes remain subject to the relevant permissions and approvals.</p></div>
+    </div>
+    <div class="note"><a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a> · <a href="/en/services/agentops.html#evaluation-engineering">Evaluation and release controls</a></div>
   </div>
 </section>
 
@@ -175,12 +208,12 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, Agentic Enterprise services, and managed operations.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/snowflake/">Snowflake Services</a></li><li><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
-      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a></li><li><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></li><li><a href="/en/services/knowledge.html" aria-current="page">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Business-led consulting and hands-on engineering for enterprise knowledge, data, and AI applications.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="/en/services/">All Services</a></li><li><a href="/en/services/platform-assessment.html">AI Strategy &amp; Architecture</a></li><li><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/data-platform.html">Data Platforms &amp; Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></li><li><a href="/en/services/snowflake/">Snowflake Services</a></li></ul></div>
+      <div class="footer-col"><h4>Applications</h4><ul><li><a href="/en/solutions/">All Applications</a></li><li><a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a></li><li><a href="/en/solutions/scm.html">SCM Applications</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/insights.html">Insights</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy</a></div></div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy Policy</a></div></div>
   </div>
 </footer>
 <script src="/assets/js/site.js"></script>

@@ -50,13 +50,31 @@ table.tbl.contact-details td{overflow-wrap:anywhere}
 <!-- ===== NAV ===== -->
 <nav class="site-nav" aria-label="Primary">
   <a href="/en/" class="logo">Nex <span>&amp;</span> Bridge</a>
-  <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
-  <ul class="nav-menu">
-    <li class="has-dropdown"><a href="/en/services/snowflake/">Snowflake</a><button class="submenu-toggle" type="button" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/snowflake/">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div></li>
-    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise</a><button class="submenu-toggle" type="button" aria-label="Open Agentic Enterprise menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></div></li>
+  <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-menu"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="primary-menu">
+    <li class="has-mega">
+      <a href="/en/services/">Services</a>
+      <button class="submenu-toggle" type="button" aria-label="Services submenu" aria-expanded="false" aria-controls="services-menu"><span class="chev"></span></button>
+      <div class="mega-menu" id="services-menu">
+        <div class="mega-overview"><a href="/en/services/" class="mega-featured">Explore All Services →</a></div>
+        <div class="mega-col"><div class="mega-col-title">Strategy &amp; Knowledge</div><a href="/en/services/platform-assessment.html">AI Strategy &amp; Architecture</a><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></div>
+        <div class="mega-col"><div class="mega-col-title"><a href="/en/services/data-platform.html">Data Platforms &amp; Engineering</a></div><a href="/en/services/snowflake/" class="mega-featured">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+        <div class="mega-col"><div class="mega-col-title">Applications &amp; Operations</div><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="/en/solutions/">Applications</a>
+      <button class="submenu-toggle" type="button" aria-label="Applications submenu" aria-expanded="false" aria-controls="applications-menu"><span class="chev"></span></button>
+      <div class="mega-menu mega-applications" id="applications-menu">
+        <a href="/en/solutions/" class="mega-featured">Explore Applications →</a>
+        <a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a>
+        <a href="/en/solutions/scm.html">SCM Applications</a>
+      </div>
+    </li>
     <li><a href="/en/how-we-work.html">How We Work</a></li>
+    <li><a href="/en/insights.html">Insights</a></li>
     <li><a href="/en/company.html">Company</a></li>
-    <li><a href="/en/contact.html" class="nav-cta" aria-current="page">Contact</a></li>
+    <li><a href="/en/contact.html" aria-current="page" class="nav-cta">Contact</a></li>
     <li><div class="lang-switch"><a href="/ko/contact.html">KO</a><a href="/en/contact.html" aria-current="true">EN</a></div></li>
   </ul>
 </nav>
@@ -129,7 +147,7 @@ table.tbl.contact-details td{overflow-wrap:anywhere}
           <option>Data Engineering &amp; Integration</option>
           <option>FinOps &amp; Managed Services</option>
           <option>Agentic Enterprise Services</option>
-          <option>AI Platform Assessment &amp; Architecture</option>
+          <option>AI Strategy &amp; Architecture</option>
           <option>Enterprise Knowledge Engineering</option>
           <option>Agentic Analytics &amp; Applications</option>
           <option>AgentOps &amp; Managed Operations</option>
@@ -182,12 +200,12 @@ table.tbl.contact-details td{overflow-wrap:anywhere}
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, Agentic Enterprise services, and managed operations.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/snowflake/">Snowflake Services</a></li><li><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
-      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a></li><li><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></li><li><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html" aria-current="page">Contact</a></li></ul></div>
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Business-led consulting and hands-on engineering for enterprise knowledge, data, and AI applications.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="/en/services/">All Services</a></li><li><a href="/en/services/platform-assessment.html">AI Strategy &amp; Architecture</a></li><li><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/data-platform.html">Data Platforms &amp; Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></li><li><a href="/en/services/snowflake/">Snowflake Services</a></li></ul></div>
+      <div class="footer-col"><h4>Applications</h4><ul><li><a href="/en/solutions/">All Applications</a></li><li><a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a></li><li><a href="/en/solutions/scm.html">SCM Applications</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/insights.html">Insights</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy</a></div></div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy Policy</a></div></div>
   </div>
 </footer>
 <script src="/assets/js/site.js"></script>
@@ -209,8 +227,8 @@ table.tbl.contact-details td{overflow-wrap:anywhere}
     'sap-migration': 'SAP to Snowflake Migration',
     'data-engineering': 'Data Engineering & Integration',
     'agentic-enterprise': 'Agentic Enterprise Services',
-    blueprint: 'AI Platform Assessment & Architecture',
-    'platform-assessment': 'AI Platform Assessment & Architecture',
+    blueprint: 'AI Strategy & Architecture',
+    'platform-assessment': 'AI Strategy & Architecture',
     knowledge: 'Enterprise Knowledge Engineering',
     solution: 'Agentic Analytics & Applications',
     applications: 'Agentic Analytics & Applications',

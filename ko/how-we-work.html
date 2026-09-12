@@ -34,33 +34,34 @@
 <body>
 
 <!-- ===== NAV ===== -->
-<nav class="site-nav">
+<nav class="site-nav" aria-label="주 메뉴">
   <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
-  <button class="nav-burger" aria-label="메뉴"><span></span><span></span><span></span></button>
-  <ul class="nav-menu">
+  <button class="nav-burger" type="button" aria-label="메뉴" aria-expanded="false" aria-controls="primary-menu"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="primary-menu">
     <li class="has-mega">
-      <a href="/ko/services/snowflake/">Snowflake</a>
-      <button class="submenu-toggle" aria-label="Snowflake 하위메뉴 열기"><span class="chev"></span></button>
-      <div class="mega-menu">
-        <div class="mega-col"><a class="mega-featured" href="/ko/services/snowflake/">Snowflake 서비스</a></div>
-        <div class="mega-col"><div class="mega-col-title">Build &amp; Migrate</div><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></div>
-        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+      <a href="/ko/services/">서비스</a>
+      <button class="submenu-toggle" type="button" aria-label="서비스 하위메뉴" aria-expanded="false" aria-controls="services-menu"><span class="chev"></span></button>
+      <div class="mega-menu" id="services-menu">
+        <div class="mega-overview"><a href="/ko/services/" class="mega-featured">서비스 전체 보기 →</a></div>
+        <div class="mega-col"><div class="mega-col-title">전략·지식</div><a href="/ko/services/platform-assessment.html">AI 전략·아키텍처</a><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></div>
+        <div class="mega-col"><div class="mega-col-title"><a href="/ko/services/data-platform.html">데이터 플랫폼·엔지니어링</a></div><a href="/ko/services/snowflake/" class="mega-featured">Snowflake Services</a><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+        <div class="mega-col"><div class="mega-col-title">Application·운영</div><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
       </div>
     </li>
     <li class="has-mega">
-      <a href="/ko/services/">Agentic Enterprise</a>
-      <button class="submenu-toggle" aria-label="Agentic Enterprise 하위메뉴 열기"><span class="chev"></span></button>
-      <div class="mega-menu">
-        <div class="mega-col"><a class="mega-featured" href="/ko/services/">Agentic Enterprise 서비스</a><div class="mega-col-title">Plan &amp; Design</div><a href="/ko/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></div>
-        <div class="mega-col"><div class="mega-col-title">Build</div><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></div>
-        <div class="mega-col"><div class="mega-col-title">Operate</div><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      <a href="/ko/solutions/">Applications</a>
+      <button class="submenu-toggle" type="button" aria-label="Applications 하위메뉴" aria-expanded="false" aria-controls="applications-menu"><span class="chev"></span></button>
+      <div class="mega-menu mega-applications" id="applications-menu">
+        <a href="/ko/solutions/" class="mega-featured">Applications 전체 보기 →</a>
+        <a href="/ko/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a>
+        <a href="/ko/solutions/scm.html">SCM Applications</a>
       </div>
     </li>
-    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li><a href="/ko/how-we-work.html" aria-current="page">일하는 방식</a></li>
     <li><a href="/ko/insights.html">Insights</a></li>
     <li><a href="/ko/company.html">회사소개</a></li>
     <li><a href="/ko/contact.html" class="nav-cta">문의하기</a></li>
-    <li><div class="lang-switch"><a href="/ko/" aria-current="true">KO</a><a href="/en/">EN</a></div></li>
+    <li><div class="lang-switch"><a href="/ko/how-we-work.html" aria-current="true">KO</a><a href="/en/how-we-work.html">EN</a></div></li>
   </ul>
 </nav>
 
@@ -69,8 +70,22 @@
   <div class="hero-inner">
     <div class="hero-label">AI-Native Consulting &amp; Delivery</div>
     <h1>경험에서 문제 가설을 세우고,<br><em>업무와 데이터</em>로 검증합니다</h1>
-    <p class="hero-sub">주어진 요건을 정리하는 데서 그치지 않습니다. 현업과 유사 과제의 경험을 바탕으로 실제 해결해야 할 문제를 정의하고, 고객의 업무 기준과 데이터로 검증합니다. 검증된 문제는 실행 가능한 해결안으로 설계·구축합니다.</p>
+    <p class="hero-sub">현업과 유사 과제의 경험에서 문제의 원인과 영향을 가설로 제시합니다. 고객의 업무 기준과 데이터로 가설을 검증하고, 해결 방향을 설계와 구현에 반영합니다.</p>
     <div class="hero-btns"><a href="#principles" class="btn btn-primary">수행 원칙 보기 ↓</a><a href="/ko/contact.html" class="btn btn-ghost">프로젝트 문의하기 →</a></div>
+  </div>
+</section>
+
+<section class="bg-alt" id="delivery-perspective">
+  <div class="container">
+    <div class="section-label">AI Engineering · Delivery Perspective</div>
+    <h2 class="section-title">AI 시대의 컨설팅과 엔지니어링</h2>
+    <p class="section-desc">AI로 코드와 분석 결과를 만드는 속도는 빨라졌습니다. 그러나 무엇을 바꿀지, 어떤 업무 기준을 적용할지, 결과를 어디까지 신뢰할지는 여전히 풀어야 할 문제입니다. 현업 경험과 직접 구현을 함께 중시하는 이유입니다.</p>
+    <div class="grid-3">
+      <div class="card animate"><h3>문제를 정의한 사람이 구현까지</h3><p>업무의 예외와 판단 배경은 요구사항 목록만으로 충분히 전달되기 어렵습니다. 넥스앤브릿지는 문제와 해결 방향을 구체화한 컨설턴트가 구현·검증까지 수행하고 전문 엔지니어와 협업합니다.</p></div>
+      <div class="card animate delay-1"><h3>업무 기준은 명시적인 구조로</h3><p>문장을 이해하는 능력과 기업의 기준에 맞게 처리하는 능력은 다릅니다. LLM으로 문서의 개념과 규칙을 추출하되, 업무 의미는 Ontology에, 계산 기준은 Semantic Model에 담습니다. 데이터 제약과 실행 권한은 별도 코드로 검증합니다.</p></div>
+      <div class="card animate delay-2"><h3>개선 여부는 실제 결과로</h3><p>같은 질문을 다시 실행해 더 나은 답을 얻는 것과 시스템을 개선하는 것은 다릅니다. 오류가 지식, 검색, 계산 중 어디에서 발생했는지 확인하고 해당 부분을 수정해야 합니다. 변경 전후의 평가를 개발 절차에 포함해 수정 효과를 확인합니다.</p></div>
+    </div>
+    <p class="note"><a href="/ko/services/knowledge.html#technical-architecture">Knowledge 설계와 구현</a> · <a href="/ko/services/agentops.html#evaluation-engineering">Agent 평가와 개선</a></p>
   </div>
 </section>
 
@@ -100,7 +115,7 @@
       <div class="card animate"><h3>Problem Hypothesis</h3><p>유사 과제와 현업 경험을 바탕으로 문제의 원인과 업무 영향에 대한 가설을 세웁니다.</p></div>
       <div class="card animate delay-1"><h3>Business &amp; Decision Context</h3><p>업무 절차와 판단 기준, 제약 조건, 예외와 승인 구조를 확인합니다.</p></div>
       <div class="card animate"><h3>Data &amp; Evidence</h3><p>인터뷰와 문서, 실제 데이터를 통해 가설을 검증하고 미확인 사항을 구분합니다.</p></div>
-      <div class="card animate delay-1"><h3>Solution Direction</h3><p>검증된 문제를 기준으로 프로세스·데이터·시스템·AI의 개선 방향과 우선순위를 정합니다.</p></div>
+      <div class="card animate delay-1"><h3>Solution Direction</h3><p>검증된 문제를 기준으로 개선 방향과 우선순위를 정합니다. 분석 소요시간, 수작업과 오류 등 대상 업무의 기준선, 목표와 측정 조건을 고객과 합의합니다.</p></div>
     </div>
   </div>
 </section>
@@ -109,8 +124,8 @@
 <section id="project-knowledge">
   <div class="container">
     <div class="section-label">Project Knowledge</div>
-    <h2 class="section-title">프로젝트에서 확인한 지식과 결정을 구조화해 관리합니다</h2>
-    <p class="section-desc">회의와 문서, 분석과 설계 과정에서 확인된 내용을 일회성 산출물에만 남기지 않습니다. 업무 정의와 데이터 의미, 판단 기준과 예외, 결정과 미확인 사항을 Project Knowledge로 관리합니다.</p>
+    <h2 class="section-title">프로젝트 지식과 의사결정의 체계적 관리</h2>
+    <p class="section-desc">회의·분석·설계 과정에서 확인한 업무 정의, 데이터의 의미, 판단 기준과 예외를 Project Knowledge로 관리합니다. 주요 결정과 미확인 사항을 구분하고 후속 설계와 검증에 활용합니다.</p>
     <div class="grid-2">
       <div class="card animate"><h3>Source &amp; Context</h3><p>문서와 데이터 정의, 인터뷰와 분석 결과에 출처와 적용 범위를 기록합니다.</p></div>
       <div class="card animate delay-1"><h3>Working Knowledge</h3><p>프로젝트 중 확인한 용어와 관계, 업무 규칙, 데이터 의미와 가정을 구조화합니다.</p></div>
@@ -199,7 +214,7 @@
         <div class="card animate delay-1">
           <div class="card-num">05 CONTROLLED ROLLOUT</div>
           <h3>검증 범위 적용</h3>
-          <p>보안과 운영 기준을 통과한 업무 단위부터 실제 환경에 적용하고 결과를 관찰합니다.</p>
+          <p>보안과 운영 기준을 통과한 업무 단위부터 적용합니다. 사용 절차와 예외 대응을 현업과 확인하고, 사용률·수정 소요·업무 처리시간을 관찰합니다.</p>
         </div>
         <div class="card animate delay-2">
           <div class="card-num">06 FEEDBACK &amp; IMPROVE</div>
@@ -209,8 +224,8 @@
       </div>
 
       <div class="note mt-2"><strong>반복 구조</strong><br>업무 이해 → Work Plan·평가 기준 → 실행·구축 → 결과 검증 → 검증 범위 적용 → 피드백·개선 ↺</div>
+      <div class="note mt-1"><strong>현업 적용과 성과 확인</strong> — 기술 평가와 업무 효과는 별도로 확인합니다. 배포 전에는 정합성·권한·실패 대응을, 적용 후에는 합의한 업무 지표와 사용상의 문제를 검토합니다. 측정 기간과 데이터 조건, 외부 요인을 기록하고 개선 효과를 해석합니다.</div>
       <div class="note mt-1">공통 아키텍처와 보안, 운영 승인 Gate는 별도로 유지합니다. 반복 단위는 업무 기능이며 플랫폼 통제 기준은 공통으로 적용합니다.</div>
-      <div class="note mt-1"><strong>Reference Principles</strong><br>단일 제품이나 프레임워크에 종속된 절차가 아닙니다. <a href="https://openai.com/index/evals-drive-next-chapter-of-ai/" target="_blank" rel="noopener noreferrer">Contextual Evals</a>, <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Agent Loop와 Evaluator–Optimizer</a>, <a href="https://docs.aws.amazon.com/wellarchitected/latest/agentic-ai-lens/operational-excellence-design-principles.html" target="_blank" rel="noopener noreferrer">운영 Gate와 점진적 적용</a> 원칙을 기업 업무 프로젝트에 맞게 구성합니다.</div>
   </div>
 </section>
 
@@ -218,7 +233,7 @@
 <section class="bg-alt" id="evidence-governance">
   <div class="container">
     <div class="section-label">Evidence &amp; Governance</div>
-    <h2 class="section-title">결과와 함께 근거와 변경 이력을 관리합니다</h2>
+    <h2 class="section-title">결과의 근거와 변경 이력을 추적합니다</h2>
     <p class="section-desc">AI가 만들었는지 사람이 작성했는지만으로 결과를 판단하지 않습니다. 작성·검토 주체를 기록하고, 근거와 검증, 승인 과정을 함께 관리합니다.</p>
     <div class="grid-2">
       <div class="card animate"><h3>Evidence</h3><p>주요 주장과 업무 규칙, 데이터 정의에 원문과 데이터 근거를 남깁니다.</p></div>
@@ -230,7 +245,7 @@
 </section>
 
 <!-- ===== §8 APPLIED METHODOLOGY ===== -->
-<section>
+<section id="koaa">
   <div class="container container-narrow">
     <div class="section-label">Applied Methodology</div>
     <h2 class="section-title">KOAA</h2>
@@ -251,9 +266,9 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake 데이터 기반부터 Agentic Enterprise 구축과 운영까지 제공합니다.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/ko/services/snowflake/">Snowflake 서비스</a></li><li><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
-      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/ko/services/">Agentic Enterprise 서비스</a></li><li><a href="/ko/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>현업과 컨설팅 경험을 바탕으로 기업의 지식·데이터와 AI Application을 설계·구현합니다.</p></div>
+      <div class="footer-col"><h4>서비스</h4><ul><li><a href="/ko/services/">서비스 전체 보기</a></li><li><a href="/ko/services/platform-assessment.html">AI 전략·아키텍처</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/data-platform.html">데이터 플랫폼·엔지니어링</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li><li><a href="/ko/services/snowflake/">Snowflake Services</a></li></ul></div>
+      <div class="footer-col"><h4>Applications</h4><ul><li><a href="/ko/solutions/">Applications 전체 보기</a></li><li><a href="/ko/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a></li><li><a href="/ko/solutions/scm.html">SCM Applications</a></li></ul></div>
       <div class="footer-col"><h4>회사</h4><ul><li><a href="/ko/how-we-work.html">일하는 방식</a></li><li><a href="/ko/insights.html">Insights</a></li><li><a href="/ko/company.html">회사소개</a></li><li><a href="/ko/contact.html">문의하기</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/ko/privacy.html">개인정보처리방침</a></div></div>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nex &amp; Bridge | Snowflake Services and Agentic Enterprise</title>
-<meta name="description" content="Nex &amp; Bridge designs Snowflake data foundations and develops AI agents and business applications for enterprise analysis and decision-making.">
+<title>Nex &amp; Bridge | Business-Led AI Transformation</title>
+<meta name="description" content="Business-led AI strategy, knowledge engineering, data platforms, and agentic applications, delivered by practitioners with operating, consulting, and engineering experience.">
 <link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/">
 <link rel="alternate" hreflang="en" href="https://nexenbridge.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://nexenbridge.com/">
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nex &amp; Bridge">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Nex &amp; Bridge | Snowflake Services and Agentic Enterprise">
-<meta property="og:description" content="Snowflake data foundations, AI agents, and business applications for enterprise analysis and decision-making.">
+<meta property="og:title" content="Nex &amp; Bridge | Business-Led AI Transformation">
+<meta property="og:description" content="Business-led AI strategy, knowledge engineering, data platforms, and agentic applications, delivered by practitioners with operating, consulting, and engineering experience.">
 <meta property="og:url" content="https://nexenbridge.com/en/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nex &amp; Bridge | Snowflake Services and Agentic Enterprise">
-<meta name="twitter:description" content="Snowflake data foundations, AI agents, and business applications for enterprise analysis and decision-making.">
+<meta name="twitter:title" content="Nex &amp; Bridge | Business-Led AI Transformation">
+<meta name="twitter:description" content="Business-led AI strategy, knowledge engineering, data platforms, and agentic applications, delivered by practitioners with operating, consulting, and engineering experience.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
@@ -26,12 +26,30 @@
 
 <!-- ===== NAV ===== -->
 <nav class="site-nav" aria-label="Primary">
-  <a href="/en/" class="logo">Nex <span>&amp;</span> Bridge</a>
-  <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
-  <ul class="nav-menu">
-    <li class="has-dropdown"><a href="/en/services/snowflake/">Snowflake</a><button class="submenu-toggle" type="button" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/snowflake/">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div></li>
-    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise</a><button class="submenu-toggle" type="button" aria-label="Open Agentic Enterprise menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></div></li>
+  <a href="/en/" aria-current="page" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-menu"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="primary-menu">
+    <li class="has-mega">
+      <a href="/en/services/">Services</a>
+      <button class="submenu-toggle" type="button" aria-label="Services submenu" aria-expanded="false" aria-controls="services-menu"><span class="chev"></span></button>
+      <div class="mega-menu" id="services-menu">
+        <div class="mega-overview"><a href="/en/services/" class="mega-featured">Explore All Services →</a></div>
+        <div class="mega-col"><div class="mega-col-title">Strategy &amp; Knowledge</div><a href="/en/services/platform-assessment.html">AI Strategy &amp; Architecture</a><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></div>
+        <div class="mega-col"><div class="mega-col-title"><a href="/en/services/data-platform.html">Data Platforms &amp; Engineering</a></div><a href="/en/services/snowflake/" class="mega-featured">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+        <div class="mega-col"><div class="mega-col-title">Applications &amp; Operations</div><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="/en/solutions/">Applications</a>
+      <button class="submenu-toggle" type="button" aria-label="Applications submenu" aria-expanded="false" aria-controls="applications-menu"><span class="chev"></span></button>
+      <div class="mega-menu mega-applications" id="applications-menu">
+        <a href="/en/solutions/" class="mega-featured">Explore Applications →</a>
+        <a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a>
+        <a href="/en/solutions/scm.html">SCM Applications</a>
+      </div>
+    </li>
     <li><a href="/en/how-we-work.html">How We Work</a></li>
+    <li><a href="/en/insights.html">Insights</a></li>
     <li><a href="/en/company.html">Company</a></li>
     <li><a href="/en/contact.html" class="nav-cta">Contact</a></li>
     <li><div class="lang-switch"><a href="/ko/">KO</a><a href="/en/" aria-current="true">EN</a></div></li>
@@ -39,107 +57,90 @@
 </nav>
 
 <main id="main-content">
-<!-- ===== §1 HERO ===== -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-label">Snowflake · Agentic Enterprise</div>
-    <h1>Build an Agentic Enterprise<br>around <em>how your business decides.</em></h1>
-    <p class="hero-sub">We design Snowflake data environments and build AI agents and business applications for analysis, forecasting, and simulation. The starting point is the business rules, data, and approval points behind the decisions your teams make.</p>
-    <div class="hero-btns">
-      <a href="/en/services/#snowflake" class="btn btn-primary">Explore Snowflake Services →</a>
-      <a href="/en/services/#enterprise-ai" class="btn btn-ghost">Explore Agentic Enterprise Services</a>
-    </div>
+    <div class="hero-label">Business-led. Knowledge-powered.</div>
+    <h1>Build an Agentic Enterprise<br>around <em>your business knowledge.</em></h1>
+    <p class="hero-sub">We combine operating and consulting experience with hands-on engineering to define the problem and build AI agents and applications around your business knowledge and data.</p>
+    <div class="hero-btns"><a href="/en/services/" class="btn btn-primary">Explore Services →</a><a href="/en/how-we-work.html" class="btn btn-ghost">How We Work</a></div>
   </div>
 </section>
-
-<!-- ===== §2 WHAT WE DO ===== -->
-<section class="bg-alt">
+<section class="bg-alt" id="problem-framing">
   <div class="container">
-    <div class="section-label">What We Do</div>
-    <h2 class="section-title">Connect your data foundation to the decisions and workflows it supports</h2>
-    <p class="section-desc">We provide Snowflake services for governed enterprise data and Agentic Enterprise services for decision-focused AI agents and applications.</p>
-    <div class="grid-2">
-      <a href="/en/services/#snowflake" class="card card-featured card-link animate">
-        <div class="featured-tag">Snowflake</div>
-        <h3>Snowflake Services</h3>
-        <p>Bring SAP and other enterprise data into Snowflake, then establish the pipelines, quality controls, security, and operating practices required for analytics and AI.</p>
-        <span class="card-more">Explore Snowflake Services →</span>
-      </a>
-      <a href="/en/services/#enterprise-ai" class="card card-featured card-link animate delay-1">
-        <div class="featured-tag">Agentic Enterprise</div>
-        <h3>Agentic Enterprise Services</h3>
-        <p>Structure the knowledge and rules behind business decisions, then build AI agents and applications that analyze data, forecast outcomes, simulate alternatives, and support review.</p>
-        <span class="card-more">Explore Agentic Enterprise Services →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== §3 PROBLEM FRAMING ===== -->
-<section>
-  <div class="container">
-    <div class="section-label">How We Start</div>
-    <h2 class="section-title">Define the problem<br>before you build the solution</h2>
-    <p class="section-desc">We use operating and consulting experience to form a working hypothesis about root causes and business impact. We then test it against the client's business rules, stakeholder input, and data before shaping a solution across process, data, systems, and AI.</p>
+    <div class="section-label">How We Work</div>
+    <h2 class="section-title">Problem framing and AI implementation.<br>One delivery team.</h2>
+    <p class="section-desc">The consultants who define the problem and shape the solution also carry out implementation and verification. Business rules and exceptions are captured in explicit specifications and checked against the working application.</p>
     <div class="grid-3">
-      <div class="card animate"><div class="card-num">01 HYPOTHESIS</div><h3>Working Hypothesis</h3><p>Relevant operating and transformation experience informs an initial view of the causes and business impact.</p></div>
-      <div class="card animate delay-1"><div class="card-num">02 VALIDATION</div><h3>Business and Data Validation</h3><p>We test the hypothesis against business rules, stakeholder input, and actual data to establish priorities.</p></div>
-      <div class="card animate delay-2"><div class="card-num">03 DELIVERY</div><h3>Actionable Solution</h3><p>We translate the validated problem into changes to process, data, systems, and AI—and build what the work requires.</p></div>
+      <div class="card animate"><div class="card-num">01 PROBLEM</div><h3>Experience-Based Problem Framing</h3><p>Look beyond the initial request to identify underlying causes, constraints, and opportunities for improvement.</p></div>
+      <div class="card animate"><div class="card-num">02 KNOWLEDGE</div><h3>Explicit Business Logic</h3><p>Express concepts, calculations, decision criteria, and exceptions in specifications that people can inspect and verify.</p></div>
+      <div class="card animate"><div class="card-num">03 DELIVERY</div><h3>Implementation and Verification</h3><p>Implement against the specifications using AI-assisted development and specialist engineering, then verify the result against business scenarios.</p></div>
     </div>
-    <a href="/en/how-we-work.html#problem-framing" class="card-more">See How We Frame Problems →</a>
+    <a href="/en/how-we-work.html#problem-framing" class="card-more">Our Approach to Problem Framing →</a>
   </div>
 </section>
-
-<!-- ===== §4 SNOWFLAKE SERVICES ===== -->
-<section class="bg-alt" id="snowflake-services">
-  <div class="container">
-    <div class="section-label">Snowflake Services</div>
-    <h2 class="section-title">Build, migrate, integrate, and operate on Snowflake</h2>
-    <p class="section-desc">The work can begin with a new data foundation, an SAP migration, data integration, or ongoing operations.</p>
-    <div class="grid-2">
-      <div class="card animate"><div class="card-num">01 FOUNDATION</div><h3>AI-Ready Data Foundation</h3><p>Establish quality rules, data standards, lineage, security, and access controls in the Snowflake foundation.</p></div>
-      <div class="card animate delay-1"><div class="card-num">02 MIGRATION</div><h3>SAP to Snowflake Migration</h3><p>Assess SAP ECC, S/4HANA, and BW data, then migrate and validate it in Snowflake.</p></div>
-      <div class="card animate"><div class="card-num">03 ENGINEERING</div><h3>Data Engineering &amp; Integration</h3><p>Connect ERP, MES, SCM, CRM, and external sources through data pipelines built for ongoing use.</p></div>
-      <div class="card animate delay-1"><div class="card-num">04 OPERATE</div><h3>FinOps &amp; Managed Services</h3><p>Manage Snowflake costs, performance, security, data pipelines, and changes over time.</p></div>
-    </div>
-    <a href="/en/services/#snowflake" class="card-more">View All Snowflake Services →</a>
-  </div>
-</section>
-
-<!-- ===== §5 AGENTIC ENTERPRISE SERVICES ===== -->
 <section id="agentic-enterprise-services">
   <div class="container">
-    <div class="section-label">Agentic Enterprise Services</div>
-    <h2 class="section-title">Put business knowledge and data into decision workflows</h2>
-    <p class="section-desc">We assess platform options, structure decision knowledge, build analytical agents and applications, and define the controls required to operate them.</p>
-    <div class="grid-2">
-      <div class="card animate"><h3>AI Platform Assessment &amp; Architecture</h3><p>Evaluate the use case and its data, security, and operating requirements across cloud, on-premise, and hybrid options before defining the target architecture.</p></div>
-      <div class="card animate delay-1"><h3>Enterprise Knowledge Engineering</h3><p>Organize business terms, decision rules, exceptions, and sources into a governed knowledge structure for agents and applications.</p></div>
-      <div class="card animate"><h3>Agentic Analytics &amp; Applications</h3><p>Build agents and applications for analysis, forecasting, simulation, and comparison of alternatives.</p></div>
-      <div class="card animate delay-1"><h3>AgentOps &amp; Managed Operations</h3><p>Manage agent quality, access, evidence, cost, and change, then improve applications as operating needs change.</p></div>
+    <div class="section-label">Services</div>
+    <h2 class="section-title">From AI strategy to knowledge, data, applications, and operations</h2>
+    <p class="section-desc">The engagement is shaped around the business problem and existing environment. Platform selection is one part of that work, alongside knowledge, applications, and operating controls.</p>
+    <div class="grid-3 service-portfolio-grid">
+      <a href="/en/services/platform-assessment.html" class="card card-link animate"><h3>AI Strategy &amp; Architecture</h3><p>Define priority AI initiatives, platform choices, and an implementation roadmap around business objectives and operating requirements.</p><span class="card-more">Explore →</span></a>
+      <a href="/en/services/knowledge.html" class="card card-link animate"><h3>Enterprise Knowledge Engineering</h3><p>Build agent-ready knowledge through LLM-based extraction, ontology and semantic models, explicit business rules, and validation.</p><span class="card-more">Architecture &amp; Design Example →</span></a>
+      <a href="/en/services/data-platform.html" class="card card-link animate"><h3>Data Platforms &amp; Engineering</h3><p>Integrate SAP and enterprise data, with data models and semantic definitions designed for analytics and AI.</p><span class="card-more">Explore →</span></a>
+      <a href="/en/services/solution.html" class="card card-link animate"><h3>Agentic Analytics &amp; Applications</h3><p>Build agents and applications for analysis, forecasting, simulation, and comparison of business alternatives.</p><span class="card-more">Explore →</span></a>
+      <a href="/en/services/agentops.html" class="card card-link animate"><h3>AgentOps &amp; Managed Operations</h3><p>Manage quality, permissions, execution history, and change, with support for adoption and ongoing improvement.</p><span class="card-more">Explore →</span></a>
     </div>
-    <a href="/en/services/#enterprise-ai" class="card-more">View All Agentic Enterprise Services →</a>
+    <p class="service-platform-note" id="snowflake-services">Data platform expertise: <a href="/en/services/snowflake/">Snowflake Services →</a></p>
+    <a href="/en/services/" class="card-more">Explore All Services →</a>
   </div>
 </section>
-
-<!-- ===== §6 HOW WE WORK ===== -->
-<section class="bg-alt">
-  <div class="container container-narrow">
-    <div class="section-label">Delivery Principles &amp; Development Methodology</div>
-    <h2 class="section-title">Build with traceable evidence and measurable feedback</h2>
-    <p class="section-desc">We manage requirements, business rules, evidence, decisions, and changes as project knowledge. Delivery follows explicit principles, and agent applications are evaluated against real work before they are expanded.</p>
-    <div class="note mt-2">Eval-Driven Development improves the work plan, knowledge, data, tools, and interface through repeated evaluation of real inputs and outcomes.</div>
-    <a href="/en/how-we-work.html" class="card-more">See How We Work →</a>
+<section class="bg-alt" id="applications">
+  <div class="container">
+    <div class="section-label">Applications</div>
+    <h2 class="section-title">Applications for profitability and supply chain decisions</h2>
+    <p class="section-desc">Explore the business scope, decision criteria, and data requirements behind each application area.</p>
+    <div class="grid-2">
+      <a href="/en/solutions/profitability.html" class="card card-link animate"><h3>Profitability &amp; Portfolio Analytics</h3><p>Evaluate product, customer, and channel profitability, cost-to-serve, and SKU rationalization decisions.</p><span class="card-more">Explore →</span></a>
+      <a href="/en/solutions/scm.html" class="card card-link animate"><h3>SCM Applications</h3><p>Analyze demand, inventory, supply, production, and logistics constraints to assess planning scenarios and response options.</p><span class="card-more">Explore →</span></a>
+    </div>
+    <a href="/en/solutions/" class="card-more">Explore Applications →</a>
   </div>
 </section>
-
-<!-- ===== §7 CONTACT ===== -->
-<section>
-  <div class="container container-narrow">
+<section id="delivery-method">
+  <div class="container">
+    <div class="section-label">AI-Native Consulting &amp; Delivery</div>
+    <h2 class="section-title">Explicit business logic.<br>Improvement grounded in evidence.</h2>
+    <p class="section-desc">We select technologies and development patterns to fit the work. Shared knowledge and specifications guide implementation; evaluation findings inform changes to knowledge, skills, tools, and applications.</p>
+    <div class="grid-2">
+      <a href="/en/how-we-work.html#principles" class="card card-link animate"><h3>Delivery Principles</h3><p>Experience-based problem framing, project knowledge, technology selection, and evidence and governance.</p><span class="card-more">Explore the Principles →</span></a>
+      <a href="/en/how-we-work.html#eval-driven-development" class="card card-link animate"><h3>Eval-Driven Development</h3><p>Understand the work, define the plan and evaluation criteria, implement and verify, then apply and improve.</p><span class="card-more">Explore the Development Method →</span></a>
+    </div>
+    <a href="/en/how-we-work.html#delivery-perspective" class="card-more">AI Engineering: Our Delivery Perspective →</a>
+  </div>
+</section>
+<section class="bg-alt" id="people">
+  <div class="container">
+    <div class="section-label">People &amp; Experience</div>
+    <h2 class="section-title">Operating experience. Consulting discipline.<br>Hands-on engineering.</h2>
+    <p class="section-desc">Our core team brings experience in corporate operations and global consulting across strategy, process, data, and systems transformation. Consultants take a hands-on role in design and implementation, working with specialist data, AI, and IT engineers.</p>
+    <p class="lead">We bring operating judgment, structured problem-solving, and implementation knowledge to the same engagement.</p>
+    <a href="/en/company.html" class="card-more">Meet Nex &amp; Bridge →</a>
+  </div>
+</section>
+<section id="insights">
+  <div class="container">
+    <div class="section-label">Insights</div>
+    <h2 class="section-title">Perspectives on AI and enterprise delivery</h2>
+    <p class="section-desc">Our perspectives examine business adoption, knowledge engineering, and verification. Articles will be published as source material and disclosure reviews are completed.</p>
+    <a href="/en/insights.html" class="card-more">Visit Insights →</a>
+  </div>
+</section>
+<section class="bg-alt" id="contact">
+  <div class="container">
     <div class="section-label">Contact</div>
-    <h2 class="section-title">Start with the decision or data problem in front of you</h2>
-    <p class="section-desc">Tell us whether you are evaluating a Snowflake foundation or migration, an AI platform, or an Agentic Analytics application. We will help identify what to examine first.</p>
-    <a href="/en/contact.html" class="btn btn-navy">Discuss Your Project →</a>
+    <h2 class="section-title">Tell us what needs to change</h2>
+    <p class="section-desc">We assess the business problem, intended change, and existing knowledge, data, and systems to propose a practical scope of work.</p>
+    <a href="/en/contact.html" class="btn btn-navy">Contact Us →</a>
   </div>
 </section>
 </main>
@@ -148,12 +149,12 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, Agentic Enterprise services, and managed operations.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/snowflake/">Snowflake Services</a></li><li><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
-      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a></li><li><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></li><li><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Business-led consulting and hands-on engineering for enterprise knowledge, data, and AI applications.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="/en/services/">All Services</a></li><li><a href="/en/services/platform-assessment.html">AI Strategy &amp; Architecture</a></li><li><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/data-platform.html">Data Platforms &amp; Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></li><li><a href="/en/services/snowflake/">Snowflake Services</a></li></ul></div>
+      <div class="footer-col"><h4>Applications</h4><ul><li><a href="/en/solutions/">All Applications</a></li><li><a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a></li><li><a href="/en/solutions/scm.html">SCM Applications</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/insights.html">Insights</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy</a></div></div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy Policy</a></div></div>
   </div>
 </footer>
 <script src="/assets/js/site.js"></script>

@@ -6,9 +6,17 @@
   var nav = document.querySelector('nav.site-nav');
   var burger = document.querySelector('.nav-burger');
   if (nav && burger) {
-    burger.addEventListener('click', function () { nav.classList.toggle('open'); });
+    burger.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(open));
+      if (!open) closeSubmenus();
+    });
     nav.querySelectorAll('.nav-menu > li > a').forEach(function (a) {
-      a.addEventListener('click', function () { nav.classList.remove('open'); });
+      a.addEventListener('click', function () {
+        nav.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        closeSubmenus();
+      });
     });
   }
 
@@ -20,11 +28,63 @@
       var li = btn.closest('li');
       var wasOpen = li.classList.contains('open');
       li.parentElement.querySelectorAll(':scope > li.open').forEach(function (openLi) {
-        if (openLi !== li) openLi.classList.remove('open');
+        if (openLi !== li) {
+          openLi.classList.remove('open');
+          openLi.querySelector('.submenu-toggle').setAttribute('aria-expanded', 'false');
+        }
       });
       li.classList.toggle('open', !wasOpen);
+      li.classList.remove('menu-dismissed');
+      btn.setAttribute('aria-expanded', String(!wasOpen));
     });
   });
+
+  function closeSubmenus() {
+    if (!nav) return;
+    nav.querySelectorAll('.has-mega, .has-dropdown').forEach(function (li) {
+      li.classList.remove('open');
+      li.querySelector('.submenu-toggle').setAttribute('aria-expanded', 'false');
+    });
+  }
+  if (nav) {
+    nav.querySelectorAll('.has-mega, .has-dropdown').forEach(function (li) {
+      function showDesktopState() {
+        li.classList.remove('menu-dismissed');
+        if (window.matchMedia('(min-width:981px)').matches) {
+          li.querySelector('.submenu-toggle').setAttribute('aria-expanded', 'true');
+        }
+      }
+      li.addEventListener('mouseenter', showDesktopState);
+      li.addEventListener('focusin', showDesktopState);
+      li.addEventListener('mouseleave', function () {
+        if (!li.contains(document.activeElement) && !li.classList.contains('open')) {
+          li.querySelector('.submenu-toggle').setAttribute('aria-expanded', 'false');
+        }
+      });
+      li.addEventListener('focusout', function (event) {
+        if (!li.contains(event.relatedTarget)) {
+          li.classList.remove('menu-dismissed');
+          if (!li.matches(':hover') && !li.classList.contains('open')) {
+            li.querySelector('.submenu-toggle').setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+    });
+    nav.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape') return;
+      var li = event.target.closest('.has-mega, .has-dropdown');
+      closeSubmenus();
+      if (li) {
+        li.querySelector('a').focus();
+        li.classList.add('menu-dismissed');
+        li.querySelector('.submenu-toggle').setAttribute('aria-expanded', 'false');
+      } else if (burger) {
+        nav.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.focus();
+      }
+    });
+  }
 
   // Scroll-in animation, with a guaranteed fallback so content can never stay hidden
   var reveal = function (el) { el.classList.add('visible'); };

@@ -36,11 +36,29 @@
 <!-- ===== NAV ===== -->
 <nav class="site-nav" aria-label="Primary">
   <a href="/en/" class="logo">Nex <span>&amp;</span> Bridge</a>
-  <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
-  <ul class="nav-menu">
-    <li class="has-dropdown"><a href="/en/services/snowflake/">Snowflake</a><button class="submenu-toggle" type="button" aria-label="Open Snowflake menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/snowflake/">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div></li>
-    <li class="has-dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise</a><button class="submenu-toggle" type="button" aria-label="Open Agentic Enterprise menu"><span class="chev"></span></button><div class="dropdown"><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></div></li>
+  <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-menu"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="primary-menu">
+    <li class="has-mega">
+      <a href="/en/services/">Services</a>
+      <button class="submenu-toggle" type="button" aria-label="Services submenu" aria-expanded="false" aria-controls="services-menu"><span class="chev"></span></button>
+      <div class="mega-menu" id="services-menu">
+        <div class="mega-overview"><a href="/en/services/" class="mega-featured">Explore All Services →</a></div>
+        <div class="mega-col"><div class="mega-col-title">Strategy &amp; Knowledge</div><a href="/en/services/platform-assessment.html">AI Strategy &amp; Architecture</a><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></div>
+        <div class="mega-col"><div class="mega-col-title"><a href="/en/services/data-platform.html">Data Platforms &amp; Engineering</a></div><a href="/en/services/snowflake/" class="mega-featured">Snowflake Services</a><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+        <div class="mega-col"><div class="mega-col-title">Applications &amp; Operations</div><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="/en/solutions/">Applications</a>
+      <button class="submenu-toggle" type="button" aria-label="Applications submenu" aria-expanded="false" aria-controls="applications-menu"><span class="chev"></span></button>
+      <div class="mega-menu mega-applications" id="applications-menu">
+        <a href="/en/solutions/" class="mega-featured">Explore Applications →</a>
+        <a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a>
+        <a href="/en/solutions/scm.html">SCM Applications</a>
+      </div>
+    </li>
     <li><a href="/en/how-we-work.html" aria-current="page">How We Work</a></li>
+    <li><a href="/en/insights.html">Insights</a></li>
     <li><a href="/en/company.html">Company</a></li>
     <li><a href="/en/contact.html" class="nav-cta">Contact</a></li>
     <li><div class="lang-switch"><a href="/ko/how-we-work.html">KO</a><a href="/en/how-we-work.html" aria-current="true">EN</a></div></li>
@@ -55,6 +73,20 @@
     <h1>Frame the right problem.<br><em>Test it against the business.</em></h1>
     <p class="hero-sub">We do not begin by translating requirements into a build plan. Operating and consulting experience informs a working hypothesis; the client's business rules and data determine whether it holds and what should be built.</p>
     <div class="hero-btns"><a href="#principles" class="btn btn-primary">View the Delivery Model ↓</a><a href="/en/contact.html" class="btn btn-ghost">Discuss a Project →</a></div>
+  </div>
+</section>
+
+<section class="bg-alt" id="delivery-perspective">
+  <div class="container">
+    <div class="section-label">AI Engineering · Delivery Perspective</div>
+    <h2 class="section-title">Consulting and engineering in the AI era</h2>
+    <p class="section-desc">AI makes it faster to produce code and analysis. Deciding what to change, which business rules apply, and how far a result can be trusted still requires judgment. That is why operating experience and hands-on implementation belong together.</p>
+    <div class="grid-3">
+      <div class="card animate"><h3>Carry the problem through to implementation</h3><p>A requirements list rarely captures every exception or the reasoning behind a business decision. At Nex &amp; Bridge, consultants who frame the problem also implement and verify the solution, alongside specialist engineers.</p></div>
+      <div class="card animate delay-1"><h3>Make business rules explicit</h3><p>Understanding a sentence is different from handling a task according to company policy. LLMs can extract concepts and rules from documents. Ontologies capture business meaning; semantic models capture calculation criteria. Data constraints and execution permissions require separate checks in code.</p></div>
+      <div class="card animate delay-2"><h3>Test whether a change is an improvement</h3><p>Getting a better answer on a second attempt is not the same as improving the system. The cause may lie in knowledge, retrieval, or calculation. Before-and-after evaluation is part of the development process, so each change can be tested for its effect.</p></div>
+    </div>
+    <p class="note"><a href="/en/services/knowledge.html#technical-architecture">Knowledge design and implementation</a> · <a href="/en/services/agentops.html#evaluation-engineering">Agent evaluation and improvement</a></p>
   </div>
 </section>
 
@@ -159,7 +191,18 @@
     </div>
     <div class="note mt-2"><strong>Iteration Cycle</strong><br>Business Context → Work Plan &amp; Evals → Build &amp; Run → Review Results → Controlled Rollout → Feedback &amp; Improvement ↺</div>
     <div class="note mt-1">Shared architecture, security, and operational approval gates remain in place. The iteration unit is the business use case; platform controls apply across the program.</div>
-    <div class="note mt-1"><strong>Reference Principles</strong><br>This approach is not tied to a single platform or framework. It adapts <a href="https://openai.com/index/evals-drive-next-chapter-of-ai/" target="_blank" rel="noopener noreferrer">contextual evals</a>, <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">agent loops and evaluator–optimizer patterns</a>, and <a href="https://docs.aws.amazon.com/wellarchitected/latest/agentic-ai-lens/operational-excellence-design-principles.html" target="_blank" rel="noopener noreferrer">operational gates and staged rollout</a> to enterprise delivery.</div>
+  </div>
+</section>
+
+<section class="bg-alt" id="adoption-outcomes">
+  <div class="container">
+    <div class="section-label">Adoption &amp; Business Measures</div>
+    <h2 class="section-title">Verify the system. Assess its use.</h2>
+    <p class="section-desc">Technical acceptance and business impact require different evidence. We agree on a baseline and measurement conditions, then review both release readiness and practical adoption within the project scope.</p>
+    <div class="grid-2">
+      <div class="card animate"><h3>Baseline and acceptance</h3><p>Agree on the workflow, target measures, and comparison basis with the client. Test correctness, permissions, and failure handling before release. Processing time, manual effort, and errors are possible measures, selected for the use case.</p></div>
+      <div class="card animate delay-1"><h3>Adoption and review</h3><p>Introduce verified workflows with clear operating and exception-handling procedures. Review usage, rework, and processing time. Record the measurement period, data conditions, and external factors before interpreting changes in performance.</p></div>
+    </div>
   </div>
 </section>
 
@@ -179,7 +222,7 @@
 </section>
 
 <!-- ===== §8 APPLIED METHODOLOGY ===== -->
-<section>
+<section id="koaa">
   <div class="container container-narrow">
     <div class="section-label">Applied Methodology</div>
     <h2 class="section-title">KOAA</h2>
@@ -202,12 +245,12 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Snowflake data foundations, Agentic Enterprise services, and managed operations.</p></div>
-      <div class="footer-col"><h4>Snowflake</h4><ul><li><a href="/en/services/snowflake/">Snowflake Services</a></li><li><a href="/en/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a></li><li><a href="/en/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a></li><li><a href="/en/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a></li><li><a href="/en/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></li></ul></div>
-      <div class="footer-col"><h4>Agentic Enterprise</h4><ul><li><a href="/en/services/#enterprise-ai">Agentic Enterprise Services</a></li><li><a href="/en/services/platform-assessment.html">AI Platform Assessment &amp; Architecture</a></li><li><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html" aria-current="page">How We Work</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>Business-led consulting and hands-on engineering for enterprise knowledge, data, and AI applications.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="/en/services/">All Services</a></li><li><a href="/en/services/platform-assessment.html">AI Strategy &amp; Architecture</a></li><li><a href="/en/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/en/services/data-platform.html">Data Platforms &amp; Engineering</a></li><li><a href="/en/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/en/services/agentops.html">AgentOps &amp; Managed Operations</a></li><li><a href="/en/services/snowflake/">Snowflake Services</a></li></ul></div>
+      <div class="footer-col"><h4>Applications</h4><ul><li><a href="/en/solutions/">All Applications</a></li><li><a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a></li><li><a href="/en/solutions/scm.html">SCM Applications</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/en/how-we-work.html">How We Work</a></li><li><a href="/en/insights.html">Insights</a></li><li><a href="/en/company.html">Company</a></li><li><a href="/en/contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy</a></div></div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/en/privacy.html">Privacy Policy</a></div></div>
   </div>
 </footer>
 <script src="/assets/js/site.js"></script>

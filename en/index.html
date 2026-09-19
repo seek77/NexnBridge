@@ -21,9 +21,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/enterprise.css">
 <link rel="stylesheet" href="/assets/css/question-design.css">
 </head>
-<body>
+<body class="ae-home">
 
 <!-- ===== NAV ===== -->
 <nav class="site-nav" aria-label="Primary">
@@ -63,15 +64,15 @@
     <div class="hero-label">Business-led. Knowledge-powered.</div>
     <h1>Build an Agentic Enterprise<br>around <em>your business knowledge.</em></h1>
     <p class="hero-sub">We combine operating and consulting experience with hands-on engineering to define the problem and build AI agents and applications around your business knowledge and data.</p>
-    <div class="hero-btns"><a href="/en/services/" class="btn btn-primary">Explore Services →</a><a href="/en/how-we-work.html" class="btn btn-ghost">How We Work</a></div>
+    <div class="hero-btns"><a href="/en/services/" class="btn btn-primary">Explore Services →</a><a href="/en/how-we-work.html" class="btn btn-ghost">How We Work</a></div><div class="ae-pillars"><div><span>AI in business workflows</span><strong>Agent-based Business Apps</strong></div><span aria-hidden="true">+</span><div><span>A shared business knowledge base</span><strong>Enterprise Knowledge Foundation</strong></div></div>
   </div>
 </section>
 <section class="bg-alt" id="problem-framing">
   <div class="container">
     <div id="nb-question-design" aria-label="Business analysis examples" data-lang="en">
       <div class="nb-eyebrow">BUSINESS QUESTIONS</div>
-      <h2>Business questions.<br>Grounded in your business.</h2>
-      <p class="nb-intro">Agents query data, investigate causes, and compare alternatives, adapting the analysis to the question and the findings.</p>
+      <h2>Investigate causes. Compare options.<br>Connect the next action.</h2>
+      <p class="nb-intro">Agents retrieve knowledge and data, use calculation tools, and check the results before continuing the analysis or routing work for approval.</p>
       <p class="nb-intro">Nex &amp; Bridge captures your metric definitions, calculation rules, and business policies, and provides validated tools for complex, recurring calculations. Agents use this foundation to pursue the analysis each question requires.</p>
       <p class="nb-invitation">Explore the questions through a profitability example.</p>
       <div class="nb-pickers" role="group" aria-label="Choose a business question">
@@ -117,23 +118,21 @@
     <a href="/en/services/" class="card-more">Explore All Services →</a>
   </div>
 </section>
-<section class="bg-alt" id="applications">
-  <div class="container">
-    <div class="section-label">Applications</div>
-    <h2 class="section-title">Applications for profitability and supply chain decisions</h2>
-    <p class="section-desc">Explore the business scope, decision criteria, and data requirements behind each application area.</p>
-    <div class="grid-2">
-      <a href="/en/solutions/profitability.html" class="card card-link animate"><h3>Profitability &amp; Portfolio Analytics</h3><p>Evaluate product, customer, and channel profitability, cost-to-serve, and SKU rationalization decisions.</p><span class="card-more">Explore →</span></a>
-      <a href="/en/solutions/scm.html" class="card card-link animate"><h3>SCM Applications</h3><p>Analyze demand, inventory, supply, production, and logistics constraints to assess planning scenarios and response options.</p><span class="card-more">Explore →</span></a>
-    </div>
-    <a href="/en/solutions/" class="card-more">Explore Applications →</a>
-  </div>
-</section>
+<section id="applications" class="ae-section bg-alt"><div class="container"><div class="section-label">Applications</div><h2 class="section-title">From market opportunities to planning and performance</h2><p class="section-desc">Build analysis and business interfaces around the company’s metrics, rules, and data, then extend into related work using shared knowledge.</p><div class="ae-portfolios"><article><span class="ae-label">Market-to-Opportunity</span><h3>Which customer opportunities deserve attention?</h3><p>Connect market changes to customer needs, prioritize opportunities, and evaluate proposal terms.</p><a href="/en/services/solution.html">Discuss the application scope →</a></article><article><span class="ae-label">Connected Planning</span><h3>What can we promise for this order?</h3><p>Compare supply options across demand, inventory, production, and procurement against delivery and cost constraints.</p><a href="/en/solutions/scm.html">SCM Applications →</a></article><article><span class="ae-label">Enterprise Intelligence</span><h3>Where is business performance changing?</h3><p>Investigate performance drivers and compare responses across products, customers, and channels.</p><a href="/en/solutions/profitability.html">Profitability &amp; Portfolio Analytics →</a></article></div><p class="ae-note">These are application areas configured for each engagement. The linked pages describe the existing application capabilities and delivery scope.</p></div></section>
+<section class="ae-architecture" id="shared-architecture"><div class="container ae-architecture-layout"><div><div class="section-label">Enterprise Architecture</div><h2 class="section-title">Specialized agents.<br>Shared enterprise knowledge.</h2><p>A coordinator connects specialist agents when a request spans domains. Agents use shared definitions and rules, with verification and approval controls governing business actions.</p><p class="ae-signature">Specialized Agents. Shared Enterprise Knowledge.</p><a href="/en/agentic-enterprise.html">Explore the architecture →</a></div><div class="ae-map" aria-label="Specialist agents and shared knowledge">
+ <div class="ae-map-app"><strong>Agent-based Business Apps</strong><span>Analysis · Options · Business actions</span></div>
+ <div class="ae-coordinator"><strong>Coordinator</strong><span>Task intent · Specialist coordination · Results</span></div>
+ <div class="ae-agents"><div><strong>Opportunity Agent</strong><span>Customer opportunities</span></div><div><strong>Supply Planning Agent</strong><span>Supply options</span></div><div><strong>Profitability Agent</strong><span>Profitability analysis</span></div></div>
+ <p class="ae-map-link">↕ Knowledge access within role and permissions</p>
+ <div class="ae-foundation"><strong>Shared Enterprise Knowledge Foundation</strong><div><span>Ontology</span><span>Knowledge Graph</span><span>Semantic View</span><span>Policies</span><span>Metrics</span><span>Business Rules</span></div></div>
+ <p class="ae-data"><strong>AI-ready Data Model</strong><span>Business objects · Relationships · State · History · Source data</span></p>
+ <p class="ae-control"><strong>Decision / Control Loop</strong><span>Observe → Decide → Act → Verify → Learn</span></p>
+ </div></div></section>
 <section id="delivery-method">
   <div class="container">
     <div class="section-label">AI-Native Consulting &amp; Delivery</div>
     <h2 class="section-title">Explicit business logic.<br>Improvement grounded in evidence.</h2>
-    <p class="section-desc">We select technologies and development patterns to fit the work. Shared knowledge and specifications guide implementation; evaluation findings inform changes to knowledge, skills, tools, and applications.</p>
+    <p class="section-desc">Start with the decision to support and how its result will be used. Design business knowledge, tools, and workflow together, then test calculations, follow-up actions, and approval steps against real cases.</p>
     <div class="grid-2">
       <a href="/en/how-we-work.html#principles" class="card card-link animate"><h3>Delivery Principles</h3><p>Experience-based problem framing, project knowledge, technology selection, and evidence and governance.</p><span class="card-more">Explore the Principles →</span></a>
       <a href="/en/how-we-work.html#eval-driven-development" class="card card-link animate"><h3>Eval-Driven Development</h3><p>Understand the work, define the plan and evaluation criteria, implement and verify, then apply and improve.</p><span class="card-more">Explore the Development Method →</span></a>

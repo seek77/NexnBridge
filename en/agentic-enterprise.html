@@ -3,23 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agentic Enterprise Operating Model | Nex &amp; Bridge</title>
-<meta name="description" content="See how Nex &amp; Bridge connects business rules, enterprise data, AI agents, human approval, and execution results in an Agentic Enterprise operating model.">
+<title>Agentic Enterprise Architecture | Nex &amp; Bridge</title>
+<meta name="description" content="Connect business analysis, execution, and verification through shared enterprise knowledge, domain-specific agents, and a decision/control loop.">
 <link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/agentic-enterprise.html">
 <link rel="alternate" hreflang="en" href="https://nexenbridge.com/en/agentic-enterprise.html">
 <link rel="canonical" href="https://nexenbridge.com/en/agentic-enterprise.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nex &amp; Bridge">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Agentic Enterprise Operating Model | Nex &amp; Bridge">
-<meta property="og:description" content="How business rules, enterprise data, AI agents, human approval, and execution results work together in an Agentic Enterprise.">
+<meta property="og:title" content="Agentic Enterprise Architecture | Nex &amp; Bridge">
+<meta property="og:description" content="Connect business analysis, execution, and verification through shared enterprise knowledge, domain-specific agents, and a decision/control loop.">
 <meta property="og:url" content="https://nexenbridge.com/en/agentic-enterprise.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Agentic Enterprise Operating Model | Nex &amp; Bridge">
-<meta name="twitter:description" content="How business rules, enterprise data, AI agents, human approval, and execution results work together in an Agentic Enterprise.">
+<meta name="twitter:title" content="Agentic Enterprise Architecture | Nex &amp; Bridge">
+<meta name="twitter:description" content="Connect business analysis, execution, and verification through shared enterprise knowledge, domain-specific agents, and a decision/control loop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/enterprise.css">
 </head>
 <body>
 
@@ -57,162 +58,21 @@
 
 <main id="main-content">
 <!-- ===== §1 HERO ===== -->
-<section class="hero hero-sm">
-  <div class="hero-inner">
-    <div class="hero-label">Agentic Enterprise</div>
-    <h1>AI agents prepare the evidence.<br><em>People make the decision.</em></h1>
-    <p class="hero-sub">We define an Agentic Enterprise by how business rules, data, human approval, and execution results work together—not by how many agents are deployed.</p>
-  </div>
-</section>
-
-<!-- ===== §2 WHERE DESIGN BEGINS ===== -->
-<section class="bg-alt">
-  <div class="container">
-    <div class="section-label">Where Design Begins</div>
-    <h2 class="section-title">Start with one decision, not an agent feature</h2>
-    <p class="section-desc">Before choosing what to automate, we identify who decides, when the decision is made, which rules and data apply, and what must be reviewed afterward.</p>
-
-    <div class="area-map animate">
-      <div class="area-row">
-        <div class="area-box">
-          <div class="ab-num">01 DECISION</div>
-          <div class="ab-title">Who makes the decision, and when?</div>
-          <div class="ab-ko">Decision scope</div>
-          <div class="ab-scope">Identify the final decision-maker, when the decision occurs, and the choice to be made.</div>
-        </div>
-        <div class="area-box">
-          <div class="ab-num">02 KNOWLEDGE</div>
-          <div class="ab-title">Which rules and exceptions apply?</div>
-          <div class="ab-ko">Business criteria</div>
-          <div class="ab-scope">Identify business rules, metrics, thresholds, exceptions, and approval conditions.</div>
-        </div>
-        <div class="area-box">
-          <div class="ab-num">03 DATA</div>
-          <div class="ab-title">Which data supports the decision?</div>
-          <div class="ab-ko">Data criteria</div>
-          <div class="ab-scope">Confirm sources, calculation rules, history, and access boundaries.</div>
-        </div>
-      </div>
-      <div class="area-row">
-        <div class="area-box">
-          <div class="ab-num">04 AGENT</div>
-          <div class="ab-title">What should the agent prepare?</div>
-          <div class="ab-ko">Role and limits</div>
-          <div class="ab-scope">Define the signals, evidence, alternatives, and open questions the agent must present.</div>
-        </div>
-        <div class="area-box">
-          <div class="ab-num">05 OPERATION</div>
-          <div class="ab-title">What should be recorded afterward?</div>
-          <div class="ab-ko">Outcomes and exceptions</div>
-          <div class="ab-scope">Record the decision and rationale, execution results, exceptions, and the next review point.</div>
-        </div>
-      </div>
-    </div>
-
-    <p class="pull-quote">Define the decision and who is accountable for it<br>before choosing the technology.</p>
-  </div>
-</section>
-
-<!-- ===== §3 ROLES AND ACCOUNTABILITY ===== -->
-<section>
-  <div class="container">
-    <div class="section-label">Roles &amp; Accountability</div>
-    <h2 class="section-title">Keep evidence preparation, decision authority, and outcome tracking separate</h2>
-    <p class="section-desc">An agent's output is not the business decision. We separate the work of preparing evidence and options from the authority to decide and the responsibility to track what happens next.</p>
-
-    <div class="grid-3">
-      <div class="card animate">
-        <div class="card-num">01 AI AGENT</div>
-        <h3>Prepares evidence and options</h3>
-        <p>Checks the relevant business rules and data, then organizes signals, evidence, options, and known limitations.</p>
-      </div>
-      <div class="card animate delay-1">
-        <div class="card-num">02 DECISION OWNER</div>
-        <h3>Reviews the evidence and decides</h3>
-        <p>Reviews the impact of each option and any open questions, then approves an option, defers the decision, or requests further analysis.</p>
-      </div>
-      <div class="card animate delay-2">
-        <div class="card-num">03 OPERATING PROCESS</div>
-        <h3>Tracks the decision and its result</h3>
-        <p>Records who decided, which evidence was used, what happened after execution, and any exceptions.</p>
-      </div>
-    </div>
-
-    <p class="pull-quote">Agents prepare evidence and options.<br>People retain decision authority and accountability.</p>
-  </div>
-</section>
-
-<!-- ===== §4 BUILD AND OPERATE ===== -->
-<section class="bg-alt">
-  <div class="container">
-    <div class="section-label">Build &amp; Operate</div>
-    <h2 class="section-title">Use a consistent delivery method and define operational support in the agreement</h2>
-    <p class="section-desc">The delivery method and support after implementation serve different purposes and are defined separately.</p>
-
-    <div class="grid-2">
-      <div class="card card-featured animate">
-        <div class="featured-tag">Methodology</div>
-        <h3>KOAA</h3>
-        <p>KOAA applies business concepts, decision criteria, exceptions, and source material to the workflows AI agents use for analysis.</p>
-        <div class="type-pills">
-          <span class="type-pill">13 principles</span>
-          <span class="type-pill">12 build steps</span>
-          <span class="type-pill">7 operating roles</span>
-          <span class="type-pill">7 levels of knowledge validation</span>
-        </div>
-      </div>
-      <div class="card card-featured animate delay-1">
-        <div class="featured-tag">After Implementation</div>
-        <h3>Managed Service &amp; SLA</h3>
-        <p>When operational support is required, the agreement defines the supported functions and environments, service conditions, responsibilities, and exclusions.</p>
-        <ul>
-          <li>Functions and environments in scope</li>
-          <li>Support hours and criteria for handling requests</li>
-          <li>Client and Nex &amp; Bridge responsibilities and exclusions</li>
-        </ul>
-        <div class="card-note">Support hours and scope depend on the client environment and the terms of the agreement.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== §5 CHOOSING A FIRST SCOPE ===== -->
-<section>
-  <div class="container">
-    <div class="section-label">Choosing a First Scope</div>
-    <h2 class="section-title">Begin with one decision that has clear boundaries</h2>
-    <p class="section-desc">Rather than starting enterprise-wide, use four questions to select the first scope. Treat missing information as something to investigate, not a gap to fill with assumptions.</p>
-
-    <div class="grid-4">
-      <div class="card animate">
-        <div class="card-num">01 RECURRENCE</div>
-        <h3>Does the same question come up repeatedly?</h3>
-        <p>Look for a decision that recurs regularly.</p>
-      </div>
-      <div class="card animate delay-1">
-        <div class="card-num">02 BUSINESS IMPACT</div>
-        <h3>Does the decision change what happens next?</h3>
-        <p>Confirm that the outcome leads to a different action or next step.</p>
-      </div>
-      <div class="card animate delay-2">
-        <div class="card-num">03 EVIDENCE</div>
-        <h3>Are the current rules and data available?</h3>
-        <p>Identify the business rules, metrics, and sources already used.</p>
-      </div>
-      <div class="card animate delay-3">
-        <div class="card-num">04 ACCOUNTABILITY</div>
-        <h3>Is someone clearly responsible for review and the final decision?</h3>
-        <p>Name who can approve, defer, or request further analysis.</p>
-      </div>
-    </div>
-
-    <div class="center mt-3">
-      <a href="/en/contact.html" class="btn btn-navy">Discuss an Agentic Enterprise Initiative →</a>
-    </div>
-
-    <p class="pull-quote">You do not need to choose a service name first.<br>Start with the decision and the data available today.</p>
-  </div>
-</section>
+<section class="hero hero-sm"><div class="hero-inner"><div class="hero-label">Agentic Enterprise</div><h1>Connect enterprise knowledge<br><em>to specialist agents at work</em></h1><p class="hero-sub">Design business applications, shared knowledge, verification, and approvals together. Specialist agents use the knowledge and tools their work requires and connect results to the next action.</p><div class="hero-btns"><a class="btn btn-primary" href="/en/how-we-work.html#execution-design">Explore the delivery method →</a><a class="btn btn-ghost" href="/en/contact.html">Discuss your project</a></div></div></section>
+ <section class="ae-architecture" id="shared-architecture"><div class="container ae-architecture-layout"><div><div class="section-label">Enterprise Architecture</div><h2 class="section-title">Specialized agents.<br>Shared enterprise knowledge.</h2><p>A coordinator connects specialist agents when a request spans domains. Agents use shared definitions and rules, with verification and approval controls governing business actions.</p><p class="ae-signature">Specialized Agents. Shared Enterprise Knowledge.</p><a href="/en/agentic-enterprise.html">Explore the architecture →</a></div><div class="ae-map" aria-label="Specialist agents and shared knowledge">
+ <div class="ae-map-app"><strong>Agent-based Business Apps</strong><span>Analysis · Options · Business actions</span></div>
+ <div class="ae-coordinator"><strong>Coordinator</strong><span>Task intent · Specialist coordination · Results</span></div>
+ <div class="ae-agents"><div><strong>Opportunity Agent</strong><span>Customer opportunities</span></div><div><strong>Supply Planning Agent</strong><span>Supply options</span></div><div><strong>Profitability Agent</strong><span>Profitability analysis</span></div></div>
+ <p class="ae-map-link">↕ Knowledge access within role and permissions</p>
+ <div class="ae-foundation"><strong>Shared Enterprise Knowledge Foundation</strong><div><span>Ontology</span><span>Knowledge Graph</span><span>Semantic View</span><span>Policies</span><span>Metrics</span><span>Business Rules</span></div></div>
+ <p class="ae-data"><strong>AI-ready Data Model</strong><span>Business objects · Relationships · State · History · Source data</span></p>
+ <p class="ae-control"><strong>Decision / Control Loop</strong><span>Observe → Decide → Act → Verify → Learn</span></p>
+ </div></div></section>
+ <section class="ae-section" id="agent-boundaries"><div class="container"><div class="section-label">Domain-Specific Agents</div><h2 class="section-title">Define agents around expertise, responsibility, and permissions</h2><p class="section-desc">Instead of concentrating every domain, tool, and permission in one giant agent, connect specialists through a coordinator where needed. Let business requirements and evaluations determine agent boundaries. A single agent or explicit workflow may be sufficient for simpler work.</p>
+ <div class="ae-graph-pair"><article><h3>Different decisions require different agents.</h3><p>Profitability analysis and supply planning need different expertise, calculations, and change permissions. These differences can justify separate agents. Question types such as diagnosis, prediction, and simulation do not each require their own agent.</p></article><article><h3>Align context, responsibility, and permissions</h3><p>Context Boundary = Responsibility / Permission Boundary is a principle for aligning scope, not a security guarantee. Data services and tools must enforce actual permissions. A coordinator does not automatically inherit every agent’s authority.</p></article></div>
+ <details class="ae-details"><summary>What makes an agent an independent execution unit</summary><div class="ae-detail-body"><dl class="ae-definitions"><div><dt>Model</dt><dd>Reasoning and tool-use capability, latency, and cost.</dd></div><div><dt>System Prompt</dt><dd>Objectives, responsibilities, and business scope.</dd></div><div><dt>Tools</dt><dd>Queries, retrieval, calculation, and integrations.</dd></div><div><dt>Context</dt><dd>Current request, relevant history, and retrieved evidence.</dd></div><div><dt>Agent Loop</dt><dd>Further queries, execution, verification, and stopping.</dd></div><div><dt>Rules</dt><dd>Business conditions, stop criteria, and error handling.</dd></div><div><dt>Hooks</dt><dd>Pre- and post-execution checks, approvals, and records.</dd></div><div><dt>Sandbox</dt><dd>Isolation of code, files, network access, and credentials.</dd></div></dl><p>Manage state, tools, permissions, and evaluations per agent while reusing shared model services and runtime infrastructure.</p></div></details></div></section>
+ <section id="shared-knowledge" class="ae-section bg-alt"><div class="container"><div class="section-label">Enterprise Knowledge Foundation</div><h2 class="section-title">Specialist responsibilities.<br>Shared business definitions.</h2><p class="section-desc">Manage ontology, knowledge graph, semantic views, policies, metrics, and business rules as a shared foundation. Sharing definitions does not mean unrestricted access or a single physical store.</p><dl class="ae-definitions"><div><dt>Ontology</dt><dd>Business concepts and relationships, such as customers, products, and orders.</dd></div><div><dt>Knowledge Graph</dt><dd>Connections among business objects, rules, documents, and evidence.</dd></div><div><dt>Semantic View</dt><dd>Mappings to data, query logic, and aggregation criteria.</dd></div><div><dt>Policies</dt><dd>Operating, approval, and access policies.</dd></div><div><dt>Metrics</dt><dd>Metric meanings, formulas, and scope.</dd></div><div><dt>Business Rules</dt><dd>Conditions, thresholds, precedence, and exceptions.</dd></div></dl><details class="ae-details"><summary>AI-ready data models and the knowledge layer</summary><div class="ae-detail-body"><p>An AI-ready data model connects object identifiers, relationships, aggregation grain, state, history, and effective dates to source data. Available inventory needs an explicit location and time basis, with clear treatment of reservations, confirmed orders, and expected receipts.</p><p>The knowledge layer is the logical interface to business knowledge and data. Combine graph queries, retrieval, and semantic views as needed, checking permissions, sources, and versions. Link metric definitions to calculation implementations without duplicating them.</p></div></details></div></section>
+ <section class="ae-section" id="decision-control"><div class="container"><div class="section-label">Decision / Control Loop</div><h2 class="section-title">Observe → Decide → Act → Verify → Learn</h2><p class="section-desc">Use validated tools for calculations and rules, and agents for interpretation and exploration. Automate pre-authorized actions and obtain approval where policy requires it. Feed outcomes and recurring exceptions into reviewed knowledge and operating criteria.</p><div class="ae-related"><a href="/en/how-we-work.html#execution-design">Harness, loops, and execution graphs →</a><a href="/en/solutions/scm.html#order-promise">Order review and planning automation →</a></div></div></section>
 </main>
 
 <!-- ===== FOOTER ===== -->

@@ -21,6 +21,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/enterprise.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -172,6 +173,7 @@
 </section>
 
 <!-- ===== §8 CONTACT ===== -->
+<section id="order-promise" class="ae-section bg-alt"><div class="container"><div class="section-label">Connected Planning</div><h2 class="section-title">신규 주문을 어떤 조건으로 약속할 수 있을까요?</h2><p class="section-desc">설명용 설계 예시입니다. 재고 조회에서 끝나지 않고, 계산 결과에 따라 다음 조사와 대안 검토를 이어갑니다.</p><ol class="ae-work-steps"><li><h3>주문과 기준 확인</h3><p>Coordinator가 제품·고객·수량·희망납기와 기준 시점을 정리합니다. 현재고·생산예정·확정수주·미래 출하를 같은 단위로 조회합니다.</p></li><li><h3>공급 가능성과 잔여재고 계산</h3><p>Order Feasibility Agent가 계산 도구로 공급 가능량을 확인합니다. Inventory Risk Agent는 MOQ에 따른 잔여재고와 미래 재고를 분석합니다.</p></li><li><h3>조건에 따른 대안 탐색</h3><p>잔여재고가 발생하면 대체 규격과 판매 이력을 조사합니다. 고객의 대체 허용 근거가 없으면 공급 가능한 대안으로 확정하지 않습니다.</p></li><li><h3>영향 재계산과 검증</h3><p>Supply Planning Agent가 기존 수주 납기·생산능력·비용을 비교합니다. 미충족 조건은 재계산하고, 반복 한도에 도달하면 미해결 항목을 담당자에게 전달합니다.</p></li><li><h3>결정과 업무 반영</h3><p>납기·비용·잔여재고·근거를 Decision Brief로 제시합니다. 사전 허용된 범위는 자동 처리하고, 승인 대상은 검토 후 최신 가용량을 재확인해 반영합니다.</p></li></ol><p class="ae-note">모든 요청이 모든 Agent를 거치지는 않습니다. 재고와 정책 조건이 충족되면 간단한 경로로 종료합니다. 계산에는 SQL·시뮬레이션·Solver를 사용하며, 실제 반영에는 승인·권한·중복 실행 방지를 적용합니다.</p><details class="ae-details"><summary>No-touch Planning과 Theory of Constraints</summary><div class="ae-detail-body"><p>계산을 자동화해도 예외 해석과 부서 간 조정이 특정 담당자에게 집중되면 전체 처리시간이 줄지 않을 수 있습니다. 데이터 수집·계산·판단 대기·승인·재작업 시간을 나눠 측정해 실제 제약을 찾습니다.</p><p>TOC 관점에서 제약을 확인하고, 현재 제약의 처리 능력을 활용하며 주변 업무를 맞춘 뒤 필요한 역량을 보강합니다. 납기 조정 승인이 병목이라면 Agent가 근거와 대안을 준비하고 승인 조건을 명확히 합니다. 전체 처리시간과 오류·재작업을 확인하고, 제약이 이동하면 개선 대상을 바꿉니다.</p><p>반복 예외에서 일관된 처리 기준이 확인되면 담당자 검토와 평가 후 Knowledge·정책에 반영합니다. 사람의 판단이 모든 계획 자동화 실패의 원인이라는 뜻은 아닙니다.</p></div></details></div></section>
 <section class="bg-navy">
   <div class="container container-narrow center">
     <div class="section-label" style="justify-content:center">Contact</div>

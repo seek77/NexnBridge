@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI가 판단에 쓸 수 있는 데이터 모델은 따로 있다 | Nex &amp; Bridge</title><meta name="description" content="수요 예측은 주문이 아니고, 안전재고 목표는 현재고가 아닙니다. 데이터의 의미와 집계 단위, 기준값을 정한 이유가 빠지면 AI는 맞는 숫자로도 잘못된 답을 낼 수 있습니다.">
+<link rel="canonical" href="https://nexenbridge.com/ko/insights/decision-ready-data-model.html"><link rel="alternate" hreflang="ko" href="https://nexenbridge.com/ko/insights/decision-ready-data-model.html"><link rel="alternate" hreflang="en" href="https://nexenbridge.com/en/insights/decision-ready-data-model.html">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Nex &amp; Bridge"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="AI가 판단에 쓸 수 있는 데이터 모델은 따로 있다"><meta property="og:description" content="수요 예측은 주문이 아니고, 안전재고 목표는 현재고가 아닙니다. 데이터의 의미와 집계 단위, 기준값을 정한 이유가 빠지면 AI는 맞는 숫자로도 잘못된 답을 낼 수 있습니다."><meta property="og:url" content="https://nexenbridge.com/ko/insights/decision-ready-data-model.html">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="AI가 판단에 쓸 수 있는 데이터 모델은 따로 있다"><meta name="twitter:description" content="수요 예측은 주문이 아니고, 안전재고 목표는 현재고가 아닙니다. 데이터의 의미와 집계 단위, 기준값을 정한 이유가 빠지면 AI는 맞는 숫자로도 잘못된 답을 낼 수 있습니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/css/site.css"><link rel="stylesheet" href="/assets/css/insights.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Post 2.5 — Agentic AI Needs a Decision-Ready Data Model","name":"AI가 판단에 쓸 수 있는 데이터 모델은 따로 있다","description":"수요 예측은 주문이 아니고, 안전재고 목표는 현재고가 아닙니다. 데이터의 의미와 집계 단위, 기준값을 정한 이유가 빠지면 AI는 맞는 숫자로도 잘못된 답을 낼 수 있습니다.","inLanguage":"en","datePublished":"2026-05-04T02:46:48.096Z","author":{"@type":"Person","name":"soonsik ahn","url":"https://www.linkedin.com/in/soonsik-ahn-b2a98225"},"publisher":{"@type":"Organization","name":"Nex & Bridge","url":"https://nexenbridge.com"},"url":"https://nexenbridge.com/ko/insights/decision-ready-data-model.html","mainEntityOfPage":"https://nexenbridge.com/ko/insights/decision-ready-data-model.html","isBasedOn":"https://www.linkedin.com/posts/soonsik-ahn-b2a98225_supplychain-scmintelligence-agenticai-activity-7456897087515938816-cjE_","citation":"https://www.linkedin.com/posts/soonsik-ahn-b2a98225_supplychain-scmintelligence-agenticai-activity-7456897087515938816-cjE_"}</script></head><body class="insights-article"><a class="ins-skip" href="#main-content">본문으로 건너뛰기</a><nav class="site-nav" aria-label="주 메뉴">
+  <a href="/ko/" class="logo">Nex <span>&amp;</span> Bridge</a>
+  <button class="nav-burger" type="button" aria-label="메뉴" aria-expanded="false" aria-controls="primary-menu"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="primary-menu">
+    <li class="has-mega">
+      <a href="/ko/services/">서비스</a>
+      <button class="submenu-toggle" type="button" aria-label="서비스 하위메뉴" aria-expanded="false" aria-controls="services-menu"><span class="chev"></span></button>
+      <div class="mega-menu" id="services-menu">
+        <div class="mega-overview"><a href="/ko/services/" class="mega-featured">서비스 전체 보기 →</a></div>
+        <div class="mega-col"><div class="mega-col-title">전략·지식</div><a href="/ko/services/platform-assessment.html">AI 전략·아키텍처</a><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></div>
+        <div class="mega-col"><div class="mega-col-title"><a href="/ko/services/data-platform.html">데이터 플랫폼·엔지니어링</a></div><a href="/ko/services/snowflake/" class="mega-featured">Snowflake Services</a><a href="/ko/services/snowflake/data-foundation.html">AI-Ready Data Foundation</a><a href="/ko/services/snowflake/sap-migration.html">SAP to Snowflake Migration</a><a href="/ko/services/snowflake/data-engineering.html">Data Engineering &amp; Integration</a><a href="/ko/services/snowflake/managed-services.html">FinOps &amp; Managed Services</a></div>
+        <div class="mega-col"><div class="mega-col-title">Application·운영</div><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></div>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="/ko/solutions/">Applications</a>
+      <button class="submenu-toggle" type="button" aria-label="Applications 하위메뉴" aria-expanded="false" aria-controls="applications-menu"><span class="chev"></span></button>
+      <div class="mega-menu mega-applications" id="applications-menu">
+        <a href="/ko/solutions/" class="mega-featured">Applications 전체 보기 →</a>
+        <a href="/ko/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a>
+        <a href="/ko/solutions/scm.html">SCM Applications</a>
+      </div>
+    </li>
+    <li><a href="/ko/how-we-work.html">일하는 방식</a></li>
+    <li><a href="/ko/insights.html" aria-current="page">Insights</a></li>
+    <li><a href="/ko/company.html">회사소개</a></li>
+    <li><a href="/ko/contact.html" class="nav-cta">문의하기</a></li>
+    <li><div class="lang-switch"><a href="/ko/insights/decision-ready-data-model.html" aria-current="true">KO</a><a href="/en/insights/decision-ready-data-model.html">EN</a></div></li>
+  </ul>
+</nav><main id="main-content"><header class="ins-article-header"><div class="ins-reading"><a class="ins-back" href="/ko/insights.html">← 글 목록</a><div class="ins-meta"><span class="ins-category">Knowledge &amp; Data</span><time datetime="2026-05-04T02:46:48.096Z">2026.05.04</time><span>soonsik ahn</span></div><h1>AI가 판단에 쓸 수 있는 데이터 모델은 따로 있다</h1><p class="ins-original-title" lang="en">Post 2.5 — Agentic AI Needs a Decision-Ready Data Model</p><p class="ins-summary">수요 예측은 주문이 아니고, 안전재고 목표는 현재고가 아닙니다. 데이터의 의미와 집계 단위, 기준값을 정한 이유가 빠지면 AI는 맞는 숫자로도 잘못된 답을 낼 수 있습니다.</p><div class="ins-source">LinkedIn 최초 발행 · 원문 영어<br><a href="https://www.linkedin.com/posts/soonsik-ahn-b2a98225_supplychain-scmintelligence-agenticai-activity-7456897087515938816-cjE_" rel="noopener noreferrer">LinkedIn 원문·댓글 보기 ↗</a></div></div></header>
+<div class="ins-article-main"><div class="ins-reading"><p class="ins-language-note">위에는 한국어 요약을, 아래에는 영어 원문을 실었습니다.</p><article class="ins-prose" lang="en" aria-label="영어 원문"><p>Post 2.5 — Agentic AI Needs a Decision-Ready Data Model</p>
+<p>In my last post, I wrote about intelligence reaching the decision.</p>
+<p>But before AI can prepare a decision, it has to understand the logic behind that decision. That requires more than data access.</p>
+<p>Many AI projects begin by connecting the model to ERP, planning, inventory, sales, production, cost, and master data. Necessary, but not sufficient.</p>
+<p>A forecast is not an order. A safety stock target is not inventory. A threshold is not an objective truth; it is a decision rule created under specific business conditions.</p>
+<p>If AI does not understand those differences, it can bring the right number into the wrong context, treat assumptions as facts, or explain a symptom as if it were the root cause.</p>
+<p>Not because the model is weak, but because the business logic underneath the data is not explicit enough.</p>
+<p>That is why Agentic AI needs a decision-ready data model.</p>
+<p>Over the years, I accumulated project material and operating experience across SCM transformation, profitability analysis, inventory decisions, supply planning, commercial analytics, pricing strategy, and demand-shaping mechanisms.</p>
+<p>But raw experience is not enough for AI. It has to be reorganised into a structure the model can reason with.</p>
+<p>So I consolidated fragmented project logic, refined the decision criteria, validated the reasoning against operational data, and built it into a knowledge map.</p>
+<p>Technically, this sits at the intersection of knowledge engineering, semantic modelling, Agentic RAG, and agent harness design.<br>Practically, it means turning expert judgement into a reusable decision system.</p>
+<p>A document library stores what people wrote.<br>A knowledge map structures how experts think.</p>
+<p>For each decision area, it defines the data grain, metric meaning, threshold assumptions, scenario constraints, and action triggers.<br>High inventory is not just stock cover. It depends on shelf life, sales velocity, margin, channel options, disposal cost, and timing of action.</p>
+<p>This is why more data layers are not the answer.</p>
+<p>Traditional DW structures often grow in the opposite direction: more marts, more extracts, more departmental views, and more local definitions. Each layer may have been created for a reason, but together they make the logic harder to trace.</p>
+<p>For Agentic AI, the direction has to be different: fewer meaningless layers, clearer semantic structure, a knowledge map that carries expert reasoning, a data model that carries business meaning, and an agent harness that controls which knowledge, tools and validation steps the AI can use.</p>
+<p>This is where AI moves from retrieving data to preparing analysis.<br>Not because the model is magically smarter, but because the decision logic has finally been made visible.</p>
+<p>That is the architecture I am building for SCM Intelligence: business knowledge, data structure, and AI reasoning connected as one decision system.</p>
+<p>#SupplyChain #SCMIntelligence #AgenticAI #DataArchitecture #DecisionScience</p></article><div class="ins-prose ins-original-media" aria-label="원문 첨부 이미지"><figure class=""><img src="/assets/images/insights/decision-ready-data-model-body-0-39d0fba7d2f8.jpg" alt="graphical user interface, website" loading="lazy" decoding="async"></figure></div><div class="ins-article-end"><a class="ins-back" href="/ko/insights.html">← 글 목록</a><a class="ins-back" href="https://www.linkedin.com/posts/soonsik-ahn-b2a98225_supplychain-scmintelligence-agenticai-activity-7456897087515938816-cjE_">LinkedIn에서 대화 이어가기 ↗</a></div></div></div>
+<section class="ins-section bg-alt"><div class="container"><div class="ins-section-head"><h2>함께 읽을 글</h2></div><div class="ins-grid"><article class="ins-card" data-insight-card data-category="knowledge" data-search="if the data is standardized and stored in a warehouse, is it ready for ai? 데이터 웨어하우스를 만들면 ai 준비는 끝날까? ‘이 주문을 받아도 될까?’라는 질문에는 재고 수량만으로 답할 수 없습니다. 기존 주문에 묶인 재고, 생산 여력, 대체품 승인 조건까지 확인해야 데이터에서 빠진 것이 보입니다. a warehouse is a starting point. real decision scenarios reveal missing relationships, metric definitions and business rules.">
+<div class="ins-meta"><span class="ins-category">Knowledge &amp; Data</span><time datetime="2026-09-17">2026.09.17</time></div>
+<h3><a href="/ko/insights/ai-ready-data.html">데이터 웨어하우스를 만들면 AI 준비는 끝날까?</a></h3><p>‘이 주문을 받아도 될까?’라는 질문에는 재고 수량만으로 답할 수 없습니다. 기존 주문에 묶인 재고, 생산 여력, 대체품 승인 조건까지 확인해야 데이터에서 빠진 것이 보입니다.</p>
+<div class="ins-card-bottom"><span>영어 원문 · 아티클</span><a href="/ko/insights/ai-ready-data.html" aria-label="데이터 웨어하우스를 만들면 AI 준비는 끝날까? — 본문 읽기">본문 읽기 →</a></div></article><article class="ins-card" data-insight-card data-category="knowledge" data-search="a knowledge graph can’t capture every phone call. 전화 한 통으로 바뀐 운송 조건을 계획에 반영하려면 추가 운송 물량이 내일만 300개에서 150개로 줄었습니다. 기본 지식 그래프는 그대로 두고, 담당자가 확인한 임시 조건으로 출하 계획을 다시 계산하는 예시입니다. an illustrative shipping demo separates temporary scenario constraints from the base knowledge graph, with human confirmation and replanning.">
+<div class="ins-meta"><span class="ins-category">Knowledge &amp; Data</span><time datetime="2026-09-10">2026.09.10</time></div>
+<h3><a href="/ko/insights/knowledge-graph-and-phone-calls.html">전화 한 통으로 바뀐 운송 조건을 계획에 반영하려면</a></h3><p>추가 운송 물량이 내일만 300개에서 150개로 줄었습니다. 기본 지식 그래프는 그대로 두고, 담당자가 확인한 임시 조건으로 출하 계획을 다시 계산하는 예시입니다.</p>
+<div class="ins-card-bottom"><span>영어 원문 · 아티클</span><a href="/ko/insights/knowledge-graph-and-phone-calls.html" aria-label="전화 한 통으로 바뀐 운송 조건을 계획에 반영하려면 — 본문 읽기">본문 읽기 →</a></div></article><article class="ins-card" data-insight-card data-category="knowledge" data-search="an ontology gives ai a business world, not just business data ai가 업무를 이해하려면 데이터 외에 무엇이 필요할까? 숫자가 맞아도 원인을 잘못 짚을 수 있습니다. 제품·고객·주문 사이의 관계와 판단 기준을 ontology로 정리하면, ai가 주어진 표 밖에서 확인해야 할 것까지 찾을 수 있습니다. how ontology connects decision logic, value drivers and business objects so ai can investigate the business around a problem.">
+<div class="ins-meta"><span class="ins-category">Knowledge &amp; Data</span><time datetime="2026-08-07">2026.08.07</time></div>
+<h3><a href="/ko/insights/ontology-and-business-context.html">AI가 업무를 이해하려면 데이터 외에 무엇이 필요할까?</a></h3><p>숫자가 맞아도 원인을 잘못 짚을 수 있습니다. 제품·고객·주문 사이의 관계와 판단 기준을 Ontology로 정리하면, AI가 주어진 표 밖에서 확인해야 할 것까지 찾을 수 있습니다.</p>
+<div class="ins-card-bottom"><span>영어 원문 · 아티클</span><a href="/ko/insights/ontology-and-business-context.html" aria-label="AI가 업무를 이해하려면 데이터 외에 무엇이 필요할까? — 본문 읽기">본문 읽기 →</a></div></article></div></div></section></main><footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="logo">Nex <span>&amp;</span> Bridge</div><p>현업과 컨설팅 경험을 바탕으로 기업의 지식·데이터와 AI Application을 설계·구현합니다.</p></div>
+      <div class="footer-col"><h4>서비스</h4><ul><li><a href="/ko/services/">서비스 전체 보기</a></li><li><a href="/ko/services/platform-assessment.html">AI 전략·아키텍처</a></li><li><a href="/ko/services/knowledge.html">Enterprise Knowledge Engineering</a></li><li><a href="/ko/services/data-platform.html">데이터 플랫폼·엔지니어링</a></li><li><a href="/ko/services/solution.html">Agentic Analytics &amp; Applications</a></li><li><a href="/ko/services/agentops.html">AgentOps &amp; Managed Operations</a></li><li><a href="/ko/services/snowflake/">Snowflake Services</a></li></ul></div>
+      <div class="footer-col"><h4>Applications</h4><ul><li><a href="/ko/solutions/">Applications 전체 보기</a></li><li><a href="/ko/solutions/profitability.html">Profitability &amp; Portfolio Analytics</a></li><li><a href="/ko/solutions/scm.html">SCM Applications</a></li></ul></div>
+      <div class="footer-col"><h4>회사</h4><ul><li><a href="/ko/how-we-work.html">일하는 방식</a></li><li><a href="/ko/insights.html">Insights</a></li><li><a href="/ko/company.html">회사소개</a></li><li><a href="/ko/contact.html">문의하기</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Nex &amp; Bridge Co., Ltd.</p><div class="footer-legal"><a href="https://nexenbridge.com">nexenbridge.com</a><a href="/ko/privacy.html">개인정보처리방침</a></div></div>
+  </div>
+</footer>
+<script src="/assets/js/site.js"></script></body></html>

@@ -12,4 +12,4 @@ The build refreshes `/ko/insights.html`, `/en/insights.html`, the corresponding 
 
 This library contains individually verified public pieces imported on 2026-09-19. It is not a claim that every post on the author's LinkedIn account has been retrieved. Account-wide coverage must be reconciled against an author-provided export before claiming completion.
 
-Topic filters and reading paths are separate. The three editorial reading paths are defined in `scripts/build-insights.cjs` and must cover every published piece exactly once. Their sequence is suggested editorial reading order, not a claim about the original LinkedIn series numbering. When adding a piece, update its reading path as well.
+The index is one newest-first list with topic filters. There are no editorial reading-path groupings. Previous/next links are generated only for original titles explicitly numbered `Post N.M`, and only when the immediately adjacent installment is available. Missing installments are not skipped, and topical similarity alone never creates a series relationship.

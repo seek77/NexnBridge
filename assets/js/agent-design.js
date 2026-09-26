@@ -4,7 +4,7 @@
   if (!root) return;
 
   // Informational website content; no model calls or business actions.
-  const designs = {
+  const koreanDesigns = {
     workflow: {
       category: 'Workflow · Graph Engineering',
       question: '반드시 지켜야 할 절차는?',
@@ -67,6 +67,69 @@
     }
   };
 
+  const englishDesigns = {
+    workflow: {
+      category: 'Workflow · Graph Engineering',
+      question: 'Which steps must be followed?',
+      summary: 'Make required steps, branches, and approval conditions explicit in the execution structure. Each step can run calculation code, call a model for a decision, or use an agent that explores within its scope.',
+      cards: [
+        ['Execution structure', 'Task steps, state, conditional branches, and loops'],
+        ['Decision boundaries', 'What code determines and what the model may choose'],
+        ['Validation checks', 'Skipped steps, incorrect branches, and exception handling']
+      ]
+    },
+    planning: {
+      category: 'Agent Loop · Planning & Replanning',
+      question: 'When does the plan need to change?',
+      summary: 'When the cause and investigation path are not known in advance, let the agent form hypotheses and choose tools. It revises its plan as new evidence emerges, within explicit stopping conditions and exploration limits.',
+      cards: [
+        ['Exploration', 'Hypotheses, evidence gathering, tool use, and replanning'],
+        ['Task state', 'Confirmed facts, open questions, and previous attempts'],
+        ['Validation checks', 'Unsupported conclusions, repeated searches, and time or cost overruns']
+      ]
+    },
+    'multi-agent': {
+      category: 'Multi-Agent · Orchestration',
+      question: 'When are multiple roles needed?',
+      summary: 'Use multiple agents when work calls for independent investigations or specialist roles. Define task allocation, shared information, and how results are combined, then compare the approach with a single agent.',
+      cards: [
+        ['Role design', 'Tasks assigned by expertise, tools, and permissions'],
+        ['Coordination', 'Parallel work, sequential handoffs, and result review'],
+        ['Validation checks', 'Duplicate work, information lost in handoffs, and coordination costs']
+      ]
+    },
+    decision: {
+      category: 'Classification · Decision Models',
+      question: 'What if the choices are defined?',
+      summary: 'Design classification, selection, and scoring separately from open-ended exploration. Use code where rules determine the answer. Where interpreting meaning requires a model, evaluate decision models such as Jev as potential options.',
+      cards: [
+        ['Decision structure', 'Input state, available choices, scoring criteria, and output format'],
+        ['Exception handling', 'No suitable choice, insufficient information, and deferral'],
+        ['Validation checks', 'Misclassification, probability calibration, and which decisions can be automated']
+      ]
+    },
+    knowledge: {
+      category: 'Knowledge Engineering · Context Engineering',
+      question: 'What should decisions be based on?',
+      summary: 'Use ontologies, knowledge graphs, and semantic models to manage business concepts, relationships, metrics, and decision criteria. Select the knowledge, data, and previous results the model needs for the current task.',
+      cards: [
+        ['Knowledge design', 'Business meaning, relationships, rules, sources, and effective dates'],
+        ['Context assembly', 'Retrieved evidence, task state, tool outputs, and history'],
+        ['Validation checks', 'Missing evidence, conflicting rules, and outdated or unauthorized information']
+      ]
+    },
+    harness: {
+      category: 'Harness · Evaluation · Operations',
+      question: 'How do we control and improve it?',
+      summary: 'Implement tool permissions, state persistence and resumption, retry and stopping conditions, and human approval. When models, tools, knowledge, or execution structures change, rerun evaluations on the same business cases.',
+      cards: [
+        ['Execution controls', 'Access permissions, approvals, failure recovery, and execution logs'],
+        ['Error analysis', 'Trace failures to retrieval, judgment, calculation, or execution'],
+        ['Improvement measures', 'Accuracy, human review effort, processing time, and total cost']
+      ]
+    }
+  };
+  const designs = root.dataset.lang === 'en' ? englishDesigns : koreanDesigns;
   const buttons = root.querySelectorAll('[data-design]');
   function show(key) {
     const design = designs[key];

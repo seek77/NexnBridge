@@ -70,35 +70,34 @@
 </section>
 <section class="bg-alt" id="problem-framing">
   <div class="container">
-    <div id="nb-question-design" aria-label="Business analysis examples" data-lang="en">
-      <div class="nb-eyebrow">BUSINESS QUESTIONS</div>
-      <h2>Understand what's happening<br>and decide what to do next.</h2>
-      <p class="nb-intro">An agent can look up the relevant data, run calculations, and investigate possible causes. It checks its findings before recommending an action or asking for approval.</p>
-      <p class="nb-intro">We make your metric definitions, calculation rules, and policies explicit, then connect them to tested tools. That gives agents the business context they need to investigate a question.</p>
-      <p class="nb-invitation">Explore the questions through a profitability example.</p>
-      <div class="nb-pickers" role="group" aria-label="Choose a business question">
-        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="monitor"><span class="nb-pick-copy"><span class="nb-pick-name">What has changed?</span><span class="nb-pick-type">Monitoring</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
-        <button class="nb-pick" type="button" disabled aria-pressed="true" aria-controls="nb-question-example" data-question="diagnose"><span class="nb-pick-copy"><span class="nb-pick-name">Why did it change?</span><span class="nb-pick-type">Diagnosis</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
-        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="predict"><span class="nb-pick-copy"><span class="nb-pick-name">What lies ahead?</span><span class="nb-pick-type">Forecasting</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
-        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="simulate"><span class="nb-pick-copy"><span class="nb-pick-name">What if we change it?</span><span class="nb-pick-type">Simulation</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
-        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="decide"><span class="nb-pick-copy"><span class="nb-pick-name">Which option works best?</span><span class="nb-pick-type">Decision support</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
-        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="act"><span class="nb-pick-copy"><span class="nb-pick-name">Can we act on it?</span><span class="nb-pick-type">Controlled action</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <div id="nb-question-design" aria-label="Agent design for business tasks" data-lang="en">
+      <div class="nb-eyebrow">AGENT ENGINEERING</div>
+      <h2>Business understanding.<br>Working agents.</h2>
+      <p class="nb-intro">Agent design starts with understanding the work: the decisions it requires, the criteria and exceptions that matter, and the consequences for the business.</p>
+      <p class="nb-intro">Our experience in business operations and consulting shapes what we build. We use it to decide which steps belong in code, which judgments need a model, and where agents need room to explore—then test those choices against real business cases.</p>
+      <p class="nb-invitation">Explore six elements of agent design. A task may call for several of them together.</p>
+      <div class="nb-pickers" role="group" aria-label="Choose an agent design element">
+        <button class="nb-pick" type="button" disabled aria-pressed="true" aria-controls="nb-question-example" data-design="workflow"><span class="nb-pick-copy"><span class="nb-pick-name">Which steps must be followed?</span><span class="nb-pick-type">Workflow · Graph Engineering</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-design="planning"><span class="nb-pick-copy"><span class="nb-pick-name">When does the plan need to change?</span><span class="nb-pick-type">Agent Loop · Planning &amp; Replanning</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-design="multi-agent"><span class="nb-pick-copy"><span class="nb-pick-name">When are multiple roles needed?</span><span class="nb-pick-type">Multi-Agent · Orchestration</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-design="decision"><span class="nb-pick-copy"><span class="nb-pick-name">What if the choices are defined?</span><span class="nb-pick-type">Classification · Decision Models</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-design="knowledge"><span class="nb-pick-copy"><span class="nb-pick-name">What should decisions be based on?</span><span class="nb-pick-type">Knowledge Engineering · Context Engineering</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-design="harness"><span class="nb-pick-copy"><span class="nb-pick-name">How do we control and improve it?</span><span class="nb-pick-type">Harness · Evaluation · Operations</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
       </div>
       <div class="nb-example" id="nb-question-example" aria-live="polite" aria-atomic="true">
         <div class="nb-question">
-          <div class="nb-context"><span>Profitability · illustrative example</span><span data-field="category">Diagnosis</span></div>
-          <h3 data-field="question">Why has profitability fallen while revenue has grown?</h3>
-          <p class="nb-analysis" data-field="summary">Compare the effects of price, volume, and product mix, then investigate discount terms and cost details where the variance remains unexplained.</p>
+          <div class="nb-context"><span>Agent design · Implementation · Validation</span><span data-field="category">Workflow · Graph Engineering</span></div>
+          <h3 data-field="question">Which steps must be followed?</h3>
+          <p class="nb-analysis" data-field="summary">Make required steps, branches, and approval conditions explicit in the execution structure. Each step can run calculation code, call a model for a decision, or use an agent that explores within its scope.</p>
         </div>
-        <ul class="nb-basis" aria-label="Business context and analytical tools">
-          <li class="nb-basis-card"><h4>Business definitions</h4><p>Profit measures, cost allocation rules, and discount terms</p><span class="nb-tech">Knowledge · Semantic Model</span></li>
-          <li class="nb-basis-card"><h4>Validated calculations</h4><p>Profit variance decomposition by price, volume, mix, and cost</p><span class="nb-tech">SQL · Views · Calculation models</span></li>
-          <li class="nb-basis-card"><h4>Further investigation</h4><p>Customer and channel comparisons, contract terms, and exceptions</p><span class="nb-tech">Agent · Data queries · Document search</span></li>
+        <ul class="nb-basis" aria-label="Design details and validation checks">
+          <li class="nb-basis-card"><h4>Execution structure</h4><p>Task steps, state, conditional branches, and loops</p></li>
+          <li class="nb-basis-card"><h4>Decision boundaries</h4><p>What code determines and what the model may choose</p></li>
+          <li class="nb-basis-card"><h4>Validation checks</h4><p>Skipped steps, incorrect branches, and exception handling</p></li>
         </ul>
       </div>
       <div class="nb-bottom">
-        <p>See how we define business knowledge and analytical requirements.</p>
-        <div class="nb-links"><a href="/en/services/knowledge.html">Knowledge Engineering →</a><a href="/en/how-we-work.html">How We Work →</a></div>
+        <div class="nb-links"><a href="/en/services/solution.html">Explore Agent Design &amp; Implementation →</a></div>
       </div>
     </div>
   </div>
@@ -183,6 +182,6 @@
   </div>
 </footer>
 <script src="/assets/js/site.js"></script>
-<script src="/assets/js/question-design.js"></script>
+<script src="/assets/js/agent-design.js"></script>
 </body>
 </html>

@@ -47,3 +47,7 @@
 @media(max-width:360px){.ae-definitions{grid-template-columns:1fr}.ae-map{padding:.75rem}.ae-agents>div{display:block}.ae-agents span{margin-top:.25rem}}
 @media print{.ae-architecture{background:#fff;color:#1e293b}.ae-architecture :is(h2,p,strong,span,a){color:#1e293b!important}.ae-map-app{background:#eef3fa}}
 @media(max-width:680px){.ae-home .hero-inner{padding:6rem 1.5rem 2rem}.ae-home .hero h1{font-size:1.9rem}}
+
+/* Keep the four methodology steps in balanced rows. */
+#execution-design > .container > .grid-2{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:1.5rem}
+@media(max-width:680px){#execution-design > .container > .grid-2{grid-template-columns:minmax(0,1fr)}}

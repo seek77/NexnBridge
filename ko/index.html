@@ -71,35 +71,33 @@
 </section>
 <section class="bg-alt" id="problem-framing">
   <div class="container">
-    <div id="nb-question-design" aria-label="업무 질문별 분석 예시" data-lang="ko">
-      <div class="nb-eyebrow">BUSINESS QUESTIONS</div>
-      <h2>원인을 찾고, 대안을 계산하고,<br>후속 업무까지 연결합니다</h2>
-      <p class="nb-intro">Agent가 필요한 지식과 데이터를 찾고 계산 도구를 사용합니다. 결과를 확인한 뒤 추가 분석이나 승인 절차로 연결합니다.</p>
-      <p class="nb-intro">넥스앤브릿지는 기업의 지표·계산 기준과 업무 규칙을 정리하고, 반복되는 복잡한 계산을 검증된 분석 도구로 제공합니다. Agent는 이를 활용해 필요한 분석을 이어갑니다.</p>
-      <p class="nb-invitation">수익성 분석을 예로 살펴보세요.</p>
-      <div class="nb-pickers" role="group" aria-label="업무 질문 선택">
-        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="monitor"><span class="nb-pick-copy"><span class="nb-pick-name">무엇이 달라졌나?</span><span class="nb-pick-type">현황 파악</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
-        <button class="nb-pick" type="button" disabled aria-pressed="true" aria-controls="nb-question-example" data-question="diagnose"><span class="nb-pick-copy"><span class="nb-pick-name">왜 달라졌나?</span><span class="nb-pick-type">원인 분석</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
-        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="predict"><span class="nb-pick-copy"><span class="nb-pick-name">앞으로 어떻게 될까?</span><span class="nb-pick-type">예측</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
-        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="simulate"><span class="nb-pick-copy"><span class="nb-pick-name">조건을 바꾸면?</span><span class="nb-pick-type">시뮬레이션</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
-        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="decide"><span class="nb-pick-copy"><span class="nb-pick-name">어떤 선택이 유리할까?</span><span class="nb-pick-type">대안 평가</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
-        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-question="act"><span class="nb-pick-copy"><span class="nb-pick-name">실제로 적용해도 될까?</span><span class="nb-pick-type">실행·통제</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+    <div id="nb-question-design" aria-label="업무별 Agent 설계 방식" data-lang="ko">
+      <div class="nb-eyebrow">AGENT ENGINEERING</div>
+      <h2>업무에 맞춰 Agent의 구조와<br>판단 방식을 설계합니다</h2>
+      <p class="nb-intro">어떤 절차를 코드로 정할지, 어디서 모델이 판단할지, 얼마나 자율적으로 탐색하게 할지. 넥스앤브릿지는 업무 특성과 운영 조건에 따라 구현 방식을 선택하고 검증합니다.</p>
+      <p class="nb-invitation">여섯 가지 설계 요소를 살펴보세요. 업무에 따라 여러 요소를 함께 적용합니다.</p>
+      <div class="nb-pickers" role="group" aria-label="Agent 설계 요소 선택">
+        <button class="nb-pick" type="button" disabled aria-pressed="true" aria-controls="nb-question-example" data-design="workflow"><span class="nb-pick-copy"><span class="nb-pick-name">반드시 지켜야 할 절차는?</span><span class="nb-pick-type">Workflow · Graph Engineering</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-design="planning"><span class="nb-pick-copy"><span class="nb-pick-name">조사 방향이 달라지는 업무는?</span><span class="nb-pick-type">Agent Loop · Planning &amp; Replanning</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-design="multi-agent"><span class="nb-pick-copy"><span class="nb-pick-name">여러 역할이 필요한 업무는?</span><span class="nb-pick-type">Multi-Agent · Orchestration</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-design="decision"><span class="nb-pick-copy"><span class="nb-pick-name">범위가 정해진 판단은?</span><span class="nb-pick-type">Classification · Decision Models</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-design="knowledge"><span class="nb-pick-copy"><span class="nb-pick-name">무엇을 근거로 판단할까?</span><span class="nb-pick-type">Knowledge Engineering · Context Engineering</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
+        <button class="nb-pick" type="button" disabled aria-pressed="false" aria-controls="nb-question-example" data-design="harness"><span class="nb-pick-copy"><span class="nb-pick-name">어떻게 통제하고 개선할까?</span><span class="nb-pick-type">Harness · Evaluation · Operations</span></span><span class="nb-check" aria-hidden="true">✓</span></button>
       </div>
       <div class="nb-example" id="nb-question-example" aria-live="polite" aria-atomic="true">
         <div class="nb-question">
-          <div class="nb-context"><span>수익성 · 설명용 분석 예시</span><span data-field="category">원인 분석</span></div>
-          <h3 data-field="question">매출은 늘었는데 수익성이 떨어진 이유는?</h3>
-          <p class="nb-analysis" data-field="summary">가격·물량·제품 구성의 영향을 비교하고, 설명되지 않는 변동은 할인 조건과 원가 내역에서 추가로 조사합니다.</p>
+          <div class="nb-context"><span>Agent 설계 · 구현 · 검증</span><span data-field="category">Workflow · Graph Engineering</span></div>
+          <h3 data-field="question">반드시 지켜야 할 절차는?</h3>
+          <p class="nb-analysis" data-field="summary">필수 단계와 분기, 승인 조건을 실행 구조에 명시합니다. 각 단계에는 계산 코드, 모델 판단 또는 자체적으로 탐색하는 Agent를 배치합니다.</p>
         </div>
-        <ul class="nb-basis" aria-label="활용하는 업무 기준과 분석 도구">
-          <li class="nb-basis-card"><h4>업무 기준</h4><p>수익성 정의와 원가 배부 기준, 할인 조건</p><span class="nb-tech">Knowledge · Semantic Model</span></li>
-          <li class="nb-basis-card"><h4>검증된 계산</h4><p>가격·물량·제품 구성·원가의 손익 영향 분해</p><span class="nb-tech">SQL · View · 계산 모델</span></li>
-          <li class="nb-basis-card"><h4>추가 분석</h4><p>고객·채널별 비교, 계약 조건과 예외 조사</p><span class="nb-tech">Agent · 데이터 조회 · 문서 검색</span></li>
+        <ul class="nb-basis" aria-label="설계 내용과 검증 항목">
+          <li class="nb-basis-card"><h4>실행 구조</h4><p>업무 단계, 상태, 조건부 분기와 반복</p></li>
+          <li class="nb-basis-card"><h4>판단 범위</h4><p>코드로 확정할 부분과 모델이 선택할 부분</p></li>
+          <li class="nb-basis-card"><h4>검증 항목</h4><p>필수 단계 누락, 잘못된 분기, 예외 처리</p></li>
         </ul>
       </div>
       <div class="nb-bottom">
-        <p>업무 지식과 분석 기준을 구성하는 방법을 확인해 보세요.</p>
-        <div class="nb-links"><a href="/ko/services/knowledge.html">Knowledge Engineering →</a><a href="/ko/how-we-work.html">일하는 방식 →</a></div>
+        <div class="nb-links"><a href="/ko/services/solution.html">Agent 설계·구현 자세히 보기 →</a></div>
       </div>
     </div>
   </div>
@@ -184,6 +182,6 @@
   </div>
 </footer>
 <script src="/assets/js/site.js"></script>
-<script src="/assets/js/question-design.js"></script>
+<script src="/assets/js/agent-design.js"></script>
 </body>
 </html>

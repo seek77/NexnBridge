@@ -33,7 +33,7 @@ const generated=[];
 for(const l of ['ko','en']){
 const ko=l==='ko',old=read(l+'/insights.html'),nav=old.match(/<nav\b[\s\S]*?<\/nav>/)[0],footer=old.match(/<footer\b[\s\S]*?<\/footer>/)[0];
 const skip=`<a class="ins-skip" href="#main-content">${ko?'본문으로 건너뛰기':'Skip to content'}</a>`;
-const end=footer+'\n<script src="/assets/js/site.js"></script>';
+const end=footer+'\n<script src="/assets/js/site.js"></script>\n<script src="/assets/js/analytics.js" defer></script>';
 const description=ko?'업무 의사결정, 기업 지식, SCM과 수익성에 관해 LinkedIn에 쓴 글을 모았습니다. 한국어 요약과 영어 원문을 함께 읽을 수 있습니다.':'Writing on enterprise AI, business knowledge, supply chain decisions and profitability, originally published on LinkedIn.';
 const schema={'@context':'https://schema.org','@type':'CollectionPage',name:'Insights | Nex & Bridge',url:base+'/'+l+'/insights.html',inLanguage:l,description,mainEntity:{'@type':'ItemList',numberOfItems:articles.length,itemListElement:articles.map((a,i)=>({'@type':'ListItem',position:i+1,name:title(a,l),url:base+href(a,l)}))}};
 const body=`<body class="insights-page">${skip}${nav}<main id="main-content">

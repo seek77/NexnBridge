@@ -112,7 +112,7 @@ body.jd-page {
 
 /* 선은 다섯 칸의 가운데(10%~90%)를 잇는다. viewBox 높이 176 = 11rem이라 y 단위가 px과 같다.
    --draw: 앞으로 가는 선, --ret: 피드백·개선에서 업무 이해로 돌아가는 선. 엔진이 쓰는 --sc-p에서 계산. */
-.jd-edd__track { position: relative; min-height: 14rem; --draw: clamp(0, (var(--sc-p, 0) - 0.06) / 0.52, 1); --ret: clamp(0, (var(--sc-p, 0) - 0.66) / 0.22, 1); }
+.jd-edd__track { position: relative; min-height: 14rem; --draw: clamp(0, (var(--sc-p, 0) - 0.02) / 0.40, 1); --ret: clamp(0, (var(--sc-p, 0) - 0.48) / 0.22, 1); }
 .jd-edd__lines { position: absolute; left: 10%; top: 0; width: 80%; height: 11rem; overflow: visible; }
 .jd-edd__lines path { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-linecap: round; }
 .jd-edd__line   { stroke: color-mix(in oklab, var(--sc-accent) 85%, transparent); stroke-dashoffset: calc(1 - var(--draw)); }

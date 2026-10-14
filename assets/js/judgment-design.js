@@ -12,6 +12,10 @@
 (function () {
   'use strict';
 
+  // EDD 고정 구간 길이: 폰에서는 더 짧게. 엔진이 마운트 시점에 data-sc-span을 읽으므로 그 전에 정한다.
+  var eddEl = document.getElementById('edd');
+  if (eddEl && matchMedia('(max-width: 760px)').matches) eddEl.setAttribute('data-sc-span', '1.8');
+
   var api = window.ScrollCraft ? window.ScrollCraft.mount(document.body) : null;
 
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -97,8 +101,8 @@
     // 정점: 엔진이 쓴 --sc-p로 돌아가는 선의 진행을 읽는다(page.css의 --ret와 같은 구간).
     if (edd) {
       var p = parseFloat(edd.style.getPropertyValue('--sc-p')) || 0;
-      var draw = clamp01((p - 0.06) / 0.52);
-      var ret = clamp01((p - 0.66) / 0.22);
+      var draw = clamp01((p - 0.02) / 0.40);
+      var ret = clamp01((p - 0.48) / 0.22);
       var loopNow = Math.max(looped, ret);
       if (loopNow >= 1) looped = 1;
       if (spec) spec.style.setProperty('--loop', loopNow.toFixed(3));

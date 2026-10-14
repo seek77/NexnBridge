@@ -1,0 +1,213 @@
+/* ko/judgment-design.html 전용.
+   로드 순서: site.css → vendor/scrollcraft-0.3.1/scrollcraft.css → 이 파일.
+   - 엔진 선택자(.sc-stage, [data-sc-*])는 재정의하지 않는다. 페이지 클래스는 모두 jd- 접두사.
+   - 사이트 공통 메뉴·바닥글이 엔진 CSS의 body 기본값에 영향받지 않도록 body 값을 사이트 기준으로 되돌린다.
+   - 색: 사이트 토큰(--navy, --navy2, --navy3, --accent2, --accent3, --bg2, --text, --text2)을 쓴다. */
+
+body.jd-page {
+  --sc-canvas: var(--bg2);
+  --sc-ink: var(--text);
+  --sc-ink-soft: var(--text2);
+  --sc-accent: var(--navy);
+  --sc-accent-ink: #fff;
+  --sc-font-display: var(--font);
+  --sc-font-text: var(--font);
+  --jd-spec-w: 15.5rem;
+  --jd-line: #D5DBE7;
+  background: var(--bg2);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.jd-skip {
+  position: absolute; left: 1rem; top: -4rem; z-index: 200;
+  background: var(--navy); color: #fff; padding: .5rem 1rem; border-radius: 6px; text-decoration: none;
+}
+.jd-skip:focus-visible { top: calc(var(--nav-h) + .5rem); }
+
+/* 전역 section 패딩(site.css)을 이 페이지의 구간에는 적용하지 않는다. */
+.jd section { padding: 0; }
+
+.jd-wrap { width: 100%; max-width: 72rem; margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 5rem); }
+@media (min-width: 1100px) {
+  .jd { padding-left: calc(var(--jd-spec-w) + 2rem); }
+  body.jd-page .site-footer { margin-left: var(--jd-spec-w); }
+}
+
+/* ---------------------------------------------------------------- 표지 */
+.jd .jd-title { padding: calc(var(--nav-h) + clamp(3rem, 8vw, 6rem)) 0 clamp(4rem, 9vw, 7rem); background: var(--bg2); }
+.jd-title__crumb { font-size: .85rem; color: var(--text2); margin-bottom: clamp(2.5rem, 6vw, 4.5rem); }
+.jd-title__crumb a { color: var(--navy); font-weight: 600; text-decoration: none; }
+.jd-title__crumb a:hover { text-decoration: underline; }
+.jd-title__body > * + * { margin-top: 1.5rem; }
+.jd-title__h {
+  font-size: clamp(2.8rem, 1.6rem + 5.5vw, 6rem); font-weight: 700;
+  line-height: 1.1; letter-spacing: -0.045em; color: var(--text); text-wrap: balance;
+}
+.jd-title__deck { font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); font-weight: 600; line-height: 1.4; letter-spacing: -0.02em; color: var(--navy); max-width: 26ch; }
+.jd-title__lead { max-width: 40rem; color: var(--text2); font-size: 1.05rem; line-height: 1.8; }
+
+/* ------------------------------------------------------------------- 장 */
+.jd .jd-ch { padding: clamp(4.5rem, 11vw, 9rem) 0; }
+.jd-ch--white { background: #fff; }
+.jd-ch--paper { background: var(--bg2); }
+.jd-ch--navy {
+  background: var(--navy3);
+  --sc-ink: #F2F6FF; --sc-ink-soft: #C3CFEA; --sc-accent: var(--accent3);
+  color: var(--sc-ink);
+}
+
+.jd-grid {
+  display: grid;
+  grid-template-columns: minmax(4.5rem, 1fr) minmax(0, 3fr);
+  column-gap: clamp(1.5rem, 4vw, 4rem); row-gap: 1.4rem; align-items: start;
+}
+.jd-grid > * { grid-column: 2; min-width: 0; }
+.jd-grid > .jd-ch__num { grid-column: 1; grid-row: 1 / span 3; }
+.jd-grid--trail { grid-template-columns: minmax(0, 3fr) minmax(4.5rem, 1fr); }
+.jd-grid--trail > * { grid-column: 1; }
+.jd-grid--trail > .jd-ch__num { grid-column: 2; text-align: right; }
+
+.jd-ch__num {
+  font-size: clamp(3.2rem, 1.8rem + 5.5vw, 7.5rem); font-weight: 300; line-height: 1;
+  letter-spacing: -0.05em; color: var(--sc-accent); font-variant-numeric: tabular-nums;
+  padding-block: .08em;
+}
+.jd-ch__title { font-size: clamp(1.75rem, 1.3rem + 2vw, 2.75rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.03em; max-width: 20ch; color: var(--sc-ink); }
+.jd-ch__text { max-width: 40rem; font-size: clamp(1.02rem, .95rem + .3vw, 1.18rem); line-height: 1.8; color: var(--sc-ink-soft); }
+.jd-ch__rule { height: 1px; border: 0; margin-top: .4rem; background: var(--sc-accent); max-width: 40rem; }
+
+/* 장 안의 명세 항목: 1100px 미만에서만 보인다(데스크톱은 여백 명세가 기록). */
+.jd-ch__terms {
+  list-style: none; margin-top: .4rem; padding-top: 1rem;
+  border-top: 1px solid color-mix(in oklab, currentColor 18%, transparent);
+  display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; font-size: .88rem; color: var(--sc-ink);
+}
+.jd-ch__terms li::before { content: "· "; color: var(--sc-accent); }
+@media (min-width: 1100px) { .jd-ch__terms { display: none; } }
+
+.jd-types {
+  list-style: none; margin-top: .6rem; max-width: 40rem;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px;
+  background: var(--bg4); border: 1px solid var(--bg4); border-radius: 6px; overflow: hidden;
+}
+.jd-types li { background: #fff; padding: 1rem .75rem; font-weight: 600; text-align: center; color: var(--text); }
+@media (max-width: 560px) { .jd-types { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ----------------------------------------------------------- 정점: EDD */
+.jd .jd-edd { background: var(--navy2); }
+.jd-edd__stage {
+  background: var(--navy2);
+  --sc-ink: #F2F6FF; --sc-ink-soft: #C3CFEA; --sc-accent: var(--accent3);
+  color: var(--sc-ink);
+  display: flex; align-items: center; padding-top: var(--nav-h);
+}
+.jd-edd__stage > .jd-wrap { width: 100%; }
+.jd-edd__title { font-size: clamp(1.9rem, 1.3rem + 2.6vw, 3.2rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: clamp(2.5rem, 7vh, 4.5rem); }
+
+/* 선은 다섯 칸의 가운데(10%~90%)를 잇는다. viewBox 높이 176 = 11rem이라 y 단위가 px과 같다.
+   --draw: 앞으로 가는 선, --ret: 피드백·개선에서 업무 이해로 돌아가는 선. 엔진이 쓰는 --sc-p에서 계산. */
+.jd-edd__track { position: relative; min-height: 14rem; --draw: clamp(0, (var(--sc-p, 0) - 0.06) / 0.52, 1); --ret: clamp(0, (var(--sc-p, 0) - 0.66) / 0.22, 1); }
+.jd-edd__lines { position: absolute; left: 10%; top: 0; width: 80%; height: 11rem; overflow: visible; }
+.jd-edd__lines path { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-linecap: round; }
+.jd-edd__line   { stroke: color-mix(in oklab, var(--sc-accent) 85%, transparent); stroke-dashoffset: calc(1 - var(--draw)); }
+.jd-edd__return { stroke: var(--sc-accent); stroke-dashoffset: calc(1 - var(--ret)); }
+
+.jd-edd__steps { position: relative; list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.jd-edd__steps li {
+  display: grid; justify-items: center; gap: 1rem; text-align: center;
+  font-size: clamp(1rem, .9rem + .4vw, 1.25rem); font-weight: 600; line-height: 1.35; padding-inline: .4rem;
+}
+.jd-edd__dot { position: relative; z-index: 1; width: .9rem; height: .9rem; border-radius: 50%; background: var(--navy2); border: 2px solid var(--sc-accent); }
+.jd-edd__steps li:last-child .jd-edd__dot { background: var(--sc-accent); }
+.jd-edd__more { margin-top: 1rem; font-size: .9rem; }
+.jd-edd__more a { color: var(--sc-ink-soft); text-underline-offset: .25em; }
+.jd-edd__more a:hover { color: var(--sc-ink); }
+
+@media (max-width: 760px) {
+  .jd-edd__lines { display: none; }
+  .jd-edd__track { min-height: 0; }
+  .jd-edd__steps { grid-template-columns: 1fr; gap: 1.4rem; padding-left: 2rem; border-left: 2px solid color-mix(in oklab, var(--sc-accent) 40%, transparent); }
+  .jd-edd__steps li { grid-template-columns: auto 1fr; justify-items: start; align-items: center; text-align: left; }
+  .jd-edd__dot { margin-left: calc(-2rem - .55rem); }
+  .jd-edd__more { margin-top: 2rem; }
+}
+
+/* ------------------------------------------------------------------ 마감 */
+.jd .jd-close { background: var(--bg2); padding: clamp(5rem, 13vw, 10rem) 0 clamp(4rem, 8vw, 6rem); }
+.jd-close .jd-wrap > * { max-width: 40rem; }
+.jd-close__principle { font-size: clamp(1.05rem, 1rem + .4vw, 1.3rem); line-height: 1.8; color: var(--text); }
+.jd-close__ask { margin-top: 3rem; color: var(--text2); }
+.jd-close__ask a { color: var(--navy); font-weight: 700; text-underline-offset: .25em; }
+.jd-close__back { margin-top: 1rem; font-size: .9rem; }
+.jd-close__back a { color: var(--text2); text-underline-offset: .25em; }
+
+/* ======================================================= 시그니처: 판단 명세 */
+.jd-spec { display: none; }
+@media (min-width: 1100px) {
+  .jd-spec {
+    display: block; position: fixed; left: 0; top: var(--nav-h); bottom: 0; z-index: 30;
+    width: var(--jd-spec-w); overflow-y: auto;
+    padding: 2.25rem 1.5rem 1.5rem 2rem;
+    background: rgba(255, 255, 255, .94);
+    border-right: 1px solid rgba(0, 51, 141, .08);
+    font-size: .88rem; color: var(--text);
+  }
+}
+.jd-spec__folio { font-weight: 700; letter-spacing: -0.01em; line-height: 1.45; }
+.jd-spec__folio-num { color: var(--navy); font-variant-numeric: tabular-nums; margin-right: .35em; }
+.jd-spec__head { margin: 2.2rem 0 .8rem; font-size: .78rem; font-weight: 600; color: var(--text2); letter-spacing: .04em; }
+.jd-spec__list { list-style: none; position: relative; }
+.jd-spec__entry + .jd-spec__entry { margin-top: 1.3rem; }
+.jd-spec__entry > a { display: flex; align-items: center; gap: .5rem; color: var(--text2); font-weight: 600; text-decoration: none; transition: color 160ms ease-out; }
+.jd-spec__entry > a:hover { color: var(--text); text-decoration: underline; }
+.jd-spec__mark { flex: none; width: .55rem; height: .55rem; border-radius: 50%; border: 1.5px solid var(--text3); transition: background-color 160ms ease-out, border-color 160ms ease-out; }
+.jd-spec__entry.is-current > a, .jd-spec__entry.is-done > a { color: var(--text); }
+.jd-spec__entry.is-current .jd-spec__mark { border-color: var(--navy); }
+.jd-spec__entry.is-done .jd-spec__mark { background: var(--navy); border-color: var(--navy); }
+
+/* 쓰이기 전: 글자는 비어 있고 회색 기입선만(::before). 쓰인 뒤: 글자와 파란 밑줄(::after). */
+.jd-spec__terms { list-style: none; margin-top: .45rem; padding-left: calc(.55rem + .5rem); }
+.jd-spec__terms li { position: relative; margin-top: .3rem; padding-bottom: .15rem; line-height: 1.45; color: transparent; transition: color 360ms ease-out; }
+.jd-spec__terms li::before, .jd-spec__terms li::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; }
+.jd-spec__terms li::before { background: var(--jd-line); }
+.jd-spec__terms li::after { background: var(--navy); transform-origin: 0 50%; transform: scaleX(0); transition: transform 520ms cubic-bezier(.23, 1, .32, 1) 120ms; }
+.jd-spec__terms li.is-written { color: var(--text); }
+.jd-spec__terms li.is-written::after { transform: scaleX(1); }
+
+/* 정점에서 마지막 항목과 첫 항목을 잇는 괄호선. 아래에서 위로 자란다. */
+.jd-spec__loop {
+  position: absolute; left: .75rem; width: .9rem;
+  top: var(--loop-top, 10rem); height: var(--loop-h, 20rem);
+  border: 1.5px solid var(--navy); border-right: 0; border-radius: .6rem 0 0 .6rem;
+  transform-origin: 50% 100%; transform: scaleY(var(--loop, 0));
+  opacity: clamp(0, var(--loop, 0) * 8, 1); pointer-events: none;
+}
+.jd-spec__loop-label { margin-top: 1.3rem; font-size: .78rem; color: var(--navy); font-weight: 600; opacity: clamp(0, (var(--loop, 0) - .9) * 10, 1); }
+
+/* 폰·태블릿: 공통 메뉴 아래 얇은 폴리오 띠 */
+.jd-strip {
+  position: fixed; left: 0; right: 0; top: var(--nav-h); z-index: 30;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .5rem 1.5rem; background: rgba(255, 255, 255, .95);
+  border-bottom: 1px solid rgba(0, 51, 141, .08);
+  font-size: .78rem; font-weight: 600; color: var(--text);
+  transform: translate3d(0, -110%, 0); visibility: hidden;
+  transition: transform 240ms ease-out, visibility 0s linear 240ms;
+}
+.jd-strip.is-shown { transform: none; visibility: visible; transition: transform 240ms ease-out; }
+.jd-strip__bars { display: flex; gap: 4px; }
+.jd-strip__bars i { width: 1.4rem; height: 3px; border-radius: 2px; background: var(--jd-line); }
+.jd-strip__bars i.is-done { background: var(--navy); }
+@media (min-width: 1100px) { .jd-strip { display: none; } }
+/* 모바일 메뉴를 펼치면 띠를 숨긴다. */
+body.jd-page:has(nav.site-nav.open) .jd-strip { visibility: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  .jd-spec__terms li, .jd-spec__terms li::after, .jd-strip { transition-duration: 1ms; transition-delay: 0ms; }
+}

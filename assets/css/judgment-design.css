@@ -119,12 +119,17 @@ body.jd-page {
 .jd-edd__return { stroke: var(--sc-accent); stroke-dashoffset: calc(1 - var(--ret)); }
 
 .jd-edd__steps { position: relative; list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+/* 단계 이름은 처음부터 항상 보인다(빈 화면 방지). 스크롤 진행(--on)에 따라 이름이 밝아지고 점이 채워진다.
+   --at: 각 단계가 켜지는 진행률(마크업의 style 속성). */
 .jd-edd__steps li {
+  --on: clamp(0, (var(--sc-p, 0) - var(--at, 0)) / 0.06, 1);
   display: grid; justify-items: center; gap: 1rem; text-align: center;
   font-size: clamp(1rem, .9rem + .4vw, 1.25rem); font-weight: 600; line-height: 1.35; padding-inline: .4rem;
 }
+.jd-edd__label { color: color-mix(in oklab, var(--sc-ink) calc(100% * var(--on)), var(--sc-ink-soft)); }
 .jd-edd__dot { position: relative; z-index: 1; width: .9rem; height: .9rem; border-radius: 50%; background: var(--navy2); border: 2px solid var(--sc-accent); }
-.jd-edd__steps li:last-child .jd-edd__dot { background: var(--sc-accent); }
+.jd-edd__dot::after { content: ""; position: absolute; inset: 1px; border-radius: 50%; background: var(--sc-accent); opacity: var(--on); }
+.jd-edd__loopnote { display: none; }
 .jd-edd__more { margin-top: 1rem; font-size: .9rem; }
 .jd-edd__more a { color: var(--sc-ink-soft); text-underline-offset: .25em; }
 .jd-edd__more a:hover { color: var(--sc-ink); }
@@ -132,9 +137,12 @@ body.jd-page {
 @media (max-width: 760px) {
   .jd-edd__lines { display: none; }
   .jd-edd__track { min-height: 0; }
-  .jd-edd__steps { grid-template-columns: 1fr; gap: 1.4rem; padding-left: 2rem; border-left: 2px solid color-mix(in oklab, var(--sc-accent) 40%, transparent); }
-  .jd-edd__steps li { grid-template-columns: auto 1fr; justify-items: start; align-items: center; text-align: left; }
-  .jd-edd__dot { margin-left: calc(-2rem - .55rem); }
+  .jd-edd__steps { grid-template-columns: 1fr; gap: 1.4rem; padding-left: 1.25rem; border-left: 2px solid color-mix(in oklab, var(--sc-accent) 30%, transparent); }
+  /* 폰: 세로선이 진행만큼 위에서 아래로 채워지고, 다 채워지면 돌아가는 방향을 글로 표시한다. */
+  .jd-edd__steps::before { content: ""; position: absolute; left: -2px; top: 0; bottom: 0; width: 2px; background: var(--sc-accent); transform-origin: 50% 0; transform: scaleY(var(--draw)); }
+  .jd-edd__loopnote { display: block; margin: 1.2rem 0 0 1.25rem; font-size: .9rem; font-weight: 600; color: var(--sc-accent); opacity: var(--ret); }
+  .jd-edd__steps li { display: flex; align-items: center; gap: 0; text-align: left; }
+  .jd-edd__dot { flex: none; margin: 0 .9rem 0 calc(-1.25rem - .55rem); }
   .jd-edd__more { margin-top: 2rem; }
 }
 
